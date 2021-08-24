@@ -3,7 +3,6 @@ import { Class, Enum } from 'meteor/jagi:astronomy';
 import "meteor/jagi:astronomy-softremove-behavior";
 
 import { Random } from 'meteor/random'
-import {MoneyCoins} from "./money";
 
 export const Transactions = new Mongo.Collection('transaction');
 
@@ -26,7 +25,8 @@ export const Transaction = Class.create({
         recipient: String,
         precision: {type: Number, default: 8},
         type: TransactionType,
-        coin: MoneyCoins
+        asset: String,
+        txid: String
     },
     behaviors: {
         timestamp: {},

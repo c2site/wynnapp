@@ -7,23 +7,13 @@ import { Random } from 'meteor/random'
 export const Moneys = new Mongo.Collection('moneys');
 export const Address = new Mongo.Collection('address');
 
-export const MoneyCoins = Enum.create({
-    name: 'money.coins',
-    identifiers: {
-        WYNNE: 'wynne',
-        TRX: 'trx',
-        //XXP: 'xxp',
-        //USDT: 'usdt'
-    }
-})
-
 export const Money = Class.create({
     name: 'money',
     collection: Moneys,
     fields: {
         userId: String,
         amount: {type: Number, default: 0},
-        coins: {type: MoneyCoins, default: MoneyCoins.WYNNE},
+        coins: {type: String},
         precision: {type: Number, default: 8},
     },
     behaviors: {

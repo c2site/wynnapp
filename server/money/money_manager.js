@@ -1,9 +1,10 @@
 import {Addr, Money} from "../../imports/api/mongo/money";
-import {Transaction} from "../../imports/api/mongo/transactions";
+import {Transaction, TransactionType} from "../../imports/api/mongo/transactions";
+import {Coin} from "../../imports/api/mongo/coins";
 
 export class Money_manager {
-    constructor(userId) {
-        this.money = Money.findOne({userId: userId});
+    constructor(userId, name) {
+        this.money = Money.findOne({userId: userId, coins: name});
     }
 
     deposit(amount) {
@@ -26,13 +27,14 @@ export class Transactions_manager {
     _send (tx) {
         const recipient = Addr.findOne({address: tx.recipient});
         const sender = Addr.findOne({address: tx.sender}) || {userId: 'cron'};
-        // получатель не найден - отменяем
+        const asset = Coin.findOne({asset: tx.asset});
+        if(!asset) return;
         if(!recipient) return;
 
-        const deposit = new Money_manager(recipient.userId);
+        const deposit = new Money_manager(recipient.userId, asset.name);
         deposit.deposit(tx.amount);
 
-        const withdrawal = new Money_manager(sender.userId);
+        const withdrawal = new Money_manager(sender.userId, asset.name);
         withdrawal.withdrawal(tx.amount);
     }
 
@@ -42,7 +44,13 @@ export class Transactions_manager {
             ...txs
         });
         tx.save();
+        
+        
+        if(tx.type === TransactionType.SEND) {
+            this._send(tx);
+        }
 
-        this._send(tx);
+        
+
     }
 }
