@@ -26,7 +26,8 @@ export const Transaction = Class.create({
         precision: {type: Number, default: 8},
         type: TransactionType,
         asset: String,
-        txid: String
+        txid: String,
+        game: {type: Object, optional: true}
     },
     behaviors: {
         timestamp: {},

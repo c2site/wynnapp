@@ -1,6 +1,6 @@
 import {Addr, Money} from "../../imports/api/mongo/money";
 import {TransactionType} from "../../imports/api/mongo/transactions";
-import {Transactions_manager} from "./money_manager";
+import {Money_manager, Transactions_manager} from "./money_manager";
 
 
 function randomInt(min, max) {
@@ -13,6 +13,7 @@ function randomInt(min, max) {
 import { Random } from 'meteor/random'
 import {Coin} from "../../imports/api/mongo/coins";
 import {Users_manager} from "../user/users";
+import Lottery_manage from "../lottery/lottery_manage";
 
 const Coins = [
     {name: 'wynne', asset: Random.id(32), precision: 8},
@@ -66,3 +67,14 @@ if(false) {
     }
 
 }
+
+if(false) {
+    const money = new Money_manager('user1', 'usdt');
+    money.buy({amount: 1000});
+}
+
+if(true) {
+    Lottery_manage.create();
+}
+
+

@@ -4,7 +4,10 @@ import {Coin} from "../../imports/api/mongo/coins";
 
 export class Money_manager {
     constructor(userId, name) {
+        this.userId = userId;
         this.money = Money.findOne({userId: userId, coins: name});
+        this.address = Addr.findOne({userId: userId}).address;
+        this.asset = Coin.findOne({name: name}).asset;
     }
 
     deposit(amount) {
@@ -15,6 +18,46 @@ export class Money_manager {
     withdrawal(amount) {
         this.money.amount -= amount;
         this.money.save();
+    }
+
+    _check(amount) {
+        if(this.money.amount < amount) throw new Meteor.Error('error_balance', 'Amount > Balance');
+    }
+
+    send({recipient, amount}) {
+        amount = amount * Math.pow(10, this.money.precision);
+        this._check(amount)
+        const tx = {
+            type: TransactionType.SEND,
+            amount: amount,
+            recipient: recipient,
+            txid: 'test_tx_id',
+            sender: this.address
+        }
+
+        const txs = new Transactions_manager(this.userId);
+        txs.create(tx);
+    }
+
+    buy({amount}) {
+        amount = amount * Math.pow(10, this.money.precision);
+        const txUser = {
+            type: TransactionType.BUY,
+            amount: amount,
+            recipient: Addr.findOne({userId: 'master'}).address,
+            txid: 'test_tx_id_game',
+            sender: this.address,
+            asset: this.asset,
+            game: {
+                game_5: amount * 0.3,
+                game_4: amount * 0.3,
+                game_3: amount * 0.3,
+                dev: amount * 0.1
+            }
+        }
+        const txs = new Transactions_manager(this.userId);
+        txs.create(txUser);
+
     }
 }
 
@@ -36,6 +79,22 @@ export class Transactions_manager {
 
         const withdrawal = new Money_manager(sender.userId, asset.name);
         withdrawal.withdrawal(tx.amount);
+
+    }
+
+    _buyLottery(tx) {
+        const asset = Coin.findOne({asset: tx.asset});
+
+        const sender = Addr.findOne({address: tx.sender});
+        const withdrawal = new Money_manager(sender.userId, asset.name);
+        withdrawal.withdrawal(tx.amount);
+
+
+        const game = tx.game;
+        for(var userId in game) {
+            const deposit = new Money_manager(userId, asset.name);
+            deposit.deposit(game[userId]);
+        }
     }
 
     create(txs) {
@@ -48,9 +107,8 @@ export class Transactions_manager {
         
         if(tx.type === TransactionType.SEND) {
             this._send(tx);
+        } else if (tx.type === TransactionType.BUY) {
+            this._buyLottery(tx);
         }
-
-        
-
     }
 }
