@@ -1,0 +1,223 @@
+// Header
+
+.header__ticket-svg {
+  fill: #ec9f3c;
+}
+
+.header__singin__icon-user {
+  width: 14px;
+  height: 14px;
+  fill: #212129;
+}
+
+.btn-signout__icon-signout {
+  width: 20px;
+  height: 20px;
+}
+
+.burger__icon,
+.burger__icon-close {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  fill: #212129;
+}
+
+.icon-close {
+  position: absolute;
+  top: 47px;
+  right: 17px;
+  width: 17px;
+  height: 17px;
+}
+
+//Sidebar
+
+.sidebar__icon-user {
+  width: 14px;
+  height: 15px;
+  fill: rgba(33, 33, 41, 0.5);
+}
+
+.sidebar__icon-plus,
+.sidebar__icon-minus {
+  width: 13px;
+  height: 13px;
+  stroke: rgba(33, 33, 41, 0.5);
+}
+
+.sidebar__icon-ticket-grey {
+  width: 15px;
+  height: 15px;
+  fill: rgba(33, 33, 41, 0.5);
+}
+
+.sidebar__icon-history {
+  width: 12px;
+  height: 14px;
+  fill: rgba(33, 33, 41, 0.5);
+}
+
+// Home
+
+.home-lottery__icon-calculate,
+.home-lottery__trophy-icon,
+.home__history-icon-trophy {
+  width: 35px;
+  height: 36px;
+  fill: #ec9f3c;
+}
+
+.home-lottery__ticket-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.home-lottery__timeout-icon,
+.home__draw__timeout-icon {
+  fill: #ec9f3c;
+  width: 30px;
+  height: 35px;
+}
+
+.home__draw__timeout-icon {
+  fill: rgba(33, 33, 41, 0.5);
+}
+
+.home__draw__ticket-grey-icon {
+  width: 24px;
+  height: 24px;
+  fill: rgba(33, 33, 41, 0.5);
+}
+
+.home__draw__icon-ticket {
+  width: 34px;
+  height: 34px;
+  fill: #212129;
+}
+
+.home__history__ticket-grey-icon,
+.home__history-icon-customer-grey {
+  width: 24px;
+  height: 24px;
+  fill: rgba(33, 33, 41, 0.25);
+}
+
+.profile__pass-name__icon-eye {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  width: 22px;
+  height: 20px;
+  fill: #ec9f3c;
+  cursor: pointer;
+}
+
+.panel__home-icon {
+  padding: 0 15px 0 15px;
+}
+
+// Profile
+
+.profile__icon-detector {
+  width: 17px;
+  height: 15px;
+  fill: #ec9f3c;
+}
+
+.profile__icon-successfull {
+  width: 13px;
+  height: 11px;
+  fill: #5faa45;
+  margin-left: 8px;
+}
+
+// Deposit
+
+.deposit__icon-copy {
+  width: 13px;
+  height: 16px;
+  fill: #212129;
+  margin-right: 15px;
+}
+
+.deposit__icon-send {
+  width: 12px;
+  height: 13px;
+  fill: #212129;
+  margin-right: 15px;
+}
+
+// Withdrawal
+
+.withdrawal__form-button__icon {
+  width: 11px;
+  height: 13px;
+  fill: #212129;
+}
+
+// History
+
+.ticket__icon-trophy {
+  width: 35px;
+  height: 36px;
+  fill: #ec9f3c;
+  margin-right: 10px;
+}
+
+// Distribution
+
+.distrubution__icon-ticket {
+  // width: 201px;
+  // height: 124px;
+  fill: #212129;
+}
+
+// History-lottery
+
+.history-lottery__icon-trophy {
+  width: 35px;
+  height: 36px;
+  fill: #ec9f3c;
+}
+
+.history-lottery__icon-ticket-grey {
+  width: 24px;
+  height: 24px;
+  fill: rgba(33, 33, 41, 0.25);
+}
+
+.history-lottery__icon-customer-grey {
+  width: 24px;
+  height: 24px;
+  fill: rgba(33, 33, 41, 0.25);
+}
+
+// Notification
+
+.notification-error__icon {
+  width: 50px;
+  height: 50px;
+  stroke: red;
+  fill: red;
+}
+
+// Buy
+
+.buy-ticket__ticket-icon {
+  width: 45px;
+  height: 34px;
+}
+
+@media screen and (min-width: 990px) {
+  .profile__pass-name__icon-eye {
+    position: absolute;
+    top: 13px;
+    right: 25px;
+  }
+}
+
+// Rules
+.header__ticket-svg {
+  width: 25px;
+}

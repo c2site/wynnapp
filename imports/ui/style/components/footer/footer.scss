@@ -1,0 +1,89 @@
+@import "../../_helpers/variables";
+
+footer {
+  padding: 15px 0 16px;
+  @media only screen and (max-width: $responsive-size-stand-mobile) {
+    padding: 20px 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      flex-direction: column;
+    }
+  }
+  .copyright {
+    font-size: 13px;
+    line-height: 24px;
+    color: rgba(255,255,255,0.5);
+    padding-left: 50px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      padding-left: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  a {
+    font-size: 13px;
+    line-height: 24px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: rgba(255,255,255,1);
+      text-decoration: underline;
+    }
+  }
+  .social {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      width: 100%;
+      padding: 25px 0 0;
+      flex-direction: column;
+    }
+
+    li {
+      padding: 0 25px;
+      @media only screen and (max-width: $responsive-size-big-tablet) {
+        padding:0 0 25px;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 24px;
+        color: rgba(255,255,255,0.5);
+        transition: all linear 0.3s;
+
+        .ico {
+          display: block;
+          margin-right: 8px;
+          svg {
+            display: block;
+            transition: all linear 0.3s;
+            path {
+              transition: all linear 0.3s;
+            }
+          }
+        }
+        &:hover {
+          color: rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+}

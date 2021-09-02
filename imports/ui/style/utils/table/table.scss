@@ -1,0 +1,326 @@
+@import "../../_helpers/variables";
+
+.table .table {
+  background: none;
+}
+
+.table {
+
+  @media only screen and (min-width: $responsive-size-tablet) {
+    table-layout: fixed;
+  }
+}
+
+  .table-wr {
+    background: #242561;
+    border-radius: 5px;
+    padding: 40px;
+    color: #ffffff;
+
+    @media only screen and (max-width : $responsive-size-tablet) {
+      padding: 16px;
+    }
+
+    table {
+      @media only screen and (min-width : $responsive-size-tablet) {
+        table-layout: fixed;
+      }
+
+      thead {
+        tr {
+          th {
+            border-bottom: 1px solid rgba(163, 167, 209, 0.23);
+            border-top: none;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            padding-bottom: 24px;
+            color: #fff;
+            &:nth-child(1) {
+              width: 30%;
+            }
+            &:nth-child(2) {
+              width: 20%;
+            }
+            &:nth-child(3) {
+              width: 40%;
+
+            }
+            &:nth-child(4) {
+              width: 10%;
+            }
+
+            @media only screen and (max-width : $responsive-size-tablet) {
+              padding: 18px 20px;
+              display: inline-flex;
+              width: 50%;
+            }
+
+            &:first-child {
+              padding-left: 20px;
+
+              @media only screen and (max-width : $responsive-size-tablet) {
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            border-bottom: 1px solid rgba(163, 167, 209, 0.23);
+            border-top: none;
+            padding: 24px 8px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            vertical-align: middle;
+            color: #fff;
+            &:nth-child(1) {
+              width: 30%;
+            }
+            &:nth-child(2) {
+              width: 20%;
+            }
+            &:nth-child(3) {
+              width: 40%;
+
+            }
+            &:nth-child(4) {
+              width: 10%;
+            }
+
+            @media only screen and (max-width : $responsive-size-tablet) {
+              padding: 20px;
+              display: inline-flex;
+              align-items: center;
+              width: 50%;
+            }
+
+            @media only screen and (max-width : $responsive-size-big-mobile) {
+              width: 100%;
+              justify-content: space-between;
+            }
+
+            &:first-child {
+              padding-left: 20px;
+
+              @media only screen and (max-width : $responsive-size-tablet) {
+                white-space: normal;
+                word-break: break-word;
+              }
+            }
+
+            &:last-child {
+              justify-content: flex-end;
+
+              @media only screen and (max-width : $responsive-size-big-mobile) {
+                justify-content: center;
+              }
+
+            }
+          }
+        }
+      }
+
+      &.reactive-table {
+        tbody {
+          tr {
+            td {
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+
+    .form-control {
+      min-width: 50px;
+      padding-left: 8px;
+      padding-right: 8px;
+      text-align: center;
+    }
+  }
+
+  .table-main {
+    margin-top: 30px;
+
+    width: 100%;
+    &.table-main-tickets {
+      @media only screen and (max-width : $responsive-size-tablet) {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    @media only screen and (max-width : $responsive-size-tablet) {
+      overflow-x: scroll;
+    }
+    .table-tickets {
+      width: 100%;
+      @media only screen and (max-width : $responsive-size-tablet) {
+        width: 830px;
+      }
+
+      thead {
+        tr {
+          th {
+
+            @media only screen and (max-width : $responsive-size-tablet) {
+              display: table-cell;
+              width: initial;
+            }
+          }
+        }
+        @media only screen and (max-width : $responsive-size-tablet) {
+          display: table-row-group;
+        }
+      }
+      tbody {
+        tr {
+          td {
+
+            @media only screen and (max-width : $responsive-size-tablet) {
+              display: table-cell;
+              width: initial;
+            }
+
+            @media only screen and (max-width : $responsive-size-big-mobile) {
+              width: initial;
+              justify-content: flex-start;
+            }
+
+            &:last-child {
+
+              @media only screen and (max-width : $responsive-size-big-mobile) {
+                justify-content: flex-end;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .createAt {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .amount {
+    white-space: nowrap;
+  }
+
+  .address, .txid {
+    min-width: 180px;
+  }
+
+  .table-paycat {
+    th {
+      white-space: nowrap;
+    }
+  }
+
+.content-before--none {
+  justify-content: flex-end !important;
+
+  &::before {
+    content: none !important;
+  }
+}
+.add-balance-row {
+  .table-wr {
+
+    table {
+
+      thead {
+        tr {
+          th {
+            &:nth-child(1) {
+              width: 30%;
+            }
+            &:nth-child(2) {
+              width: 20%;
+            }
+            &:nth-child(3) {
+              width: 40%;
+
+            }
+            &:nth-child(4) {
+              width: 10%;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            &:nth-child(1) {
+              width: 30%;
+            }
+            &:nth-child(2) {
+              width: 20%;
+            }
+            &:nth-child(3) {
+              width: 40%;
+
+            }
+            &:nth-child(4) {
+              width: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.withdrawal-table {
+  .table-wr {
+
+    table {
+
+      thead {
+        tr {
+          th {
+            &:nth-child(1) {
+              width: 20%;
+            }
+            &:nth-child(2) {
+              width: 15%;
+            }
+            &:nth-child(3) {
+              width: 32%;
+
+            }
+            &:nth-child(4) {
+              width: 32%;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            &:nth-child(1) {
+              width: 20%;
+            }
+            &:nth-child(2) {
+              width: 15%;
+            }
+            &:nth-child(3) {
+              width: 32%;
+
+            }
+            &:nth-child(4) {
+              width: 32%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
