@@ -1,0 +1,64 @@
+.next-draw {
+    position: relative;
+    background: linear-gradient(180deg, #FCDA7E 0%, #212129 33.96%);
+    border-radius: 150px;
+    padding-top: 2px;
+    &:after {
+        position: absolute;
+        bottom: -42px;
+        right: 47px;
+        display: block;
+        content: '';
+        width: 102px;
+        height: 123px;
+        background: url("./img/coin-steps.svg") no-repeat;
+        background-size: cover;
+        z-index: 3;
+    }
+    .inner {
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        border-radius: 150px;
+        position: relative;
+        z-index: 2;
+        padding: 94px 110px;
+        .win-number {
+            font-family: 'Intro', sans-serif;
+            position: absolute;
+            top: -36px;
+            left: 50%;
+            min-height: 73px;
+            transform: translateX(-50%);
+            padding: 24px;
+            min-width: 445px;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 32px;
+            color: #1E2632;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+            border-radius: 150px;
+            svg {
+                display: block;
+                margin-right: 18px;
+            }
+        }
+        .timer {
+            display: flex;
+            align-items: center;
+            span {
+                font-size: 40px;
+                line-height: 49px;
+                text-align: center;
+                color: #FFFFFF;
+                &.separator {
+                    height: 24px;
+                    margin: 0 20px;
+                    width: 1px;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,465 @@
+.ticket-block {
+    background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+    border-radius: 15px;
+    position: relative;
+    &:after {
+        position: absolute;
+        bottom: -49px;
+        left: 348px;
+        display: block;
+        content: '';
+        width: 102px;
+        height: 123px;
+        background: url("./img/coin-steps.svg") no-repeat;
+        background-size: cover;
+        z-index: 3;
+    }
+    .holder-ticket {
+        padding: 0 45px;
+    }
+
+    .ticket-head {
+        padding: 33px 0 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        @media only screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+        .column {
+            width: 100%;
+            max-width: 50%;
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: 767px) {
+                max-width: initial;
+                margin-bottom: 15px;
+            }
+            &:last-child {
+                justify-content: flex-end;
+                @media only screen and (max-width: 767px) {
+                    margin-bottom: 0;
+                    justify-content: center;
+                }
+            }
+            .info {
+                .name {
+                    display: block;
+                    font-family: 'Intro', sans-serif;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+            }
+            .btn {
+                margin-left: 15px;
+            }
+        }
+    }
+    .number-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px 0;
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            width: calc(100% / 9);
+
+            .number {
+                font-family: "Rubik", sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 57px;
+                height: 57px;
+                background: transparent;
+                border: 1px solid #EB3B3B;
+                box-sizing: border-box;
+                border-radius: 50px;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 18px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                outline: none;
+                padding: 0;
+                margin: 0;
+                transition: all linear 0.3s;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover,
+                &.active {
+                    background: #EB3B3B;
+                }
+            }
+        }
+    }
+    .ticket-stats {
+        background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+        border-radius: 0px 0px 15px 15px;
+        padding: 30px 45px;
+        .holder {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+
+            .number-tickets {
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #1E2632;
+                display: flex;
+                align-items: center;
+                span {
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    background: #EB3B3B;
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    margin-left: 10px;
+                }
+            }
+            .price {
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #1E2632;
+                display: flex;
+                align-items: center;
+                span {
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    background: #EB3B3B;
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .checkbox {
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: solid 1px #F6C465;
+            background: #FFF;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 13px;
+            color: #212129;
+            @media screen and (min-width: 400px) {
+                width: 45px;
+                height: 45px;
+                font-size: 21px;
+                line-height: 16px;
+            }
+        }
+    }
+}
+.ticket-balance {
+    background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+    box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    position: relative;
+    padding: 40px 10px;
+    margin-bottom: 35px;
+    &:before,
+    &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover !important;
+        z-index: 1;
+    }
+    &:before {
+        background: url("./img/bg-br-step.svg") no-repeat;
+    }
+    &:after {
+        background: url("./img/bg-bt-step.svg") no-repeat;
+    }
+    .contain-balance {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #1E2632;
+        margin-bottom: 10px;
+    }
+    .balance-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        .item {
+            border-radius: 20px;
+            margin-left: 10px;
+            padding: 7px 20px;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #1E2632;
+            border: 1px solid rgba(30, 38, 50, 0.25);
+            &:first-child {
+                margin-left: 0;
+                background: #EB3B3B;
+                border: none;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+.info-text {
+    font-size: 16px;
+    line-height: 33px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 30px;
+    h6 {
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 33px;
+        color: rgba(255,255,255,0.75);
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+.prize-box {
+    padding: 150px 0;
+    top: -240px;
+    position: relative;
+    background: url("./img/bg-prize.svg") no-repeat 50% 100%;
+    h2 {
+        text-align: center;
+        margin-bottom: 80px;
+        font-size: 60px;
+        line-height: 60px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    .prize-list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 945px;
+        margin: 0 auto;
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .ico {
+                height: 240px;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    display: block;
+                }
+            }
+            .number {
+                font-family: 'Intro', sans-serif;
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 40px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                display: block;
+                margin-bottom: 5px;
+            }
+            .info {
+                display: block;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+                color: #F2DA62;
+            }
+        }
+    }
+}
+.distribution-box {
+    padding: 140px 0;
+    background: #fff;
+    .head-box {
+        text-align: center;
+        margin-bottom: 95px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(30, 38, 50, 0.75);
+    }
+}
+.new-tickets {
+    position: relative;
+    overflow: hidden;
+    padding: 140px 0 90px;
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 1300px;
+        height: 1300px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -50%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(33, 33, 41, 0) 100%);
+        z-index: 1;
+    }
+    .head-box {
+        text-align: center;
+        margin-bottom: 125px;
+    }
+    .list-new-tickets {
+        .item {
+            background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+            border-radius: 15px;
+            padding: 0 50px 40px;
+            margin-top: 30px;
+            &:first-child {
+                margin-top: 0;
+            }
+            .head {
+                padding: 23px 0 27px;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+                margin-bottom: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                .name {
+                    display: block;
+                    font-family: 'Intro', sans-serif;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+                .info {
+                    border: 2px solid rgba(255, 255, 255, 0.1);
+                    box-sizing: border-box;
+                    border-radius: 50px;
+                    padding: 13px 30px 12px;
+                    display: flex;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.75);
+                    .separator {
+                        margin: 0 15px;
+                        color: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+            .body {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                .number-list {
+                    display: flex;
+                    .number {
+                        font-family: "Rubik", sans-serif;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 57px;
+                        height: 57px;
+                        background: transparent;
+                        border: 1px solid #EB3B3B;
+                        box-sizing: border-box;
+                        border-radius: 50px;
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        outline: none;
+                        padding: 0;
+                        margin: 0 50px 0 0;
+                        transition: all linear 0.3s;
+                        overflow: hidden;
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+                .price {
+                    font-weight: bold;
+                    font-size: 13px;
+                    line-height: 16px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        background: #EB3B3B;
+                        border-radius: 20px;
+                        padding: 5px 10px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

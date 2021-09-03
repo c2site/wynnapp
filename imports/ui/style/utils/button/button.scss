@@ -39,13 +39,58 @@
       border: 2px solid transparent;
       svg {
         path {
-          fill: #212129;
+          //fill: #212129;
           stroke:#212129;
         }
         circle {
           fill: #212129;
           stroke:#212129;
         }
+      }
+    }
+  }
+
+  &-chose {
+    background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: 1;
+      background: #3E4550;
+      display: block;
+      border-radius: 50px;
+      transition: all linear 0.2s;
+    }
+    svg,
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    &:hover,
+    &:focus {
+      color: #212129;
+      background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+      svg {
+        circle,
+        line,
+        path {
+          fill: #212129;
+          stroke:#212129;
+        }
+
+      }
+      &:after {
+        opacity: 0;
       }
     }
   }
@@ -71,6 +116,30 @@
         path {
           fill: rgba(255, 255, 255, 0.75);
           stroke:rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+  }
+
+  &-black {
+    background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+    box-shadow: 0px 0px 40px rgba(242, 223, 58, 0.25);
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background: #EB3B3B;
+      svg {
+        path {
+          fill: rgba(255, 255, 255, 1);
+          stroke:rgba(255, 255, 255, 1);
         }
       }
     }

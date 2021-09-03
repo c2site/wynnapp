@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
 @import "../imports/ui/fonts/Intro";
 @import "../imports/ui/style/utils/normalize";
+@import "../imports/ui/style/_helpers/variables";
 @import "../imports/ui/style/_helpers/general";
 @import "../imports/ui/style/utils/icons-style/icons-style";
 @import "../imports/ui/style/utils/button/button";
@@ -8,6 +9,7 @@
 @import "../imports/ui/style/utils/table/table";
 @import "../imports/ui/style/components/footer/footer";
 @import "../imports/ui/style/components/header/header";
+@import "../imports/ui/style/page/innerPage";
 @import "../imports/ui/style/page/home";
 @import "../imports/ui/style/components/banner/banner";
 @import "../imports/ui/style/components/linksList/linksList";
