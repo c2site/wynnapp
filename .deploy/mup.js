@@ -24,7 +24,7 @@ module.exports = {
       ROOT_URL: 'https://pirs-wynn.devgent.net',
       MONGO_URL: 'mongodb://mongodb/wynneG?retryWrites=false',
       //MONGO_OPLOG_URL: 'mongodb://mongodb/local',
-      PORT: 2065
+      PORT: 2665
     },
 
     docker: {
