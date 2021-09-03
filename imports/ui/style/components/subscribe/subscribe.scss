@@ -1,0 +1,89 @@
+.subscribe-box {
+    position: relative;
+    padding-top: 115px;&:after {
+    position: absolute;
+    bottom: 26px;
+    left: -54px;
+    width: 80px;
+    height: 111px;
+    display: block;
+    content: '';
+    background: url("./img/coin-sub-1.svg") no-repeat 50% 50%;
+    background-size: cover;
+}
+    &:before {
+        position: absolute;
+        top: -70px;
+        right: 74px;
+        width: 70px;
+        height: 96px;
+        display: block;
+        content: '';
+        background: url("./img/coin-sub-2.svg") no-repeat 50% 50%;
+        background-size: cover;
+    }
+    .inner {
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        border-radius: 15px;
+        padding: 74px 74px 74px 98px;
+
+        .img-box {
+            margin-top: -190px;
+            svg {
+                display: block;
+                margin-left: auto;
+            }
+        }
+    }
+    h2 {
+        margin-bottom: 44px;
+        span {
+            margin-bottom: 16px;
+        }
+    }
+    .form {
+        .holder-email {
+            width: calc(100% - 240px);
+            padding: 15px 30px 15px 40px;
+            display: flex;
+            align-items: center;
+            background: #FFFFFF;
+            border-radius: 50px;
+            height: 60px;
+            .ico {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+            input {
+                display: block;
+                width: 100%;
+                padding: 0;
+                height: 24px;
+                background: none;
+                border: none;
+                outline: none;
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #BABAC2;
+                &::placeholder {
+                    font-weight: bold;
+                    font-size: 13px;
+                    line-height: 16px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #BABAC2;
+                }
+            }
+        }
+        input[type="submit"] {
+            cursor: pointer;
+            width: 220px;
+            height: 60px;
+            margin-left: 20px;
+        }
+    }
+}

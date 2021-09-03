@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+@import "../imports/ui/fonts/Intro";
 @import "../imports/ui/style/utils/normalize";
 @import "../imports/ui/style/_helpers/general";
 @import "../imports/ui/style/utils/icons-style/icons-style";
@@ -8,4 +9,10 @@
 @import "../imports/ui/style/components/footer/footer";
 @import "../imports/ui/style/components/header/header";
 @import "../imports/ui/style/page/home";
+@import "../imports/ui/style/components/banner/banner";
+@import "../imports/ui/style/components/linksList/linksList";
+@import "../imports/ui/style/components/steps/steps";
+@import "../imports/ui/style/components/borrow/borrow";
+@import "../imports/ui/style/components/stats/stats";
+@import "../imports/ui/style/components/subscribe/subscribe";
 

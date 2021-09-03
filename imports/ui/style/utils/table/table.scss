@@ -5,23 +5,20 @@
 }
 
 .table {
-
+  background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+  border-radius: 15px;
+  padding: 50px 75px;
   @media only screen and (min-width: $responsive-size-tablet) {
     table-layout: fixed;
   }
-}
-
-  .table-wr {
-    background: #242561;
-    border-radius: 5px;
-    padding: 40px;
-    color: #ffffff;
-
-    @media only screen and (max-width : $responsive-size-tablet) {
-      padding: 16px;
-    }
+  .table-head {
+    margin: 0 -75px;
+    padding: 0 75px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
 
     table {
+      width: 100%;
       @media only screen and (min-width : $responsive-size-tablet) {
         table-layout: fixed;
       }
@@ -29,39 +26,18 @@
       thead {
         tr {
           th {
-            border-bottom: 1px solid rgba(163, 167, 209, 0.23);
             border-top: none;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 16px;
-            padding-bottom: 24px;
-            color: #fff;
-            &:nth-child(1) {
-              width: 30%;
-            }
-            &:nth-child(2) {
-              width: 20%;
-            }
-            &:nth-child(3) {
-              width: 40%;
-
-            }
-            &:nth-child(4) {
-              width: 10%;
-            }
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding-bottom: 21px;
 
             @media only screen and (max-width : $responsive-size-tablet) {
               padding: 18px 20px;
               display: inline-flex;
               width: 50%;
-            }
-
-            &:first-child {
-              padding-left: 20px;
-
-              @media only screen and (max-width : $responsive-size-tablet) {
-                white-space: nowrap;
-              }
             }
           }
         }
@@ -69,30 +45,32 @@
       tbody {
         tr {
           td {
-            border-bottom: 1px solid rgba(163, 167, 209, 0.23);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             border-top: none;
-            padding: 24px 8px;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 16px;
-            vertical-align: middle;
-            color: #fff;
-            &:nth-child(1) {
-              width: 30%;
-            }
-            &:nth-child(2) {
-              width: 20%;
-            }
-            &:nth-child(3) {
-              width: 40%;
+            padding: 24px 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+            opacity: 0.75;
 
+            &.red {
+              color: #EB3B3B;
             }
-            &:nth-child(4) {
-              width: 10%;
+            &.green {
+              color: #28D83A;
+            }
+            &.game1 {
+              color: #FAAD02;
+            }
+            &.game2 {
+              color: #EAD052;
+            }
+            &.game3 {
+              color: #B6D5DF;
             }
 
             @media only screen and (max-width : $responsive-size-tablet) {
-              padding: 20px;
               display: inline-flex;
               align-items: center;
               width: 50%;
@@ -101,24 +79,6 @@
             @media only screen and (max-width : $responsive-size-big-mobile) {
               width: 100%;
               justify-content: space-between;
-            }
-
-            &:first-child {
-              padding-left: 20px;
-
-              @media only screen and (max-width : $responsive-size-tablet) {
-                white-space: normal;
-                word-break: break-word;
-              }
-            }
-
-            &:last-child {
-              justify-content: flex-end;
-
-              @media only screen and (max-width : $responsive-size-big-mobile) {
-                justify-content: center;
-              }
-
             }
           }
         }
@@ -135,14 +95,15 @@
       }
     }
 
+}
+
     .form-control {
       min-width: 50px;
       padding-left: 8px;
       padding-right: 8px;
       text-align: center;
     }
-  }
-
+/*
   .table-main {
     margin-top: 30px;
 
@@ -323,4 +284,4 @@
       }
     }
   }
-}
+}*/

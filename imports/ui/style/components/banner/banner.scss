@@ -1,0 +1,152 @@
+.banner-box {
+    &.container {
+        max-width: 1800px;
+        min-height: 788px;
+        background: url("./img/img-banner.svg") no-repeat 50% 0;
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    .head-banner {
+        margin-bottom: 105px;
+        .title-box {
+            h1 {
+                margin: 0 0 22px;
+            }
+        }
+    }
+    .next-draw {
+        position: relative;
+        &:after {
+            position: absolute;
+            bottom: -42px;
+            right: 47px;
+            display: block;
+            content: '';
+            width: 102px;
+            height: 123px;
+            background: url("./img/coin-steps.svg") no-repeat;
+            background-size: cover;
+            z-index: 3;
+        }
+        &:before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -2px;
+            left: 0;
+            display: block;
+            content: '';
+            background: linear-gradient(180deg, #FCDA7E 0%, #212129 33.96%);
+            border-radius: 150px;
+            z-index: 1;
+        }
+        .inner {
+            background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+            border-radius: 150px;
+            position: relative;
+            z-index: 2;
+            padding: 94px 110px;
+            .win-number {
+                font-family: 'Intro', sans-serif;
+                position: absolute;
+                top: -36px;
+                left: 50%;
+                min-height: 73px;
+                transform: translateX(-50%);
+                padding: 24px;
+                min-width: 445px;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 32px;
+                color: #1E2632;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+                border-radius: 150px;
+                svg {
+                    display: block;
+                    margin-right: 18px;
+                }
+            }
+            .timer {
+                display: flex;
+                align-items: center;
+                span {
+                    font-size: 40px;
+                    line-height: 49px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    &.separator {
+                        height: 24px;
+                        margin: 0 20px;
+                        width: 1px;
+                        background: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+    }
+    .links-list {
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 31.25%;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 37px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1E2632;
+            padding: 30px 40px;
+            border-radius: 150px;
+            &:after {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: url("./img/link-mask.svg") no-repeat 100% 50%;
+                display: block;
+                content: '';
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            &.color1 {
+                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+            }
+            &.color2 {
+                background: linear-gradient(87.16deg, #FFEB82 -4.55%, #D9AF1B 103.59%);
+            }
+            &.color3 {
+                background: linear-gradient(87.16deg, #D8EBFD -4.55%, #8694A9 103.59%);
+            }
+            span {
+                position: relative;
+                z-index: 2;
+            }
+            .ico {
+                display: flex;
+                height: 120px;
+                width: 120px;
+                align-items: center;
+                justify-content: center;
+                margin-right: 17px;
+                background: #FFFFFF;
+                border-radius: 50%;
+                svg {
+                    display: block;
+                }
+            }
+            .arrow {
+                display: block;
+                margin-left: auto;
+                svg {
+                    display: block;
+                }
+            }
+        }
+    }
+}

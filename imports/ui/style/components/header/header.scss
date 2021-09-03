@@ -1,9 +1,12 @@
 @import "../../_helpers/variables.scss";
 
 .head-top {
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   .info {
+    display: flex;
+    align-items: center;
     a {
       display: flex;
       align-items: center;
@@ -16,6 +19,89 @@
       svg {
         display: block;
         margin-right: 10px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .btn-head {
+    display: flex;
+    .btn {
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.btn-basket {
+        width: 60px;
+        padding: 15px 17px;
+        span {
+          position: relative;
+          display: block;
+          svg {
+            margin: 0;
+          }
+          .number {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #EB3B3B;
+            width: 17px;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+header {
+  padding: 22px 0 70px;
+  .nav {
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      padding: 0 40px;
+      a {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 0;
+        position: relative;
+        &:after {
+          position: absolute;
+          bottom: -12px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          display: block;
+          content: '';
+          border-radius: 10px;
+          background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+          transition: all linear 0.2s;
+        }
+        &:hover {
+          background: none;
+          &:after {
+            width: 100%;
+          }
+        }
       }
     }
   }
