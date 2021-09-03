@@ -34,7 +34,7 @@ module.exports = {
       // abernix/meteord:node-12-base works with Meteor 1.9 - 1.10
       // If you are using a different version of Meteor,
       // refer to the docs for the correct image to use.
-      image: 'abernix/meteord:node-12-base',
+      image: 'zodern/meteor',
     },
 
     // Show progress bar while uploading bundle to server
@@ -42,12 +42,12 @@ module.exports = {
     enableUploadProgressBar: true
   },
 
-  mongo: {
-    version: '3.4.1',
-    servers: {
-      one: {}
-    }
-  },
+  // mongo: {
+  //   version: '3.4.1',
+  //   servers: {
+  //     one: {}
+  //   }
+  // },
 
   // (Optional)
   // Use the proxy to setup ssl or to route requests to the correct
