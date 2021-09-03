@@ -84,7 +84,7 @@ if(false){
     await TronNode.createAddress('userId');
 }
 
-if(true) {
+if(false) {
     const demo = {
         userId: 'master',
         name: 'Lottery 5/36',
