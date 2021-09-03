@@ -1,7 +1,18 @@
 import React from "react";
+import {useSubscribe} from "../../../api/hooks";
+import {Meteor} from "meteor/meteor";
+import { useTracker } from 'meteor/react-meteor-data'
+import {Lottery} from "../../../api/mongo/lottery";
+import {Money} from "../../../api/mongo/money";
 
 const Banner = () => {
+  const assetName = 'usdt'
+  useSubscribe('lottery', []);
+  useSubscribe('money.game', []);
+  const lottery = useTracker(()=>Lottery.findOne({assetName: assetName}), [assetName]);
+  const money = useTracker(()=>Money.findOne({userId: 'game_5', coins: assetName}), [assetName]);
 
+  console.log(lottery, money);
   return (
     <>
       <div className="banner-box container">
@@ -27,7 +38,7 @@ const Banner = () => {
                   <path d="M2.69199 10.5412L3.92773 10.3529L2.69199 10.5412ZM8.66667 7.25H3.16392V4.75H8.66667V7.25ZM3.41107 6.96234L3.92773 10.3529L1.45626 10.7295L0.9396 7.33894L3.41107 6.96234ZM7.74815 14.306L10.2304 14.7714L9.76964 17.2286L7.28743 16.7632L7.74815 14.306ZM3.92773 10.3529C4.23183 12.3485 5.76406 13.934 7.74815 14.306L7.28743 16.7632C4.25907 16.1954 1.92041 13.7755 1.45626 10.7295L3.92773 10.3529ZM3.16392 7.25C3.317 7.25 3.43413 7.11367 3.41107 6.96234L0.9396 7.33894C0.732062 5.97698 1.78623 4.75 3.16392 4.75V7.25Z" fill="#1E2632"/>
                   <path d="M8 27H23" stroke="#1E2632" stroke-width="2.5"/>
                 </svg>
-                <strong>13 499 488 WYNN</strong>
+                <strong>{money?.value()} {money?.coins}</strong>
               </div>
               <div className="flex f-space-between f-align-center">
                 <div className="name">
