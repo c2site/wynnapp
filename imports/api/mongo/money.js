@@ -15,6 +15,7 @@ export const Money = Class.create({
         amount: {type: Number, default: 0},
         coins: {type: String},
         precision: {type: Number, default: 8},
+        type: {type: String, optional: true}
     },
     behaviors: {
         timestamp: {},

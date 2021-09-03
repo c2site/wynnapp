@@ -1,6 +1,12 @@
 import React from "react";
+import {useSubscribe} from "../../../api/hooks";
+
+import { useTracker } from 'meteor/react-meteor-data'
+import {Ticket} from "../../../api/mongo/ticket";
 
 const Borrow = () => {
+  useSubscribe('lottery.tickets', []);
+  const list = useTracker(()=>Ticket.find().fetch(), []);
   return (
     <>
       <div className="borrow-box">
@@ -25,27 +31,15 @@ const Borrow = () => {
             </div>
             <table>
               <tbody>
-              <tr>
-                <td>Tomas</td>
-                <td>B28827002</td>
-                <td className='red'>0.0000154 BTC</td>
-                <td className='game1'>Lottery 5/36</td>
-                <td className='green'>0.0000154 BTC</td>
-              </tr>
-              <tr>
-                <td>Tomas</td>
-                <td>B28827002</td>
-                <td className='red'>0.0000154 BTC</td>
-                <td className='game2'>Option</td>
-                <td className='green'>0.0000154 BTC</td>
-              </tr>
-              <tr>
-                <td>Tomas</td>
-                <td>B28827002</td>
-                <td className='red'>0.0000154 BTC</td>
-                <td className='game3'>Dice</td>
-                <td className='green'>0.0000154 BTC</td>
-              </tr>
+              {list?.map(ticket=>(
+                  <tr>
+                    <td>{ticket.user.name}</td>
+                    <td>{ticket.id}</td>
+                    <td className='red'>{ticket.price} {ticket.lottery.assetName}</td>
+                    <td className='game1'>{ticket.name}</td>
+                    <td className='green'>{ticket.win} {ticket.lottery.assetName}</td>
+                  </tr>
+              ))}
               </tbody>
             </table>
           </div>

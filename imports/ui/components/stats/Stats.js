@@ -1,6 +1,15 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 const Stats = () => {
+  const [data, setData] = useState();
+
+  useEffect(()=> {
+    Meteor.call('stats.count', function (err, res) {
+      if(err) console.error(err.reason);
+      setData(res);
+    });
+  }, []);
+
   return (
     <>
       <div className="stats-box container">
@@ -19,7 +28,7 @@ const Stats = () => {
                 <path d="M67.5 123.75L90 50.625" stroke="#77FEFE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <span className="number">3 813K</span>
+            <span className="number">{data?.lottery}</span>
             <span className="name">Games</span>
           </div>
           <div className="item">
@@ -31,7 +40,7 @@ const Stats = () => {
                 <path d="M89.0002 17.606C93.8401 18.8452 98.1298 21.6599 101.193 25.6065C104.257 29.553 105.919 34.4069 105.919 39.4028C105.919 44.3988 104.257 49.2527 101.193 53.1992C98.1298 57.1458 93.8401 59.9605 89.0002 61.1997" stroke="#77FF85" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <span className="number">3 813K</span>
+            <span className="number">{data?.users}</span>
             <span className="name">Users</span>
           </div>
           <div className="item">
@@ -43,7 +52,7 @@ const Stats = () => {
                 <path d="M31 116H99" stroke="#F2DA62" stroke-width="3"/>
               </svg>
             </div>
-            <span className="number">3 813K</span>
+            <span className="number">{data?.win}</span>
             <span className="name">Winners</span>
           </div>
         </div>

@@ -1,8 +1,19 @@
 import React from "react";
+import {useSubscribe} from "../../../api/hooks";
+import {Meteor} from "meteor/meteor";
+import { useTracker } from 'meteor/react-meteor-data'
+import {Lottery} from "../../../api/mongo/lottery";
+import {Money} from "../../../api/mongo/money";
 
 import NextDraw from '/imports/ui/components/banner/components/NextDraw'
 const Banner = () => {
+  const assetName = 'usdt'
+  useSubscribe('lottery', []);
+  useSubscribe('money.game', []);
+  const lottery = useTracker(()=>Lottery.findOne({assetName: assetName}), [assetName]);
+  const money = useTracker(()=>Money.findOne({userId: 'game_5', coins: assetName}), [assetName]);
 
+  console.log(lottery, money);
   return (
     <>
       <div className="banner-box container">
