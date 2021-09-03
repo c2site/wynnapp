@@ -1,6 +1,7 @@
 import {Coin} from "../../imports/api/mongo/coins";
 import {Addr, Money} from "../../imports/api/mongo/money";
 import { Random } from 'meteor/random'
+import TronNode from "../tron/tron";
 
 class Users_manager {
     static createUser(userId) {
@@ -14,9 +15,10 @@ class Users_manager {
             money.save();
         })
 
+        const addr = TronNode.createAddress();
         const address = new Addr({
             userId: userId,
-            address: Random.id(32)
+            ...addr
         })
 
         address.save();

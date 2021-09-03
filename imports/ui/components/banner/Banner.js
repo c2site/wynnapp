@@ -2,6 +2,7 @@ import React from "react";
 
 import NextDraw from '/imports/ui/components/banner/components/NextDraw'
 const Banner = () => {
+
   return (
     <>
       <div className="banner-box container">
