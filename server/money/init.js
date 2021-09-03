@@ -15,6 +15,8 @@ import {Coin} from "../../imports/api/mongo/coins";
 import {Users_manager} from "../user/users";
 import Lottery_manage from "../lottery/lottery_manage";
 import TronNode from "../tron/tron";
+import {Ticket, TicketStatus} from "../../imports/api/mongo/ticket";
+import {Lottery} from "../../imports/api/mongo/lottery";
 
 const Coins = [
     {name: 'wynne', asset: Random.id(32), precision: 8},
@@ -78,6 +80,28 @@ if(false) {
     Lottery_manage.create();
 }
 
-if(true){
+if(false){
     await TronNode.createAddress('userId');
 }
+
+if(true) {
+    const demo = {
+        userId: 'master',
+        name: 'Lottery 5/36',
+        user: {name: 'Master'},
+        id: 11,
+        numbers: [10,58,47,31],
+        status: TicketStatus.WIN,
+        price: 1389981,
+        assetName: 'xxp',
+        lottery: Lottery.findOne(),
+        win: 13884
+    };
+
+    for(let i = 0; i < 10; i++) {
+        const t = new Ticket(demo);
+        t.save();
+    }
+}
+
+

@@ -16,12 +16,15 @@ export const Ticket = Class.create({
     collection: Tickets,
     fields: {
         userId: String,
+        name: {type: String, optional: true},
+        user: {type: Object, optional: true},
         id: Number,
         numbers: [Number],
         status: {type: TicketStatus, default: TicketStatus.WAIT},
         price: Number,
         assetName: String,
-        lottery: Object
+        lottery: Object,
+        win: {type: Number, optional: true}
     },
     behaviors: {
         timestamp: {},
