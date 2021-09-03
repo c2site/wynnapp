@@ -1,0 +1,18 @@
+.branchdevelop:
+  only:
+    refs:
+      - pirs
+
+stages:
+  - BuildAndDeploy
+
+install:
+  extends: .branchdevelop
+  stage: BuildAndDeploy
+  script:
+    - node -v # Check node version
+    - npm -v # Check NPM version
+    - meteor npm install # Installing meteor
+    - cd .deploy
+    #- cp /home/gitlab-runner/xplatform-mup-files/${CI_COMMIT_BRANCH}/mup.js mup.js
+    - mup deploy
