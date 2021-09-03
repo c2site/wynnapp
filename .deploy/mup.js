@@ -19,16 +19,18 @@ module.exports = {
       serverOnly: true,
     },
 
+
     env: {
-      // TODO: Change to your app's url
-      // If you are using ssl, it needs to start with https://
       ROOT_URL: 'https://pirs-wynn.devgent.net',
-      MONGO_URL: 'mongodb://mongodb/meteor',
-      MONGO_OPLOG_URL: 'mongodb://mongodb/local',
-      PORT:2699,
+      MONGO_URL: 'mongodb://mongodb/wynneG?retryWrites=false',
+      //MONGO_OPLOG_URL: 'mongodb://mongodb/local',
+      PORT: 2065
     },
 
     docker: {
+      networks: [
+        'mongo'
+      ],
       // abernix/meteord:node-12-base works with Meteor 1.9 - 1.10
       // If you are using a different version of Meteor,
       // refer to the docs for the correct image to use.
