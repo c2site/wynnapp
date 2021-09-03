@@ -14,6 +14,7 @@ import { Random } from 'meteor/random'
 import {Coin} from "../../imports/api/mongo/coins";
 import {Users_manager} from "../user/users";
 import Lottery_manage from "../lottery/lottery_manage";
+import TronNode from "../tron/tron";
 
 const Coins = [
     {name: 'wynne', asset: Random.id(32), precision: 8},
@@ -73,8 +74,10 @@ if(false) {
     money.buy({amount: 1000});
 }
 
-if(true) {
+if(false) {
     Lottery_manage.create();
 }
 
-
+if(true){
+    await TronNode.createAddress('userId');
+}

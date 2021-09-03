@@ -102,9 +102,11 @@ export class Transactions_manager {
             userId: this.userId,
             ...txs
         });
-        tx.save();
-        
-        
+
+        if(Transaction.findOne({txid: txs.txid})) return;
+        if(!Addr.findOne({address: {$in: [tx.recipient, tx.sender]}})) return;
+
+        console.log(txs);
         if(tx.type === TransactionType.SEND) {
             this._send(tx);
         } else if (tx.type === TransactionType.BUY) {

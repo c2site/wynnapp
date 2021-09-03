@@ -3,7 +3,12 @@ import './money/init';
 
 
 import './api';
+import TronNode from "./tron/tron";
 
-Meteor.startup(() => {
+// tron
 
+
+Meteor.startup(async () => {
+    const tron = new TronNode();
+    await tron.startLoadTxs();
 });
