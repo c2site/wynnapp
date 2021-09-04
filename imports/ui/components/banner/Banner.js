@@ -7,13 +7,6 @@ import {Money} from "../../../api/mongo/money";
 
 import NextDraw from '/imports/ui/components/banner/components/NextDraw'
 const Banner = () => {
-  const assetName = 'usdt'
-  useSubscribe('lottery', []);
-  useSubscribe('money.game', []);
-  const lottery = useTracker(()=>Lottery.findOne({assetName: assetName}), [assetName]);
-  const money = useTracker(()=>Money.findOne({userId: 'game_5', coins: assetName}), [assetName]);
-
-  console.log(lottery, money);
   return (
     <>
       <div className="banner-box container">
