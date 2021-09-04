@@ -1,16 +1,17 @@
 .subscribe-box {
     position: relative;
-    padding-top: 115px;&:after {
-    position: absolute;
-    bottom: 26px;
-    left: -54px;
-    width: 80px;
-    height: 111px;
-    display: block;
-    content: '';
-    background: url("./img/coin-sub-1.svg") no-repeat 50% 50%;
-    background-size: cover;
-}
+    padding-top: 115px;
+    &:after {
+        position: absolute;
+        bottom: 26px;
+        left: -54px;
+        width: 80px;
+        height: 111px;
+        display: block;
+        content: '';
+        background: url("./img/coin-sub-1.svg") no-repeat 50% 50%;
+        background-size: cover;
+    }
     &:before {
         position: absolute;
         top: -70px;
