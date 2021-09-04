@@ -1,20 +1,40 @@
 import React, { useState, useEffect } from 'react';
-
-import Banner from '/imports/ui/components/banner/Banner';
-import LinksList from '/imports/ui/components/linksList/linksList';
-import Steps from '/imports/ui/components/Steps/Steps';
-import Borrow from '/imports/ui/components/borrow/Borrow';
-import Stats from '/imports/ui/components/stats/Stats';
-import Subscribe from '/imports/ui/components/subscribe/Subscribe';
+import { useTracker } from 'meteor/react-meteor-data'
+// import Banner from '/imports/ui/components/banner/Banner';
+// import LinksList from '/imports/ui/components/linksList/linksList';
+// import Steps from '/imports/ui/components/Steps/Steps';
+// import Borrow from '/imports/ui/components/borrow/Borrow';
+// import Stats from '/imports/ui/components/stats/Stats';
+// import Subscribe from '/imports/ui/components/subscribe/Subscribe';
 import NextDraw from "../../components/banner/components/NextDraw";
-import Ticket from "/imports/ui/components/tickets/Ticket";
+import '/imports/ui/style/components/ticket/ticket.scss'
+import {useSubscribe} from "../../../api/hooks";
+import {Ticket} from "../../../api/mongo/ticket";
+import TicketItem from "../../components/tickets/TicketItem";
 
 const BuyPage = () => {
+
+  useSubscribe('lottery.all', []);
+  const list = useTracker(()=> Ticket.find().fetch(), []);
   const [tickets, setTickets] = useState([{ id: 1 }]);
+  const [number, setNumber] = useState([]);
+  const numbers = [];
+
+  for (let i = 1; i < 37; i++) {
+    numbers.push(i);
+  }
 
   const addTickets = () => {
     setTickets((oldTickets) => [...tickets, { id: tickets.length + 1 }]);
   };
+
+
+
+  const Random = () => {
+    const [...checkedBoxes] = document.querySelectorAll("a[data-active=true]");
+
+    console.log(checkedBoxes);
+  }
 
   const buyTicket = (e) => {
     e.preventDefault();
@@ -24,13 +44,17 @@ const BuyPage = () => {
     checkedBoxes.forEach((item) => {
       const index = result.findIndex((x) => x.id === item.name);
       if (index === -1) {
-        result.push({ id: item.name, number: [item.id] });
+        result.push({ id: item.name, number: [Number(item.id)] });
       } else {
-        result[index].number.push(item.id);
+        result[index].number.push(Number(item.id));
       }
     });
 
-    console.log(result);
+    if(!result[0]?.number) alert('error')
+
+    Meteor.call('buy', result[0].number, (err, res)=> {
+      if(err) alert(err.reason);
+    })
   };
     return (
       <div className="buy-page inner-page">
@@ -54,7 +78,64 @@ const BuyPage = () => {
             <div className="col-md-8">
               {tickets.map((x) => (
                 <div key={x.id}>
-                  <Ticket data={x} idTicket={tickets} />
+                  <div className="ticket-block">
+                    <div className="holder-ticket">
+                      <div className="ticket-head" data-toggle="collapse" data-target="#ticket" role="button">
+                        <div className="column">
+                          <div className="info">
+                            <span className="name">buy ticket 3/36</span>
+                          </div>
+                        </div>
+                        <div className="column">
+                          <button className="btn btn-chose">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.0001 2.63605L15.3638 2.77211L15.3637 7" stroke="#CED0D3" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"/>
+                              <line x1="14.4905" y1="3.20083" x2="3.01197" y2="14.6793" stroke="#CED0D3"
+                                    stroke-width="1.5" stroke-linecap="round"/>
+                              <path d="M15.3639 11.0682L15.2278 15.432L10.9999 15.4319" stroke="#CED0D3"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <line x1="14.7992" y1="14.5587" x2="3.32069" y2="3.08014" stroke="#CED0D3"
+                                    stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>random</span>
+                          </button>
+                          <button className="btn btn-default">
+                            <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M2.88647 15.2122L2.37169 4.91667H16.6281L16.1134 15.2122C16.0003 17.4741 14.1334 19.25 11.8687 19.25H7.13117C4.86645 19.25 2.99956 17.4741 2.88647 15.2122Z"
+                                  stroke="#CED0D3" stroke-width="1.5"/>
+                              <path
+                                  d="M6.29175 5H12.7084V4C12.7084 2.75736 11.7011 1.75 10.4584 1.75H8.54175C7.29911 1.75 6.29175 2.75736 6.29175 4V5Z"
+                                  stroke="#CED0D3" stroke-width="1.5"/>
+                              <path d="M0.791748 4.95833H18.2084" stroke="#CED0D3" stroke-width="1.5"
+                                    stroke-linecap="round"/>
+                              <path d="M11.875 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
+                                    stroke-linecap="round"/>
+                              <path d="M7.125 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
+                                    stroke-linecap="round"/>
+                            </svg>
+                            clear
+                          </button>
+                        </div>
+                      </div>
+                      <div className="number-list">
+                        <TicketItem num={numbers} idTicket={x.id}/>
+                      </div>
+                    </div>
+                    <div className="ticket-stats">
+                      <div className="holder">
+            <span className="number-tickets">
+              select number <span> {} / 36 </span>
+            </span>
+                        <span className="price">
+              price <span>13 wynne</span>
+            </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -139,75 +220,30 @@ const BuyPage = () => {
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
             <div className="list-new-tickets">
-              <div className="item">
-                <div className="head">
-                  <span className="name">tony</span>
-                  <span className="info">
-                      game #1055
-                      <span className="separator">/</span>
-                      ID #83728
+              {list?.map(tic=> (
+                  <div key={tic?._id} className="item">
+                    <div className="head">
+                      <span className="name">{tic?.user?.name || 'Anonyms'}</span>
+                      <span className="info">
+                      game #{tic?.lottery.id}
+                        <span className="separator">/</span>
+                      ID #{tic?.id}
                     </span>
-                </div>
-                <div className="body">
-                  <div className="number-list">
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                  </div>
-                  <span className="price">
+                    </div>
+                    <div className="body">
+                      <div className="number-list">
+                        {tic?.numbers.map(x=>(
+                            <span key={x} className="number">{x}</span>
+                        ))}
+                      </div>
+                      <span className="price">
                       price
-                      <span>13 wynne</span>
+                      <span>{tic?.price} {tic?.lottery.assetName}</span>
                     </span>
-                </div>
-              </div>
-              <div className="item">
-                <div className="head">
-                  <span className="name">tony</span>
-                  <span className="info">
-                      game #1055
-                      <span className="separator">/</span>
-                      ID #83728
-                    </span>
-                </div>
-                <div className="body">
-                  <div className="number-list">
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
+                    </div>
                   </div>
-                  <span className="price">
-                      price
-                      <span>13 wynne</span>
-                    </span>
-                </div>
-              </div>
-              <div className="item">
-                <div className="head">
-                  <span className="name">tony</span>
-                  <span className="info">
-                      game #1055
-                      <span className="separator">/</span>
-                      ID #83728
-                    </span>
-                </div>
-                <div className="body">
-                  <div className="number-list">
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                  </div>
-                  <span className="price">
-                      price
-                      <span>13 wynne</span>
-                    </span>
-                </div>
-              </div>
+              ))}
+
             </div>
           </div>
         </div>

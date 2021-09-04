@@ -17,6 +17,7 @@ import Lottery_manage from "../lottery/lottery_manage";
 import TronNode from "../tron/tron";
 import {Ticket, TicketStatus} from "../../imports/api/mongo/ticket";
 import {Lottery} from "../../imports/api/mongo/lottery";
+import {Price} from "../../imports/api/mongo/price";
 
 const Coins = [
     {name: 'wynne', asset: Random.id(32), precision: 8},
@@ -102,6 +103,17 @@ if(false) {
         const t = new Ticket(demo);
         t.save();
     }
+}
+
+if(Price.find().count() === 0) {
+    Coin.find().map(coin=> {
+        const price = new Price({
+            assetName: coin.name,
+            price: 0,
+            prices: {'price3': 1,'price4': 2,'price5': 3}
+        });
+        price.save();
+    })
 }
 
 

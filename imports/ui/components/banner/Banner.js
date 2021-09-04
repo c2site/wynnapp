@@ -1,11 +1,8 @@
 import React from "react";
-import {useSubscribe} from "../../../api/hooks";
-import {Meteor} from "meteor/meteor";
-import { useTracker } from 'meteor/react-meteor-data'
-import {Lottery} from "../../../api/mongo/lottery";
-import {Money} from "../../../api/mongo/money";
 
-import NextDraw from '/imports/ui/components/banner/components/NextDraw'
+
+import NextDraw from '/imports/ui/components/banner/components/NextDraw';
+
 const Banner = () => {
   return (
     <>

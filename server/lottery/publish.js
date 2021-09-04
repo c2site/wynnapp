@@ -7,4 +7,8 @@ Meteor.publish('lottery', function () {
 
 Meteor.publish('lottery.tickets', function () {
     return Ticket.find({status: TicketStatus.WIN},{sort: {createdAt: -1}, limit: 25});
+});
+
+Meteor.publish('lottery.all', function () {
+    return Ticket.find({},{sort: {createdAt: -1}, limit: 25});
 })

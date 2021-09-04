@@ -6,6 +6,7 @@ import './lottery/publish';
 import './lottery/methods';
 
 import './money/publish';
+
 Meteor.startup(() => {
 
 });
