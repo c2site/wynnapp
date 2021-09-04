@@ -6,51 +6,30 @@ import '/imports/ui/style/components/ticket/ticket.scss'
 import {useSubscribe} from "../../../api/hooks";
 import {Ticket} from "../../../api/mongo/ticket";
 import TicketItem from "../../components/tickets/TicketItem";
+import {Notify} from "../../utils";
 
 const BuyPage = () => {
 
   useSubscribe('lottery.all', []);
   const list = useTracker(()=> Ticket.find().fetch(), []);
-  const [tickets, setTickets] = useState([{ id: 1 }]);
-  const [number, setNumber] = useState([]);
+  const [selected, setSelected] = useState([]);
   const numbers = [];
-
-  for (let i = 1; i < 37; i++) {
-    numbers.push(i);
+  for(let i = 1; i <= 36; i++) {
+    numbers.push(i)
+  }
+  const onChangeBox = (value) => {
+    if(selected.length > 11) Notify();
+    const index = selected.indexOf(value);
+    if (index === -1) {
+      selected.push(value);
+    } else {
+      selected.splice(index, 1)
+    }
+    setSelected([...selected]);
   }
 
-  const addTickets = () => {
-    setTickets((oldTickets) => [...tickets, { id: tickets.length + 1 }]);
-  };
 
 
-
-  const Random = () => {
-    const [...checkedBoxes] = document.querySelectorAll("a[data-active=true]");
-
-    console.log(checkedBoxes);
-  }
-
-  const buyTicket = (e) => {
-    e.preventDefault();
-    const [...checkedBoxes] = document.querySelectorAll("a[data-active=true]");
-
-    const result = [];
-    checkedBoxes.forEach((item) => {
-      const index = result.findIndex((x) => x.id === item.name);
-      if (index === -1) {
-        result.push({ id: item.name, number: [Number(item.id)] });
-      } else {
-        result[index].number.push(Number(item.id));
-      }
-    });
-
-    if(!result[0]?.number) alert('error')
-
-    Meteor.call('buy', result[0].number, (err, res)=> {
-      if(err) alert(err.reason);
-    })
-  };
     return (
       <div className="buy-page inner-page">
         <div className="container">
@@ -71,68 +50,76 @@ const BuyPage = () => {
           <NextDraw button={false}/>
           <div className="row">
             <div className="col-md-8">
-              {tickets.map((x) => (
-                <div key={x.id}>
-                  <div className="ticket-block">
-                    <div className="holder-ticket">
-                      <div className="ticket-head" data-toggle="collapse" data-target="#ticket" role="button">
-                        <div className="column">
-                          <div className="info">
-                            <span className="name">buy ticket 3/36</span>
-                          </div>
-                        </div>
-                        <div className="column">
-                          <button className="btn btn-chose">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                              <path d="M11.0001 2.63605L15.3638 2.77211L15.3637 7" stroke="#CED0D3" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"/>
-                              <line x1="14.4905" y1="3.20083" x2="3.01197" y2="14.6793" stroke="#CED0D3"
-                                    stroke-width="1.5" stroke-linecap="round"/>
-                              <path d="M15.3639 11.0682L15.2278 15.432L10.9999 15.4319" stroke="#CED0D3"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              <line x1="14.7992" y1="14.5587" x2="3.32069" y2="3.08014" stroke="#CED0D3"
-                                    stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
-                            <span>random</span>
-                          </button>
-                          <button className="btn btn-default">
-                            <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                  d="M2.88647 15.2122L2.37169 4.91667H16.6281L16.1134 15.2122C16.0003 17.4741 14.1334 19.25 11.8687 19.25H7.13117C4.86645 19.25 2.99956 17.4741 2.88647 15.2122Z"
-                                  stroke="#CED0D3" stroke-width="1.5"/>
-                              <path
-                                  d="M6.29175 5H12.7084V4C12.7084 2.75736 11.7011 1.75 10.4584 1.75H8.54175C7.29911 1.75 6.29175 2.75736 6.29175 4V5Z"
-                                  stroke="#CED0D3" stroke-width="1.5"/>
-                              <path d="M0.791748 4.95833H18.2084" stroke="#CED0D3" stroke-width="1.5"
-                                    stroke-linecap="round"/>
-                              <path d="M11.875 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
-                                    stroke-linecap="round"/>
-                              <path d="M7.125 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
-                                    stroke-linecap="round"/>
-                            </svg>
-                            clear
-                          </button>
+              <div>
+                <div className="ticket-block">
+                  <div className="holder-ticket">
+                    <div className="ticket-head" data-toggle="collapse" data-target="#ticket" role="button">
+                      <div className="column">
+                        <div className="info">
+                          <span className="name">buy ticket 3/36</span>
                         </div>
                       </div>
-                      <div className="number-list">
-                        <TicketItem num={numbers} idTicket={x.id}/>
+                      <div className="column">
+                        <button className="btn btn-chose">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                               xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.0001 2.63605L15.3638 2.77211L15.3637 7" stroke="#CED0D3" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="14.4905" y1="3.20083" x2="3.01197" y2="14.6793" stroke="#CED0D3"
+                                  stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M15.3639 11.0682L15.2278 15.432L10.9999 15.4319" stroke="#CED0D3"
+                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="14.7992" y1="14.5587" x2="3.32069" y2="3.08014" stroke="#CED0D3"
+                                  stroke-width="1.5" stroke-linecap="round"/>
+                          </svg>
+                          <span>random</span>
+                        </button>
+                        <button className="btn btn-default">
+                          <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
+                               xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.88647 15.2122L2.37169 4.91667H16.6281L16.1134 15.2122C16.0003 17.4741 14.1334 19.25 11.8687 19.25H7.13117C4.86645 19.25 2.99956 17.4741 2.88647 15.2122Z"
+                                stroke="#CED0D3" stroke-width="1.5"/>
+                            <path
+                                d="M6.29175 5H12.7084V4C12.7084 2.75736 11.7011 1.75 10.4584 1.75H8.54175C7.29911 1.75 6.29175 2.75736 6.29175 4V5Z"
+                                stroke="#CED0D3" stroke-width="1.5"/>
+                            <path d="M0.791748 4.95833H18.2084" stroke="#CED0D3" stroke-width="1.5"
+                                  stroke-linecap="round"/>
+                            <path d="M11.875 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
+                                  stroke-linecap="round"/>
+                            <path d="M7.125 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
+                                  stroke-linecap="round"/>
+                          </svg>
+                          clear
+                        </button>
                       </div>
                     </div>
-                    <div className="ticket-stats">
-                      <div className="holder">
+                    <div className="number-list">
+                      {numbers.map(x=>(
+                          <div className={"item"}>
+                            <div className="payment-check" key={x}>
+                              <input type="checkbox" onChange={()=>onChangeBox(x)} checked={selected.includes(x)}/>
+                              <label htmlFor="">
+                                {x}
+                              </label>
+                            </div>
+                          </div>
+                      ))}
+
+                    </div>
+                  </div>
+                  <div className="ticket-stats">
+                    <div className="holder">
             <span className="number-tickets">
-              select number <span> {} / 36 </span>
+              select number <span> {selected.length} / 11 </span>
             </span>
-                        <span className="price">
+                      <span className="price">
               price <span>13 wynne</span>
             </span>
-                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
             <div className="col-md-4">
               <div className="ticket-balance">
@@ -146,7 +133,7 @@ const BuyPage = () => {
                     0.0001150 BTC
                   </span>
                   </div>
-                  <a href="#" className="btn btn-black" onClick={buyTicket}>
+                  <a href="#" className="btn btn-black">
                     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0)">
                         <path d="M1.5 9.17071H0.5V9.87788L1.16675 10.1135L1.5 9.17071ZM1.5 14.8293L1.16675 13.8865L0.5 14.1221V14.8293H1.5ZM23.5 14.8293H24.5V14.1221L23.8332 13.8865L23.5 14.8293ZM23.5 9.17071L23.8332 10.1135L24.5 9.87788V9.17071H23.5ZM2.5 6C2.5 5.44772 2.94772 5 3.5 5V3C1.84315 3 0.5 4.34315 0.5 6H2.5ZM2.5 9.17071V6H0.5V9.17071H2.5ZM4.5 12C4.5 10.2568 3.38549 8.7765 1.83325 8.22787L1.16675 10.1135C1.9449 10.3886 2.5 11.1307 2.5 12H4.5ZM1.83325 15.7721C3.38549 15.2235 4.5 13.7432 4.5 12H2.5C2.5 12.8693 1.9449 13.6114 1.16675 13.8865L1.83325 15.7721ZM2.5 18V14.8293H0.5V18H2.5ZM3.5 19C2.94772 19 2.5 18.5523 2.5 18H0.5C0.5 19.6569 1.84314 21 3.5 21V19ZM21.5 19H3.5V21H21.5V19ZM22.5 18C22.5 18.5523 22.0523 19 21.5 19V21C23.1569 21 24.5 19.6569 24.5 18H22.5ZM22.5 14.8293V18H24.5V14.8293H22.5ZM20.5 12C20.5 13.7432 21.6145 15.2235 23.1668 15.7721L23.8332 13.8865C23.0551 13.6114 22.5 12.8693 22.5 12H20.5ZM23.1668 8.22787C21.6145 8.7765 20.5 10.2568 20.5 12H22.5C22.5 11.1308 23.0551 10.3886 23.8332 10.1135L23.1668 8.22787ZM22.5 6V9.17071H24.5V6H22.5ZM21.5 5C22.0523 5 22.5 5.44771 22.5 6H24.5C24.5 4.34315 23.1569 3 21.5 3V5ZM3.5 5H21.5V3H3.5V5Z" fill="white"/>
