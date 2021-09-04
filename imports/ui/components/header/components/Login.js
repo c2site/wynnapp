@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-
-import '/imports/ui/style/utils/popup/popup.scss';
-
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const Login = (props) => {
@@ -18,7 +15,7 @@ const Login = (props) => {
   };
 
   return (
-    <>
+    <div>
       <Button className="btn btn-default" onClick={toggle}>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -29,7 +26,7 @@ const Login = (props) => {
       <Modal isOpen={modal} toggle={toggle} className={'modal-orange modal-app'}>
         <ModalHeader toggle={toggle}>Login</ModalHeader>
         <ModalBody>
-          <Form className="form" onSubmit={onSubmit}>
+          <Form className="form" onSubmit={()=>onSubmit}>
             <div className="input-box">
               <Label for="">Email</Label>
               <Input type="email"  />
@@ -41,7 +38,7 @@ const Login = (props) => {
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button className="btn btn-primary" onClick={onSubmit} type={'submit'}>
+          <Button className="btn btn-primary" onClick={()=>onSubmit} type={'submit'}>
             Вход
           </Button>
 
@@ -50,7 +47,7 @@ const Login = (props) => {
           </Button>
         </ModalFooter>
       </Modal>
-    </>
+    </div>
   );
 }
 

@@ -32,8 +32,8 @@ const Borrow = () => {
             <table>
               <tbody>
               {list?.map(ticket=>(
-                  <tr>
-                    <td>{ticket.user.name}</td>
+                  <tr key={ticket._id}>
+                    <td>{ticket?.user?.name || 'Anonyms'}</td>
                     <td>{ticket.id}</td>
                     <td className='red'>{ticket.price} {ticket.lottery.assetName}</td>
                     <td className='game1'>{ticket.name}</td>

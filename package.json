@@ -19,8 +19,8 @@
     "react-dom": "^17.0.2",
     "react-mounter": "^1.2.0",
     "react-router-dom": "^5.2.1",
-    "reactstrap": "^8.10.0",
     "react-toastify": "^8.0.2",
+    "reactstrap": "^8.10.0",
     "sass-loader": "^12.1.0",
     "trongrid": "^1.2.6",
     "tronweb": "^4.0.0"

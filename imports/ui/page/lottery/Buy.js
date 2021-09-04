@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTracker } from 'meteor/react-meteor-data'
 
 import NextDraw from "../../components/banner/components/NextDraw";
-import '/imports/ui/style/components/ticket/ticket.scss'
+//import '/imports/ui/style/components/ticket/ticket.scss'
 import {useSubscribe} from "../../../api/hooks";
 import {Ticket} from "../../../api/mongo/ticket";
 import TicketItem from "../../components/tickets/TicketItem";
@@ -60,7 +60,7 @@ const BuyPage = () => {
                         </div>
                       </div>
                       <div className="column">
-                        <button className="btn btn-chose">
+                        <button className="btn btn-chose" disabled={true}>
                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.0001 2.63605L15.3638 2.77211L15.3637 7" stroke="#CED0D3" stroke-width="1.5"
@@ -74,7 +74,7 @@ const BuyPage = () => {
                           </svg>
                           <span>random</span>
                         </button>
-                        <button className="btn btn-default">
+                        <button className="btn btn-default" disabled={true}>
                           <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
                                xmlns="http://www.w3.org/2000/svg">
                             <path

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTracker } from 'meteor/react-meteor-data'
-import '/imports/ui/style/components/banner/nextDraw.scss'
+//import '/imports/ui/style/components/banner/nextDraw.scss'
 import {useSubscribe} from "../../../../api/hooks";
 import {Lottery} from "../../../../api/mongo/lottery";
 import {Money} from "../../../../api/mongo/money";
