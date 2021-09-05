@@ -1,0 +1,180 @@
+.history-page {
+
+    .table {
+        &.history-table {
+            padding:50px 40px;
+            .table-head {
+                padding: 0 40px;
+                margin: 0 -40px;
+                thead {
+                    tr {
+                        th {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            &:nth-child(1) {
+                                width: 8%;
+                            }
+                            &:nth-child(2) {
+                                width: 8%;
+                            }
+                            &:nth-child(3) {
+                                width: 20%;
+                            }
+                            &:nth-child(4) {
+                                width: 10%;
+                            }
+                            &:nth-child(5) {
+                                width: 41%;
+                            }
+                        }
+                    }
+                }
+            }
+            table {
+                tr {
+                    td {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &:nth-child(1) {
+                            width: 8%;
+                        }
+                        &:nth-child(2) {
+                            width: 8%;
+                        }
+                        &:nth-child(3) {
+                            width: 20%;
+                        }
+                        &:nth-child(4) {
+                            width: 10%;
+                        }
+                        &:nth-child(5) {
+                            width: 41%;
+                        }
+                        .btn {
+                            margin-left: auto;
+                            padding: 13px 30px 12px 25px;
+                            font-weight: bold;
+                            font-size: 12px;
+                            line-height: 15px;
+                            text-align: center;
+                            letter-spacing: 0.05em;
+                            text-transform: uppercase;
+                            color: #1E2632;
+                        }
+                        .numbers {
+                            display: flex;
+                            align-items: center;
+                            .number {
+                                background: #EB3B3B;
+                                border: 1px solid #EB3B3B;
+                                box-sizing: border-box;
+                                border-radius: 50px;
+                                width: 35px;
+                                height: 35px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-weight: bold;
+                                font-size: 13px;
+                                line-height: 16px;
+                                text-align: center;
+                                letter-spacing: 0.05em;
+                                text-transform: uppercase;
+                                color: #FFFFFF;
+                                margin-left: 20px;
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.history-hash {
+                .table-head {
+                    thead {
+                        tr {
+                            th {
+                                &:nth-child(1) {
+                                    width: 10%;
+                                }
+                                &:nth-child(2) {
+                                    width: 10%;
+                                }
+                                &:nth-child(3) {
+                                    width: 22%;
+                                }
+                                &:nth-child(4) {
+                                    width: 12%;
+                                }
+                                &:nth-child(5) {
+                                    width: 43%;
+                                }
+                            }
+                        }
+                    }
+                }
+                table {
+                    tr {
+                        border: none;
+                        td {
+                            border: none;
+                            &:nth-child(1) {
+                                width: 10%;
+                            }
+                            &:nth-child(2) {
+                                width: 10%;
+                            }
+                            &:nth-child(3) {
+                                width: 22%;
+                            }
+                            &:nth-child(4) {
+                                width: 12%;
+                            }
+                            &:nth-child(5) {
+                                width: 43%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .form-hash {
+        max-width: 560px;
+        margin-bottom: 30px;
+        label {
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.75);
+            display: block;
+            margin-bottom: 16px;
+        }
+        input {
+            width: calc(100% - 60px);
+        }
+        .btn {
+            padding: 0;
+            width: 50px;
+            height: 50%;
+            border-radius: 5px;
+            margin-left: 10px;
+            svg {
+                margin-left: 0;
+            }
+        }
+    }
+    .hash-btn {
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+        .btn {
+            margin-left: 15px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

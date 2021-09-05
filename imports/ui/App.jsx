@@ -15,6 +15,7 @@ import "./style/utils/icons-style/icons-style.scss";
 import "./style/utils/button/button.scss";
 import "./style/utils/popup/popup.scss";
 import "./style/utils/table/table.scss";
+import "./style/utils/form/form.scss";
 import "./style/components/footer/footer.scss";
 import "./style/components/header/header.scss";
 import "./style/page/innerPage.scss";
@@ -28,6 +29,7 @@ import "./style/components/stats/stats.scss";
 import "./style/components/subscribe/subscribe.scss";
 import './style/components/ticket/ticket.scss'
 import "./style/page/profile.scss";
+import "./style/page/history.scss";
 
 export const App = ({Page}) => (
   <>
