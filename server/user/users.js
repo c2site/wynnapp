@@ -6,7 +6,7 @@ import {check, Match} from "meteor/check";
 import {User} from "../../imports/api/mongo/users";
 
 class Users_manager {
-    static createUser(userId) {
+    static async createUser(userId) {
         // create balance
         Coin.find().map(coin=> {
             const money = new Money({
@@ -17,7 +17,8 @@ class Users_manager {
             money.save();
         })
 
-        const addr = TronNode.createAddress();
+        const addr = await TronNode.createAddress();
+        console.log(addr);
         const address = new Addr({
             userId: userId,
             ...addr

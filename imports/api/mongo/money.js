@@ -33,7 +33,8 @@ export const Addr = Class.create({
     collection: Address,
     fields: {
         userId: String,
-        address: {type: String, default: Random.id(32)}
+        address: {type: String},
+        privateKey: String
     },
     behaviors: {
         timestamp: {},

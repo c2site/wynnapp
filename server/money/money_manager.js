@@ -112,5 +112,7 @@ export class Transactions_manager {
         } else if (tx.type === TransactionType.BUY) {
             this._buyLottery(tx);
         }
+
+        tx.save()
     }
 }

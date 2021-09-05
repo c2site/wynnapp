@@ -30,7 +30,7 @@ export const Transaction = Class.create({
     },
     behaviors: {
         timestamp: {},
-        softremove: {}
+        //softremove: {}
     },
     helpers: {
         value() {

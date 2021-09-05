@@ -4,15 +4,28 @@ import SendModal from '/imports/ui/components/modal/sendModal';
 import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Addr, Money} from "../../../api/mongo/money";
+import {Transaction} from "../../../api/mongo/transactions";
+import {Coin} from "../../../api/mongo/coins";
+import Moment from "react-moment";
 const Profile = () => {
   const progress = {
       width: '33%',
   };
-
+    useSubscribe('coin');
     useSubscribe('user.money');
     useSubscribe('user.addr');
+    useSubscribe('user.transactions');
     const money = useTracker(()=> Money.find().fetch(), []);
     const addr = useTracker(()=>Addr.findOne(), []);
+    const txs = useTracker(()=>Transaction.find().fetch(), [])
+    const coin = (asset)=>{
+        return Coin.findOne({asset: asset})?.name;
+    }
+
+    const type = (sender) => {
+      if(addr.address === sender) return 'red';
+      return 'green'
+    }
     return (
           <div className="row">
             <div className="col-md-4">
@@ -89,7 +102,7 @@ const Profile = () => {
                     <tr>
                       <th>time</th>
                       <th>amount</th>
-                      <th>profit</th>
+                      <th>coin</th>
                       <th colSpan="3">txid</th>
                     </tr>
                     </thead>
@@ -97,18 +110,14 @@ const Profile = () => {
                 </div>
                 <table>
                   <tbody>
-                    <tr>
-                      <td className='green'>23/05/2021 12:31:33</td>
-                      <td className='green'>1450</td>
-                      <td className='green'>WYNNE</td>
-                      <td className='green' colSpan="3">1aa2793c984e484a12f249fbc331ece54b33f50020d40075bbbdecc2422edfab</td>
-                    </tr>
-                    <tr>
-                      <td className='red'>23/05/2021 12:31:33</td>
-                      <td className='red'>1450</td>
-                      <td className='red'>WYNNE</td>
-                      <td className='red' colSpan="3">1aa2793c984e484a12f249fbc331ece54b33f50020d40075bbbdecc2422edfab</td>
-                    </tr>
+                  {txs?.map(tx=>(
+                      <tr key={tx._id}>
+                        <td className={type(tx.sender)}><Moment format={"HH:mm:ss DD/MM/YYYY"}>{tx.createdAt}</Moment></td>
+                        <td className={type(tx.sender)}>{tx.value()}</td>
+                        <td className={type(tx.sender)}>{coin(tx.asset)}</td>
+                        <td className={type(tx.sender)} colSpan="3"><a href={`https://tronscan.io/#/transaction/${tx.txid}`} target={'_blank'}>{tx.txid}</a></td>
+                      </tr>
+                  ))}
                   </tbody>
                 </table>
               </div>

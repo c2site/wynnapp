@@ -7,6 +7,8 @@ import './lottery/methods';
 
 import './money/publish';
 
+import './cron';
+
 Meteor.startup(() => {
 
 });

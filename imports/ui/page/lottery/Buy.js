@@ -23,11 +23,18 @@ const BuyPage = () => {
   for(let i = 1; i <= 36; i++) {
     numbers.push(i)
   }
+
+  const checkVal = () => {
+    if(selected.length +1 > 9) {
+      Notify()
+      return false;
+    } else return true;
+  }
   const onChangeBox = (value) => {
-    if(selected.length > 11) Notify();
+
     const index = selected.indexOf(value);
     if (index === -1) {
-      selected.push(value);
+      if(checkVal()) selected.push(value);
     } else {
       selected.splice(index, 1)
     }
@@ -116,7 +123,7 @@ const BuyPage = () => {
                   <div className="ticket-stats">
                     <div className="holder">
             <span className="number-tickets">
-              select number <span> {selected.length} / 11 </span>
+              select number <span> {selected.length} / 9 </span>
             </span>
                       <span className="price">
               price <span>13 {coinName}</span>

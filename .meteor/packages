@@ -31,3 +31,5 @@ accounts-base
 accounts-password
 fourseven:scss
 check
+littledata:synced-cron
+http

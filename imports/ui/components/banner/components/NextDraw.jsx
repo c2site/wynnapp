@@ -6,7 +6,7 @@ import {Lottery} from "../../../../api/mongo/lottery";
 import {Money} from "../../../../api/mongo/money";
 import Countdown from 'react-countdown';
 
-const NextDraw = ({button, coins})=> {
+const NextDraw = ({button, coins = 'wynne'})=> {
 
   const assetName = coins;
   useSubscribe ('lottery', []);
