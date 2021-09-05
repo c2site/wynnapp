@@ -72,32 +72,43 @@
             padding: 20px 0;
             width: calc(100% / 9);
 
-            .number {
-                font-family: "Rubik", sans-serif;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 57px;
-                height: 57px;
-                background: transparent;
-                border: 1px solid #EB3B3B;
-                box-sizing: border-box;
-                border-radius: 50px;
-                font-weight: bold;
-                font-size: 15px;
-                line-height: 18px;
-                text-align: center;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                outline: none;
-                padding: 0;
-                margin: 0;
-                transition: all linear 0.3s;
-                overflow: hidden;
-                cursor: pointer;
-                &:hover,
-                &.active {
+            .payment-check {
+                position: relative;
+                input {
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    opacity: 0;
+                }
+                label {
+                    font-family: "Rubik", sans-serif;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 57px;
+                    height: 57px;
+                    background: transparent;
+                    border: 1px solid #EB3B3B;
+                    box-sizing: border-box;
+                    border-radius: 50px;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    outline: none;
+                    padding: 0;
+                    margin: 0;
+                    transition: all linear 0.3s;
+                    overflow: hidden;
+                    cursor: pointer;
+                    &:hover {
+                        background: #EB3B3B;
+                    }
+                }
+                input:checked + label {
                     background: #EB3B3B;
                 }
             }

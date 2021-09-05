@@ -98,8 +98,8 @@ const BuyPage = () => {
                       {numbers.map(x=>(
                           <div className={"item"}>
                             <div className="payment-check" key={x}>
-                              <input type="checkbox" onChange={()=>onChangeBox(x)} checked={selected.includes(x)}/>
-                              <label htmlFor="">
+                              <input type="checkbox" id={x} onChange={()=>onChangeBox(x)} checked={selected.includes(x)}/>
+                              <label htmlFor={x}>
                                 {x}
                               </label>
                             </div>
