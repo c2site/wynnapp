@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SendModal from '/imports/ui/components/modal/sendModal';
 
 const Profile = () => {
   const progress = {
@@ -96,12 +97,7 @@ const Profile = () => {
                       </svg>
                     </span>
                   </div>
-                  <button type="submit" className="btn btn-black">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14.2827 5L20.9998 12L14.2827 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="19.7329" y1="12.0317" x2="3.99985" y2="12.0317" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                  </button>
+                  <SendModal/>
                 </form>
                 <p>Чтобы пополнить кошелек, скопируйте адрес и вставьте в соответствующую строку в обменнике или кошельке другой системы.</p>
                   <p>На кошелек Wynne можно перевести криптовалюту только на базе блокчейна TRON. Токены с вашим балансом, которые можно здесь хранить, указаны ниже.

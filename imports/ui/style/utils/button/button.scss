@@ -50,8 +50,39 @@
     }
   }
 
+
+  &-close-default {
+    background: transparent;
+    border: 2px solid rgba(62, 69, 80, 0.5);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1E2632;
+
+    &:hover,
+    &:focus {
+      color: #212129;
+      background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+      border: 2px solid transparent;
+      svg {
+        path {
+          //fill: #212129;
+          stroke:#212129;
+        }
+        circle {
+          fill: #212129;
+          stroke:#212129;
+        }
+      }
+    }
+  }
+
+  &-active,
   &-chose {
-    background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+    background: transparent;
+    border: 2px solid rgba(255, 229, 139, 1);
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
@@ -61,16 +92,6 @@
     color: rgba(255, 255, 255, 0.75);
     position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      z-index: 1;
-      background: #3E4550;
-      display: block;
-      border-radius: 50px;
-      transition: all linear 0.2s;
-    }
     svg,
     span {
       position: relative;
@@ -78,6 +99,7 @@
     }
     &:hover,
     &:focus {
+      border: 2px solid transparent;
       color: #212129;
       background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
       svg {
@@ -88,9 +110,6 @@
           stroke:#212129;
         }
 
-      }
-      &:after {
-        opacity: 0;
       }
     }
   }

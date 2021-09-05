@@ -13,7 +13,7 @@ const Navigation = () => {
             >Lottery</a></li>
             <li><a href="#">Dice</a></li>
             <li><a href="#">Option</a></li>
-            <li><a href="#">Contact</a></li>*
+            <li><a href="#">Contact</a></li>
           </ul>
     </>
   );
