@@ -16,6 +16,9 @@ const BuyPage = () => {
   const money = useTracker(()=>Money.find({userId: Meteor.userId()}).fetch(), []);
   const list = useTracker(()=> Ticket.find().fetch(), []);
   const [selected, setSelected] = useState([]);
+  const [coinName, setCoinName] = useState('xxp');
+
+  const pool = useTracker(()=>Money.find({coins: coinName ,type: 'game', userId: {$in: ['game_4', 'game_3']}}),[coinName]);
   const numbers = [];
   for(let i = 1; i <= 36; i++) {
     numbers.push(i)
@@ -50,7 +53,7 @@ const BuyPage = () => {
             </div>
             <h2 className="title-page">buy</h2>
           </div>
-          <NextDraw button={false}/>
+          <NextDraw button={false} coins={coinName}/>
           <div className="row">
             <div className="col-md-8">
               <div>
@@ -108,7 +111,6 @@ const BuyPage = () => {
                             </div>
                           </div>
                       ))}
-
                     </div>
                   </div>
                   <div className="ticket-stats">
@@ -117,7 +119,7 @@ const BuyPage = () => {
               select number <span> {selected.length} / 11 </span>
             </span>
                       <span className="price">
-              price <span>13 wynne</span>
+              price <span>13 {coinName}</span>
             </span>
                     </div>
                   </div>
@@ -174,20 +176,17 @@ const BuyPage = () => {
         <div className="prize-box">
           <h2>prize pool</h2>
           <div className="prize-list">
-            <div className="item">
-              <div className="ico">
-                <img src="./img/ico-prize-01.svg" alt="" />
-              </div>
-              <span className="number">345943 WYNNE</span>
-              <span className="info">4 matches</span>
-            </div>
-            <div className="item">
-              <div className="ico">
-                <img src="./img/ico-prize-02.svg" alt="" />
-              </div>
-              <span className="number">2193 WYNNE</span>
-              <span className="info">3 matches</span>
-            </div>
+            {pool?.map(money=>(
+                <div className={'col'}>
+                  <div className="item">
+                    <div className="ico">
+                      <img src="./img/ico-prize-01.svg" alt="" />
+                    </div>
+                    <span className="number">{money.value()} {money.coins}</span>
+                    <span className="info">{(money.userId).replace(/^.{5}/, '')} matches</span>
+                  </div>
+                </div>
+            ))}
           </div>
         </div>
         <div className="distribution-box">
