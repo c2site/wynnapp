@@ -7,10 +7,13 @@ import {useSubscribe} from "../../../api/hooks";
 import {Ticket} from "../../../api/mongo/ticket";
 import TicketItem from "../../components/tickets/TicketItem";
 import {Notify} from "../../utils";
+import {Money} from "../../../api/mongo/money";
 
 const BuyPage = () => {
 
   useSubscribe('lottery.all', []);
+  useSubscribe('user.money');
+  const money = useTracker(()=>Money.find({userId: Meteor.userId()}).fetch(), []);
   const list = useTracker(()=> Ticket.find().fetch(), []);
   const [selected, setSelected] = useState([]);
   const numbers = [];
@@ -126,12 +129,12 @@ const BuyPage = () => {
                 <div className="contain-balance">
                   <h3>balance</h3>
                   <div className="balance-info">
-                  <span className="item">
-                    14000 wynne
-                  </span>
-                    <span className="item">
-                    0.0001150 BTC
-                  </span>
+                    {money?.map(wallet=>(
+                        <span className="item">
+                          {wallet.value()} {wallet.coins}
+                        </span>
+                    ))}
+
                   </div>
                   <a href="#" className="btn btn-black">
                     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -3,16 +3,16 @@ import React from 'react';
 import SendModal from '/imports/ui/components/modal/sendModal';
 import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
-import {Money} from "../../../api/mongo/money";
+import {Addr, Money} from "../../../api/mongo/money";
 const Profile = () => {
   const progress = {
       width: '33%',
   };
 
     useSubscribe('user.money');
+    useSubscribe('user.addr');
     const money = useTracker(()=> Money.find().fetch(), []);
-
-
+    const addr = useTracker(()=>Addr.findOne(), []);
     return (
           <div className="row">
             <div className="col-md-4">
@@ -56,7 +56,7 @@ const Profile = () => {
                 <h2>wallet adress</h2>
                 <form action="#" className="form-copy">
                   <div className="input-box">
-                    <input type="text" disabled value="m8P44DBSWZij59NyriHQuRaBqcB2YL9a" name="" id="" />
+                    <input type="text" disabled value={addr?.address} name="" id="" />
                     <span className="copy">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M13 4.5C13 5.05228 13.4477 5.5 14 5.5C14.5523 5.5 15 5.05228 15 4.5H13ZM5.42857 16C5.98086 16 6.42857 15.5523 6.42857 15C6.42857 14.4477 5.98086 14 5.42857 14V16ZM5 2H11V0H5V2ZM3 12V4H1V12H3ZM13 4V4.5H15V4H13ZM5.42857 14H5V16H5.42857V14ZM1 12C1 14.2091 2.79086 16 5 16V14C3.89543 14 3 13.1046 3 12H1ZM11 2C12.1046 2 13 2.89543 13 4H15C15 1.79086 13.2091 0 11 0V2ZM5 0C2.79086 0 1 1.79086 1 4H3C3 2.89543 3.89543 2 5 2V0Z" fill="#CED0D3"/>
