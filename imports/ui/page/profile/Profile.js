@@ -1,11 +1,18 @@
 import React from 'react';
 
 import SendModal from '/imports/ui/components/modal/sendModal';
-
+import {useSubscribe} from "../../../api/hooks";
+import { useTracker } from 'meteor/react-meteor-data'
+import {Money} from "../../../api/mongo/money";
 const Profile = () => {
   const progress = {
       width: '33%',
   };
+
+    useSubscribe('user.money');
+    const money = useTracker(()=> Money.find().fetch(), []);
+
+
     return (
           <div className="row">
             <div className="col-md-4">
@@ -65,30 +72,15 @@ const Profile = () => {
                 <p>*Минимальный остаток на вашем кошельке не может быть ниже 5TRC (или в любой другой валюте, равной этой сумме).</p>
               </div>
               <div className="wallets-list row">
-                <div className="col-md-4">
-                  <div className="item">
-                    <span className="name">wynne</span>
-                    <span className="info">13984771.38745517</span>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="item">
-                    <span className="name">usdt</span>
-                    <span className="info">13984771.38745517</span>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="item">
-                    <span className="name">trc</span>
-                    <span className="info">13984771.38745517</span>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="item">
-                    <span className="name">xxp</span>
-                    <span className="info">13984771.38745517</span>
-                  </div>
-                </div>
+                {money?.map(wallet=>(
+                    <div className="col" key={wallet._id}>
+                      <div className="item">
+                        <span className="name">{wallet.coins}</span>
+                        <span className="info">{wallet.value()}</span>
+                      </div>
+                    </div>
+                ))}
+
               </div>
               <div className="table profile-table">
                 <div className="table-head">
