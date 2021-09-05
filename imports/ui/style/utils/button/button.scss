@@ -32,19 +32,20 @@
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.75);
 
+    &.active,
     &:hover,
     &:focus {
-      color: #212129;
-      background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
-      border: 2px solid transparent;
+      color: rgba(255, 255, 255, 0.75);
+      background: transparent;
+      border: 2px solid rgba(255, 229, 139, 1);
       svg {
         path {
           //fill: #212129;
-          stroke:#212129;
+          stroke:rgba(255, 255, 255, 0.75);
         }
         circle {
-          fill: #212129;
-          stroke:#212129;
+          fill: rgba(255, 255, 255, 0.75);
+          stroke:rgba(255, 255, 255, 0.75);
         }
       }
     }

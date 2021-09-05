@@ -513,109 +513,240 @@
         text-align: center;
         margin-bottom: 125px;
     }
-    .list-new-tickets {
-        .item {
-            background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
-            border-radius: 15px;
-            padding: 0 50px 40px;
-            margin-top: 30px;
-            &:first-child {
-                margin-top: 0;
+}
+.list-new-tickets {
+    .item {
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        border-radius: 15px;
+        padding: 0 50px 40px;
+        margin-top: 30px;
+        &:first-child {
+            margin-top: 0;
+        }
+        .head {
+            padding: 23px 0 27px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            .name {
+                display: block;
+                font-family: 'Intro', sans-serif;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 20px;
+                text-transform: uppercase;
+                color: #FFFFFF;
             }
-            .head {
-                padding: 23px 0 27px;
-                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-                margin-bottom: 30px;
+            .info {
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                box-sizing: border-box;
+                border-radius: 50px;
+                padding: 13px 30px 12px;
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-                .name {
-                    display: block;
-                    font-family: 'Intro', sans-serif;
-                    font-weight: bold;
-                    font-size: 20px;
-                    line-height: 20px;
-                    text-transform: uppercase;
-                    color: #FFFFFF;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.75);
+                .separator {
+                    margin: 0 15px;
+                    color: rgba(255, 255, 255, 0.1);
                 }
-                .info {
-                    border: 2px solid rgba(255, 255, 255, 0.1);
+            }
+            .win {
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-left: 40px;
+                display: flex;
+                align-items: center;
+                span {
+                    background: #1E2632;
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #28D83A;
+                    display: block;
+                }
+            }
+            .status {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 6px 16px 6px 11px;
+                margin-left: auto;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                text-align: right;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: rgba(255,255,255,0.75);
+                border: 2px solid #6C7788;
+                svg {
+                    margin-right: 6px;
+                    display: block;
+                }
+                &.wait {
+                    border: 2px solid #6C7788;
+                }
+                &.win {
+                    border: 2px solid #28D83A;
+                }
+                &.lose {
+                    border: 2px solid #EB3B3B;
+                }
+            }
+        }
+        .body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            .number-list {
+                display: flex;
+                .number {
+                    font-family: "Rubik", sans-serif;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 57px;
+                    height: 57px;
+                    background: transparent;
+                    border: 1px solid #EB3B3B;
                     box-sizing: border-box;
                     border-radius: 50px;
-                    padding: 13px 30px 12px;
-                    display: flex;
                     font-weight: bold;
-                    font-size: 12px;
-                    line-height: 15px;
+                    font-size: 15px;
+                    line-height: 18px;
                     text-align: center;
                     letter-spacing: 0.05em;
                     text-transform: uppercase;
-                    color: rgba(255, 255, 255, 0.75);
-                    .separator {
-                        margin: 0 15px;
-                        color: rgba(255, 255, 255, 0.1);
+                    color: #FFFFFF;
+                    outline: none;
+                    padding: 0;
+                    margin: 0 50px 0 0;
+                    transition: all linear 0.3s;
+                    overflow: hidden;
+                    &:last-child {
+                        margin: 0;
                     }
                 }
             }
-            .body {
+            .price {
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #fff;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                flex-wrap: wrap;
+                span {
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    background: #EB3B3B;
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    &.my-tickets {
+        .item {
+            padding: 0 30px 30px;
+            .head {
+                padding: 30px 0 20px;
+                border-bottom: none;
+                margin-bottom: 20px;
+                justify-content: flex-start;
+            }
+            .body {
                 .number-list {
-                    display: flex;
                     .number {
-                        font-family: "Rubik", sans-serif;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 57px;
-                        height: 57px;
-                        background: transparent;
-                        border: 1px solid #EB3B3B;
-                        box-sizing: border-box;
-                        border-radius: 50px;
-                        font-weight: bold;
-                        font-size: 15px;
-                        line-height: 18px;
-                        text-align: center;
-                        letter-spacing: 0.05em;
-                        text-transform: uppercase;
-                        color: #FFFFFF;
-                        outline: none;
-                        padding: 0;
-                        margin: 0 50px 0 0;
-                        transition: all linear 0.3s;
-                        overflow: hidden;
-                        &:last-child {
-                            margin: 0;
-                        }
+                        margin-right: 30px;
                     }
                 }
                 .price {
-                    font-weight: bold;
-                    font-size: 13px;
-                    line-height: 16px;
-                    text-align: center;
-                    letter-spacing: 0.05em;
-                    text-transform: uppercase;
-                    color: #fff;
-                    display: flex;
-                    align-items: center;
                     span {
-                        font-weight: bold;
-                        font-size: 15px;
-                        line-height: 18px;
-                        letter-spacing: 0.05em;
-                        text-transform: uppercase;
-                        color: #FFFFFF;
-                        background: #EB3B3B;
-                        border-radius: 20px;
-                        padding: 5px 10px;
-                        margin-left: 10px;
+                        background: #1E2632;
                     }
                 }
+            }
+        }
+    }
+}
+.info-tickets {
+    padding-top: 30px;
+    font-size: 14px;
+    line-height: 27px;
+    color: rgba(255,255,255,0.75);
+    padding-left: 15px;
+    h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 33px;
+        color: #FFFFFF;
+        margin: 0;
+    }
+    .info-list {
+        .info-item {
+            padding: 30px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            &:first-child {
+                border-top: none;
+            }
+            .ico {
+                margin-bottom: 14px;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                svg {
+                    display: block;
+                }
+                &.wait {
+                    border: 2px solid #6C7788;
+                }
+                &.win {
+                    border: 2px solid #28D83A;
+                }
+                &.lose {
+                    border: 2px solid #EB3B3B;
+                }
+            }
+            .name {
+                display: block;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+            p {
+                margin: 0;
             }
         }
     }
