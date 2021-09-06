@@ -32,7 +32,7 @@ const Profile = () => {
     }
 
     const type = (sender) => {
-      if(addr.address === sender) return 'red';
+      if(addr?.address === sender) return 'red';
       return 'green'
     }
     return (
