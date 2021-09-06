@@ -7,6 +7,7 @@ import ChangeName from '/imports/ui/components/modal/changeName';
 import TwoFa from '/imports/ui/components/modal/TwoFA';
 import SendWallet from '/imports/ui/components/modal/sendWallet';
 import RatingModal from '/imports/ui/components/modal/RatingModal';
+import СommissionModal from '/imports/ui/components/modal/СommissionModal';
 import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Addr, Money} from "../../../api/mongo/money";
@@ -68,7 +69,10 @@ const Profile = () => {
                   </div>
                   <div className="item">
                     <span className="name">fee</span>
-                    <span className="info">{user?.rating?.fee * 100 || 0}%</span>
+                    <span className="info">
+                      {user?.rating?.fee * 100 || 0}%
+                      <СommissionModal/>
+                    </span>
                   </div>
                   <div className="item progress-item">
                     <span className="name">next level</span>

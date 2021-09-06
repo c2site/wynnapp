@@ -183,7 +183,7 @@ const BuyPage = () => {
                     <div className="form-control item">
                       <select name="" id="">
                         {money?.map(wallet=>(
-                        <option value="12">{wallet.value()} {wallet.coins}</option>
+                        <option value="">{wallet.value()} {wallet.coins}</option>
                         ))}
                       </select>
                     </div>
