@@ -10,6 +10,7 @@ export const Price = Class.create({
     fields: {
         assetName: String,
         price: Number,
-        prices: Object // [{3: 13994},{4: 13994},{5: 13994}]
+        prices: Object, // [{3: 13994},{4: 13994},{5: 13994}]
+        cgName: String
     }
 })

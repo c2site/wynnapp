@@ -15,12 +15,15 @@ const tronWeb = new TronWeb({
 const tronGrid = new TronGrid(tronWeb);
 
 class TronNode {
-    constructor() {
+    constructor(userId, asset) {
         this.node = tronWeb;
         this.grid = tronGrid;
         this.event = (method, params) => {
             return HTTP.get(`http://5.45.78.116:3089/${method}`, params).data.data;
         }
+
+        this.address = Addr.findOne({userId: userId});
+        this.asset = Coin.findOne({name: asset});
     }
 
     async _getBlock() {
@@ -48,6 +51,14 @@ class TronNode {
             privateKey: tron.privateKey,
             address: tron.address.base58
         }
+    }
+
+    _send({amount, address}) {
+
+    }
+
+    async send(amount, address) {
+
     }
 
 

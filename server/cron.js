@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { SyncedCron } from 'meteor/littledata:synced-cron';
 
 import './tron/cron';
+import './price/price';
 
 Meteor.startup(() => {
     SyncedCron.config({

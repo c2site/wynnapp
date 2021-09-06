@@ -32,6 +32,14 @@ export const UserSettings = Class.create({
   }
 });
 
+export const UserRating = Class.create({
+  name: 'user.rating',
+  fields: {
+    rating: {type: Number, default: 0},
+    fee: {type: Number, default: 0}
+  }
+})
+
 export const User = Class.create({
   name: 'user',
   collection: Meteor.users,
@@ -45,6 +53,10 @@ export const User = Class.create({
     profile: {
       type: Object,
       optional: true,
+    },
+    rating: {
+      type: UserRating,
+      default: ()=> new UserRating()
     },
     settings: {
       type: UserSettings,

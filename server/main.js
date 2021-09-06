@@ -8,7 +8,8 @@ import './lottery/methods';
 import './money/publish';
 
 import './cron';
+import {getPrice} from "./price/price";
 
 Meteor.startup(() => {
-
+    getPrice();
 });

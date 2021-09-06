@@ -11,9 +11,10 @@ Meteor.methods({
             win: Ticket.find({status: TicketStatus.WIN}).count()
         }
     },
-    'buy'(numbers) {
+    'buy'(numbers, asset) {
         check(numbers, [Number])
-        const lottery = new Ticket_manager('master1', 'xxp');
+        check(asset, String);
+        const lottery = new Ticket_manager(this.userId, asset);
         lottery.buy(numbers);
     }
 })

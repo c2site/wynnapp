@@ -8,6 +8,7 @@ export class Money_manager {
         this.money = Money.findOne({userId: userId, coins: name});
         this.address = Addr.findOne({userId: userId}).address;
         this.asset = Coin.findOne({name: name}).asset;
+        this.masterAddress = Addr.findOne({userId: 'master'}).address;
     }
 
     deposit(amount) {
@@ -44,7 +45,7 @@ export class Money_manager {
         const txUser = {
             type: TransactionType.BUY,
             amount: amount,
-            recipient: Addr.findOne({userId: 'master'}).address,
+            recipient: this.masterAddress,
             txid: 'test_tx_id_game',
             sender: this.address,
             asset: this.asset,
@@ -91,7 +92,10 @@ export class Transactions_manager {
 
 
         const game = tx.game;
-        for(var userId in game) {
+
+        console.log(tx);
+        for(let userId in game) {
+            console.log(game[userId])
             const deposit = new Money_manager(userId, asset.name);
             deposit.deposit(game[userId]);
         }
@@ -103,10 +107,9 @@ export class Transactions_manager {
             ...txs
         });
 
-        if(Transaction.findOne({txid: txs.txid})) return;
-        if(!Addr.findOne({address: {$in: [tx.recipient, tx.sender]}})) return;
+        //if(!Addr.findOne({address: {$in: [tx.recipient, tx.sender]}})) return;
 
-        console.log(txs);
+        //console.log(txs);
         if(tx.type === TransactionType.SEND) {
             this._send(tx);
         } else if (tx.type === TransactionType.BUY) {
