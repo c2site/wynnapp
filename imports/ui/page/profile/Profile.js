@@ -6,6 +6,7 @@ import ChangeEmail from '/imports/ui/components/modal/changeEmail';
 import ChangeName from '/imports/ui/components/modal/changeName';
 import TwoFa from '/imports/ui/components/modal/TwoFA';
 import SendWallet from '/imports/ui/components/modal/sendWallet';
+import RatingModal from '/imports/ui/components/modal/RatingModal';
 import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Addr, Money} from "../../../api/mongo/money";
@@ -60,7 +61,10 @@ const Profile = () => {
                   </div>
                   <div className="item">
                     <span className="name">rating</span>
-                    <span className="info">{user?.rating?.rating || 0}</span>
+                    <span className="info">
+                      {user?.rating?.rating || 0}
+                      <RatingModal/>
+                    </span>
                   </div>
                   <div className="item">
                     <span className="name">fee</span>
@@ -101,6 +105,7 @@ const Profile = () => {
                       <div className="item">
                         <span className="name">{wallet.coins}</span>
                         <span className="info">{wallet.value()}</span>
+                        <SendWallet/>
                       </div>
                     </div>
                 ))}
