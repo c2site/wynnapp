@@ -1,11 +1,11 @@
-import {Addr} from "../../imports/api/mongo/money";
+import {Addr, Money} from "../../imports/api/mongo/money";
 import {Coin} from "../../imports/api/mongo/coins";
 
 const TronWeb = require('tronweb');
 
 class TronSend {
     constructor(userId, asset) {
-        this.asset = Coin.findOne({name: asset});
+        this.asset = Coin.findOne({asset: asset});
         this.userId = userId;
         this.address = Addr.findOne({userId: this.userId});
         this.tronWeb = new TronWeb({
@@ -16,11 +16,18 @@ class TronSend {
         });
     }
 
+    async _updateTrx() {
+        const money = Money.findOne({userId: this.userId, coins: 'trx'});
+        money.amount = await this.tronWeb.trx.getBalance(this.address.address);
+        money.save();
+    }
+
     async _send({amount, address}) {
+        //if(await this.tronWeb.trx.getBalance(this.address.address) < 1 * Math.pow(10, 6)) throw new Meteor.Error('error.trx.balance', 'You need min 5 TRX');
         if(this.asset.name === 'trx') {
             const trxTxs = await this.tronWeb.transactionBuilder.sendTrx(
                 address,
-                this.tronWeb.toSun(amount),
+                amount,
                 this.address.address
             );
 
@@ -31,6 +38,10 @@ class TronSend {
             const receipt = await this.tronWeb.trx.sendRawTransaction(
                 signedtxn
             );
+
+            setTimeout(async ()=> {
+                await this._updateTrx();
+            }, 1000 * 60)
             return receipt.txid;
         } else {
             const {
@@ -39,16 +50,19 @@ class TronSend {
 
             const contract = await this.tronWeb.contract(abi.entrys, this.asset.asset);
 
-            const tx = await contract.methods.transfer(address, parseInt(amount * Math.pow(10, this.decimals))).send({
+            const tx = await contract.methods.transfer(address, amount).send({
                 callValue:0,
                 shouldPollResponse: false
             });
-            await this._saveTx(tx, address, amount);
             return tx;
         }
     }
 
     async send({amount, address}) {
-       await this._send({amount, address});
+        const tx = await this._send({amount, address});
+        console.log(tx);
+       return tx;
     }
 }
+
+export default TronSend;

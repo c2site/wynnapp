@@ -28,13 +28,13 @@ class Ticket_manager {
         return res;
     }
 
-    _send(ticker) {
+    async _send(ticker) {
         const money = new Money_manager(this.userId, this.assetName);
-        money.buy({amount: ticker.price});
+        await money.buy({amount: ticker.price});
     }
 
 
-    buy (numbers) {
+    async buy (numbers) {
 
         const ticker = new Ticket({
             userId: this.userId,
@@ -46,7 +46,7 @@ class Ticket_manager {
         });
         ticker.price = Number(this._getPrice(numbers).toFixed(2));
         this._check(ticker);
-        this._send(ticker)
+        await this._send(ticker)
         ticker.save();
     }
 }

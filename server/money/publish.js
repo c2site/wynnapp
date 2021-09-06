@@ -28,5 +28,5 @@ Meteor.publish('user.transactions', function () {
     return Transaction.find({"$or": [
             {recipient: address},
             {sender: address}
-        ]}, {sort: {createdAt: -1}, limit: 5});
+        ]}, {sort: {createdAt: -1}});
 })

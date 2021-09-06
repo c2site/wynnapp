@@ -12,3 +12,8 @@ Meteor.publish('lottery.tickets', function () {
 Meteor.publish('lottery.all', function () {
     return Ticket.find({},{sort: {createdAt: -1}, limit: 25});
 })
+
+Meteor.publish('lottery.user', function () {
+    if (!this.userId) this.ready();
+    return Ticket.find({userId: this.userId},{sort: {createdAt: -1}});
+})

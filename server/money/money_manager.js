@@ -1,6 +1,7 @@
 import {Addr, Money} from "../../imports/api/mongo/money";
 import {Transaction, TransactionType} from "../../imports/api/mongo/transactions";
 import {Coin} from "../../imports/api/mongo/coins";
+import TronSend from "../tron/send";
 
 export class Money_manager {
     constructor(userId, name) {
@@ -23,30 +24,36 @@ export class Money_manager {
 
     _check(amount) {
         if(this.money.amount < amount) throw new Meteor.Error('error_balance', 'Amount > Balance');
+        if(Transaction.findOne({userId: this.userId, createdAt: {$gte: new Date( Date.now()- (1000 * 60) ) }})) throw new Meteor.Error('error.timer', 'One transaction 20 seconds');
     }
 
-    send({recipient, amount}) {
+    async send({recipient, amount}) {
         amount = amount * Math.pow(10, this.money.precision);
         this._check(amount)
         const tx = {
             type: TransactionType.SEND,
             amount: amount,
             recipient: recipient,
-            txid: 'test_tx_id',
+            //txid: 'test_tx_id',
             sender: this.address
         }
+
+        const tron = new TronSend(this.userId, this.asset)
+
+        tx.txid = await tron.send({amount: tx.amount, address: recipient});
 
         const txs = new Transactions_manager(this.userId);
         txs.create(tx);
     }
 
-    buy({amount}) {
+    async buy({amount}) {
         amount = amount * Math.pow(10, this.money.precision);
+        this._check(amount)
         const txUser = {
             type: TransactionType.BUY,
             amount: amount,
             recipient: this.masterAddress,
-            txid: 'test_tx_id_game',
+            //txid: 'test_tx_id_game',
             sender: this.address,
             asset: this.asset,
             game: {
@@ -56,6 +63,10 @@ export class Money_manager {
                 dev: amount * 0.1
             }
         }
+
+        const tron = new TronSend(this.userId, this.asset)
+        txUser.txid = await tron.send({amount: amount, address: this.masterAddress});
+
         const txs = new Transactions_manager(this.userId);
         txs.create(txUser);
 
