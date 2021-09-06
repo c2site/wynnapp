@@ -1,13 +1,17 @@
 import React from 'react';
 
 import SendModal from '/imports/ui/components/modal/sendModal';
+import ChangePassword from '/imports/ui/components/modal/changePassword';
+import ChangeEmail from '/imports/ui/components/modal/changeEmail';
+import ChangeName from '/imports/ui/components/modal/changeName';
+import TwoFa from '/imports/ui/components/modal/TwoFA';
+import SendWallet from '/imports/ui/components/modal/sendWallet';
 import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Addr, Money} from "../../../api/mongo/money";
 import {Transaction} from "../../../api/mongo/transactions";
 import {Coin} from "../../../api/mongo/coins";
 import Moment from "react-moment";
-import {Meteor} from "meteor/meteor";
 const Profile = () => {
   const progress = {
       width: '33%',
@@ -37,18 +41,22 @@ const Profile = () => {
                   <div className="item">
                     <span className="name">email</span>
                     <span className="info">{user?.emails[0].address}</span>
-                  </div>
+                    <ChangeEmail/>
+                    </div>
                   <div className="item">
                     <span className="name">name</span>
                     <span className="info">Tony Stark</span>
+                    <ChangeName/>
                   </div>
                   <div className="item">
                     <span className="name">password</span>
                     <span className="info">****************</span>
+                    <ChangePassword/>
                   </div>
                   <div className="item">
                     <span className="name">2fa</span>
                     <span className="info">Disabled</span>
+                    <TwoFa/>
                   </div>
                   <div className="item">
                     <span className="name">rating</span>

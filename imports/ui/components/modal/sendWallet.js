@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-const SendWynn = (props) => {
+const SendWallet = (props) => {
   const {
   } = props;
 
@@ -16,14 +16,9 @@ const SendWynn = (props) => {
 
   return (
     <>
-      <Button className="btn btn-black" onClick={toggle}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.2827 5L20.9998 12L14.2827 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="19.7329" y1="12.0317" x2="3.99985" y2="12.0317" stroke="white" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </Button>
+      <Button className="btn-hide" onClick={toggle}></Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
-        <ModalHeader toggle={toggle}>Send WYNNE</ModalHeader>
+        <ModalHeader toggle={toggle}>Send</ModalHeader>
         <ModalBody>
           <Form className="form" onSubmit={()=>onSubmit}>
             <div className="row">
@@ -67,4 +62,4 @@ const SendWynn = (props) => {
   );
 }
 
-export default SendWynn;
+export default SendWallet;
