@@ -11,5 +11,5 @@ import './cron';
 import {getPrice} from "./price/price";
 
 Meteor.startup(() => {
-    getPrice();
+    //getPrice();
 });
