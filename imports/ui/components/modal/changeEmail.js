@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-const Login = (props) => {
+const ChangeEmail = (props) => {
   const {
   } = props;
 
@@ -16,9 +16,7 @@ const Login = (props) => {
 
   return (
     <>
-      <Button className="btn btn-primary" onClick={toggle}>
-        Change email
-      </Button>
+      <Button className="btn-hide" onClick={toggle}></Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
         <ModalHeader toggle={toggle}>Change email</ModalHeader>
         <ModalBody>
@@ -67,4 +65,4 @@ const Login = (props) => {
   );
 }
 
-export default Login;
+export default ChangeEmail;

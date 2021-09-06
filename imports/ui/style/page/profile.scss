@@ -19,6 +19,7 @@
                 padding-top: 30px;
                 border-top: 1px solid rgba(255, 255, 255, 0.1);
                 padding-bottom: 10px;
+                position: relative;
                 &:first-child {
                     border: none;
                     padding-top: 0;
@@ -132,6 +133,7 @@
             margin-bottom: 30px;
             padding: 40px 17px 30px 30px;
             border: 1px solid rgba(216, 235, 253, 0.25);
+            position: relative;
             .name {
                 display: block;
                 margin-bottom: 10px;
