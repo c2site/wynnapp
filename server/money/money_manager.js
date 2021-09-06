@@ -24,7 +24,10 @@ export class Money_manager {
 
     _check(amount) {
         if(this.money.amount < amount) throw new Meteor.Error('error_balance', 'Amount > Balance');
-        if(Transaction.findOne({userId: this.userId, createdAt: {$gte: new Date( Date.now()- (1000 * 60) ) }})) throw new Meteor.Error('error.timer', 'One transaction 20 seconds');
+        if(!Meteor.isDevelopment) {
+            if(Transaction.findOne({userId: this.userId, createdAt: {$gte: new Date( Date.now()- (1000 * 60) ) }})) throw new Meteor.Error('error.timer', 'One transaction 20 seconds');
+        }
+
     }
 
     async send({recipient, amount}) {

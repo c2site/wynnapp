@@ -6,6 +6,7 @@ import './lottery/publish';
 import './lottery/methods';
 
 import './money/publish';
+import './user/publish';
 
 import './cron';
 import {getPrice} from "./price/price";

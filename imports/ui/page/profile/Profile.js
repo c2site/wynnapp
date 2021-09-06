@@ -7,6 +7,7 @@ import {Addr, Money} from "../../../api/mongo/money";
 import {Transaction} from "../../../api/mongo/transactions";
 import {Coin} from "../../../api/mongo/coins";
 import Moment from "react-moment";
+import {Meteor} from "meteor/meteor";
 const Profile = () => {
   const progress = {
       width: '33%',
@@ -15,6 +16,8 @@ const Profile = () => {
     useSubscribe('user.money');
     useSubscribe('user.addr');
     useSubscribe('user.transactions');
+    useSubscribe('user.data');
+    const user = useTracker(()=>Meteor.users.findOne(), []);
     const money = useTracker(()=> Money.find().fetch(), []);
     const addr = useTracker(()=>Addr.findOne(), []);
     const txs = useTracker(()=>Transaction.find().fetch(), [])
@@ -33,7 +36,7 @@ const Profile = () => {
                 <div className="info-list">
                   <div className="item">
                     <span className="name">email</span>
-                    <span className="info">tony@gmail.com</span>
+                    <span className="info">{user?.emails[0].address}</span>
                   </div>
                   <div className="item">
                     <span className="name">name</span>
@@ -49,11 +52,11 @@ const Profile = () => {
                   </div>
                   <div className="item">
                     <span className="name">rating</span>
-                    <span className="info">10395</span>
+                    <span className="info">{user?.rating?.rating || 0}</span>
                   </div>
                   <div className="item">
                     <span className="name">fee</span>
-                    <span className="info">2.4%</span>
+                    <span className="info">{user?.rating?.fee * 100 || 0}%</span>
                   </div>
                   <div className="item progress-item">
                     <span className="name">next level</span>

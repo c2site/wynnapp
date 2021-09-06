@@ -10,7 +10,7 @@ class Ticket_manager {
     constructor(userId, assetName) {
         this.userId = userId;
         this.assetName = assetName;
-        this.user = Meteor.users.findOne(this.userId);
+        this.user = Meteor.users.findOne({_id: this.userId});
         this.lottery = Lottery.findOne({status: LotteryStatus.OPEN, assetName: assetName});
         this.balance = Money.findOne({userId: this.userId, coins: this.assetName});
         this.asset = Coin.findOne({name: this.assetName})
@@ -33,6 +33,53 @@ class Ticket_manager {
         await money.buy({amount: ticker.price});
     }
 
+    _fee(rating) {
+        switch (rating) {
+            case rating > 1000:
+                return 0.01;
+                break;
+            case rating > 2000:
+                return 0.03;
+                break;
+            case rating > 5000:
+                return 0.07;
+                break;
+            case rating > 4000:
+                return 0.1;
+                break;
+            case rating > 10000:
+                return 0.15;
+                break;
+            case rating > 1500:
+                return 0.19;
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+
+    _addedRating(ticket) {
+        const prams = {
+            rating: this.user?.rating?.rating || 0,
+            fee: this.user?.rating?.fee || 0
+        }
+
+        if(this.assetName === 'wynne') {
+            prams.rating += ticket.price;
+            prams.fee = this._fee(prams.rating);
+        }
+
+        if(this.assetName === 'trx') {
+            prams.rating += ticket.price / 2;
+            prams.fee = this._fee(prams.rating);
+        }
+
+
+        // console.log(prams)
+        Meteor.users.update(this.userId, {$set: {rating: prams}})
+        //throw new Meteor.Error('error.rating', 'Error rating fee');
+    }
 
     async buy (numbers) {
 
@@ -46,7 +93,9 @@ class Ticket_manager {
         });
         ticker.price = Number(this._getPrice(numbers).toFixed(2));
         this._check(ticker);
-        await this._send(ticker)
+        this._addedRating(ticker);
+        await this._send(ticker);
+
         ticker.save();
     }
 }
