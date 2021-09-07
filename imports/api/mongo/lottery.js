@@ -22,10 +22,11 @@ export const Lottery = Class.create({
         status: {type: LotteryStatus, default: LotteryStatus.OPEN},
         tickets: {type: Number, default: 0},
         assetName: String,
-        start: Date,
+        //start: Date,
         close: Date,
         hash: {type: String, optional: true},
-        numbers: {type: [Number], optional: true}
+        numbers: {type: [Number], optional: true},
+        win: {type: Number, optional: true}
     },
     behaviors: {
         timestamp: {},

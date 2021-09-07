@@ -65,7 +65,7 @@ const BuyPage = () => {
     } else {
       setPrice(prices.prices[`price${selected.length}`].toFixed(2));
     }
-  }, [selected])
+  }, [selected, coinName])
 
 
   const buy = (e) => {

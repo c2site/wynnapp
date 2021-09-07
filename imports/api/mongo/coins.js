@@ -10,6 +10,7 @@ export const Coin = Class.create({
     fields: {
         name: String,
         precision: Number,
-        asset: String
+        asset: String,
+        rating: Number
     }
 });

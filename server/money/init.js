@@ -20,9 +20,9 @@ import {Lottery} from "../../imports/api/mongo/lottery";
 import {Price} from "../../imports/api/mongo/price";
 
 const Coins = [
-    {name: 'wynne', asset: Random.id(32), precision: 8},
-    {name: 'trx', asset: Random.id(32), precision: 8},
-    {name: 'usdt', asset: Random.id(32), precision: 8},
+    {name: 'wynne', asset: Random.id(32), precision: 6},
+    {name: 'trx', asset: Random.id(32), precision: 6},
+    {name: 'usdt', asset: Random.id(32), precision: 6},
     {name: 'xxp', asset: Random.id(32), precision: 8}
 ];
 

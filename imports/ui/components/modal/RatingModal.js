@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Moment from "react-moment";
+import { useTracker } from 'meteor/react-meteor-data'
+import {useSubscribe} from "../../../api/hooks";
+import {Coin} from "../../../api/mongo/coins";
 
 const RatingModal = (props) => {
   const {
@@ -9,8 +12,9 @@ const RatingModal = (props) => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+  useSubscribe('coin');
 
-
+  const list = useTracker(()=> Coin.find().fetch(), []);
   return (
     <>
       <Button className="btn-default" onClick={toggle}>?</Button>
@@ -22,26 +26,20 @@ const RatingModal = (props) => {
               <table>
                 <thead>
                 <tr>
-                  <th>rating</th>
-                  <th>discount</th>
+                  <th>Name</th>
+                  <th>Amount</th>
                 </tr>
                 </thead>
               </table>
             </div>
             <table>
               <tbody>
-                <tr>
-                  <td>10</td>
-                  <td>10%</td>
-                </tr>
-                <tr>
-                  <td>50</td>
-                  <td>20%</td>
-                </tr>
-                <tr>
-                  <td>170</td>
-                  <td>30%</td>
-                </tr>
+              {list?.map(coin=>(
+                  <tr>
+                    <td>{coin.name}</td>
+                    <td>1 {coin.name} = { (1 / coin.rating ).toFixed(2)} rating</td>
+                  </tr>
+              ))}
               </tbody>
             </table>
           </div>

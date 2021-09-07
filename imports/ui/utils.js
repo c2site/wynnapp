@@ -11,3 +11,6 @@ function RandomNumber(min, max) {
 }
 
 export {Notify, RandomNumber}
+
+import { Cookies } from 'meteor/ostrio:cookies';
+export const cookies = new Cookies();

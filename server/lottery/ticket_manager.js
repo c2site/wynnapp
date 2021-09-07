@@ -82,7 +82,8 @@ class Ticket_manager {
     }
 
     async buy (numbers) {
-
+        const lottery = Lottery.findOne({status: LotteryStatus.WAIT});
+        if(lottery) throw new Meteor.Error('find.game', 'Now wait new block, please wait');
         const ticker = new Ticket({
             userId: this.userId,
             user: {name: this.user?.profile?.name || 'Anonymous'},

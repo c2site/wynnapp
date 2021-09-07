@@ -14,6 +14,9 @@ import {Addr, Money} from "../../../api/mongo/money";
 import {Transaction} from "../../../api/mongo/transactions";
 import {Coin} from "../../../api/mongo/coins";
 import Moment from "react-moment";
+import {CopyToClipboard} from "react-copy-to-clipboard/lib/Component";
+import {toast} from "react-toastify";
+import {Button} from "reactstrap";
 const Profile = () => {
   const progress = {
       width: '33%',
@@ -74,12 +77,27 @@ const Profile = () => {
                       <СommissionModal/>
                     </span>
                   </div>
-                  <div className="item progress-item">
-                    <span className="name">next level</span>
-                    <div className="progress">
-                      <div style={progress}></div>
-                    </div>
+
+                  <div className="item">
+                    <span className="name">Invite url</span>
+                    <span className="info">
+                      https://wynn-games.com/?invite={user?.settings?.ref?.code}
+                      <CopyToClipboard text={`https://wynn-games.com/?invite=${user?.settings?.ref?.code}`} onCopy={() => toast.success('Copy invite url')}>
+                        <Button className="btn-default">
+                          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 4.5C13 5.05228 13.4477 5.5 14 5.5C14.5523 5.5 15 5.05228 15 4.5H13ZM5.42857 16C5.98086 16 6.42857 15.5523 6.42857 15C6.42857 14.4477 5.98086 14 5.42857 14V16ZM5 2H11V0H5V2ZM3 12V4H1V12H3ZM13 4V4.5H15V4H13ZM5.42857 14H5V16H5.42857V14ZM1 12C1 14.2091 2.79086 16 5 16V14C3.89543 14 3 13.1046 3 12H1ZM11 2C12.1046 2 13 2.89543 13 4H15C15 1.79086 13.2091 0 11 0V2ZM5 0C2.79086 0 1 1.79086 1 4H3C3 2.89543 3.89543 2 5 2V0Z" fill="#CED0D3"/>
+                            <rect x="10" y="9" width="12" height="14" rx="3" stroke="#CED0D3" stroke-width="2"/>
+                          </svg>
+                        </Button>
+                      </CopyToClipboard>
+                    </span>
                   </div>
+                  {/*<div className="item progress-item">*/}
+                  {/*  <span className="name">next level</span>*/}
+                  {/*  <div className="progress">*/}
+                  {/*    <div style={progress}></div>*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
                 </div>
               </div>
             </div>
@@ -89,14 +107,15 @@ const Profile = () => {
                 <form action="#" className="form-copy">
                   <div className="input-box">
                     <input type="text" disabled value={addr?.address} name="" id="" />
+                    <CopyToClipboard text={addr?.address} onCopy={() => toast.success('Copy wallet address')}>
                     <span className="copy">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M13 4.5C13 5.05228 13.4477 5.5 14 5.5C14.5523 5.5 15 5.05228 15 4.5H13ZM5.42857 16C5.98086 16 6.42857 15.5523 6.42857 15C6.42857 14.4477 5.98086 14 5.42857 14V16ZM5 2H11V0H5V2ZM3 12V4H1V12H3ZM13 4V4.5H15V4H13ZM5.42857 14H5V16H5.42857V14ZM1 12C1 14.2091 2.79086 16 5 16V14C3.89543 14 3 13.1046 3 12H1ZM11 2C12.1046 2 13 2.89543 13 4H15C15 1.79086 13.2091 0 11 0V2ZM5 0C2.79086 0 1 1.79086 1 4H3C3 2.89543 3.89543 2 5 2V0Z" fill="#CED0D3"/>
                       <rect x="10" y="9" width="12" height="14" rx="3" stroke="#CED0D3" stroke-width="2"/>
                       </svg>
                     </span>
+                    </CopyToClipboard>
                   </div>
-                  <SendModal/>
                 </form>
                 <p>Чтобы пополнить кошелек, скопируйте адрес и вставьте в соответствующую строку в обменнике или кошельке другой системы.</p>
                   <p>На кошелек Wynne можно перевести криптовалюту только на базе блокчейна TRON. Токены с вашим балансом, которые можно здесь хранить, указаны ниже.
@@ -109,7 +128,7 @@ const Profile = () => {
                       <div className="item">
                         <span className="name">{wallet.coins}</span>
                         <span className="info">{wallet.value()}</span>
-                        <SendWallet/>
+                        <SendWallet wallet={wallet}/>
                       </div>
                     </div>
                 ))}

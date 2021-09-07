@@ -34,18 +34,18 @@ const Header = () => {
             </a>
           </div>
           <div className="btn-head">
-            <button className="btn btn-default btn-basket">
-              <span>
-                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.75">
-                <path d="M1 1H3.39566C4.33305 1 5.14468 1.65106 5.34803 2.56614L6 5.5M6 5.5L7.10424 11.5733C7.62296 14.4263 10.1077 16.5 13.0075 16.5H15.7106C18.512 16.5 20.9406 14.5615 21.5614 11.8297L22.5835 7.33243C22.7969 6.39379 22.0834 5.5 21.1208 5.5H6Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="8.5" cy="20" r="1" stroke="white" stroke-width="2"/>
-                <circle cx="20.5" cy="20" r="1" stroke="white" stroke-width="2"/>
-                </g>
-                </svg>
-                <span className="number">10</span>
-              </span>
-            </button>
+            {/*<button className="btn btn-default btn-basket">*/}
+            {/*  <span>*/}
+            {/*    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+            {/*    <g opacity="0.75">*/}
+            {/*    <path d="M1 1H3.39566C4.33305 1 5.14468 1.65106 5.34803 2.56614L6 5.5M6 5.5L7.10424 11.5733C7.62296 14.4263 10.1077 16.5 13.0075 16.5H15.7106C18.512 16.5 20.9406 14.5615 21.5614 11.8297L22.5835 7.33243C22.7969 6.39379 22.0834 5.5 21.1208 5.5H6Z" stroke="white" stroke-width="2" stroke-linecap="round"/>*/}
+            {/*    <circle cx="8.5" cy="20" r="1" stroke="white" stroke-width="2"/>*/}
+            {/*    <circle cx="20.5" cy="20" r="1" stroke="white" stroke-width="2"/>*/}
+            {/*    </g>*/}
+            {/*    </svg>*/}
+            {/*    <span className="number">10</span>*/}
+            {/*  </span>*/}
+            {/*</button>*/}
 
             {!login ? (<Login/>) : (
                 <Button className="btn btn-default" onClick={()=>FlowRouter.go('/profile')}>
@@ -72,7 +72,15 @@ const Header = () => {
             </a>
           <NavBar/>
           <div className="btn-header">
-            {!login ? (<Registration/>) : (<></>)}
+            {!login ? (<Registration/>) : (
+                <Button className="btn btn-default" onClick={()=>Meteor.logout()}>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  logout
+                </Button>
+            )}
           </div>
         </header>
       </div>

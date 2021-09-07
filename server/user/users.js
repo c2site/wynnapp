@@ -8,6 +8,8 @@ import {User} from "../../imports/api/mongo/users";
 class Users_manager {
     static async createUser(userId) {
         // create balance
+
+        this._checkInvite(userId);
         Coin.find().map(coin=> {
             const money = new Money({
                 userId: userId,
@@ -26,6 +28,11 @@ class Users_manager {
 
         address.save();
     }
+
+    static _checkInvite(userId) {
+        const user = Meteor.users.findOne(userId);
+        console.log(user)
+    }
 }
 
 export {Users_manager};
@@ -38,6 +45,10 @@ Accounts.onCreateUser((options, user) => {
             invite: Match.Maybe(String),
         },
     });
+
+    if (options.profile.invite) {
+        user.settings.ref.invite = options.profile.invite;
+    }
 
     Users_manager.createUser(user._id);
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {Meteor} from "meteor/meteor";
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import {cookies} from "../../../utils";
+import {toast} from "react-toastify";
 
 const Registration = (props) => {
   const {
@@ -12,7 +14,7 @@ const Registration = (props) => {
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
   const toggle = () => setModal(!modal);
-  const invite = FlowRouter.getQueryParam('invite');
+  const invite = cookies.get('invite');
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -22,16 +24,13 @@ const Registration = (props) => {
       profile: { invite },
     }, (err) => {
       if (err) {
-        alert(err.reason);
+        toast.error(err.reason);
       } else {
         toggle();
       }
     });
   };
 
-  const changeOn = () => {
-
-  }
   return (
     <>
       <Button className="btn btn-primary" onClick={toggle}>

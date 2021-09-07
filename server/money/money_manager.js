@@ -38,7 +38,8 @@ export class Money_manager {
             amount: amount,
             recipient: recipient,
             //txid: 'test_tx_id',
-            sender: this.address
+            sender: this.address,
+            asset: this.asset
         }
 
         const tron = new TronSend(this.userId, this.asset)

@@ -2,7 +2,7 @@ import {Lottery, LotteryStatus} from "../../imports/api/mongo/lottery";
 import {Ticket, TicketStatus} from "../../imports/api/mongo/ticket";
 
 Meteor.publish('lottery', function () {
-    return Lottery.find({status: LotteryStatus.OPEN});
+    return Lottery.find({status: {$in: [LotteryStatus.OPEN, LotteryStatus.WAIT]}});
 })
 
 Meteor.publish('lottery.tickets', function () {

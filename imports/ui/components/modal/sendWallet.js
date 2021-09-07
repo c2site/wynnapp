@@ -3,10 +3,11 @@ import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter 
 
 const SendWallet = (props) => {
   const {
+    wallet
   } = props;
 
   const [modal, setModal] = useState(false);
-
+  const [send, setSend] = useState({address: '', amount: 0});
   const toggle = () => setModal(!modal);
 
 
@@ -14,26 +15,37 @@ const SendWallet = (props) => {
     e.preventDefault();
   };
 
+  const change = (e) => {
+    const newState = { [e.currentTarget.name]: e.currentTarget.value };
+    setSend((prevState) => ({ ...prevState, ...newState }));
+
+  }
+
+  const max = () => {
+    const newState = { ['amount']: wallet.value() };
+    setSend((prevState) => ({ ...prevState, ...newState }));
+  }
+
   return (
     <>
       <Button className="btn-hide" onClick={toggle}></Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
-        <ModalHeader toggle={toggle}>Send</ModalHeader>
+        <ModalHeader toggle={toggle}>Send  ({wallet.value()} {wallet.coins})</ModalHeader>
         <ModalBody>
           <Form className="form" onSubmit={()=>onSubmit}>
             <div className="row">
               <div className="col-md-9">
                 <div className="input-box">
                   <Label for="">wallet adress</Label>
-                  <Input type="text"  />
+                  <Input type="text" name={'address'} onChange={change} value={send.address} />
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="input-box">
                   <Label for="">amount</Label>
                   <div className="input-max">
-                    <Input type="number"  />
-                    <span className="max">max</span>
+                    <Input type="number" name={'amount'} onChange={change} value={send.amount} />
+                    <span className="max" onClick={max} >max</span>
                   </div>
                 </div>
               </div>

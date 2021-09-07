@@ -24,7 +24,8 @@ export const Ticket = Class.create({
         price: Number,
         assetName: String,
         lottery: Object,
-        win: {type: Number, optional: true}
+        win: {type: Number, optional: true},
+        winCount: {type: Number, optional: true}
     },
     behaviors: {
         timestamp: {},

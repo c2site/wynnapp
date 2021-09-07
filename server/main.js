@@ -10,6 +10,7 @@ import './user/publish';
 
 import './cron';
 import {getPrice} from "./price/price";
+import './api';
 
 Meteor.startup(() => {
     //getPrice();
