@@ -17,21 +17,25 @@ const TokenInput: React.FC<TokenInputProps> = ({ token, onChange, offset = 4, si
   };
 
   return (
-    <Row>
-      <Col xs={{ offset, size }}>
-        <FormGroup>
-          <Input
-            className={'text-center'}
-            type={'text'}
-            value={token}
-            onChange={handleChange}
-            pattern={`[0-9]*`}
-            inputMode={'numeric'}
-            maxLength={6}
-          />
-        </FormGroup>
-      </Col>
-    </Row>
+      <div className="twofa-box">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="input-box">
+              <FormGroup>
+                <Input
+                    className={'text-center'}
+                    type={'text'}
+                    value={token}
+                    onChange={handleChange}
+                    pattern={`[0-9]*`}
+                    inputMode={'numeric'}
+                    maxLength={6}
+                />
+              </FormGroup>
+            </div>
+          </div>
+        </div>
+      </div>
   );
 };
 
