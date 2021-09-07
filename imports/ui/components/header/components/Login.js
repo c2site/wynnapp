@@ -11,6 +11,7 @@ const Login = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
   };
 
   return (
@@ -28,11 +29,11 @@ const Login = (props) => {
           <Form className="form" onSubmit={()=>onSubmit}>
             <div className="input-box">
               <Label for="">Email</Label>
-              <Input type="email"  />
+              <Input type="email"  name={'email'}/>
             </div>
             <div className="input-box">
               <Label for="">Password</Label>
-              <Input type="password"  />
+              <Input type="password"  name={'password'}/>
             </div>
           </Form>
         </ModalBody>

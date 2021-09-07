@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 

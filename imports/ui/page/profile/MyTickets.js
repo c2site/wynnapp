@@ -47,7 +47,7 @@ const MyTickets = () => {
             </div>
             <div className="col-md-4">
               <div className="info-tickets">
-                <h4>ВАШИ БИЛЕТЫ</h4>
+                <h4>YOUR TICKETS</h4>
                 <div className="info-list">
                   <div className="info-item">
                     <div className="ico wait">
@@ -59,7 +59,7 @@ const MyTickets = () => {
                       </svg>
                     </div>
                     <strong className="name">WAIT</strong>
-                    <p>Эти билеты еще ждут розыгрыша. Как только определится выигрышная комбинация, он перейдет в раздел Win или Lose.</p>
+                    <p>These tickets are still awaiting a draw. As soon as the winning combination is determined, it will go to the Win or Lose section.</p>
                   </div>
                   <div className="info-item">
                     <div className="ico win">
@@ -69,7 +69,7 @@ const MyTickets = () => {
                       </svg>
                     </div>
                     <strong className="name">WIN</strong>
-                    <p>Ваши билеты, в которых есть 3, 4 или 5 совпадений (совпавшие числа подсвечиваются). Это выигрышные билеты.</p>
+                    <p>Your tickets that have 3, 4, or 5 matches (matched numbers are highlighted). These are winning tickets.</p>
                   </div>
                   <div className="info-item">
                     <div className="ico lose">
@@ -88,7 +88,7 @@ const MyTickets = () => {
                       </svg>
                     </div>
                     <strong className="name">LOSE</strong>
-                    <p>Билеты, в которых не оказалось ни одного совпадения.</p>
+                    <p>Tickets that didn't match.</p>
                   </div>
                 </div>
               </div>

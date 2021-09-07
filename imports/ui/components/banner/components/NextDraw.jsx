@@ -60,7 +60,7 @@ const NextDraw = ({button, coins = 'wynne'})=> {
             <div className="name">
               <h2>
                 next draw
-                <span>Choose Your Dream car tickets</span>
+                <span>CHOOSE YOUR DREAM TICKETS</span>
               </h2>
             </div>
             <Countdown

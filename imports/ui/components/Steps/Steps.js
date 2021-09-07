@@ -40,7 +40,7 @@ const Steps = () => {
                       <ellipse cx="52.4583" cy="40.625" rx="2.45833" ry="2.45834" stroke="#1E2632" stroke-width="3"/>
                     </svg>
                   </div>
-                  <h5>choise </h5>
+                  <h5>Choose</h5>
                   <p>Register to WYNN & Choose your contest</p>
                 </div>
               </div>
@@ -56,8 +56,8 @@ const Steps = () => {
                     </svg>
 
                   </div>
-                  <h5>buy</h5>
-                  <p>Register to WYNN & Choose your contest</p>
+                  <h5>Buy</h5>
+                  <p>Buy a ticket</p>
                 </div>
               </div>
               <div className="col-md-4">
@@ -71,8 +71,8 @@ const Steps = () => {
                       <path d="M32.9791 17.235V26.642H30.5871V30H39.4191V26.642H36.9811V13.9H30.7941V17.235H32.9791Z" fill="#EB3B3B"/>
                     </svg>
                   </div>
-                  <h5>win</h5>
-                  <p>Register to WYNN & Choose your contest</p>
+                  <h5>Win</h5>
+                  <p>Win</p>
                 </div>
               </div>
             </div>

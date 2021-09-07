@@ -20,10 +20,10 @@ import {Lottery} from "../../imports/api/mongo/lottery";
 import {Price} from "../../imports/api/mongo/price";
 
 const Coins = [
-    {name: 'wynne', asset: Random.id(32), precision: 6},
-    {name: 'trx', asset: Random.id(32), precision: 6},
-    {name: 'usdt', asset: Random.id(32), precision: 6},
-    {name: 'xxp', asset: Random.id(32), precision: 8}
+    {name: 'wynne', asset: 'TKAmuifcYR6iXRWa3igiNe2xZroTwGCKH9', precision: 6},
+    {name: 'trx', asset: 'master1', precision: 6},
+    {name: 'usdt', asset: 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t', precision: 6},
+    {name: 'xxp', asset: 'TBT6Asn7eZ8GD5s7T3r579s6XxKSe9m12E', precision: 8}
 ];
 
 if(!Coin.findOne()) {
@@ -35,12 +35,10 @@ if(!Coin.findOne()) {
 
 if(!Money.findOne()){
     Users_manager.createUser('cron');
-    Users_manager.createUser('user1');
     // Users_manager.createUser('user2');
     // Users_manager.createUser('user3');
     Users_manager.createUser('dev');
     Users_manager.createUser('master');
-
     Users_manager.createUser('game_5');
     Users_manager.createUser('game_4');
     Users_manager.createUser('game_3');
@@ -110,7 +108,7 @@ if(Price.find().count() === 0) {
         const price = new Price({
             assetName: coin.name,
             price: 0,
-            prices: {'price3': 1,'price4': 2,'price5': 3}
+            prices: {'price3': 1,'price4': 2,'price5': 3},
         });
         price.save();
     })

@@ -1,5 +1,4 @@
 import {IcoProfile, IcoTicket} from "./icons";
-import Profile from "./Profile";
 import MyTickets from "./MyTickets";
 import React from "react";
 

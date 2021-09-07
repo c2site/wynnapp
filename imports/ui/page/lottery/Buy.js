@@ -42,8 +42,7 @@ const BuyPage = () => {
   }
 
   const onChangeBox = (value) => {
-
-    const index = selected.indexOf(value);ЫЙ
+    const index = selected.indexOf(value);
     if (index === -1) {
       if(checkVal()) selected.push(value);
     } else {
@@ -213,18 +212,17 @@ const BuyPage = () => {
                   </div>
               ) : (<></>)}
               <div className="info-text">
-                <h6>Выберите 5 чисел</h6>
-                <p>Вам нужно выбрать 5 любых чисел. Это можно сделать вручную или активизировать режим “Random” в верхней части билета.  Режим “Random” выбирает ячейки случайным образом.</p>
-                <p>Выигрывают билеты, в которых после розыгрыша окажется 3, 4 или 5 совпадений. </p>
+                <h6>Pick 5 numbers</h6>
+                <p>You need to choose any 5 numbers. This can be done manually or by activating the “Random” mode at the top of the ticket. Random mode selects cells at random.</p>
+                <p>Tickets are won, in which after the drawing there will be 3, 4 or 5 matches.</p>
               </div>
               <div className="info-text">
-                <h6>Хотите увеличить шансы на выигрыш?</h6>
-                <p>Добавьте к билету еще 1, 2, 3 или 4 дополнительных числа (это платная услуга). Также вы можете купите еще один билет.</p>
+                <h6>Want to increase your chances of winning?</h6>
+                <p>Add 1, 2, 3 or 4 additional numbers to your ticket (this is a paid service). You can also buy another ticket.</p>
               </div>
               <div className="info-text">
-                <h6>Призовой фонд</h6>
-                <p>Почти все вырученные средства (90%) поступают в призовой фонд, который в дальнейшем распределяется между победителями: 3 совпадения - 30%,
-                  4 совпадения - 30%, 5 совпадений - 30%.</p>
+                <h6>Prize fund</h6>
+                <p>Almost all the proceeds (90%) go to the prize fund, which is further distributed among the winners: 3 matches - 30%, 4 matches - 30%, 5 matches - 30%.</p>
               </div>
             </div>
           </div>
@@ -249,7 +247,7 @@ const BuyPage = () => {
           <div className="container">
             <div className="head-box">
               <h2 className="black">Distribution</h2>
-              <p>90% вырученных денег от продажи билетов идут в призовой фонд</p>
+              <p>90% of the proceeds from ticket sales go to the prize pool</p>
             </div>
             <div className="distribution-list">
               <div className="line">
@@ -312,7 +310,7 @@ const BuyPage = () => {
           <div className="container">
             <div className="head-box">
               <h2>New Tickets</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              {/*<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>*/}
             </div>
             <div className="list-new-tickets">
               {list?.map(tic=> (

@@ -44,6 +44,7 @@ class Lottery_manage {
                 const winAmount = money.amount / countT;
                 tikets.map(async(tik)=> {
                     tik.win = Number((winAmount / Math.pow(10, money.precision)).toFixed(money.precision));
+                    tik.name = 'Lottery 5/36';
                     tik.save();
 
                     const moneySend = new Money_manager('master', lottery.assetName);
@@ -71,7 +72,7 @@ class Lottery_manage {
                 ticket.winCount = count;
                 ticket.status = TicketStatus.WIN;
             } else {
-                ticket.status = TicketStatus.LOST;
+                ticket.status = TicketStatus.LOSE;
             }
             ticket.save();
         });

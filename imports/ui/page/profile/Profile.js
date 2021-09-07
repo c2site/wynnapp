@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import SendModal from '/imports/ui/components/modal/sendModal';
 import ChangePassword from '/imports/ui/components/modal/changePassword';
@@ -17,7 +17,6 @@ import Moment from "react-moment";
 import {CopyToClipboard} from "react-copy-to-clipboard/lib/Component";
 import {toast} from "react-toastify";
 import {Button} from "reactstrap";
-import { toast } from 'react-toastify';
 
 import TwoFAModal from "./TwoFAModal";
 import TwoFAConfirm from "/imports/ui/components/modal/TwoFAConfirm";
@@ -30,6 +29,7 @@ const Profile = () => {
   const progress = {
       width: '33%',
   };
+
     useSubscribe('coin');
     useSubscribe('user.money');
     useSubscribe('user.addr');
@@ -78,24 +78,24 @@ const Profile = () => {
       return 'green'
     }
     return (
-          <div className="row">
+          <div className={'row'}>
             <div className="col-md-4">
               <div className="profile-info">
                 <div className="info-list">
                   <div className="item">
                     <span className="name">email</span>
                     <span className="info">{user?.emails[0].address}</span>
-                    <ChangeEmail/>
+                    {/*<ChangeEmail/>*/}
                     </div>
-                  <div className="item">
-                    <span className="name">name</span>
-                    <span className="info">Tony Stark</span>
-                    <ChangeName/>
-                  </div>
+                  {/*<div className="item">*/}
+                  {/*  <span className="name">name</span>*/}
+                  {/*  <span className="info">Tony Stark</span>*/}
+                  {/*  <ChangeName/>*/}
+                  {/*</div>*/}
                   <div className="item">
                     <span className="name">password</span>
                     <span className="info">****************</span>
-                    <ChangePassword/>
+                    {/*<ChangePassword/>*/}
                   </div>
                   <div className="item" onClick={toggle2FA}>
                     <span className="name">2fa</span>
@@ -112,7 +112,7 @@ const Profile = () => {
                     <span className="name">fee</span>
                     <span className="info">
                       {user?.rating?.fee * 100 || 0}%
-                      <СommissionModal/>
+
                     </span>
                   </div>
 
@@ -155,10 +155,9 @@ const Profile = () => {
                     </CopyToClipboard>
                   </div>
                 </form>
-                <p>Чтобы пополнить кошелек, скопируйте адрес и вставьте в соответствующую строку в обменнике или кошельке другой системы.</p>
-                  <p>На кошелек Wynne можно перевести криптовалюту только на базе блокчейна TRON. Токены с вашим балансом, которые можно здесь хранить, указаны ниже.
-                 </p>
-                <p>*Минимальный остаток на вашем кошельке не может быть ниже 5TRC (или в любой другой валюте, равной этой сумме).</p>
+                <p>To replenish the wallet, copy the address and paste it into the corresponding line in the exchanger or wallet of another system.</p>
+                  <p>The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens with your balance that you can store here are listed below.</p>
+                <p>* The minimum balance on your wallet cannot be lower than 5 TRC.</p>
               </div>
               <div className="wallets-list row">
                 {money?.map(wallet=>(
@@ -199,14 +198,16 @@ const Profile = () => {
                 </table>
               </div>
             </div>
-            <TwoFAModal secret={secret} close={() => setSecret(null)} />
-            <TwoFAConfirm
-              open={open}
-              close={() => setOpen(false)}
-              confirm={handleDeactivate}
-              token={token}
-              onChange={(tkn) => setToken(tkn)}
-            />
+            <div>
+              <TwoFAModal secret={secret} close={() => setSecret(null)} />
+              <TwoFAConfirm
+                  open={open}
+                  close={() => setOpen(false)}
+                  confirm={handleDeactivate}
+                  token={token}
+                  onChange={(tkn) => setToken(tkn)}
+              />
+            </div>
           </div>
     )
 }

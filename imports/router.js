@@ -1,17 +1,19 @@
 import React from 'react';
 import {Meteor} from "meteor/meteor";
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import { FlowRouterTitle } from 'meteor/ostrio:flow-router-title';
+
 import { mount } from 'react-mounter';
-import {App} from "../imports/ui/App";
-import HomePage from "../imports/ui/page/home/HomePage";
-import BuyPage from "../imports/ui/page/lottery/Buy";
-import Profile from "../imports/ui/page/profile/Profile";
-import ProfilePage from "../imports/ui/page/profile/ProfilePage";
-import HistoryPage from "../imports/ui/page/lottery/History";
-import HashPage from "../imports/ui/page/lottery/Hash";
-import MyTickets from "../imports/ui/page/profile/MyTickets";
-import {cookies} from "../imports/ui/utils";
-import ProfileTickets from "../imports/ui/page/profile/profileTickets";
+import {App} from "./ui/App";
+import HomePage from "./ui/page/home/HomePage";
+import BuyPage from "./ui/page/lottery/Buy";
+import Profile from "./ui/page/profile/Profile";
+import ProfilePage from "./ui/page/profile/ProfilePage";
+import HistoryPage from "./ui/page/lottery/History";
+import HashPage from "./ui/page/lottery/Hash";
+//import MyTickets from "./ui/page/profile/MyTickets";
+import {cookies} from "./ui/utils";
+import ProfileTickets from "./ui/page/profile/profileTickets";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -30,14 +32,20 @@ const invite = () => {
 
 function whileWaiting() {
     console.log('while waiting');
-
     const computation = Tracker.autorun(checkAuth);
     computation.onStop(() => console.log('waiting stopped'));
     return computation;
 }
 
+const title = (text) => `Wynn Games - ${text}`
+
+FlowRouter.globals.push({
+    title: 'Wynn Games'
+});
+
 FlowRouter.route('/', {
     name: 'home',
+    title: title('Home'),
     action() {
         mountMain(HomePage);
         invite()
@@ -46,6 +54,7 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/buy', {
     name: 'buy',
+    title: title('Buy'),
     action() {
         mountMain(BuyPage);
     },
@@ -53,6 +62,7 @@ FlowRouter.route('/buy', {
 
 FlowRouter.route('/profile', {
     name: 'profile',
+    title: title('Profile'),
     action() {
         mountMain(ProfilePage);
     },
@@ -61,6 +71,7 @@ FlowRouter.route('/profile', {
 
 FlowRouter.route('/profile/my-tickets', {
     name: 'profile.tickets',
+    title: title('My Tickets'),
     action() {
         mountMain(ProfileTickets);
     },
@@ -69,16 +80,19 @@ FlowRouter.route('/profile/my-tickets', {
 
 FlowRouter.route('/history', {
     name: 'history',
+    title: title('Game History'),
     action() {
         mountMain(HistoryPage);
-    },
-    whileWaiting,
+    }
 });
 
 
 FlowRouter.route('/hash', {
     name: 'hash',
+    title: title('Check Hash'),
     action() {
         mountMain(HashPage);
     },
 });
+
+new FlowRouterTitle(FlowRouter);

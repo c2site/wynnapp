@@ -12,8 +12,8 @@ const Borrow = () => {
       <div className="borrow-box">
         <div className="container">
           <div className="head-box">
-            <h2 className='black'><span>THE SMARTER WAY</span>LEND AND BORROW</h2>
-            <p>The World's First Crypto Lending Marketplace and Affordable and competitive interest rates</p>
+            <h2 className='black'><span>Latest winners</span>Leaderboard</h2>
+            {/*<p>The World's First Crypto Lending Marketplace and Affordable and competitive interest rates</p>*/}
           </div>
           <div className="table coin-table">
             <div className="table-head">

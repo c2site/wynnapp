@@ -2,12 +2,11 @@ import { SyncedCron } from 'meteor/littledata:synced-cron';
 
 import {Price} from "../../imports/api/mongo/price";
 
-const startPrice = Meteor.isDevelopment ? 0.0000001 : 0.000027;
+const startPrice = Meteor.isDevelopment ? 0.0000001 : 0.000026;
 
 export function getPrice() {
     Price.find().map(coin=>{
         if(coin.cgName === 'demo') return;
-        console.log(coin.cgName)
         const price = HTTP.get(`https://api.coingecko.com/api/v3/simple/price?ids=${coin.cgName}&vs_currencies=btc`);
         const priceOne = price.data[coin.cgName]['btc'];
         const ticketPrice = (startPrice / priceOne);

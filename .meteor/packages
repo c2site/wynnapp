@@ -34,3 +34,4 @@ check
 littledata:synced-cron
 http
 ostrio:cookies
+ostrio:flow-router-title

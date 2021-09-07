@@ -4,11 +4,11 @@ import "meteor/jagi:astronomy-softremove-behavior";
 
 export const Tickets = new Mongo.Collection('tickets');
 export const TicketStatus = Enum.create({
-    name: 'ticket.satus',
+    name: 'ticket.status',
     identifiers: {
         WAIT: 'wait',
         WIN: 'win',
-        LOST: 'lost'
+        LOSE: 'lose'
     }
 })
 export const Ticket = Class.create({
