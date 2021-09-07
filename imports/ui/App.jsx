@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
-//@import "./style/Intro";
+import "./fonts/Intro";
 import "./style/utils/normalize.scss";
 import "./style/_helpers/variables.scss";
 import "./style/_helpers/general.scss";

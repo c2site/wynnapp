@@ -118,7 +118,8 @@
   &-primary {
     color: #212129;
     background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
-    border: 2px solid transparent;
+    border-width: 0;
+    border-color: transparent;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;

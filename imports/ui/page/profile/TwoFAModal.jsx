@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import otplib from 'otplib';
 import QRCode from 'qrcode.react';
-import { Button, FormGroup, Modal, ModalBody, ModalFooter, ModalHeader, } from 'reactstrap';
+import { Button, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader, } from 'reactstrap';
 import { toast } from 'react-toastify';
 import styled from "styled-components";
 
@@ -40,21 +40,28 @@ const TwoFAModal = ({ secret, close }) => {
     <Modal toggle={toggle} isOpen={isOpen} className="modal-app">
       <ModalHeader toggle={toggle}>Two-Factor Authentication</ModalHeader>
       <ModalBody>
-        <h5>Two-factor authentication increases the security of your XPlatform account</h5>
+        <h6>Two-factor authentication increases the security of your XPlatform account</h6>
         <p className={'mb-1'}>All you need is a compatible app on your smartphone, for example:</p>
         <UL>
           <li>Google Authenticator</li>
           <li>Duo</li>
           <li>Authy</li>
         </UL>
-        <div className="d-flex justify-content-center">
-          <div className="border p-3">
+        <div className="twofa-box">
+          <div className="img-holder">
             <QRCode value={otpauth} level="H" size={256} />
           </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="input-box">
+                <FormGroup className={'mt-4'}>
+                  <CopyAddress address={secret} />
+                </FormGroup>
+              </div>
+            </div>
+          </div>
         </div>
-        <FormGroup className={'mt-4'}>
-          <CopyAddress address={secret} />
-        </FormGroup>
+
         <p className={'mt-2'}>
           Scan this image with your app. You will see a 6-digit code on your screen.
           Enter the code below to verify your phone and complete the setup.
@@ -62,9 +69,11 @@ const TwoFAModal = ({ secret, close }) => {
         <TokenInput token={token} onChange={(tkn) => setToken(tkn)} />
       </ModalBody>
       <ModalFooter>
-        <Button color={'primary'} onClick={enable2FA}>
-          Activate
-        </Button>
+        <div className="btn-box">
+          <Button color={'black'} onClick={enable2FA}>
+            Activate
+          </Button>
+        </div>
       </ModalFooter>
     </Modal>
   );
