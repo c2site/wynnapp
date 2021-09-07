@@ -23,7 +23,7 @@ const SendWynn = (props) => {
         </svg>
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
-        <ModalHeader toggle={toggle}>Send WYNNE</ModalHeader>
+        <ModalHeader toggle={toggle}>Send WYNN</ModalHeader>
         <ModalBody>
           <Form className="form" onSubmit={()=>onSubmit}>
             <div className="row">

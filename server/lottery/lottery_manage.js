@@ -4,13 +4,33 @@ import {Ticket, Tickets, TicketStatus} from "../../imports/api/mongo/ticket";
 import {Price} from "../../imports/api/mongo/price";
 import {Addr, Money} from "../../imports/api/mongo/money";
 import {Money_manager} from "../money/money_manager";
+import {Meteor} from "meteor/meteor";
 
 const keccak256 = require('keccak256')
 
+const bound = Meteor.bindEnvironment((callback) => {callback()});
+
 class Lottery_manage {
 
+    static _getHash() {
+        const hash = HTTP.get('http://5.45.78.116:8090/wallet/getnowblock').content;
+        const res = JSON.parse(hash)
+        return res.blockID;
+    }
+
+    static _startGame() {
+        const games = Lottery.find({status: LotteryStatus.WAIT}).fetch();
+        games.map((game, index)=> {
+            setTimeout(()=> {
+                bound(()=> {
+                    this.hash(this._getHash())
+                })
+            }, index * 1000 * 60)
+        })
+    }
     static _toWaitOldLottery () {
         Lottery.update({status: LotteryStatus.OPEN}, {$set: {status: LotteryStatus.WAIT}}, {multi: true});
+        this._startGame();
     }
 
     static create() {
@@ -84,7 +104,7 @@ class Lottery_manage {
 
     static _startLottery({numbers, hash}) {
         const lottery = Lottery.findOne({status: LotteryStatus.WAIT});
-        //if(!lottery) return;
+        if(!lottery) return;
         lottery.set({
             numbers,
             hash,

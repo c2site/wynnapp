@@ -20,7 +20,7 @@ import {Lottery} from "../../imports/api/mongo/lottery";
 import {Price} from "../../imports/api/mongo/price";
 
 const Coins = [
-    {name: 'wynne', asset: 'TKAmuifcYR6iXRWa3igiNe2xZroTwGCKH9', precision: 6},
+    {name: 'wynn', asset: 'TKAmuifcYR6iXRWa3igiNe2xZroTwGCKH9', precision: 6},
     {name: 'trx', asset: 'master1', precision: 6},
     {name: 'usdt', asset: 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t', precision: 6},
     {name: 'xxp', asset: 'TBT6Asn7eZ8GD5s7T3r579s6XxKSe9m12E', precision: 8}
@@ -46,69 +46,12 @@ if(!Money.findOne()){
 
 
 
-// check transactions
-
-if(false) {
-    function createTxs(asset) {
-        const user = Addr.find().fetch();
-        const tx = {
-            //userId: user[0].userId,
-            asset: asset,
-            amount: 1_000,
-            sender: Addr.findOne({userId: user[0].userId}).address,
-            recipient: Addr.findOne({userId: user[2].userId}).address,
-            type: TransactionType.SEND
-        }
-        const transactions = new Transactions_manager(user[0].userId);
-        transactions.create(tx);
-    }
-    for(let i = 0; i < 10; i++) {
-        Coin.find().map(x=> {
-            createTxs(x.asset);
-        });
-    }
-
-}
-
-if(false) {
-    const money = new Money_manager('user1', 'usdt');
-    money.buy({amount: 1000});
-}
-
-if(false) {
-    Lottery_manage.create();
-}
-
-if(false){
-    await TronNode.createAddress('userId');
-}
-
-if(false) {
-    const demo = {
-        userId: 'master',
-        name: 'Lottery 5/36',
-        user: {name: 'Master'},
-        id: 11,
-        numbers: [10,58,47,31],
-        status: TicketStatus.WIN,
-        price: 1389981,
-        assetName: 'xxp',
-        lottery: Lottery.findOne(),
-        win: 13884
-    };
-
-    for(let i = 0; i < 10; i++) {
-        const t = new Ticket(demo);
-        t.save();
-    }
-}
-
 if(Price.find().count() === 0) {
     Coin.find().map(coin=> {
         const price = new Price({
             assetName: coin.name,
             price: 0,
-            prices: {'price3': 1,'price4': 2,'price5': 3},
+            prices: {'price5': 1,'price6': 2,'price7': 3, 'price8': 3, 'price9': 3},
         });
         price.save();
     })

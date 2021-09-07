@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-// import './money/init';
+import './money/init';
 
 
 import './lottery/publish';
@@ -12,7 +12,9 @@ import './user/methods'
 import './cron';
 import {getPrice} from "./price/price";
 import './api';
+import Lottery_manage from "./lottery/lottery_manage";
 
 Meteor.startup(() => {
     //getPrice();
+    //Lottery_manage.create();
 });

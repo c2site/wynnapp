@@ -8,9 +8,9 @@ import './lottery/cron'
 Meteor.startup(() => {
     SyncedCron.config({
         // Log job run details to console
-        log: !Meteor.isProduction,
+        log: Meteor.isProduction,
     });
-    if (Meteor.isDevelopment) {
+    if (!Meteor.isDevelopment) {
         SyncedCron.start();
     }
 });
