@@ -43,7 +43,7 @@ const BuyPage = () => {
 
   const onChangeBox = (value) => {
 
-    const index = selected.indexOf(value);
+    const index = selected.indexOf(value);ЫЙ
     if (index === -1) {
       if(checkVal()) selected.push(value);
     } else {

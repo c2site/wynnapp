@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import SendModal from '/imports/ui/components/modal/sendModal';
 import ChangePassword from '/imports/ui/components/modal/changePassword';
@@ -14,7 +14,16 @@ import {Addr, Money} from "../../../api/mongo/money";
 import {Transaction} from "../../../api/mongo/transactions";
 import {Coin} from "../../../api/mongo/coins";
 import Moment from "react-moment";
+import { toast } from 'react-toastify';
+
+import TwoFAModal from "./TwoFAModal";
+import TwoFAConfirm from "/imports/ui/components/modal/TwoFAConfirm";
+
 const Profile = () => {
+  const [secret, setSecret] = useState('');
+  const [token, setToken] = useState('');
+  const [open, setOpen] = useState(false);
+
   const progress = {
       width: '33%',
   };
@@ -30,6 +39,36 @@ const Profile = () => {
     const coin = (asset)=>{
         return Coin.findOne({asset: asset})?.name;
     }
+
+  const handleDeactivate = () => {
+    if (!token) {
+      return;
+    }
+
+    Meteor.call('user.disable2fa', token, (e) => {
+      if (e) {
+        toast.error(e.reason);
+      } else {
+        setOpen(false);
+      }
+      setToken('');
+    });
+  }
+
+  const toggle2FA = () => {
+    if (user?.settings?.twoFa) {
+      setOpen(true);
+    } else {
+      Meteor.call('user.enable2fa', (e, r) => {
+        if (e) {
+          console.log(e);
+        } else {
+          //console.log(r);
+          setSecret(r);
+        }
+      });
+    }
+  };
 
     const type = (sender) => {
       if(addr.address === sender) return 'red';
@@ -55,10 +94,9 @@ const Profile = () => {
                     <span className="info">****************</span>
                     <ChangePassword/>
                   </div>
-                  <div className="item">
+                  <div className="item" onClick={toggle2FA}>
                     <span className="name">2fa</span>
-                    <span className="info">Disabled</span>
-                    <TwoFa/>
+                    <span className="info">{user?.settings?.twoFa ? 'Active' : 'Disabled'}</span>
                   </div>
                   <div className="item">
                     <span className="name">rating</span>
@@ -142,6 +180,14 @@ const Profile = () => {
                 </table>
               </div>
             </div>
+            <TwoFAModal secret={secret} close={() => setSecret(null)} />
+            <TwoFAConfirm
+              open={open}
+              close={() => setOpen(false)}
+              confirm={handleDeactivate}
+              token={token}
+              onChange={(tkn) => setToken(tkn)}
+            />
           </div>
     )
 }
