@@ -19,7 +19,6 @@ import {toast} from "react-toastify";
 import {Button} from "reactstrap";
 import ProfileLayout from "./ProfileLayout";
 
-import TwoFAModal from "./TwoFAModal";
 import TwoFAConfirm from "/imports/ui/components/modal/TwoFAConfirm";
 
 const Profile = () => {
@@ -212,7 +211,7 @@ const Profile = () => {
             </div>
             </div>
             <div>
-              <TwoFAModal secret={secret} close={() => setSecret(null)} />
+              <TwoFa secret={secret} close={() => setSecret(null)} />
               <TwoFAConfirm
                   open={open}
                   close={() => setOpen(false)}

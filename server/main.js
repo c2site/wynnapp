@@ -8,6 +8,7 @@ import './lottery/methods';
 import './money/publish';
 import './user/publish';
 import './user/methods'
+import './user/users';
 
 import './cron';
 import {getPrice} from "./price/price";

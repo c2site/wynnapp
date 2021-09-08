@@ -13,6 +13,7 @@ import HashPage from "./ui/page/lottery/Hash";
 //import MyTickets from "./ui/page/profile/MyTickets";
 import {cookies} from "./ui/utils";
 import ProfileTickets from "./ui/page/profile/profileTickets";
+import SwapPage from "./ui/page/swap/swapPage";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -91,6 +92,15 @@ FlowRouter.route('/hash', {
     title: title('Check Hash'),
     action() {
         mountMain(HashPage);
+    },
+});
+
+
+FlowRouter.route('/swap', {
+    name: 'swap',
+    title: title('Swap coin'),
+    action() {
+        mountMain(SwapPage);
     },
 });
 
