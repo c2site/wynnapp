@@ -3,25 +3,36 @@
 .table .table {
   background: none;
 }
-
+.scroll-table {
+  @media only screen and (max-width: $responsive-size-big-tablet) {
+    overflow-x: scroll;
+    margin-right: -30px;
+  }
+}
 .table {
   background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
   border-radius: 15px;
   padding: 50px 75px;
-  @media only screen and (min-width: $responsive-size-tablet) {
-    table-layout: fixed;
-  }
+  min-width: 815px;
+  //@media only screen and (min-width: $responsive-size-tablet) {
+  //  table-layout: fixed;
+  //}
   .table-head {
     margin: 0 -75px;
     padding: 0 75px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    min-width: 815px;
+    table {
+      min-width: initial;
+    }
   }
 
     table {
       width: 100%;
-      @media only screen and (min-width : $responsive-size-tablet) {
-        table-layout: fixed;
-      }
+      min-width: 815px;
+      //@media only screen and (min-width : $responsive-size-tablet) {
+      //  table-layout: fixed;
+      //}
 
       thead {
         border: none;
@@ -35,11 +46,11 @@
             color: #FFFFFF;
             padding-bottom: 21px;
 
-            @media only screen and (max-width : $responsive-size-tablet) {
-              padding: 18px 20px;
-              display: inline-flex;
-              width: 50%;
-            }
+            //@media only screen and (max-width : $responsive-size-tablet) {
+            //  padding: 18px 20px;
+            //  display: inline-flex;
+            //  width: 50%;
+            //}
           }
         }
       }
@@ -71,16 +82,16 @@
               color: #B6D5DF;
             }
 
-            @media only screen and (max-width : $responsive-size-tablet) {
-              display: inline-flex;
-              align-items: center;
-              width: 50%;
-            }
-
-            @media only screen and (max-width : $responsive-size-big-mobile) {
-              width: 100%;
-              justify-content: space-between;
-            }
+            //@media only screen and (max-width : $responsive-size-tablet) {
+            //  display: inline-flex;
+            //  align-items: center;
+            //  width: 50%;
+            //}
+            //
+            //@media only screen and (max-width : $responsive-size-big-mobile) {
+            //  width: 100%;
+            //  justify-content: space-between;
+            //}
           }
         }
       }

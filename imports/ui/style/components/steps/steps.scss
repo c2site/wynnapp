@@ -1,3 +1,5 @@
+@import "../../_helpers/variables";
+
 .steps-block {
     padding-bottom: 150px;
     h2 {
@@ -20,6 +22,11 @@
             background: url("./img/coin-steps.svg") no-repeat;
             background-size: cover;
         }
+        &>* {
+            @media only screen and (max-width: 991px) {
+                margin-bottom: 20px;
+            }
+        }
         .item {
             background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
             box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
@@ -35,6 +42,14 @@
             text-align: center;
             color: #FFFFFF;
             position: relative;
+            min-height: 100%;
+            @media only screen and (max-width: 991px) {
+                padding: 30px 30px 35px;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: left;
+            }
             &:before,
             &:after {
                 position: absolute;
@@ -61,13 +76,26 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
+                @media only screen and (max-width: 991px) {
+                    margin: 0 15px 0 0;
+                    width: 100px;
+                    height: 100px;
+                }
                 svg {
                     display: block;
+                }
+            }
+            .text {
+                @media only screen and (max-width: 991px) {
+                    width: calc(100% - 115px);
                 }
             }
             h5 {
                 text-align: center;
                 margin-bottom: 12px;
+                @media only screen and (max-width: 991px) {
+                    text-align: left;
+                }
             }
             p {
                 margin: 0;
@@ -75,6 +103,9 @@
         }
     }
     .img {
+        @media only screen and (max-width: 991px) {
+            display: none;
+        }
         img {
             display: block;
             margin-left: auto;

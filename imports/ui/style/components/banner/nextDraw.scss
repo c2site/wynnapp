@@ -1,8 +1,13 @@
+@import "../../_helpers/variables";
+
 .next-draw {
     position: relative;
     background: linear-gradient(180deg, #FCDA7E 0%, #212129 33.96%);
     border-radius: 150px;
     padding-top: 2px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+        border-radius: 50px;
+    }
     &:after {
         position: absolute;
         bottom: -42px;
@@ -21,6 +26,10 @@
         position: relative;
         z-index: 2;
         padding: 94px 110px;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            border-radius: 50px;
+            padding: 70px 30px 45px;
+        }
         .win-number {
             font-family: 'Intro', sans-serif;
             position: absolute;
@@ -39,14 +48,40 @@
             justify-content: center;
             background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
             border-radius: 150px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                padding: 20px 30px 12px;
+                font-size: 20px;
+                line-height: 20px;
+                min-width: initial;
+            }
             svg {
                 display: block;
                 margin-right: 18px;
+                @media only screen and (max-width: $responsive-size-big-tablet) {
+                    width: 20px;
+                    height: 17px;
+                    margin-right: 16px;
+                }
+            }
+        }
+        .name {
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin-bottom: 35px;
+            }
+        }
+        .flex {
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
             }
         }
         .timer {
             display: flex;
             align-items: center;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin-bottom: 35px;
+            }
             span {
                 font-size: 40px;
                 line-height: 49px;

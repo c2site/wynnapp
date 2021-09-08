@@ -1,16 +1,55 @@
+@import "../../_helpers/variables";
+
 .banner-box {
     &.container {
-        max-width: 1800px;
-        min-height: 788px;
         background: url("./img/img-banner.svg") no-repeat 50% 0;
         padding-left: 90px;
         padding-right: 90px;
+        @media only screen and (min-width: 1400px) {
+            max-width: 1800px;
+            min-height: 788px;
+        }
+        @media only screen and (max-width: $responsive-size-laptop-screen) {
+            padding-left: 15px;
+            padding-right: 15px;
+            background-size: contain;
+        }
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            background-size: contain;
+            background-position: 0 50%;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .container {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
     }
     .head-banner {
         margin-bottom: 105px;
         .title-box {
             h1 {
                 margin: 0 0 22px;
+            }
+            .btn-holder {
+                display: flex;
+                align-items: center;
+                .btn {
+                    margin-right: 15px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .ico {
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                display: none;
+            }
+            img {
+                @media only screen and (max-width: $responsive-size-laptop-screen) {
+                    max-width: 331px;
+                }
             }
         }
     }

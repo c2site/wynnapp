@@ -188,9 +188,18 @@ ul,
 li {
   list-style-type: none;
 }
-//.container {
-//  padding: 0 15px 0 15px;
-//}
+.container {
+  @media only screen and (min-width: 992px) {
+    max-width: 100%;
+  }
+  @media only screen and (max-width: 992px) {
+    max-width: 100%;
+  }
+  @media only screen and (max-width: $responsive-size-big-tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 //@media screen and (min-width: 990px) {
 //  .container {
 //    width: 990px;
@@ -206,39 +215,39 @@ li {
 
 //flex
 
- .flex {
-   display: flex;
- }
+.flex {
+  display: flex;
+}
 
- .f-align-center {
-   align-items: center;
- }
+.f-align-center {
+  align-items: center;
+}
 
- .f-align-end {
-   align-items: flex-end;
- }
+.f-align-end {
+  align-items: flex-end;
+}
 
- .f-align-start {
-   align-items: flex-start;
- }
+.f-align-start {
+  align-items: flex-start;
+}
 
- .f-content-end {
-   justify-content: flex-end;
- }
+.f-content-end {
+  justify-content: flex-end;
+}
 
- .f-space-between {
-   justify-content: space-between;
- }
+.f-space-between {
+  justify-content: space-between;
+}
 
- .flex-center {
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
- .flex-1 {
-   flex: 1;
- }
+.flex-1 {
+  flex: 1;
+}
 
 //end flex
 
@@ -256,6 +265,10 @@ h1 {
   color: #FFFFFF;
   text-shadow: 0px 7px 0px rgba(0, 0, 0, 0.25);
   margin: 0;
+  @media only screen and (max-width: $responsive-size-laptop-screen) {
+    font-size: 70px;
+    line-height: 70px;
+  }
   span {
     display: block;
     font-size: 41px;
@@ -263,6 +276,10 @@ h1 {
     text-transform: uppercase;
     color: #E8C76F;
     text-shadow: 0px 7px 0px rgba(0, 0, 0, 0.25);
+    @media only screen and (max-width: $responsive-size-laptop-screen) {
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 }
 h2 {
@@ -273,12 +290,20 @@ h2 {
   text-transform: uppercase;
   color: #FFFFFF;
   margin: 0;
+  @media only screen and (max-width: $responsive-size-laptop-screen) {
+    font-size: 40px;
+    line-height: 40px;
+  }
   span {
     display: block;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
     color: #E8C76F;
+    @media only screen and (max-width: $responsive-size-laptop-screen) {
+      font-size: 17px;
+      line-height: 17px;
+    }
   }
 }
 

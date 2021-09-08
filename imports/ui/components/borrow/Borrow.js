@@ -15,33 +15,35 @@ const Borrow = () => {
             <h2 className='black'><span>Latest winners</span>Leaderboard</h2>
             {/*<p>The World's First Crypto Lending Marketplace and Affordable and competitive interest rates</p>*/}
           </div>
-          <div className="table coin-table">
-            <div className="table-head">
+          <div className="scroll-table">
+            <div className="table coin-table">
+              <div className="table-head">
+                <table>
+                  <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>bet id</th>
+                    <th>bet amount</th>
+                    <th>game</th>
+                    <th>profit</th>
+                  </tr>
+                  </thead>
+                </table>
+              </div>
               <table>
-                <thead>
-                <tr>
-                  <th>User</th>
-                  <th>bet id</th>
-                  <th>bet amount</th>
-                  <th>game</th>
-                  <th>profit</th>
-                </tr>
-                </thead>
+                <tbody>
+                {list?.map(ticket=>(
+                    <tr key={ticket._id}>
+                      <td>{ticket?.user?.name || 'Anonyms'}</td>
+                      <td>{ticket.id}</td>
+                      <td className='red'>{ticket.price} {ticket.lottery.assetName}</td>
+                      <td className='game1'>{ticket.name}</td>
+                      <td className='green'>{ticket.win} {ticket.lottery.assetName}</td>
+                    </tr>
+                ))}
+                </tbody>
               </table>
             </div>
-            <table>
-              <tbody>
-              {list?.map(ticket=>(
-                  <tr key={ticket._id}>
-                    <td>{ticket?.user?.name || 'Anonyms'}</td>
-                    <td>{ticket.id}</td>
-                    <td className='red'>{ticket.price} {ticket.lottery.assetName}</td>
-                    <td className='game1'>{ticket.name}</td>
-                    <td className='green'>{ticket.win} {ticket.lottery.assetName}</td>
-                  </tr>
-              ))}
-              </tbody>
-            </table>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ const Steps = () => {
     <>
       <div className="container steps-block">
         <div className="row f-align-center">
-          <div className="col-md-8">
+          <div className="col-lg-8">
             <div className="title-box">
               <h2>
                 <span>need to know about</span>
@@ -14,7 +14,7 @@ const Steps = () => {
               <p>Follow these 3 easy steps!</p>
             </div>
             <div className="steps-list row">
-              <div className="col-md-4">
+              <div className="col-lg-4">
                 <div className="item">
                   <div className="ico">
                     <svg width="57" height="45" viewBox="0 0 57 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,11 +40,13 @@ const Steps = () => {
                       <ellipse cx="52.4583" cy="40.625" rx="2.45833" ry="2.45834" stroke="#1E2632" stroke-width="3"/>
                     </svg>
                   </div>
-                  <h5>Choose</h5>
-                  <p>Register to WYNN & Choose your contest</p>
+                  <div className="text">
+                    <h5>Choose</h5>
+                    <p>Register to WYNN & Choose your contest</p>
+                  </div>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-lg-4">
                 <div className="item">
                   <div className="ico">
                     <svg width="59" height="69" viewBox="0 0 59 69" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,11 +58,13 @@ const Steps = () => {
                     </svg>
 
                   </div>
-                  <h5>Buy</h5>
-                  <p>Buy a ticket</p>
+                  <div className="text">
+                    <h5>Buy</h5>
+                    <p>Buy a ticket</p>
+                  </div>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-lg-4">
                 <div className="item">
                   <div className="ico">
                     <svg width="68" height="59" viewBox="0 0 68 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,13 +75,15 @@ const Steps = () => {
                       <path d="M32.9791 17.235V26.642H30.5871V30H39.4191V26.642H36.9811V13.9H30.7941V17.235H32.9791Z" fill="#EB3B3B"/>
                     </svg>
                   </div>
-                  <h5>Win</h5>
-                  <p>Win</p>
+                  <div className="text">
+                    <h5>Win</h5>
+                    <p>Win</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-4 img">
+          <div className="col-lg-4 img">
             <img src="./img/img-steps.svg" alt="" />
           </div>
         </div>

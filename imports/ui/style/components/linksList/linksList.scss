@@ -1,7 +1,13 @@
+@import "../../_helpers/variables";
+
 .links-list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 190px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
 
     a {
         display: flex;
@@ -16,6 +22,18 @@
         color: #1E2632;
         padding: 30px 40px;
         border-radius: 150px;
+        overflow: hidden;
+        @media only screen and (max-width: $responsive-size-laptop-screen) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+        @media only screen and (max-width: $responsive-size-big-screen) {
+            padding: 20px;
+        }
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            width: 100%;
+            margin: 0 0 30px;
+        }
 
         &:after {
             position: absolute;
@@ -55,9 +73,17 @@
             margin-right: 17px;
             background: #FFFFFF;
             border-radius: 50%;
+            @media only screen and (max-width: $responsive-size-laptop-screen) {
+                height: 83px;
+                width: 83px;
+            }
 
             svg {
                 display: block;
+                @media only screen and (max-width: $responsive-size-laptop-screen) {
+                    height: 40px;
+                    width: 40px;
+                }
             }
         }
 

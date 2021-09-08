@@ -17,6 +17,7 @@ import Moment from "react-moment";
 import {CopyToClipboard} from "react-copy-to-clipboard/lib/Component";
 import {toast} from "react-toastify";
 import {Button} from "reactstrap";
+import ProfileLayout from "./ProfileLayout";
 
 import TwoFAModal from "./TwoFAModal";
 import TwoFAConfirm from "/imports/ui/components/modal/TwoFAConfirm";
@@ -78,6 +79,7 @@ const Profile = () => {
       return 'green'
     }
     return (
+      <ProfileLayout>
           <div className={'row'}>
             <div className="col-md-4">
               <div className="profile-info">
@@ -218,6 +220,7 @@ const Profile = () => {
               />
             </div>
           </div>
+      </ProfileLayout>
     )
 }
 

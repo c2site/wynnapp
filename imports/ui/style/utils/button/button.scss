@@ -13,7 +13,7 @@
   color: #fff;
 
   border-radius: 50px;
-  transition: all linear 0.3s;
+  //transition: all linear 0.3s;
   min-height: 50px;
   padding: 15px 30px;
   svg {
@@ -126,6 +126,8 @@
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    padding-left: 32px;
+    padding-right: 32px;
 
 
     &:hover,
@@ -133,6 +135,8 @@
       color: rgba(255, 255, 255, 0.75);
       background: transparent;
       border: 2px solid rgba(255, 255, 255, 0.1);
+      padding-left: 30px;
+      padding-right: 30px;
       svg {
         path {
           fill: rgba(255, 255, 255, 0.75);

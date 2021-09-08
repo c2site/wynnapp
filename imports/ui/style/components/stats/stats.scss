@@ -1,3 +1,5 @@
+@import "../../_helpers/variables";
+
 .stats-box {
     h2 {
         text-align: center;
@@ -14,6 +16,9 @@
             display: flex;
             flex-direction: column;
             padding: 75px 0;
+            @media only screen and (max-width: $responsive-size-stand-mobile) {
+                width: 50%;
+            }
             .ico {
                 display: flex;
                 align-items: center;

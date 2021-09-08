@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Col, Label, Modal, ModalBody, ModalFooter, ModalHeader, Row } from 'reactstrap';
+import {Button, Col, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader, Row} from 'reactstrap';
 
 import TokenInput from './TokenInput';
 
@@ -21,7 +21,19 @@ const TwoFAConfirm: React.FC<TwoFAConfirmProps> = ({ open, close, confirm }) => 
     <Modal isOpen={open} toggle={closeModal} className="modal-app text-center">
       <ModalHeader toggle={closeModal}>2fa confirmation</ModalHeader>
       <ModalBody>
-        <TokenInput token={token} onChange={onChange} />
+        <div className="twofa-box">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="input-box">
+                <FormGroup>
+                  <Label for="">2fa code</Label>
+                  <TokenInput type="text" placeholder="2fa code" token={token} onChange={(tkn) => setToken(tkn)} />
+                </FormGroup>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </ModalBody>
       <ModalFooter>
         <div className="btn-box">

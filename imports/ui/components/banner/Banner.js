@@ -13,8 +13,10 @@ const Banner = () => {
               <span>New crypto game</span>
               play to win
             </h1>
-            <button className="btn btn-primary">get started now</button>
-            <a hre={'https://discord.gg/2tPXTF7795'}  target={'_blank'} className="btn btn-primary">Discord</a>
+            <div className="btn-holder">
+              <button className="btn btn-primary">get started now</button>
+              <a hre={'https://discord.gg/2tPXTF7795'}  target={'_blank'} className="btn btn-primary">Discord</a>
+            </div>
           </div>
           <div className="ico">
             <img src="./img/ico-banner.svg" alt="" />

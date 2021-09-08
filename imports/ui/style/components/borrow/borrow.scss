@@ -1,3 +1,5 @@
+@import "../../_helpers/variables";
+
 .borrow-box {
     color: #1E2632;
     background: #fff;
@@ -43,6 +45,9 @@
             width: 150px;
             height: 187px;
             background: url("./img/coin-table.svg") no-repeat 50% 50%;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                display: none;
+            }
         }
     }
 }
