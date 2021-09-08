@@ -146,4 +146,19 @@
             }
         }
     }
+    .progress-box {
+        margin-bottom: 30px;
+        .progress {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 13px;
+            height: 15px;
+            div {
+                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+                border-radius: 10px;
+                height: 15px;
+
+            }
+        }
+    }
 }

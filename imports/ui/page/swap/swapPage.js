@@ -33,7 +33,9 @@ const SwapPage = () => {
             }
         });
     }
-
+  const progress = {
+    width: '50%',
+  };
 
     return (
         <div className="history-page inner-page">
@@ -48,6 +50,14 @@ const SwapPage = () => {
                     </div>
                     <h2 className="title-page">Get WYNN</h2>
                 </div>
+              <div className="progress-box">
+                <div className="item progress-item">
+                  <h5 className="name">Остаток 2 000 000 WYNN</h5>
+                  <div className="progress">
+                    <div style={progress}></div>
+                  </div>
+                </div>
+              </div>
               <div className="wallet-info">
                 <h2>Get amount WYNN</h2>
                 <form className="form form-swap" onSubmit={(e)=>swapOn(e)}>
