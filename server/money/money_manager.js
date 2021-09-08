@@ -51,6 +51,8 @@ export class Money_manager {
         txs.create(tx);
     }
 
+
+
     async buy({amount}) {
         amount = amount * Math.pow(10, this.money.precision);
         this._check(amount)
