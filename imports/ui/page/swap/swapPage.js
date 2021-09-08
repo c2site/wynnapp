@@ -10,20 +10,13 @@ import {Input, Label, Form} from 'reactstrap';
 const SwapPage = () => {
     const [asset, setAsset] = useState('trx');
     const [price, setPrice] = useState(0);
-    const [amount, setAmmount] = useState(0);
-
+    const [amount, setAmount] = useState(0);
     useSubscribe('price', []);
     useSubscribe('coin', []);
     useSubscribe('user.money', []);
 
     const prices = useTracker(()=>Price.findOne({assetName: asset}), [asset]);
-    const money = useTracker(()=> Money.find({coins: {$ne: 'wynn'}}).fetch(), []);
-
-
-
-    const select = () => {
-        setAsset('usdt');
-    }
+    const money = useTracker(()=> Money.find({coins: {$ne: 'wynne'}}).fetch(), []);
 
     useEffect(()=> {
         setPrice((prices?.prices?.price5 * amount).toFixed(2))
@@ -58,7 +51,7 @@ const SwapPage = () => {
                 <h2>Get amount WYNN</h2>
                 <form className="form form-swap" onSubmit={(e)=>swap(e)}>
                   <div className="input-box flex f-align-center">
-                    <input type="number" name="amount" value={amount} onChange={(e)=>setAmmount(e.currentTarget.value)}/> <span>= {price} {asset}</span>
+                    <input type="number" name="amount" value={amount} onChange={(e)=>setAmount(e.currentTarget.value)}/> <span>= {price || 0} {asset}</span>
                   </div>
                     <div className="hash-btn" onClick={(e)=>swap(e)}>
                         <button className="btn btn-black">Swap</button>
@@ -68,8 +61,8 @@ const SwapPage = () => {
                       <h2>Select coins</h2>
                       {money?.map(wallet=> (
                           <div className="col-md-4 holder-item" key={wallet._id}>
-                            <Input type="radio" name="wallets" id={wallet.coins} />
-                              <Label className="item" htmlFor={wallet.coins} onClick={select} value={wallet.coins}>
+                            <Input type="radio" id={wallet.coins} checked={wallet.coins === asset} value={wallet.coins} onChange={()=>setAsset(wallet.coins)}/>
+                              <Label className="item" htmlFor={wallet.coins} value={wallet.coins}>
                                   <span className="name">{wallet.coins}</span>
                                   <span className="info">{wallet.value()}</span>
                               </Label>

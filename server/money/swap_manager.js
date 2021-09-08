@@ -9,11 +9,7 @@ class Swap_manager {
         this.address = Addr.findOne({userId: userId}).address;
         this.asset = Coin.find({name: asset});
         this.price = Price.findOne({assetName: asset});
-        this.swapAddress = 'AddresSwapp';
-    }
-
-    _checkSwap(swap) {
-
+        this.swapAddress = 'TU3xyLDSWzutmTUHTS46EYfBfNsHL1aU7Y';
     }
 
     async _sendUserCoin({amount}) {
