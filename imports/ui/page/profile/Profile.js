@@ -81,8 +81,8 @@ const Profile = () => {
     return (
       <ProfileLayout>
           <div className={'row'}>
-            <div className="col-md-4">
-              <div className="profile-info">
+            <div className="col-lg-4">
+              <div className="profile-info mb30m">
                 <div className="info-list">
                   <div className="item">
                     <span className="name">email</span>
@@ -145,7 +145,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-8">
+        <div className="col-lg-8">
           <div className="wallet-info">
             <h2>wallet adress</h2>
             <form action="#" className="form-copy">
@@ -172,7 +172,7 @@ const Profile = () => {
           </div>
           <div className="wallets-list row">
             {money?.map(wallet => (
-              <div className="col" key={wallet._id}>
+              <div className="col-md-4" key={wallet._id}>
                 <div className="item">
                   <span className="name">{wallet.coins}</span>
                   <span className="info">{wallet.value()}</span>
@@ -182,6 +182,7 @@ const Profile = () => {
             ))}
 
               </div>
+            <div className="scroll-table">
               <div className="table profile-table">
                 <div className="table-head">
                   <table>
@@ -208,6 +209,7 @@ const Profile = () => {
                   </tbody>
                 </table>
               </div>
+            </div>
             </div>
             <div>
               <TwoFAModal secret={secret} close={() => setSecret(null)} />

@@ -10,7 +10,7 @@ const MyTickets = () => {
   const list = useTracker(()=>Ticket.find({userId: Meteor.userId()}).fetch(), []);
     return (
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <div className="list-new-tickets my-tickets">
                 {list?.map(ticket=>(
                     <div className="item" key={ticket._id}>
@@ -45,7 +45,7 @@ const MyTickets = () => {
                 ))}
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-lg-4">
               <div className="info-tickets">
                 <h4>YOUR TICKETS</h4>
                 <div className="info-list">

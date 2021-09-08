@@ -1,3 +1,5 @@
+@import "../../_helpers/variables";
+
 .ticket-block {
     background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
     border-radius: 15px;
@@ -13,6 +15,9 @@
         background: url("./img/coin-steps.svg") no-repeat;
         background-size: cover;
         z-index: 3;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            bottom: -80px;
+        }
     }
     .holder-ticket {
         padding: 0 45px;
@@ -24,9 +29,9 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-        @media only screen and (max-width: 767px) {
-            flex-direction: column;
-        }
+        //@media only screen and (max-width: 767px) {
+        //    flex-direction: column;
+        //}
         .column {
             width: 100%;
             max-width: 50%;
@@ -34,13 +39,14 @@
             align-items: center;
             @media only screen and (max-width: 767px) {
                 max-width: initial;
-                margin-bottom: 15px;
+                width: initial;
+                //margin-bottom: 15px;
             }
             &:last-child {
                 justify-content: flex-end;
                 @media only screen and (max-width: 767px) {
                     margin-bottom: 0;
-                    justify-content: center;
+                    //justify-content: center;
                 }
             }
             .info {
@@ -56,6 +62,22 @@
             }
             .btn {
                 margin-left: 15px;
+                @media only screen and (max-width: $responsive-size-stand-mobile) {
+                    padding: 10px;
+                    height: 45px;
+                    width: 45px;
+                    min-height: 45px;
+                }
+                svg {
+                    @media only screen and (max-width: $responsive-size-stand-mobile) {
+                        margin-right: 0;
+                    }
+                }
+                span {
+                    @media only screen and (max-width: $responsive-size-stand-mobile) {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -71,6 +93,12 @@
             align-items: center;
             padding: 20px 0;
             width: calc(100% / 9);
+            @media only screen and (max-width: $responsive-size-stand-mobile) {
+                width: calc(100% / 5);
+            }
+            @media only screen and (max-width: $responsive-size-big-mobile) {
+                width: calc(100% / 4);
+            }
 
             .payment-check {
                 position: relative;
@@ -118,12 +146,20 @@
         background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
         border-radius: 0px 0px 15px 15px;
         padding: 30px 45px;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            position: relative;
+            z-index: 3;
+        }
         .holder {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 50px;
             width: 100%;
+            @media only screen and (max-width: 767px) {
+                flex-direction: column;
+                height: initial;
+            }
 
             .number-tickets {
                 font-weight: bold;
@@ -135,6 +171,13 @@
                 color: #1E2632;
                 display: flex;
                 align-items: center;
+                @media only screen and (max-width: 767px) {
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    justify-content: center;
+                }
                 span {
                     font-weight: bold;
                     font-size: 15px;
@@ -158,6 +201,10 @@
                 color: #1E2632;
                 display: flex;
                 align-items: center;
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    justify-content: center;
+                }
                 span {
                     font-weight: bold;
                     font-size: 15px;
@@ -317,6 +364,12 @@
     margin: 0 0 -240px;
     position: relative;
     background: url("./img/bg-prize.svg") no-repeat 50% 100%;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+        padding: 50px 0;
+        transform: none;
+        margin: 0;
+        background: none;
+    }
     h2 {
         text-align: center;
         margin-bottom: 80px;
@@ -572,6 +625,12 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            @media only screen and (max-width: 767px) {
+                flex-direction: column;
+                align-items: flex-start;
+                border: none;
+                margin-bottom: 0;
+            }
             .name {
                 display: block;
                 font-family: 'Intro', sans-serif;
@@ -580,6 +639,11 @@
                 line-height: 20px;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
             }
             .info {
                 border: 2px solid rgba(255, 255, 255, 0.1);
@@ -659,8 +723,15 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            @media only screen and (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+            }
             .number-list {
                 display: flex;
+                @media only screen and (max-width: 767px) {
+                    margin-bottom: 30px;
+                }
                 .number {
                     font-family: "Rubik", sans-serif;
                     display: flex;

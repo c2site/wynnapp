@@ -107,9 +107,9 @@ const BuyPage = () => {
           </div>
           <NextDraw button={false} coins={coinName}/>
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <div>
-                <div className="ticket-block">
+                <div className="ticket-block mb45m">
                   <div className="holder-ticket">
                     <div className="ticket-head" data-toggle="collapse" data-target="#ticket" role="button">
                       <div className="column">
@@ -148,7 +148,7 @@ const BuyPage = () => {
                             <path d="M7.125 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
                                   stroke-linecap="round"/>
                           </svg>
-                          clear
+                          <span>clear</span>
                         </button>
                       </div>
                     </div>
@@ -178,7 +178,7 @@ const BuyPage = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-lg-4">
               {user? (
                   <div className="ticket-balance">
                     <form className="contain-balance">

@@ -1,3 +1,5 @@
+@import "../_helpers/variables";
+
 .inner-page {
     position: relative;
     &:after {
@@ -19,6 +21,11 @@
         z-index: 2;
     }
     .head-page {
+        .flex {
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                flex-direction: column;
+            }
+        }
         .breadcrumbs {
             display: flex;
             align-items: center;
