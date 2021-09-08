@@ -1,59 +1,124 @@
 import React, { useState } from 'react';
-import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, Label, Input, ModalHeader, ModalBody, ModalFooter, Row, Col } from 'reactstrap';
+import { toast } from "react-toastify";
+import otplib from "otplib";
+import QRCode from "qrcode.react";
 
-const TwoFA = (props) => {
-  const {
-  } = props;
-
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
+import TokenInput from "./TokenInput";
+import TwoFAConfirm from "./TwoFAConfirm";
 
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+const QR = ({ secret }) => {
+  if (!secret) {
+    return <></>;
+  }
+  const user = Meteor.user();
+  const otpauth = otplib.authenticator.keyuri(user.emails[0].address, 'Wynne', secret);
+
+  return (
+    <QRCode value={otpauth} level="H" size={256} />
+  )
+}
+
+const TwoFA = () => {
+  const [openDeactivate, setDeactivate] = useState(false);
+  const [secret, setSecret] = useState('');
+  const [token, setToken] = useState('');
+  const user = Meteor.user();
+
+  const enable2FA = () => {
+    if (token.length !== 6 || isNaN(Number(token))) {
+      toast.error('Invalid code');
+      return;
+    }
+
+    Meteor.call('user.confirm2fa', token, (e) => {
+      if (e) {
+        toast.error('Invalid code');
+      } else {
+        setSecret('');
+        toast.success('Two-Factor has activated');
+      }
+    });
   };
+
+  const toggle2FA = () => {
+    if (user?.settings?.twoFa) {
+      setDeactivate(true);
+    } else {
+      Meteor.call('user.enable2fa', (e, r) => {
+        if (e) {
+          console.log(e);
+        } else {
+          setSecret(r);
+        }
+      });
+    }
+  };
+
+  const handleDeactivate = (tkn) => {
+    if (!tkn) {
+      return;
+    }
+
+    Meteor.call('user.disable2fa', tkn, (e) => {
+      if (e) {
+        toast.error(e.reason);
+      } else {
+        setDeactivate(false);
+      }
+      setToken('');
+    });
+  }
+
+  const toggleSecret = () => setSecret('');
 
   return (
     <>
-      <Button className="btn-hide" onClick={toggle}></Button>
-      <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
-        <ModalHeader toggle={toggle}>2FA</ModalHeader>
+      <Button className="btn-hide" onClick={toggle2FA} />
+      <Modal isOpen={!!secret} toggle={toggleSecret} className={'modal-app'}>
+        <ModalHeader toggle={toggleSecret}>2FA</ModalHeader>
         <ModalBody>
-          <Form className="form" onSubmit={()=>onSubmit}>
-            <div className="twofa-box">
-              <div className="img-holder">
-                <img src="./img/qr-board.svg" alt="" />
-              </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="input-box">
-                    <Label for="">2fa code</Label>
-                    <Input type="text" placeholder="2fa code"  />
-                  </div>
-                </div>
-              </div>
+          <div className="twofa-box">
+            <div className="img-holder">
+              <QR secret={secret} />
             </div>
-          </Form>
+            <Row>
+              <Col md={12}>
+                <div className="input-box">
+                  <Label for="">2fa code</Label>
+                  <TokenInput type="text" placeholder="2fa code" token={token} onChange={(tkn) => setToken(tkn)} />
+                </div>
+              </Col>
+            </Row>
+          </div>
         </ModalBody>
         <ModalFooter>
           <div className="btn-box">
-            <Button color="black" onClick={()=>onSubmit} type={'submit'}>
+            <Button color="black" onClick={enable2FA} type={'submit'}>
               <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white"
+                      strokeLinecap="round" />
               </svg>
               save
             </Button>
-            <Button color="close-default" onClick={toggle}>
+            <Button color="close-default" onClick={toggleSecret}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 6.00003L18.7742 18.7742" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 18.7742L18.7742 6.00001" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 6.00003L18.7742 18.7742" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
+                      strokeLinejoin="round" />
+                <path d="M6 18.7742L18.7742 6.00001" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
+                      strokeLinejoin="round" />
               </svg>
               Close
             </Button>
           </div>
         </ModalFooter>
       </Modal>
+      <TwoFAConfirm
+        open={openDeactivate}
+        close={() => setDeactivate(false)}
+        confirm={handleDeactivate}
+      />
     </>
   );
 }

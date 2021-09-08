@@ -2,9 +2,8 @@ import { Accounts } from 'meteor/accounts-base';
 import { check, Match } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 import otplib from 'otplib';
-import { NpmModuleBcrypt } from 'meteor/npm-bcrypt';
+import bcrypt from 'bcrypt';
 
-const bcrypt = NpmModuleBcrypt;
 const bcryptHash = Meteor.wrapAsync(bcrypt.hash);
 
 const hashPassword = password => bcryptHash(password, Accounts._bcryptRounds());

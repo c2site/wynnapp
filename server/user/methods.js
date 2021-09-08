@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
 
+import './2fa_auth';
+import './2fa_reset';
 import TwoFA from './2fa_manager';
 
 Meteor.methods({

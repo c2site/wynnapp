@@ -27,7 +27,7 @@ const Profile = () => {
   const [open, setOpen] = useState(false);
 
   const progress = {
-      width: '33%',
+    width: '33%',
   };
 
     useSubscribe('coin');
@@ -105,70 +105,79 @@ const Profile = () => {
                     <span className="name">rating</span>
                     <span className="info">
                       {user?.rating?.rating || 0}
-                      <RatingModal/>
+                  <RatingModal />
                     </span>
-                  </div>
-                  <div className="item">
-                    <span className="name">fee</span>
-                    <span className="info">
+              </div>
+              <div className="item">
+                <span className="name">fee</span>
+                <span className="info">
                       {user?.rating?.fee * 100 || 0}%
 
                     </span>
-                  </div>
+              </div>
 
-                  <div className="item">
-                    <span className="name">Invite url</span>
-                    <span className="info">
+              <div className="item">
+                <span className="name">Invite url</span>
+                <span className="info">
                       https://wynn-games.com/?invite={user?.settings?.ref?.code}
-                      <CopyToClipboard text={`https://wynn-games.com/?invite=${user?.settings?.ref?.code}`} onCopy={() => toast.success('Copy invite url')}>
-                        <Button className="btn-default">
-                          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 4.5C13 5.05228 13.4477 5.5 14 5.5C14.5523 5.5 15 5.05228 15 4.5H13ZM5.42857 16C5.98086 16 6.42857 15.5523 6.42857 15C6.42857 14.4477 5.98086 14 5.42857 14V16ZM5 2H11V0H5V2ZM3 12V4H1V12H3ZM13 4V4.5H15V4H13ZM5.42857 14H5V16H5.42857V14ZM1 12C1 14.2091 2.79086 16 5 16V14C3.89543 14 3 13.1046 3 12H1ZM11 2C12.1046 2 13 2.89543 13 4H15C15 1.79086 13.2091 0 11 0V2ZM5 0C2.79086 0 1 1.79086 1 4H3C3 2.89543 3.89543 2 5 2V0Z" fill="#CED0D3"/>
-                            <rect x="10" y="9" width="12" height="14" rx="3" stroke="#CED0D3" stroke-width="2"/>
+                  <CopyToClipboard text={`https://wynn-games.com/?invite=${user?.settings?.ref?.code}`}
+                                   onCopy={() => toast.success('Copy invite url')}>
+                        <Button color="default">
+                          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                               xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13 4.5C13 5.05228 13.4477 5.5 14 5.5C14.5523 5.5 15 5.05228 15 4.5H13ZM5.42857 16C5.98086 16 6.42857 15.5523 6.42857 15C6.42857 14.4477 5.98086 14 5.42857 14V16ZM5 2H11V0H5V2ZM3 12V4H1V12H3ZM13 4V4.5H15V4H13ZM5.42857 14H5V16H5.42857V14ZM1 12C1 14.2091 2.79086 16 5 16V14C3.89543 14 3 13.1046 3 12H1ZM11 2C12.1046 2 13 2.89543 13 4H15C15 1.79086 13.2091 0 11 0V2ZM5 0C2.79086 0 1 1.79086 1 4H3C3 2.89543 3.89543 2 5 2V0Z"
+                              fill="#CED0D3" />
+                            <rect x="10" y="9" width="12" height="14" rx="3" stroke="#CED0D3" stroke-width="2" />
                           </svg>
                         </Button>
                       </CopyToClipboard>
                     </span>
-                  </div>
-                  {/*<div className="item progress-item">*/}
-                  {/*  <span className="name">next level</span>*/}
-                  {/*  <div className="progress">*/}
-                  {/*    <div style={progress}></div>*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
-                </div>
               </div>
+              {/*<div className="item progress-item">*/}
+              {/*  <span className="name">next level</span>*/}
+              {/*  <div className="progress">*/}
+              {/*    <div style={progress}></div>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
-            <div className="col-md-8">
-              <div className="wallet-info">
-                <h2>wallet adress</h2>
-                <form action="#" className="form-copy">
-                  <div className="input-box">
-                    <input type="text" disabled value={addr?.address} name="" id="" />
-                    <CopyToClipboard text={addr?.address} onCopy={() => toast.success('Copy wallet address')}>
+          </div>
+        </div>
+        <div className="col-md-8">
+          <div className="wallet-info">
+            <h2>wallet adress</h2>
+            <form action="#" className="form-copy">
+              <div className="input-box">
+                <input type="text" disabled value={addr?.address} name="" id="" />
+                <CopyToClipboard text={addr?.address} onCopy={() => toast.success('Copy wallet address')}>
                     <span className="copy">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13 4.5C13 5.05228 13.4477 5.5 14 5.5C14.5523 5.5 15 5.05228 15 4.5H13ZM5.42857 16C5.98086 16 6.42857 15.5523 6.42857 15C6.42857 14.4477 5.98086 14 5.42857 14V16ZM5 2H11V0H5V2ZM3 12V4H1V12H3ZM13 4V4.5H15V4H13ZM5.42857 14H5V16H5.42857V14ZM1 12C1 14.2091 2.79086 16 5 16V14C3.89543 14 3 13.1046 3 12H1ZM11 2C12.1046 2 13 2.89543 13 4H15C15 1.79086 13.2091 0 11 0V2ZM5 0C2.79086 0 1 1.79086 1 4H3C3 2.89543 3.89543 2 5 2V0Z" fill="#CED0D3"/>
-                      <rect x="10" y="9" width="12" height="14" rx="3" stroke="#CED0D3" stroke-width="2"/>
+                      <path
+                        d="M13 4.5C13 5.05228 13.4477 5.5 14 5.5C14.5523 5.5 15 5.05228 15 4.5H13ZM5.42857 16C5.98086 16 6.42857 15.5523 6.42857 15C6.42857 14.4477 5.98086 14 5.42857 14V16ZM5 2H11V0H5V2ZM3 12V4H1V12H3ZM13 4V4.5H15V4H13ZM5.42857 14H5V16H5.42857V14ZM1 12C1 14.2091 2.79086 16 5 16V14C3.89543 14 3 13.1046 3 12H1ZM11 2C12.1046 2 13 2.89543 13 4H15C15 1.79086 13.2091 0 11 0V2ZM5 0C2.79086 0 1 1.79086 1 4H3C3 2.89543 3.89543 2 5 2V0Z"
+                        fill="#CED0D3" />
+                      <rect x="10" y="9" width="12" height="14" rx="3" stroke="#CED0D3" stroke-width="2" />
                       </svg>
                     </span>
-                    </CopyToClipboard>
-                  </div>
-                </form>
-                <p>To replenish the wallet, copy the address and paste it into the corresponding line in the exchanger or wallet of another system.</p>
-                  <p>The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens with your balance that you can store here are listed below.</p>
-                <p>* The minimum balance on your wallet cannot be lower than 5 TRC.</p>
+                </CopyToClipboard>
               </div>
-              <div className="wallets-list row">
-                {money?.map(wallet=>(
-                    <div className="col" key={wallet._id}>
-                      <div className="item">
-                        <span className="name">{wallet.coins}</span>
-                        <span className="info">{wallet.value()}</span>
-                        <SendWallet wallet={wallet}/>
-                      </div>
-                    </div>
-                ))}
+            </form>
+            <p>To replenish the wallet, copy the address and paste it into the corresponding line in the exchanger or
+              wallet of another system.</p>
+            <p>The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens with your
+              balance
+              that you can store here are listed below.</p>
+            <p>* The minimum balance on your wallet cannot be lower than 5 TRC.</p>
+          </div>
+          <div className="wallets-list row">
+            {money?.map(wallet => (
+              <div className="col" key={wallet._id}>
+                <div className="item">
+                  <span className="name">{wallet.coins}</span>
+                  <span className="info">{wallet.value()}</span>
+                  <SendWallet wallet={wallet} />
+                </div>
+              </div>
+            ))}
 
               </div>
               <div className="table profile-table">

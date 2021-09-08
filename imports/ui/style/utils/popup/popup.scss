@@ -76,11 +76,11 @@
           background: #fff;
           border-radius: 15px;
           margin-bottom: 20px;
-          img {
-            width: 100%;
-            height: auto;
-            display: block;
-          }
+          width: 300px;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
       .input-box {
