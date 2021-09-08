@@ -28,7 +28,8 @@ const SwapPage = () => {
         setPrice((prices?.prices?.price5 * amount).toFixed(2))
     }, [asset, amount]);
 
-    const swap = () => {
+    const swap = (e) => {
+        e.preventDefault()
         Meteor.call('swap', {amount, asset}, (err) => {
             if(err) {
                 toast.error(err.reason);
@@ -54,11 +55,11 @@ const SwapPage = () => {
                 </div>
               <div className="wallet-info">
                 <h2>Get amount WYNN</h2>
-                <form action="#" className="form form-swap">
+                <form className="form form-swap" onSubmit={(e)=>swap(e)}>
                   <div className="input-box flex f-align-center">
                     <input type="number" name="amount" value={amount} onChange={(e)=>setAmmount(e.currentTarget.value)}/> <span>= {price} {asset}</span>
                   </div>
-                    <div className="hash-btn">
+                    <div className="hash-btn" onClick={(e)=>swap(e)}>
                         <button className="btn btn-black">Swap</button>
                     </div>
                 </form>

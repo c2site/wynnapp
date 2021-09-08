@@ -6,6 +6,8 @@ import './lottery/publish';
 import './lottery/methods';
 
 import './money/publish';
+import './money/methods';
+
 import './user/publish';
 import './user/methods'
 import './user/users';
