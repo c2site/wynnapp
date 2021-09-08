@@ -6,9 +6,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 2;
+  @media only screen and (max-width: $responsive-size-stand-mobile) {
+    z-index: 999;
+  }
   .info {
     display: flex;
     align-items: center;
+    @media only screen and (max-width: $responsive-size-stand-mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     a {
       display: flex;
       align-items: center;
@@ -18,6 +25,12 @@
       line-height: 17px;
       color: #FFFFFF;
       margin-right: 40px;
+      @media only screen and (max-width: $responsive-size-stand-mobile) {
+        margin-top: 10px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
       svg {
         display: block;
         margin-right: 10px;
@@ -31,6 +44,20 @@
     display: flex;
     .btn {
       margin-left: 20px;
+      @media only screen and (max-width: $responsive-size-stand-mobile) {
+        padding: 0;
+        width: 50px;
+      }
+      span {
+        @media only screen and (max-width: $responsive-size-stand-mobile) {
+          display: none;
+        }
+      }
+      svg {
+        @media only screen and (max-width: $responsive-size-stand-mobile) {
+          margin-right: 0;
+        }
+      }
       &:first-child {
         margin-left: 0;
       }
@@ -71,14 +98,114 @@ header {
   padding: 22px 0 70px;
   position: relative;
   z-index: 2;
+  @media only screen and (max-width: $responsive-size-big-tablet) {
+    z-index: 999;
+  }
+  .holder-logo {
+    width: 25%;
+  }
+  .btn-mob {
+    display: none;
+    .btn {
+      width: 50px;
+      padding: 0;
+    }
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      display: flex;
+    }
+    svg {
+      margin-right: 0;
+    }
+  }
+  .holder-nav {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      flex-direction: column;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      overflow-y: scroll;
+      background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+      padding: 30px;
+      justify-content: center;
+      align-items: flex-end;
+      display: none;
+    }
+    .nav-close {
+      display: none;
+      margin-bottom: 60px;
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(62, 69, 80, 0.25);
+      padding: 0;
+      @media only screen and (max-width: $responsive-size-big-tablet) {
+        display: flex;
+      }
+      svg {
+        margin-right: 0;
+      }
+    }
+    .btn-header {
+      @media only screen and (max-width: $responsive-size-big-tablet) {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    .btn {
+      @media only screen and (max-width: $responsive-size-big-tablet) {
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        box-shadow: 0px 0px 40px rgba(242, 223, 58, 0.25);
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        &:hover,
+        &:focus {
+          color: #fff;
+          background: #EB3B3B;
+          svg {
+            path {
+              fill: rgba(255, 255, 255, 1);
+              stroke:rgba(255, 255, 255, 1);
+            }
+          }
+        }
+      }
+    }
+    }
+  }
   .nav {
     width: 100%;
-    max-width: 50%;
+    max-width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      flex-direction: column;
+      max-width: initial;
+    }
     li {
-      padding: 0 40px;
+      padding: 0 15px;
+      @media only screen and (max-width: $responsive-size-big-tablet) {
+        padding: 30px 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: right;
+        &:first-child {
+          border-top: none;
+        }
+      }
       a {
         font-weight: bold;
         font-size: 12px;
@@ -88,6 +215,16 @@ header {
         color: #FFFFFF;
         padding: 0;
         position: relative;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          text-align: right;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+
+          color: #1E2632;
+        }
         &:after {
           position: absolute;
           bottom: -12px;
@@ -99,6 +236,9 @@ header {
           border-radius: 10px;
           background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
           transition: all linear 0.2s;
+          @media only screen and (max-width: $responsive-size-big-tablet) {
+            display: none;
+          }
         }
         &.active,
         &:focus,

@@ -2,7 +2,11 @@
 
     .table {
         &.history-table {
+            min-width: 1500px;
             padding:50px 40px;
+            &.history-hash {
+                min-width: initial;
+            }
             .table-head {
                 padding: 0 40px;
                 margin: 0 -40px;
