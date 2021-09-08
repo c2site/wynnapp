@@ -21,3 +21,5 @@ Meteor.startup(() => {
     //getPrice();
     //Lottery_manage.create();
 });
+
+import './migration';

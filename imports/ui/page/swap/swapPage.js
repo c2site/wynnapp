@@ -16,14 +16,15 @@ const SwapPage = () => {
     useSubscribe('user.money', []);
 
     const prices = useTracker(()=>Price.findOne({assetName: asset}), [asset]);
-    const money = useTracker(()=> Money.find({coins: {$ne: 'wynne'}}).fetch(), []);
+    const money = useTracker(()=> Money.find({coins: {$ne: 'wynn'}}).fetch(), []);
 
     useEffect(()=> {
         setPrice((prices?.prices?.price5 * amount).toFixed(2))
     }, [asset, amount]);
 
-    const swap = (e) => {
+    const swapOn = (e) => {
         e.preventDefault()
+        console.log('methods')
         Meteor.call('swap', {amount, asset}, (err) => {
             if(err) {
                 toast.error(err.reason);
@@ -49,11 +50,11 @@ const SwapPage = () => {
                 </div>
               <div className="wallet-info">
                 <h2>Get amount WYNN</h2>
-                <form className="form form-swap" onSubmit={(e)=>swap(e)}>
+                <form className="form form-swap" onSubmit={(e)=>swapOn(e)}>
                   <div className="input-box flex f-align-center">
                     <input type="number" name="amount" value={amount} onChange={(e)=>setAmount(e.currentTarget.value)}/> <span>= {price || 0} {asset}</span>
                   </div>
-                    <div className="hash-btn" onClick={(e)=>swap(e)}>
+                    <div className="hash-btn" onClick={(e)=>swapOn(e)}>
                         <button className="btn btn-black">Swap</button>
                     </div>
                 </form>

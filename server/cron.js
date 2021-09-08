@@ -10,7 +10,7 @@ Meteor.startup(() => {
         // Log job run details to console
         log: Meteor.isProduction,
     });
-    if (!Meteor.isDevelopment) {
+    if (Meteor.isDevelopment) {
         SyncedCron.start();
     }
 });

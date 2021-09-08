@@ -57,4 +57,7 @@ if(Price.find().count() === 0) {
     })
 }
 
+//Users_manager.createUser('cron');
+
+
 
