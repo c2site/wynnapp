@@ -8,7 +8,6 @@ import {App} from "./ui/App";
 import HomePage from "./ui/page/home/HomePage";
 import BuyPage from "./ui/page/lottery/Buy";
 import Profile from "./ui/page/profile/Profile";
-import ProfilePage from "./ui/page/profile/ProfilePage";
 import HistoryPage from "./ui/page/lottery/History";
 import HashPage from "./ui/page/lottery/Hash";
 //import MyTickets from "./ui/page/profile/MyTickets";
@@ -64,7 +63,7 @@ FlowRouter.route('/profile', {
     name: 'profile',
     title: title('Profile'),
     action() {
-        mountMain(ProfilePage);
+        mountMain(Profile);
     },
     whileWaiting,
 });

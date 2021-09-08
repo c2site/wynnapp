@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import './money/init';
+// import './money/init';
 
 
 import './lottery/publish';

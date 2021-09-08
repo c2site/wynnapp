@@ -17,21 +17,15 @@ const TokenInput: React.FC<TokenInputProps> = ({ token, onChange, offset = 4, si
   };
 
   return (
-    <Row>
-      <Col xs={{ offset, size }}>
-        <FormGroup>
-          <Input
-            className={'text-center'}
-            type={'text'}
-            value={token}
-            onChange={handleChange}
-            pattern={`[0-9]*`}
-            inputMode={'numeric'}
-            maxLength={6}
-          />
-        </FormGroup>
-      </Col>
-    </Row>
+    <Input
+      className={'text-center'}
+      type={'text'}
+      value={token}
+      onChange={handleChange}
+      pattern={`[0-9]*`}
+      inputMode={'numeric'}
+      maxLength={6}
+    />
   );
 };
 
