@@ -1,8 +1,44 @@
-import React from "react";
-import NextDraw from "../../components/banner/components/NextDraw";
-import SendWallet from "../../components/modal/sendWallet";
+import React, {useEffect, useState} from "react";
+import {useSubscribe} from "../../../api/hooks";
+import {useTracker} from "meteor/react-meteor-data";
+import {Money} from "../../../api/mongo/money";
+import {Price} from "../../../api/mongo/price";
+import {Meteor} from "meteor/meteor";
+import {toast} from "react-toastify";
 
 const SwapPage = () => {
+    const [asset, setAsset] = useState('trx');
+    const [price, setPrice] = useState(0);
+    const [amount, setAmmount] = useState(0);
+
+    useSubscribe('price', []);
+    useSubscribe('coin', []);
+    useSubscribe('user.money', []);
+
+    const prices = useTracker(()=>Price.findOne({assetName: asset}), [asset]);
+    const money = useTracker(()=> Money.find({coins: {$ne: 'wynn'}}).fetch(), []);
+
+
+
+    const select = () => {
+        setAsset('usdt');
+    }
+
+    useEffect(()=> {
+        setPrice((prices?.prices?.price5 * amount).toFixed(2))
+    }, [asset, amount]);
+
+    const swap = () => {
+        Meteor.call('swap', {amount, asset}, (err) => {
+            if(err) {
+                toast.error(err.reason);
+            } else {
+                toast.success(`You swap ${amount} WYNN. Wait transactions`);
+            }
+        });
+    }
+
+
     return (
         <div className="history-page inner-page">
             <div className="container">
@@ -20,41 +56,23 @@ const SwapPage = () => {
                 <h2>Get amount WYNN</h2>
                 <form action="#" className="form form-swap">
                   <div className="input-box flex f-align-center">
-                    <input type="number" name="" id="" /> <span>= 1000 XXP</span>
+                    <input type="number" name="amount" value={amount} onChange={(e)=>setAmmount(e.currentTarget.value)}/> <span>= {price} {asset}</span>
                   </div>
-                  <div className="hash-btn">
-                    <button className="btn btn-black">Swap</button>
-                  </div>
+                    <div className="hash-btn">
+                        <button className="btn btn-black">Swap</button>
+                    </div>
                 </form>
-                <div className="wallets-list row">
-                  <div className="col-md-4">
-                    <div className="item active">
-                      <span className="name">wallet coins</span>
-                      <span className="info">wallet value</span>
-                      {/*<SendWallet wallet={wallet} />*/}
-                    </div>
+                  <div className="wallets-list row">
+                      <h2>Select coins</h2>
+                      {money?.map(wallet=> (
+                          <div className="col-md-4" key={wallet._id}>
+                              <div className="item" onClick={select} value={wallet.coins}>
+                                  <span className="name">{wallet.coins}</span>
+                                  <span className="info">{wallet.value()}</span>
+                              </div>
+                          </div>
+                      ))}
                   </div>
-                  <div className="col-md-4">
-                    <div className="item">
-                      <span className="name">wallet coins</span>
-                      <span className="info">wallet value</span>
-                      {/*<SendWallet wallet={wallet} />*/}
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="item">
-                      <span className="name">wallet coins</span>
-                      <span className="info">wallet value</span>
-                      {/*<SendWallet wallet={wallet} />*/}
-                    </div>
-                  </div>
-                </div>
-                <p>To replenish the wallet, copy the address and paste it into the corresponding line in the exchanger or
-                  wallet of another system.</p>
-                <p>The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens with your
-                  balance
-                  that you can store here are listed below.</p>
-                <p>* The minimum balance on your wallet cannot be lower than 5 TRX.</p>
               </div>
               <div className="scroll-history">
                 <div className="table history-table">

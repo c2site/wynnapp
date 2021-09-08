@@ -33,3 +33,5 @@ class Swap_manager {
     }
 
 }
+
+export default Swap_manager
