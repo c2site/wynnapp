@@ -19,7 +19,7 @@ const SwapPage = () => {
                     <form action="#" className="form form-hash">
                         <label>Get amount WYNN</label>
                         <div className="flex">
-                            <input type="number" name="" id="" />
+                            <input type="number" name="" id="" /> = 1000 XXP
 
                         </div>
                     </form>

@@ -101,6 +101,14 @@ const Profile = () => {
                   <div className="item" onClick={toggle2FA}>
                     <span className="name">2fa</span>
                     <span className="info">{user?.settings?.twoFa ? 'Active' : 'Disabled'}</span>
+                    <TwoFa secret={secret} close={() => setSecret(null)} />
+                    <TwoFAConfirm
+                        open={open}
+                        close={() => setOpen(false)}
+                        confirm={handleDeactivate}
+                        token={token}
+                        onChange={(tkn) => setToken(tkn)}
+                    />
                   </div>
                   <div className="item">
                     <span className="name">rating</span>
@@ -167,7 +175,7 @@ const Profile = () => {
             <p>The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens with your
               balance
               that you can store here are listed below.</p>
-            <p>* The minimum balance on your wallet cannot be lower than 5 TRC.</p>
+            <p>* The minimum balance on your wallet cannot be lower than 5 TRX.</p>
           </div>
           <div className="wallets-list row">
             {money?.map(wallet => (
@@ -209,16 +217,6 @@ const Profile = () => {
                 </table>
               </div>
             </div>
-            </div>
-            <div>
-              <TwoFa secret={secret} close={() => setSecret(null)} />
-              <TwoFAConfirm
-                  open={open}
-                  close={() => setOpen(false)}
-                  confirm={handleDeactivate}
-                  token={token}
-                  onChange={(tkn) => setToken(tkn)}
-              />
             </div>
           </div>
       </ProfileLayout>
