@@ -5,6 +5,7 @@ import {Money} from "../../../api/mongo/money";
 import {Price} from "../../../api/mongo/price";
 import {Meteor} from "meteor/meteor";
 import {toast} from "react-toastify";
+import {Input, Label, Form} from 'reactstrap';
 
 const SwapPage = () => {
     const [asset, setAsset] = useState('trx');
@@ -62,17 +63,18 @@ const SwapPage = () => {
                         <button className="btn btn-black">Swap</button>
                     </div>
                 </form>
-                  <div className="wallets-list row">
+                  <Form className="wallets-list row">
                       <h2>Select coins</h2>
                       {money?.map(wallet=> (
-                          <div className="col-md-4" key={wallet._id}>
-                              <div className="item" onClick={select} value={wallet.coins}>
+                          <div className="col-md-4 holder-item" key={wallet._id}>
+                            <Input type="radio" name="wallets" id={wallet.coins} />
+                              <Label className="item" htmlFor={wallet.coins} onClick={select} value={wallet.coins}>
                                   <span className="name">{wallet.coins}</span>
                                   <span className="info">{wallet.value()}</span>
-                              </div>
+                              </Label>
                           </div>
                       ))}
-                  </div>
+                  </Form>
               </div>
               <div className="scroll-history">
                 <div className="table history-table">
