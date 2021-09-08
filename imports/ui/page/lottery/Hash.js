@@ -33,38 +33,42 @@ const Hash = () => {
               <button className="btn btn-active">fine games</button>
               <button className="btn btn-default">game lorem</button>
             </div>
-            <div className="table-head">
-              <table>
-                <thead>
-                <tr>
-                  <th>game</th>
-                  <th>tickets</th>
-                  <th>win numbers</th>
-                  <th>win amount</th>
-                  <th>hash</th>
-                </tr>
-                </thead>
-              </table>
+            <div className="scroll-hash">
+              <div className="table-hash">
+                <div className="table-head">
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>game</th>
+                      <th>tickets</th>
+                      <th>win numbers</th>
+                      <th>win amount</th>
+                      <th>hash</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+                <table>
+                  <tbody>
+                  <tr>
+                    <td>№1055</td>
+                    <td>12</td>
+                    <td>
+                      <div className="numbers">
+                        <span className="number">10</span>
+                        <span className="number">10</span>
+                        <span className="number">10</span>
+                        <span className="number">10</span>
+                        <span className="number">10</span>
+                      </div>
+                    </td>
+                    <td className='green'>24500 WYNN</td>
+                    <td>1aa2793c984e484a12f249fbc331ece54b33f50020d40075bbbdecc2422edfab</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <table>
-              <tbody>
-              <tr>
-                <td>№1055</td>
-                <td>12</td>
-                <td>
-                  <div className="numbers">
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                    <span className="number">10</span>
-                  </div>
-                </td>
-                <td className='green'>24500 WYNN</td>
-                <td>1aa2793c984e484a12f249fbc331ece54b33f50020d40075bbbdecc2422edfab</td>
-              </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>

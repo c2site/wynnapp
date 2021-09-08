@@ -9,6 +9,20 @@
     margin-right: -30px;
   }
 }
+.scroll-history {
+  @media only screen and (max-width: 1500px) {
+    overflow-x: scroll;
+    margin-right: -30px;
+  }
+}
+.scroll-hash {
+  @media only screen and (max-width: 1500px) {
+    overflow-x: scroll;
+  }
+  .table-hash {
+    min-width: 1500px;
+  }
+}
 .table {
   background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
   border-radius: 15px;
