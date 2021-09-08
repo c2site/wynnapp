@@ -34,7 +34,7 @@ const TwoFAModal = ({ secret, close }) => {
     return <></>;
   }
   const user = Meteor.user();
-  const otpauth = otplib.authenticator.keyuri(user.emails[0].address, 'Wynne', secret);
+  const otpauth = otplib.authenticator.keyuri(user.emails[0].address, 'Wynn', secret);
 
   return (
     <Modal toggle={toggle} isOpen={isOpen} className="modal-app">

@@ -14,6 +14,7 @@ const Banner = () => {
               play to win
             </h1>
             <button className="btn btn-primary">get started now</button>
+            <a hre={'https://discord.gg/2tPXTF7795'}  target={'_blank'} className="btn btn-primary">Discord</a>
           </div>
           <div className="ico">
             <img src="./img/ico-banner.svg" alt="" />

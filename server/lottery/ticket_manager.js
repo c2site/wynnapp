@@ -65,7 +65,7 @@ class Ticket_manager {
             fee: this.user?.rating?.fee || 0
         }
 
-        if(this.assetName === 'wynne') {
+        if(this.assetName === 'wynn') {
             prams.rating += ticket.price;
             prams.fee = this._fee(prams.rating);
         }

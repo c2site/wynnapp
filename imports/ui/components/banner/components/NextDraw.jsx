@@ -8,7 +8,7 @@ import Countdown from 'react-countdown';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 
-const NextDraw = ({button, coins = 'wynne'})=> {
+const NextDraw = ({button, coins = 'wynn'})=> {
 
   const assetName = coins;
   useSubscribe ('lottery', []);
@@ -65,6 +65,7 @@ const NextDraw = ({button, coins = 'wynne'})=> {
             </div>
             <Countdown
                 date={lottery?.close}
+                intervalDelay={1000}
                 renderer={renderer}
             />
               {button ? (

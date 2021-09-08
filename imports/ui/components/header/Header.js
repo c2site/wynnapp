@@ -9,6 +9,11 @@ import {FlowRouter} from "meteor/ostrio:flow-router-extra";
 const Header = () => {
 
   const login = useTracker(()=>Meteor.userId(), []);
+
+  const logout = (e) => {
+    e.preventDefault();
+    Meteor.logout()
+  }
   return (
     <>
       <div className="container">
@@ -30,7 +35,7 @@ const Header = () => {
                 <path d="M1 5C1 3.89543 1.89543 3 3 3H17C18.1046 3 19 3.89543 19 5V13.75C19 14.8546 18.1046 15.75 17 15.75H3C1.89543 15.75 1 14.8546 1 13.75V5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
                 <path d="M2.42131 4.30287C1.91709 3.84067 2.24409 3 2.9281 3H17.0719C17.7559 3 18.0829 3.84067 17.5787 4.30287L12.0272 9.39176C10.8802 10.4431 9.11979 10.4431 7.97283 9.39176L2.42131 4.30287Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
               </svg>
-              info@wynne.com
+              info@wynn-games.com
             </a>
           </div>
           <div className="btn-head">
@@ -73,7 +78,7 @@ const Header = () => {
           <NavBar/>
           <div className="btn-header">
             {!login ? (<Registration/>) : (
-                <Button className="btn btn-default" onClick={()=>Meteor.logout()}>
+                <Button className="btn btn-default" onClick={(e)=>logout(e)}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

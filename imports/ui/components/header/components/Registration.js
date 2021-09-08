@@ -71,7 +71,7 @@ const Registration = (props) => {
                 <path d="M6 6.00003L18.7742 18.7742" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M6 18.7742L18.7742 6.00001" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              Закрыть
+              Close
             </Button>
           </div>
         </ModalFooter>

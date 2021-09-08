@@ -19,7 +19,7 @@ const BuyPage = () => {
   const user = useTracker(()=>Meteor.user() , []);
   const list = useTracker(()=> Ticket.find().fetch(), []);
   const [selected, setSelected] = useState([]);
-  const [coinName, setCoinName] = useState('trx');
+  const [coinName, setCoinName] = useState('wynn');
   const [price, setPrice] = useState(0);
   const [wait, setWait] = useState(false);
 

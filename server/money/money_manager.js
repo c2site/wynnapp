@@ -8,7 +8,7 @@ export class Money_manager {
         this.userId = userId;
         this.money = Money.findOne({userId: userId, coins: name});
         this.address = Addr.findOne({userId: userId}).address;
-        this.asset = Coin.findOne({name: name}).asset;
+        this.asset = Coin.findOne({name: name});
         this.masterAddress = Addr.findOne({userId: 'master'}).address;
     }
 
@@ -25,7 +25,7 @@ export class Money_manager {
     _check(amount) {
         if(this.money.amount < amount) throw new Meteor.Error('error_balance', 'Amount > Balance');
         if(!Meteor.isDevelopment) {
-            if(Transaction.findOne({userId: this.userId, createdAt: {$gte: new Date( Date.now()- (1000 * 60) ) }})) throw new Meteor.Error('error.timer', 'One transaction 20 seconds');
+            if(Transaction.findOne({sender: this.address, createdAt: {$gte: new Date( Date.now()- (1000 * 60) ) }})) throw new Meteor.Error('error.timer', 'One transaction 60 seconds');
         }
 
     }
@@ -37,12 +37,13 @@ export class Money_manager {
             type: TransactionType.SEND,
             amount: amount,
             recipient: recipient,
+            precision: this.money.precision,
             //txid: 'test_tx_id',
             sender: this.address,
-            asset: this.asset
+            asset: this.asset.asset
         }
 
-        const tron = new TronSend(this.userId, this.asset)
+        const tron = new TronSend(this.userId, this.asset.asset)
 
         tx.txid = await tron.send({amount: tx.amount, address: recipient});
 
@@ -59,7 +60,8 @@ export class Money_manager {
             recipient: this.masterAddress,
             //txid: 'test_tx_id_game',
             sender: this.address,
-            asset: this.asset,
+            asset: this.asset.asset,
+            precision: this.money.precision,
             game: {
                 game_5: amount * 0.3,
                 game_4: amount * 0.3,
@@ -68,8 +70,8 @@ export class Money_manager {
             }
         }
 
-        const tron = new TronSend(this.userId, this.asset)
-        txUser.txid = await tron.send({amount: amount, address: this.masterAddress});
+        const tron = new TronSend(this.userId, this.asset.asset)
+        txUser.txid = await tron.send({amount: txUser.amount, address: this.masterAddress});
 
         const txs = new Transactions_manager(this.userId);
         txs.create(txUser);

@@ -2,7 +2,7 @@ import { SyncedCron } from 'meteor/littledata:synced-cron';
 
 import {Price} from "../../imports/api/mongo/price";
 
-const startPrice = Meteor.isDevelopment ? 0.0000001 : 0.000026;
+const startPrice = 0.000026;
 
 export function getPrice() {
     Price.find().map(coin=>{
@@ -10,6 +10,7 @@ export function getPrice() {
         const price = HTTP.get(`https://api.coingecko.com/api/v3/simple/price?ids=${coin.cgName}&vs_currencies=btc`);
         const priceOne = price.data[coin.cgName]['btc'];
         const ticketPrice = (startPrice / priceOne);
+        console.log(coin.cgName, ticketPrice)
         coin.price = priceOne;
         coin.prices = {
             price5: ticketPrice,
@@ -27,7 +28,7 @@ export function getPrice() {
 
 SyncedCron.add({
     name: 'Update price',
-    schedule: (parser) => parser.text('every 60 minutes'),
+    schedule: (parser) => parser.text('every 10 minutes'),
     async job()  {
         getPrice()
     },

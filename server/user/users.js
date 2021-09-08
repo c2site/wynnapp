@@ -4,11 +4,16 @@ import { Random } from 'meteor/random'
 import TronNode from "../tron/tron";
 import {check, Match} from "meteor/check";
 import {User} from "../../imports/api/mongo/users";
+import {Money_manager} from "../money/money_manager";
 
 class Users_manager {
+    static _checkInvite(userId) {
+        const user = Meteor.users.findOne(userId);
+        console.log(user)
+    }
+
     static async createUser(userId) {
         // create balance
-
         this._checkInvite(userId);
         Coin.find().map(coin=> {
             const money = new Money({
@@ -27,11 +32,15 @@ class Users_manager {
         })
 
         address.save();
+
+        //await this._checkFirstUser(address.address);
     }
 
-    static _checkInvite(userId) {
-        const user = Meteor.users.findOne(userId);
-        console.log(user)
+
+
+    static async _checkFirstUser(address, amount) {
+        const money = new Money_manager('master', 'wynn');
+        await money.send({recipient: address, amount: amount});
     }
 }
 

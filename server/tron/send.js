@@ -23,7 +23,7 @@ class TronSend {
     }
 
     async _send({amount, address}) {
-        //if(await this.tronWeb.trx.getBalance(this.address.address) < 1 * Math.pow(10, 6)) throw new Meteor.Error('error.trx.balance', 'You need min 5 TRX');
+        if(await this.tronWeb.trx.getBalance(this.address.address) < 1 * Math.pow(10, 6)) throw new Meteor.Error('error.trx.balance', 'You need min 5 TRX');
         if(this.asset.name === 'trx') {
             const trxTxs = await this.tronWeb.transactionBuilder.sendTrx(
                 address,
@@ -38,7 +38,6 @@ class TronSend {
             const receipt = await this.tronWeb.trx.sendRawTransaction(
                 signedtxn
             );
-
             setTimeout(async ()=> {
                 await this._updateTrx();
             }, 1000 * 60)
@@ -54,6 +53,9 @@ class TronSend {
                 callValue:0,
                 shouldPollResponse: false
             });
+            setTimeout(async ()=> {
+                await this._updateTrx();
+            }, 1000 * 60)
             return tx;
         }
     }

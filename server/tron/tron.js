@@ -32,7 +32,7 @@ class TronNode {
 
     _save(tx) {
         const txs = new Transactions_manager('cron');
-
+        const coin = Coin.findOne({asset: tx.asset})
         //console.log(tx);
         txs.create({
             ...tx,
@@ -41,7 +41,8 @@ class TronNode {
             sender: tx.from,
             recipient: tx.to,
             txid: tx.txid,
-            amount: tx.value
+            amount: tx.value,
+            precision: coin.precision
         });
     }
 
@@ -74,7 +75,7 @@ class TronNode {
     }
 
     async _getTransactionContract(number) {
-        const txs = this.event('contracts', {params: {number: number, address: ['TBT6Asn7eZ8GD5s7T3r579s6XxKSe9m12E','TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t']}});
+        const txs = this.event('contracts', {params: {number: number, address: ['TBT6Asn7eZ8GD5s7T3r579s6XxKSe9m12E','TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t', 'TKAmuifcYR6iXRWa3igiNe2xZroTwGCKH9']}});
         txs.map((tx)=> {
             if(Transactions.findOne({txid: tx.txid})) return;
             if(!tx.to) return;
