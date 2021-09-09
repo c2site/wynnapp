@@ -50,7 +50,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#" target="_blank">
+            <a href="https://twitter.com/WYNNFoundation" target="_blank">
               <span className="ico">
                 <svg
                   width="21"

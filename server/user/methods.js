@@ -19,5 +19,9 @@ Meteor.methods({
     check(this.userId, String);
     check(token, String);
     TwoFA.confirm2fa(this.userId, token);
+  },
+  'user.invites'(){
+    const user = Meteor.user();
+    return Meteor.users.find({'settings.ref.invite': user.settings.ref.code}).count()
   }
 });

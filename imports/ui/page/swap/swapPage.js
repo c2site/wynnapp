@@ -31,7 +31,7 @@ const SwapPage = () => {
         });
     }
   const progress = {
-    width: `${(swap?.value() / 2000000 * 100).toFixed(2)}%`,
+    width: `${(swap?.value() / 1000 * 100).toFixed(2)}%`,
   };
 
     useEffect(()=> {
@@ -64,7 +64,7 @@ const SwapPage = () => {
                     </div>
                     <div className="wallet-info">
                         <h2>Get amount WYNN</h2>
-                        <form className="form form-swap" onSubmit={(e)=>swapOn(e)}>
+                        <form className="form form-swap">
                             <div className="input-box flex f-align-center">
                                 <input type="number" name="amount" value={amount} onChange={(e)=>setAmount(e.currentTarget.value)}/> <span>= {price || 0} {asset}</span>
                             </div>

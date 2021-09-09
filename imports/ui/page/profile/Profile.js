@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import SendModal from '/imports/ui/components/modal/sendModal';
 import ChangePassword from '/imports/ui/components/modal/changePassword';
@@ -40,7 +40,7 @@ const Profile = () => {
     const money = useTracker(()=> Money.find().fetch(), []);
     const addr = useTracker(()=>Addr.findOne(), []);
     const txs = useTracker(()=>Transaction.find().fetch(), [])
-    const invite = useTracker(()=>Meteor.users.find().count(), []);
+    const [invite, setInvite] = useState(0);
     const coin = (asset)=>{
         return Coin.findOne({asset: asset})?.name;
     }
@@ -59,6 +59,16 @@ const Profile = () => {
       setToken('');
     });
   }
+
+  useEffect(()=> {
+    Meteor.call('user.invites', (err, res)=> {
+      if(err) {
+        console.error(err.reason);
+      } else {
+        setInvite(res);
+      }
+    })
+  }, [])
 
   const toggle2FA = () => {
     if (user?.settings?.twoFa) {

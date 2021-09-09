@@ -36,7 +36,7 @@ const SendWallet = (props) => {
             <div className="row">
               <div className="col-md-9">
                 <div className="input-box">
-                  <Label for="">wallet adress</Label>
+                  <Label for="">wallet address</Label>
                   <Input type="text" name={'address'} onChange={change} value={send.address} />
                 </div>
               </div>
