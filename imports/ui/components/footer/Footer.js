@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         <ul className="social">
           <li>
-            <a href="#" target="_blank">
+            <a href="https://discord.gg/2tPXTF7795" target="_blank">
               <span className="ico">
                 <svg
                   width="21"
@@ -81,7 +81,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#" target="_blank">
+            <a href="https://bitcointalk.org/index.php?topic=5358909.0" target="_blank">
               <span className="ico">
                 <svg
                   width="24"

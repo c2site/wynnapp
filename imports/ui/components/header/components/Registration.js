@@ -18,10 +18,12 @@ const Registration = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    console.log(invite);
     Accounts.createUser({
       email: email,
       password: password,
-      profile: { invite },
+      profile: { invite: invite },
     }, (err) => {
       if (err) {
         toast.error(err.reason);

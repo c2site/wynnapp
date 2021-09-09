@@ -20,6 +20,7 @@ import {Button} from "reactstrap";
 import ProfileLayout from "./ProfileLayout";
 
 import TwoFAConfirm from "/imports/ui/components/modal/TwoFAConfirm";
+import {Meteor} from "meteor/meteor";
 
 const Profile = () => {
   const [secret, setSecret] = useState('');
@@ -39,6 +40,7 @@ const Profile = () => {
     const money = useTracker(()=> Money.find().fetch(), []);
     const addr = useTracker(()=>Addr.findOne(), []);
     const txs = useTracker(()=>Transaction.find().fetch(), [])
+    const invite = useTracker(()=>Meteor.users.find().count(), []);
     const coin = (asset)=>{
         return Coin.findOne({asset: asset})?.name;
     }
@@ -126,7 +128,7 @@ const Profile = () => {
               </div>
 
               <div className="item">
-                <span className="name">Invite url</span>
+                <span className="name">Invite url (invite users {invite})</span>
                 <span className="info">
                       https://wynn-games.com/?invite={user?.settings?.ref?.code}
                   <CopyToClipboard text={`https://wynn-games.com/?invite=${user?.settings?.ref?.code}`}

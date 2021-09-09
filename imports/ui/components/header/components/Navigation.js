@@ -11,9 +11,9 @@ const Navigation = () => {
             <li>
               <a href={FlowRouter.path('buy')}
             >Lottery</a></li>
-            <li><a href="#">Dice</a></li>
-            <li><a href="#">Option</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href={FlowRouter.path('swap')}>Buy WYNN</a></li>
+            {/*<li><a href="#">Option</a></li>*/}
+            {/*<li><a href="#">Contact</a></li>*/}
           </ul>
     </>
   );

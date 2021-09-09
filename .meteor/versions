@@ -50,6 +50,8 @@ meteor-base@1.5.1
 minifier-css@1.5.4
 minifier-js@2.6.1
 minimongo@1.7.0
+mizzao:timesync@0.5.2
+mizzao:user-status@1.0.1
 mobile-experience@1.1.0
 mobile-status-bar@1.1.0
 modern-browsers@0.1.5

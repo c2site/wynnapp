@@ -102,6 +102,7 @@ FlowRouter.route('/swap', {
     action() {
         mountMain(SwapPage);
     },
+    whileWaiting
 });
 
 new FlowRouterTitle(FlowRouter);

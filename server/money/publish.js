@@ -7,6 +7,10 @@ Meteor.publish('money.game', function () {
     return Money.find({type: 'game'});
 });
 
+Meteor.publish('money.swap', function () {
+    return Money.find({type: 'swap'});
+});
+
 Meteor.publish('user.money', function () {
     if (!this.userId) this.ready();
     return Money.find({userId: this.userId})

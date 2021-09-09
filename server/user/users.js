@@ -5,16 +5,16 @@ import TronNode from "../tron/tron";
 import {check, Match} from "meteor/check";
 import {User} from "../../imports/api/mongo/users";
 import {Money_manager} from "../money/money_manager";
+import {Meteor} from "meteor/meteor";
 
 class Users_manager {
-    static _checkInvite(userId) {
-        const user = Meteor.users.findOne(userId);
-        console.log(user)
+    static async _checkInvite(userId) {
+        //const user = Meteor.users.findOne(userId);
+        //const refer = Meteor.users.findOne({'settings.ref.code': user.settings.ref.invite});
     }
 
     static async createUser(userId) {
         // create balance
-        this._checkInvite(userId);
         Coin.find().map(coin=> {
             const money = new Money({
                 userId: userId,
@@ -33,6 +33,7 @@ class Users_manager {
 
         address.save();
 
+        await this._checkInvite(userId);
         //await this._checkFirstUser(address.address);
     }
 
@@ -56,8 +57,10 @@ Accounts.onCreateUser((options, user) => {
     });
 
     if (options.profile.invite) {
-        user.settings.ref.invite = options.profile.invite;
+        user.settings = {ref: { invite :options.profile.invite} };
     }
+
+    console.log(user);
 
     Users_manager.createUser(user._id);
 
