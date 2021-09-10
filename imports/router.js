@@ -14,6 +14,9 @@ import HashPage from "./ui/page/lottery/Hash";
 import {cookies} from "./ui/utils";
 import ProfileTickets from "./ui/page/profile/profileTickets";
 import SwapPage from "./ui/page/swap/swapPage";
+import OptionPage from "./ui/page/option/optionPage";
+import WynnRustPage from "./ui/page/wynnRust/wynnRustPage";
+import FreeCoinPage from "./ui/page/freeCoin/freeCoinPage";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -101,6 +104,33 @@ FlowRouter.route('/swap', {
     title: title('Swap coin'),
     action() {
         mountMain(SwapPage);
+    },
+    whileWaiting
+});
+
+FlowRouter.route('/option', {
+    name: 'option',
+    title: title('option'),
+    action() {
+        mountMain(OptionPage);
+    },
+    whileWaiting
+});
+
+FlowRouter.route('/wynn-rust', {
+    name: 'wynnRust',
+    title: title('wynn rust'),
+    action() {
+        mountMain(WynnRustPage);
+    },
+    whileWaiting
+});
+
+FlowRouter.route('/free-coin', {
+    name: 'freeCoin',
+    title: title('free coin'),
+    action() {
+        mountMain(FreeCoinPage);
     },
     whileWaiting
 });

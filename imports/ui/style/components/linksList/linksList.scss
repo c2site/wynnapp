@@ -73,17 +73,20 @@
             margin-right: 17px;
             background: #FFFFFF;
             border-radius: 50%;
+            &.ico-min {
+                svg {
+                    @media only screen and (max-width: $responsive-size-laptop-screen) {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+            }
             @media only screen and (max-width: $responsive-size-laptop-screen) {
                 height: 83px;
                 width: 83px;
             }
-
             svg {
                 display: block;
-                @media only screen and (max-width: $responsive-size-laptop-screen) {
-                    height: 40px;
-                    width: 40px;
-                }
             }
         }
 
