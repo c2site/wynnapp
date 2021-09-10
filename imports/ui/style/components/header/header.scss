@@ -27,6 +27,10 @@
       margin-right: 40px;
       @media only screen and (max-width: $responsive-size-stand-mobile) {
         margin-top: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        margin-right: 0;
         &:first-child {
           margin-top: 0;
         }
@@ -88,6 +92,46 @@
             text-transform: uppercase;
             color: #FFFFFF;
             border-radius: 50%;
+          }
+        }
+      }
+
+      &.profile-btn {
+        @media only screen and (max-width: $responsive-size-stand-mobile) {
+          width: auto;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        .summ {
+          padding: 6px 6px 4px;
+          margin-left: 10px;
+          background: #EB3B3B;
+          border-radius: 20px;
+          font-weight: bold;
+          font-size: 11px;
+          line-height: 13px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          display: flex;
+          align-items: center;
+          @media only screen and (max-width: $responsive-size-stand-mobile) {
+            padding: 2px 4px;
+            margin-left: -6px;
+            position: relative;
+            z-index: 2;
+          }
+          svg {
+            display: block;
+            margin-right: 5px;
+            @media only screen and (max-width: $responsive-size-stand-mobile) {
+              display: none;
+            }
+          }
+          span {
+            @media only screen and (max-width: $responsive-size-stand-mobile) {
+              display: none;
+            }
           }
         }
       }

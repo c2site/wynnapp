@@ -3,9 +3,11 @@
 .profile-page {
     padding-bottom: 30px;
     .profile-btn {
-        overflow-x: scroll;
         @media only screen and (max-width: $responsive-size-big-tablet) {
+            overflow-x: scroll;
             margin-top: 30px;
+            width: 100%;
+            margin-right: -30px;
         }
         .holder {
             display: flex;

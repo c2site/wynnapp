@@ -69,12 +69,21 @@ const Header = () => {
             {/*</button>*/}
 
             {!login ? (<Login/>) : (
-                <Button className="btn btn-default" onClick={()=>FlowRouter.go('/profile')}>
+                <Button className="btn btn-default profile-btn" onClick={()=>FlowRouter.go('/profile')}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <span>Profile</span>
+                  <strong className="summ">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.3334 6.00001V5.33334C11.3334 4.22877 10.438 3.33334 9.33341 3.33334H2.66675C1.56218 3.33334 0.666748 4.22877 0.666748 5.33334V8.00001C0.666748 9.10458 1.56218 10 2.66675 10H4.57151" stroke="white"/>
+                      <rect x="4.66675" y="6" width="10.6667" height="6.66667" rx="2" stroke="white"/>
+                      <ellipse cx="10.0001" cy="9.33333" rx="1.33333" ry="1.33333" stroke="white"/>
+                    </svg>
+                    14000
+                    <span>wynn</span>
+                  </strong>
                 </Button>
             )}
           </div>
@@ -98,9 +107,12 @@ const Header = () => {
             <div className="btn-header">
               {!login ? (<Registration/>) : (
                 <Button className="btn btn-default" onClick={(e)=>logout(e)}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
+                    <g>
+                      <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8
+                        c1.3,0,2.4,1.1,2.4,2.4v3.3H14V3.3c0-0.4-0.4-0.8-0.8-0.8H3.3c-0.4,0-0.8,0.4-0.8,0.8v16c0,0.4,0.4,0.8,0.8,0.8h9.8
+                        c0.4,0,0.8-0.4,0.8-0.8V16.1z M17.9,7.5l-1.2,1.2l1.9,1.9H8.1v1.6h10.6L16.8,14l1.2,1.2l3.8-3.8L17.9,7.5z" />
+                    </g>
                   </svg>
                   <span>logout</span>
                 </Button>
@@ -121,15 +133,12 @@ const Header = () => {
             <div className="btn-header">
               {!login ? (<Registration />) : (
                 <Button className="btn btn-default" onClick={(e) => logout(e)}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z"
-                      stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z"
-                      stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
+                  <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
+                    <g>
+                      <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8
+                        c1.3,0,2.4,1.1,2.4,2.4v3.3H14V3.3c0-0.4-0.4-0.8-0.8-0.8H3.3c-0.4,0-0.8,0.4-0.8,0.8v16c0,0.4,0.4,0.8,0.8,0.8h9.8
+                        c0.4,0,0.8-0.4,0.8-0.8V16.1z M17.9,7.5l-1.2,1.2l1.9,1.9H8.1v1.6h10.6L16.8,14l1.2,1.2l3.8-3.8L17.9,7.5z" />
+                    </g>
                   </svg>
                   <span>logout</span>
                 </Button>
