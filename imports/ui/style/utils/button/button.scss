@@ -65,8 +65,7 @@
     &:hover,
     &:focus {
       color: #212129;
-      background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
-      border: 2px solid transparent;
+      border: 2px solid rgba(62, 69, 80, 1);
       svg {
         path {
           //fill: #212129;
@@ -163,8 +162,56 @@
       background: #EB3B3B;
       svg {
         path {
-          fill: rgba(255, 255, 255, 1);
-          stroke:rgba(255, 255, 255, 1);
+          //fill: rgba(255, 255, 255, 1);
+          //stroke:rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+
+
+  &-links {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active{
+      color: #212129;
+      background: none;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      svg {
+        path {
+          //fill: #212129;
+          stroke:#212129;
+        }
+      }
+    }
+    &:focus {
+      &:active{
+        color: #212129;
+        background: none;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        svg {
+          path {
+            //fill: #212129;
+            stroke:#212129;
+          }
         }
       }
     }

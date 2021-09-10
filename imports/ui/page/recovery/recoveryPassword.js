@@ -52,7 +52,47 @@ const RecoveryPassword = () => {
 
     return (
         <>
-            <Form className={'recovery-form password-form form sing'} onSubmit={onSubmit}>
+            <div className="inner-page">
+                <div className="container-form">
+                    <div className="wallet-info">
+                        <Form className={'recovery-form password-form form sing'} onSubmit={onSubmit}>
+                            {show ? (
+                            <>
+                                <div className="input-box">
+                                    <Label className="label">Enter 2FA code</Label>
+                                    <TokenInput token={secret} onChange={(tkn) => setSecret(tkn)} offset={3} size={6} />
+                                </div>
+                            </>
+                            ) : (
+                            <>
+                                <div className={'input-box'}>
+                                    <Label for="pass1" className="label in">
+                                        Password
+                                    </Label><Input type={'password'} id={'pass1'} value={pass} onChange={(e) => setPass(e.currentTarget.value)} />
+                                </div>
+                                <div className="input-box">
+                                    <Label for="pass2" className="label in">
+                                        Password confirm
+                                    </Label>
+                                    <Input
+                                      type={'password'}
+                                      id={'pass2'}
+                                      value={repeat}
+                                      onChange={(e) => setRepeat(e.currentTarget.value)}
+                                    />
+                                </div>
+                            </>
+                            )}
+                            <div className="btn-box text-center">
+                                <Button color={'black'} type={'submit'}>
+                                    Change
+                                </Button>
+                            </div>
+                        </Form>
+                    </div>
+                </div>
+            </div>
+            {/*<Form className={'recovery-form password-form form sing'} onSubmit={onSubmit}>
                 {show ? (
                     <>
                         <Label className="label in text-center">Enter 2FA code</Label>
@@ -83,7 +123,7 @@ const RecoveryPassword = () => {
                         Change
                     </Button>
                 </div>
-            </Form>
+            </Form>*/}
         </>
     )
 }

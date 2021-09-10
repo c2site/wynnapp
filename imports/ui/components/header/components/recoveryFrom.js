@@ -29,15 +29,7 @@ const RecoveryFrom = () => {
 
     return (
         <>
-            <Button className="btn btn-default" onClick={toggle}>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z"
-                        stroke="white" strokeOpacity="0.75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path
-                        d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z"
-                        stroke="white" strokeOpacity="0.75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+            <Button className="btn btn-links" onClick={toggle}>
                 Recovery password
             </Button>
             <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
@@ -54,9 +46,8 @@ const RecoveryFrom = () => {
                     <ModalFooter>
                         <div className="btn-box">
                             <Button color="black" onClick={(e) => onSubmit(e)} type={'submit'}>
-                                <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white" strokeWidth="2"
-                                          strokeLinecap="round" />
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.39325 9.83193C1.5655 9.51356 1.53105 8.3552 2.33842 7.98822L17.1842 1.24011C18.0254 0.857758 18.8908 1.7231 18.5084 2.56428L11.7603 17.4101C11.3933 18.2175 10.235 18.183 9.9166 17.3553L7.98633 12.3366C7.88475 12.0725 7.67605 11.8638 7.41196 11.7622L2.39325 9.83193Z" stroke="white" stroke-width="2"/>
                                 </svg>
                                 Send
                             </Button>

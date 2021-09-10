@@ -100,6 +100,8 @@ const Login = () => {
                 </svg>
                 Close
               </Button>
+            </div>
+            <div className="btn-box">
               <RecoveryFrom />
             </div>
 
