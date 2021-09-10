@@ -62,7 +62,7 @@ const Login = () => {
             d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z"
             stroke="white" strokeOpacity="0.75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        Login
+        <span>Login</span>
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
         <ModalHeader toggle={toggle}>Login</ModalHeader>

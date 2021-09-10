@@ -6,13 +6,15 @@
 .scroll-table {
   @media only screen and (max-width: $responsive-size-big-tablet) {
     overflow-x: scroll;
-    margin-right: -30px;
+    //margin-right: -30px;
+    border-radius: 15px;
   }
 }
 .scroll-history {
   @media only screen and (max-width: 1500px) {
     overflow-x: scroll;
-    margin-right: -30px;
+    //margin-right: -30px;
+    border-radius: 15px;
   }
 }
 .scroll-hash {
@@ -28,6 +30,7 @@
   border-radius: 15px;
   padding: 50px 75px;
   min-width: 815px;
+  margin: 0;
   //@media only screen and (min-width: $responsive-size-tablet) {
   //  table-layout: fixed;
   //}

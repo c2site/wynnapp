@@ -20,6 +20,10 @@
             padding-left: 30px;
             padding-right: 30px;
         }
+        @media only screen and (max-width: $responsive-size-mobile) {
+            background-size: 100% auto;
+            background-position: 50% 55%;
+        }
         .container {
             padding-left: 0px;
             padding-right: 0px;
@@ -34,8 +38,12 @@
             .btn-holder {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 .btn {
                     margin-right: 15px;
+                    @media only screen and (max-width: $responsive-size-stand-mobile) {
+                        margin-bottom: 15px;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
