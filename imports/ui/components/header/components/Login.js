@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { toast } from "react-toastify";
 import TwoFAConfirm from "../../modal/TwoFAConfirm";
+import RecoveryFrom from "./recoveryFrom";
 
 const Login = () => {
   const [modal, setModal] = useState(false);
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [recovery, setRecovery] = useState(false);
 
   const toggle = () => setModal(!modal);
 
@@ -51,6 +53,7 @@ const Login = () => {
     login();
   };
 
+
   return (
     <>
       <Button className="btn btn-default" onClick={toggle}>
@@ -66,38 +69,42 @@ const Login = () => {
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
         <ModalHeader toggle={toggle}>Login</ModalHeader>
-        <ModalBody>
-          <Form className="form" onSubmit={() => onSubmit}>
-            <div className="input-box">
-              <Label for="">Email</Label>
-              <Input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />
+        <>
+          <ModalBody>
+            <Form className="form" onSubmit={() => onSubmit}>
+              <div className="input-box">
+                <Label for="">Email</Label>
+                <Input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />
+              </div>
+              <div className="input-box">
+                <Label for="">Password</Label>
+                <Input type="password" value={password} onChange={(e) => setPassword(e.currentTarget.value)} />
+              </div>
+            </Form>
+          </ModalBody>
+          <ModalFooter>
+            <div className="btn-box">
+              <Button color="black" onClick={(e) => onSubmit(e)} type={'submit'}>
+                <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white" strokeWidth="2"
+                        strokeLinecap="round" />
+                </svg>
+                Login
+              </Button>
+              <Button color="close-default" onClick={toggle}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 6.00003L18.7742 18.7742" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
+                        strokeLinejoin="round" />
+                  <path d="M6 18.7742L18.7742 6.00001" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
+                        strokeLinejoin="round" />
+                </svg>
+                Close
+              </Button>
+              <RecoveryFrom />
             </div>
-            <div className="input-box">
-              <Label for="">Password</Label>
-              <Input type="password" value={password} onChange={(e) => setPassword(e.currentTarget.value)} />
-            </div>
-          </Form>
-        </ModalBody>
-        <ModalFooter>
-          <div className="btn-box">
-            <Button color="black" onClick={(e) => onSubmit(e)} type={'submit'}>
-              <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white" strokeWidth="2"
-                      strokeLinecap="round" />
-              </svg>
-              Login
-            </Button>
-            <Button color="close-default" onClick={toggle}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 6.00003L18.7742 18.7742" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
-                      strokeLinejoin="round" />
-                <path d="M6 18.7742L18.7742 6.00001" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
-                      strokeLinejoin="round" />
-              </svg>
-              Close
-            </Button>
-          </div>
-        </ModalFooter>
+
+          </ModalFooter>
+        </>
       </Modal>
       <TwoFAConfirm
         open={show}

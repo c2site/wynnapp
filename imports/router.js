@@ -14,6 +14,7 @@ import HashPage from "./ui/page/lottery/Hash";
 import {cookies} from "./ui/utils";
 import ProfileTickets from "./ui/page/profile/profileTickets";
 import SwapPage from "./ui/page/swap/swapPage";
+import RecoveryPassword from "./ui/page/recovery/recoveryPassword";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -42,6 +43,25 @@ const title = (text) => `Wynn Games - ${text}`
 FlowRouter.globals.push({
     title: 'Wynn Games'
 });
+
+
+FlowRouter.route('/recoveryPassword/:token', {
+    name: 'recoveryPassword',
+    action() {
+        mountMain(RecoveryPassword);
+    },
+});
+
+FlowRouter.route('/verifyEmail/:token', {
+    name: 'verifyEmail',
+    action({ token }) {
+        Accounts.verifyEmail(token, () => {
+            //Meteor.call('user.verify');
+            FlowRouter.go('/');
+        });
+    },
+});
+
 
 FlowRouter.route('/', {
     name: 'home',

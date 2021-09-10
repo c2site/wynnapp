@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import {Accounts} from "meteor/accounts-base";
 // import './money/init';
 
 
@@ -23,3 +24,6 @@ Meteor.startup(() => {
 });
 
 import './migration';
+
+
+Accounts.urls.resetPassword = (token) => Meteor.absoluteUrl(`recoveryPassword/${token}`);

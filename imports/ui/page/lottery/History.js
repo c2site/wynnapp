@@ -1,8 +1,13 @@
 import React from 'react';
-
+import {useSubscribe} from "../../../api/hooks";
+import { useTracker } from 'meteor/react-meteor-data'
+import {Lottery} from "../../../api/mongo/lottery";
 
 const History = () => {
+    const loading = useSubscribe('lottery.history');
+    const list = useTracker(()=>Lottery.find().fetch(), []);
 
+    if(loading) return (<div></div>)
     return (
       <div className="history-page inner-page">
         <div className="container">
@@ -23,9 +28,9 @@ const History = () => {
                   <thead>
                   <tr>
                     <th>game</th>
-                    <th>tickets</th>
+                    {/*<th>tickets</th>*/}
                     <th>win numbers</th>
-                    <th>win amount</th>
+                    {/*<th>win amount</th>*/}
                     <th>hash</th>
                     <th></th>
                   </tr>
@@ -34,26 +39,26 @@ const History = () => {
               </div>
               <table>
                 <tbody>
-                <tr>
-                  <td>№1055</td>
-                  <td>12</td>
-                  <td>
-                    <div className="numbers">
-                      <span className="number">10</span>
-                      <span className="number">10</span>
-                      <span className="number">10</span>
-                      <span className="number">10</span>
-                      <span className="number">10</span>
-                    </div>
-                  </td>
-                  <td className='green'>24500 WYNN</td>
-                  <td>1aa2793c984e484a12f249fbc331ece54b33f50020d40075bbbdecc2422edfab</td>
-                  <td>
-                    <div className="flex">
-                      <button className="btn btn-primary">check hash</button>
-                    </div>
-                  </td>
-                </tr>
+                {list?.map(lot=>(
+                    <tr>
+                      <td>№{lot.id}</td>
+                      {/*<td>12</td>*/}
+                      <td>
+                        <div className="numbers">
+                          {lot.numbers?.map(x=>(
+                              <span className="number">{x}</span>
+                          ))}
+                        </div>
+                      </td>
+                      {/*<td className='green'>24500 WYNN</td>*/}
+                      <td><a href={` ${lot.hash}`}>{lot.hash}</a></td>
+                      <td>
+                        <div className="flex">
+                          {/*<button className="btn btn-primary">check hash</button>*/}
+                        </div>
+                      </td>
+                    </tr>
+                ))}
                 </tbody>
               </table>
             </div>

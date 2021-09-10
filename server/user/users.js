@@ -9,8 +9,9 @@ import {Meteor} from "meteor/meteor";
 
 class Users_manager {
     static async _checkInvite(userId) {
-        const user = Meteor.users.findOne(userId);
-        const refer = Meteor.users.findOne({'settings.ref.code': user.settings.ref.invite});
+        const user = Meteor.users.findOne({_id: userId});
+        if(!user['settings'].ref.invite) return;
+        const refer = Meteor.users.findOne({'settings.ref.code': user['settings'].ref.invite});
         if(!refer) return;
         const address = Addr.findOne({userId: refer._id}).address;
         const money = new Money_manager('invite', 'wynn');

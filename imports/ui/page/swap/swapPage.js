@@ -68,8 +68,8 @@ const SwapPage = () => {
                             <div className="input-box flex f-align-center">
                                 <input type="number" name="amount" value={amount} onChange={(e)=>setAmount(e.currentTarget.value)}/> <span>= {price || 0} {asset}</span>
                             </div>
-                            <div className="hash-btn" onClick={(e)=>swapOn(e)}>
-                                <button className="btn btn-black">Swap</button>
+                            <div className="hash-btn">
+                                <button className="btn btn-black" onClick={(e)=>swapOn(e)}>Swap</button>
                             </div>
                         </form>
                         <Form className="wallets-list row">
