@@ -16,6 +16,7 @@ import "./style/utils/button/button.scss";
 import "./style/utils/popup/popup.scss";
 import "./style/utils/table/table.scss";
 import "./style/utils/form/form.scss";
+import "./style/utils/notification/notification.scss";
 import "./style/components/footer/footer.scss";
 import "./style/components/header/header.scss";
 import "./style/page/innerPage.scss";

@@ -18,9 +18,15 @@
         @media only screen and (max-width: $responsive-size-big-tablet) {
             bottom: -80px;
         }
+        @media only screen and (max-width: 549px) {
+            left: 70%;
+        }
     }
     .holder-ticket {
         padding: 0 45px;
+        @media only screen and (max-width: $responsive-size-mobile) {
+            padding: 0 20px;
+        }
     }
 
     .ticket-head {
@@ -98,6 +104,7 @@
             }
             @media only screen and (max-width: $responsive-size-big-mobile) {
                 width: calc(100% / 4);
+                padding: 15px 0;
             }
 
             .payment-check {
@@ -132,6 +139,10 @@
                     transition: all linear 0.3s;
                     overflow: hidden;
                     cursor: pointer;
+                    @media only screen and (max-width: $responsive-size-mobile) {
+                        width: 50px;
+                        height: 50px;
+                    }
                     &:hover {
                         background: #EB3B3B;
                     }
@@ -470,14 +481,25 @@
     }
     .distribution-list {
         max-width: 968px;
+        height: 660px;
         margin: 0 auto;
-        .line {
-            display: flex;
-            align-items: center;
-            margin-top: 100px;
-            &:first-child {
-                margin-top: 0;
-            }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @media only screen and (max-width: 549px) {
+            height: 480px;
+        }
+        @media only screen and (max-width: 399px){
+            height: 510px;
+        }
+        //.line {
+            //display: flex;
+            //align-items: center;
+            //margin-top: 100px;
+            //&:first-child {
+                //margin-top: 0;
+            //}
             .item {
                 background: linear-gradient(87.16deg, #D8EBFD -4.55%, #8694A9 103.59%);
                 border-radius: 150px;
@@ -496,6 +518,20 @@
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
+                @media only screen and (max-width: 549px) {
+                    padding: 28px 15px 20px;
+                    width: 140px;
+                    height: 120px;
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+                @media only screen and (max-width: 399px){
+                    padding: 0;
+                    width: 120px;
+                    height: 120px;
+                    font-size: 26px;
+                    line-height: 32px;
+                }
                 &:after {
                     position: absolute;
                     top: 0;
@@ -513,6 +549,10 @@
                     background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
                     border-radius: 150px;
                     position: relative;
+                    margin: 100px auto;
+                    @media only screen and (max-width: 549px) {
+                        margin: 30px auto;
+                    }
                     .ico {
                         margin-bottom: 15px;
                         svg {
@@ -535,30 +575,137 @@
                         position: absolute;
                         width: 100px;
                         height: 100px;
+                        @media only screen and (max-width: 549px) {
+                            width: 50px;
+                            height: 50px;
+                        }
+                        svg {
+                            @media only screen and (max-width: 549px) {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
                         &.top {
                             left: 50%;
                             transform: translateX(-50%);
                             top: -100px;
+                            @media only screen and (max-width: $responsive-size-big-tablet) {
+                                right: -75px;
+                                left: initial;
+                                transform: rotateZ(45deg);
+                            }
+                            @media only screen and (max-width: $responsive-size-stand-mobile) {
+                                left: 52%;
+                                right: initial;
+                            }
+                            @media only screen and (max-width: 549px) {
+                                top: -50px;
+                            }
                         }
                         &.bottom {
                             left: 50%;
                             transform: translateX(-50%);
                             bottom: -100px;
+                            @media only screen and (max-width: $responsive-size-big-tablet) {
+                                right: -75px;
+                                left: initial;
+                                transform: rotateZ(-45deg);
+                            }
+                            @media only screen and (max-width: $responsive-size-stand-mobile) {
+                                left: 52%;
+                                right: initial;
+                            }
+                            @media only screen and (max-width: 549px) {
+                                bottom: -50px;
+                            }
                         }
                         &.right {
                             right: -100px;
                             transform: translateY(-50%);
                             top: 50%;
+                            @media only screen and (max-width: $responsive-size-big-tablet) {
+                                left: -75px;
+                                right: initial;
+                                bottom: -100px;
+                                top: initial;
+                                transform: rotateZ(135deg);
+                            }
+                            @media only screen and (max-width: $responsive-size-stand-mobile) {
+                                right: 52%;
+                                left: initial;
+                            }
+                            @media only screen and (max-width: 549px) {
+                                bottom: -50px;
+                            }
                         }
                         &.left {
                             left: -100px;
                             transform: translateY(-50%);
                             top: 50%;
+                            @media only screen and (max-width: $responsive-size-big-tablet) {
+                                right: initial;
+                                top: -100px;
+                                left: -75px;
+                                transform: rotateZ(45deg);
+                            }
+                            @media only screen and (max-width: $responsive-size-stand-mobile) {
+                                right: 52%;
+                                left: initial;
+                            }
+                            @media only screen and (max-width: 549px) {
+                                top: -50px;
+                            }
                         }
                     }
                 }
                 &.center {
                     margin: 0 auto;
+                }
+                &.center-top {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        left: 0;
+                        transform: none;
+                    }
+                }
+                &.center-bottom {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        right: 0;
+                        left: initial;
+                        transform: none;
+                    }
+                }
+                &.right {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        bottom: 0;
+                        top: initial;
+                        right: initial;
+                        left: 0;
+                        transform: none;
+                    }
+                }
+                &.left {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        top: 0;
+                        left: initial;
+                        right: 0;
+                        transform: none;
+                    }
                 }
                 .info {
                     font-weight: bold;
@@ -576,6 +723,10 @@
                     padding: 7px 20px;
                     position: relative;
                     z-index: 2;
+                    @media only screen and (max-width: 549px) {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
                 }
                 strong {
                     display: block;
@@ -583,7 +734,7 @@
                     z-index: 2;
                 }
             }
-        }
+        //}
     }
 }
 .new-tickets {
@@ -614,6 +765,9 @@
         border-radius: 15px;
         padding: 0 50px 40px;
         margin-top: 30px;
+        @media only screen and (max-width: $responsive-size-mobile) {
+            padding: 0 20px 20px;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -731,6 +885,8 @@
                 display: flex;
                 @media only screen and (max-width: 767px) {
                     margin-bottom: 30px;
+                    justify-content: space-around;
+                    width: 100%;
                 }
                 .number {
                     font-family: "Rubik", sans-serif;
@@ -755,6 +911,13 @@
                     margin: 0 50px 0 0;
                     transition: all linear 0.3s;
                     overflow: hidden;
+                    @media only screen and (max-width: 767px) {
+                        margin: 0;
+                    }
+                    @media only screen and (max-width: $responsive-size-mobile) {
+                        width: 42px;
+                        height: 42px;
+                    }
                     &:last-child {
                         margin: 0;
                     }

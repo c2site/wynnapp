@@ -2,6 +2,7 @@
 
 .inner-page {
     position: relative;
+    padding-bottom: 50px;
     &:after {
         z-index: 1;
         position: absolute;
@@ -159,6 +160,49 @@
                 height: 15px;
 
             }
+        }
+    }
+    .text-information {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 23px;
+        color: rgba(255,255,255,0.75);
+        padding-bottom: 100px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 40px;
+        h5 {
+            font-size: 20px;
+            line-height: 27px;
+            color: #E8C76F;
+            margin-bottom: 12px;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+.comming-page {
+    padding: 20px 0;
+    .flex {
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            flex-direction: column;
+        }
+    }
+    h1 {
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+    .img-page {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(33, 33, 41, 0) 100%);
+        max-width: 50%;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            max-width: 100%;
+        }
+        img {
+            display: block;
+
         }
     }
 }

@@ -229,7 +229,7 @@ const BuyPage = () => {
         </div>
         <div className="prize-box">
           <h2>prize pool</h2>
-          <div className="prize-list">
+          <div className="prize-list row">
             {pool?.map(money=>(
                 <div className={'col'}>
                   <div className="item">
@@ -250,14 +250,11 @@ const BuyPage = () => {
               <p>90% of the proceeds from ticket sales go to the prize pool</p>
             </div>
             <div className="distribution-list">
-              <div className="line">
-                <div className="item center">
+                <div className="item center-top">
                   <span className="info">4 match</span>
                   <strong>30%</strong>
                 </div>
-              </div>
-              <div className="line">
-                <div className="item">
+                <div className="item left">
                   <span className="info">5 match</span>
                   <strong>30%</strong>
                 </div>
@@ -292,17 +289,14 @@ const BuyPage = () => {
                     </svg>
                   </span>
                 </div>
-                <div className="item">
+                <div className="item right">
                   <span className="info">3 match</span>
                   <strong>30%</strong>
                 </div>
-              </div>
-              <div className="line">
-                <div className="item center">
+                <div className="item center-bottom">
                   <span className="info">dev</span>
                   <strong>10%</strong>
                 </div>
-              </div>
             </div>
           </div>
         </div>

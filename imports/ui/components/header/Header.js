@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from '/imports/ui/components/header/components/Navigation';
 import Login from  '/imports/ui/components/header/components/Login';
 import Registration from "./components/Registration";
@@ -14,8 +14,24 @@ const Header = () => {
     e.preventDefault();
     Meteor.logout()
   }
+
+  const [isShown, setIsShown] = useState(false);
+
+  const toggleNav = () => setIsShown(!isShown);
+
   return (
     <>
+      <a href={FlowRouter.path('freeCoin')} className="notification">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.2827 5L20.9998 12L14.2827 19" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="19.7329" y1="12.0317" x2="3.99985" y2="12.0317" stroke="#1E2632" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>get it for free WYNNE</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.71729 19L3.00021 12L9.71729 5" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="4.26709" y1="11.9683" x2="20.0002" y2="11.9683" stroke="#1E2632" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
       <div className="container">
         <div className="head-top flex f-space-between f-align-center">
           <div className="info">
@@ -78,12 +94,6 @@ const Header = () => {
             </a>
           </div>
           <div className="holder-nav">
-            <button className="btn btn-default nav-close">
-              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.5 6.50003L19.2742 19.2742" stroke="#1E2632" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6.5 19.2742L19.2742 6.50001" stroke="#1E2632" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
             <NavBar/>
             <div className="btn-header">
               {!login ? (<Registration/>) : (
@@ -92,13 +102,46 @@ const Header = () => {
                     <path d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  logout
+                  <span>logout</span>
                 </Button>
               )}
             </div>
           </div>
+          {isShown &&
+          <div className="holder-nav mobile-nav">
+            <button className="btn btn-default nav-close" onClick={toggleNav}>
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.5 6.50003L19.2742 19.2742" stroke="#1E2632" stroke-opacity="0.25" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6.5 19.2742L19.2742 6.50001" stroke="#1E2632" stroke-opacity="0.25" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <NavBar />
+            <div className="btn-header">
+              {!login ? (<Registration />) : (
+                <Button className="btn btn-default" onClick={(e) => logout(e)}>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.5253 14.3486C14.1995 13.6936 12.1695 12.9167 10 12.9167C7.83052 12.9167 5.80049 13.6936 4.47467 14.3486C3.45001 14.8547 2.83962 15.8875 2.70497 17.0224L2.5 18.75H17.5L17.295 17.0224C17.1604 15.8875 16.55 14.8547 15.5253 14.3486Z"
+                      stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z"
+                      stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>logout</span>
+                </Button>
+              )}
+            </div>
+          </div>
+          }
+          {isShown &&
+          <div className="shadow"></div>
+          }
           <div className="btn-mob">
-            <Button className="btn btn-active" onClick={(e)=>logout(e)}>
+            <Button className="btn btn-active" onClick={toggleNav}>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 5.5H18" stroke="white" stroke-width="2" stroke-linecap="round"/>
                 <path d="M6 15.5H18" stroke="white" stroke-width="2" stroke-linecap="round"/>
