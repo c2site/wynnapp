@@ -31,6 +31,7 @@ import "./style/components/subscribe/subscribe.scss";
 import './style/components/ticket/ticket.scss'
 import "./style/page/profile.scss";
 import "./style/page/history.scss";
+import '../api/i18n';
 
 export const App = ({Page}) => (
   <>

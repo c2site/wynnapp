@@ -6,6 +6,7 @@ import {Lottery} from "../../../../api/mongo/lottery";
 import {Money} from "../../../../api/mongo/money";
 import Countdown from 'react-countdown';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import Loading from "../../loading";
 
 
 const NextDraw = ({button, coins = 'wynn'})=> {
@@ -31,7 +32,7 @@ const NextDraw = ({button, coins = 'wynn'})=> {
     }
 
   if(loading) {
-      return (<div></div>)
+      return (<Loading />)
   } else {
       return (
           <>

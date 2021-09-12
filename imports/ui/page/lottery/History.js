@@ -2,12 +2,13 @@ import React from 'react';
 import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Lottery} from "../../../api/mongo/lottery";
+import Loading from "../../components/loading";
 
 const History = () => {
     const loading = useSubscribe('lottery.history');
     const list = useTracker(()=>Lottery.find().fetch(), []);
 
-    if(loading) return (<div></div>)
+    if(loading) return (<Loading/>)
     return (
       <div className="history-page inner-page">
         <div className="container">

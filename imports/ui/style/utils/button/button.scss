@@ -1,5 +1,10 @@
 @import "../../_helpers/variables";
 
+.spinner-border {
+  span {
+    display: none;
+  }
+}
 .btn {
   position: relative;
   top: 0px;
