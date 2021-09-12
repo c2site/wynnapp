@@ -5,9 +5,11 @@ import Registration from "./components/Registration";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Button} from "reactstrap";
 import {FlowRouter} from "meteor/ostrio:flow-router-extra";
+import {useTranslation} from "react-i18next";
 
 const Header = () => {
 
+  const {t, i18n} = useTranslation();
   const login = useTracker(()=>Meteor.userId(), []);
 
   const logout = (e) => {
@@ -44,7 +46,7 @@ const Header = () => {
                 <path d="M11.6516 6.34836L14.8336 3.16638" stroke="white" stroke-width="1.5"/>
                 <path d="M3.1665 14.8336L6.34848 11.6516" stroke="white" stroke-width="1.5"/>
               </svg>
-              Support 24/7
+              {t("header.support")}24/7
             </a>
             <a href="#">
               <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
