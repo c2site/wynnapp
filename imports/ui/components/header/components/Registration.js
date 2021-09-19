@@ -19,6 +19,11 @@ const Registration = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
+    if(password !== confirm) {
+      toast.error('Error password');
+      return;
+    }
+
     console.log(invite);
     Accounts.createUser({
       email: email,
@@ -42,10 +47,10 @@ const Registration = (props) => {
         <ModalHeader toggle={toggle}>join us</ModalHeader>
         <ModalBody>
           <Form className="form" onSubmit={(e)=>onSubmit(e)}>
-            <div className="input-box">
-              <Label for="">name</Label>
-              <Input type="text"/>
-            </div>
+            {/*<div className="input-box">*/}
+            {/*  <Label for="">name</Label>*/}
+            {/*  <Input type="text"/>*/}
+            {/*</div>*/}
             <div className="input-box">
               <Label for="">Email</Label>
               <Input type="email"  value={email} onChange={(e)=>setEmail(e.currentTarget.value)}/>

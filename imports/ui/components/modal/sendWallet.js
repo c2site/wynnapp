@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {Meteor} from "meteor/meteor";
+import {toast} from "react-toastify";
 
 const SendWallet = (props) => {
   const {
@@ -13,6 +15,15 @@ const SendWallet = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    Meteor.call('user.send.coin', {wallet, send}, (err) => {
+      if(err) {
+        toast.error(err.reason);
+      } else {
+        setSend({address: '', amount: 0});
+        toggle()
+      }
+    });
   };
 
   const change = (e) => {
