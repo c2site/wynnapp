@@ -774,7 +774,7 @@
         .head {
             padding: 23px 0 27px;
             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -816,6 +816,10 @@
                     margin: 0 15px;
                     color: rgba(255, 255, 255, 0.1);
                 }
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    justify-content: center;
+                }
             }
             .win {
                 font-weight: bold;
@@ -842,34 +846,39 @@
                 }
             }
             .status {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-                padding: 6px 16px 6px 11px;
-                margin-left: auto;
-                border-radius: 20px;
-                font-weight: bold;
-                font-size: 12px;
-                line-height: 15px;
-                text-align: right;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
-                color: rgba(255,255,255,0.75);
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+        .status {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 6px 16px 6px 11px;
+            margin-left: auto;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: right;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.75);
+            border: 2px solid #6C7788;
+            svg {
+                margin-right: 6px;
+                display: block;
+            }
+            &.wait {
                 border: 2px solid #6C7788;
-                svg {
-                    margin-right: 6px;
-                    display: block;
-                }
-                &.wait {
-                    border: 2px solid #6C7788;
-                }
-                &.win {
-                    border: 2px solid #28D83A;
-                }
-                &.lose {
-                    border: 2px solid #EB3B3B;
-                }
+            }
+            &.win {
+                border: 2px solid #28D83A;
+            }
+            &.lose {
+                border: 2px solid #EB3B3B;
             }
         }
         .body {
@@ -883,43 +892,43 @@
             }
             .number-list {
                 display: flex;
+                flex-wrap: wrap;
                 @media only screen and (max-width: 767px) {
-                    margin-bottom: 30px;
-                    justify-content: space-around;
-                    width: 100%;
+                    //margin-bottom: 30px;
+                    //justify-content: space-around;
+                    //width: 100%;
                 }
                 .number {
-                    font-family: "Rubik", sans-serif;
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 57px;
-                    height: 57px;
-                    background: transparent;
-                    border: 1px solid #EB3B3B;
-                    box-sizing: border-box;
-                    border-radius: 50px;
-                    font-weight: bold;
-                    font-size: 15px;
-                    line-height: 18px;
-                    text-align: center;
-                    letter-spacing: 0.05em;
-                    text-transform: uppercase;
-                    color: #FFFFFF;
-                    outline: none;
-                    padding: 0;
-                    margin: 0 50px 0 0;
-                    transition: all linear 0.3s;
-                    overflow: hidden;
-                    @media only screen and (max-width: 767px) {
-                        margin: 0;
-                    }
-                    @media only screen and (max-width: $responsive-size-mobile) {
-                        width: 42px;
-                        height: 42px;
-                    }
-                    &:last-child {
-                        margin: 0;
+                    span {
+                        font-family: "Rubik", sans-serif;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 57px;
+                        height: 57px;
+                        background: transparent;
+                        border: 1px solid #EB3B3B;
+                        box-sizing: border-box;
+                        border-radius: 50px;
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        outline: none;
+                        padding: 0;
+                        transition: all linear 0.3s;
+                        overflow: hidden;
+                        @media only screen and (max-width: 767px) {
+                            margin: 0;
+                        }
+                        @media only screen and (max-width: $responsive-size-mobile) {
+                            width: 42px;
+                            height: 42px;
+                        }
                     }
                 }
             }
@@ -947,6 +956,22 @@
                 }
             }
         }
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+            }
+            .status {
+                display: none;
+                margin-left: initial;
+                @media only screen and (max-width: 767px) {
+                    display: flex;
+                }
+            }
+        }
     }
     &.my-tickets {
         .item {
@@ -959,8 +984,9 @@
             }
             .body {
                 .number-list {
+                    margin: 0 -15px;
                     .number {
-                        margin-right: 30px;
+                        padding: 15px;
                     }
                 }
                 .price {

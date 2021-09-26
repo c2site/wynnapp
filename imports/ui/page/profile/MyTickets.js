@@ -12,6 +12,7 @@ const MyTickets = () => {
           <div className="row">
             <div className="col-lg-8">
               <div className="list-new-tickets my-tickets">
+
                 {list?.map(ticket=>(
                     <div className="item" key={ticket._id}>
                       <div className="head">
@@ -33,13 +34,34 @@ const MyTickets = () => {
                       <div className="body">
                         <div className="number-list">
                           {ticket.numbers.map(x=>(
-                              <span className="number" key={'k'+x}>{x}</span>
+                              <span className="number" key={'k'+x}><span>{x}</span></span>
                           ))}
                         </div>
-                        <span className="price">
-                      price
-                      <span>{ticket.price} {ticket.lottery.assetName}</span>
-                    </span>
+                        <div className={'status mob-show'+ticket.status}>
+                          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.75">
+                              <ellipse cx="10.9997" cy="11" rx="9.16667" ry="9.16667" stroke="white" stroke-width="2"/>
+                              <path d="M11 6.83334V11.8333L13.0833 13.9167" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                          </svg>
+                          {ticket.status}
+                        </div>
+
+                        <div className="footer">
+                          <div className={'status '+ticket.status}>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g opacity="0.75">
+                                <ellipse cx="10.9997" cy="11" rx="9.16667" ry="9.16667" stroke="white" stroke-width="2"/>
+                                <path d="M11 6.83334V11.8333L13.0833 13.9167" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </svg>
+                            {ticket.status}
+                          </div>
+                          <span className="price">
+                            price
+                            <span>{ticket.price} {ticket.lottery.assetName}</span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                 ))}

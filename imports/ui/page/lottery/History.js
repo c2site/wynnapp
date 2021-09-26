@@ -42,9 +42,10 @@ const History = () => {
                 <tbody>
                 {list?.map(lot=>(
                     <tr>
-                      <td>№{lot.id}</td>
+                      <td><span className="th-name">game</span>№{lot.id}</td>
                       {/*<td>12</td>*/}
                       <td>
+                        <span className="th-name">win numbers</span>
                         <div className="numbers">
                           {lot.numbers?.map(x=>(
                               <span className="number">{x}</span>
@@ -52,7 +53,7 @@ const History = () => {
                         </div>
                       </td>
                       {/*<td className='green'>24500 WYNN</td>*/}
-                      <td><a href={` ${lot.hash}`}>{lot.hash}</a></td>
+                      <td><span className="th-name">hash</span><a href={` ${lot.hash}`}>{lot.hash}</a></td>
                       <td>
                         <div className="flex">
                           {/*<button className="btn btn-primary">check hash</button>*/}

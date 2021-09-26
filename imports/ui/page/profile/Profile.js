@@ -219,10 +219,10 @@ const Profile = () => {
                   <tbody>
                   {txs?.map(tx=>(
                       <tr key={tx._id}>
-                        <td className={type(tx.sender)}><Moment format={"HH:mm:ss DD/MM/YYYY"}>{tx.createdAt}</Moment></td>
-                        <td className={type(tx.sender)}>{tx.value()}</td>
-                        <td className={type(tx.sender)}>{coin(tx.asset)}</td>
-                        <td className={type(tx.sender)} colSpan="3"><a href={`https://tronscan.io/#/transaction/${tx.txid}`} target={'_blank'}>{tx.txid}</a></td>
+                        <td className={type(tx.sender)}><span className="th-name">time</span><Moment format={"HH:mm:ss DD/MM/YYYY"}>{tx.createdAt}</Moment></td>
+                        <td className={type(tx.sender)}><span className="th-name">amount</span>{tx.value()}</td>
+                        <td className={type(tx.sender)}><span className="th-name">coin</span>{coin(tx.asset)}</td>
+                        <td className={type(tx.sender)} colSpan="3"><span className="th-name">txid</span><a href={`https://tronscan.io/#/transaction/${tx.txid}`} target={'_blank'}>{tx.txid}</a></td>
                       </tr>
                   ))}
                   </tbody>

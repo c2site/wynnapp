@@ -12,12 +12,19 @@
         .holder {
             display: flex;
             align-items: center;
-            min-width: 525px;
+            flex-wrap: wrap;
+            //min-width: 525px;
         }
         .btn {
             margin-left: 15px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin-left: 0;
+                margin-right: 15px;
+                margin-top: 10px;
+            }
             &:first-child {
                 margin-left: 0;
+                margin-top: 0;
             }
         }
     }
@@ -61,6 +68,9 @@
                         height: 28px;
                         min-height: auto;
                         margin-left: auto;
+                        svg {
+                            margin: 0;
+                        }
                     }
                 }
                 .progress {
@@ -157,6 +167,18 @@
             padding: 40px 17px 30px 30px;
             border: 1px solid rgba(216, 235, 253, 0.25);
             position: relative;
+            &:after {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                display: block;
+                content: '';
+                z-index: 1;
+                transform: translateY(-50%);
+                background: url("./img/arrow-coin.svg") no-repeat 50% 50%;
+            }
             .name {
                 display: block;
                 margin-bottom: 10px;
@@ -166,6 +188,8 @@
                 letter-spacing: 0.05em;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                position: relative;
+                z-index: 2;
             }
             .info {
                 display: inline-flex;
@@ -178,6 +202,8 @@
                 letter-spacing: 0.05em;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                position: relative;
+                z-index: 2;
             }
         }
     }
@@ -186,13 +212,13 @@
     &.profile-table {
         min-width: initial;
         @media only screen and (max-width: $responsive-size-big-tablet) {
-            min-width: 815px;
+            //min-width: 815px;
         }
         padding: 30px;
         .table-head {
             min-width: initial;
             @media only screen and (max-width: $responsive-size-big-tablet) {
-                min-width: 815px;
+                //min-width: 815px;
             }
             padding: 0 30px;
             margin: 0 -30px;

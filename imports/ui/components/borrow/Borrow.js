@@ -34,11 +34,11 @@ const Borrow = () => {
                 <tbody>
                 {list?.map(ticket=>(
                     <tr key={ticket._id}>
-                      <td>{ticket?.user?.name || 'Anonyms'}</td>
-                      <td>{ticket.id}</td>
-                      <td className='red'>{ticket.price} {ticket.lottery.assetName}</td>
-                      <td className='game1'>{ticket.name}</td>
-                      <td className='green'>{ticket.win} {ticket.lottery.assetName}</td>
+                      <td><span className="th-name">User</span>{ticket?.user?.name || 'Anonyms'}</td>
+                      <td><span className="th-name">bet id</span>{ticket.id}</td>
+                      <td className='red'><span className="th-name">bet amount</span>{ticket.price} {ticket.lottery.assetName}</td>
+                      <td className='game1'><span className="th-name">game</span>{ticket.name}</td>
+                      <td className='green'><span className="th-name">profit</span>{ticket.win} {ticket.lottery.assetName}</td>
                     </tr>
                 ))}
                 </tbody>

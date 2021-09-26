@@ -31,16 +31,16 @@ const СommissionModal = (props) => {
             <table>
               <tbody>
                 <tr>
-                  <td>10</td>
-                  <td>10%</td>
+                  <td><span className="th-name">Сommission</span>10</td>
+                  <td><span className="th-name">discount</span>10%</td>
                 </tr>
                 <tr>
-                  <td>50</td>
-                  <td>20%</td>
+                  <td><span className="th-name">Сommission</span>50</td>
+                  <td><span className="th-name">discount</span>20%</td>
                 </tr>
                 <tr>
-                  <td>170</td>
-                  <td>30%</td>
+                  <td><span className="th-name">Сommission</span>170</td>
+                  <td><span className="th-name">discount</span>30%</td>
                 </tr>
               </tbody>
             </table>

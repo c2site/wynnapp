@@ -5,31 +5,31 @@
 }
 .scroll-table {
   @media only screen and (max-width: $responsive-size-big-tablet) {
-    overflow-x: scroll;
+    //overflow-x: scroll;
     //margin-right: -30px;
     border-radius: 15px;
   }
 }
 .scroll-history {
   @media only screen and (max-width: 1500px) {
-    overflow-x: scroll;
+    //overflow-x: scroll;
     //margin-right: -30px;
     border-radius: 15px;
   }
 }
 .scroll-hash {
   @media only screen and (max-width: 1500px) {
-    overflow-x: scroll;
+    //overflow-x: scroll;
   }
   .table-hash {
-    min-width: 1500px;
+    //min-width: 1500px;
   }
 }
 .table {
   background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
   border-radius: 15px;
   padding: 50px 75px;
-  min-width: 815px;
+  //min-width: 815px;
   margin: 0;
   //@media only screen and (min-width: $responsive-size-tablet) {
   //  table-layout: fixed;
@@ -38,7 +38,7 @@
     margin: 0 -75px;
     padding: 0 75px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    min-width: 815px;
+    //min-width: 815px;
     table {
       min-width: initial;
     }
@@ -46,7 +46,7 @@
 
     table {
       width: 100%;
-      min-width: 815px;
+      //min-width: 815px;
       //@media only screen and (min-width : $responsive-size-tablet) {
       //  table-layout: fixed;
       //}
@@ -124,6 +124,38 @@
       }
     }
 
+  .th-name {
+    display: none;
+  }
+  @media only screen and (max-width : 767px) {
+    .table-head {
+      display: none;
+    }
+    .th-name {
+      display: block;
+      margin-right: 12px;
+      font-weight: 800;
+      min-width: 110px;
+    }
+    thead {
+      display: none;
+    }
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 1px solid #F0F2F4;
+    }
+    td {
+      display: flex;
+      align-items: center;
+      min-width: 50%;
+      width: initial !important;
+      flex: 1 0 auto;
+    }
+    .btn {
+      min-height: 30px;
+    }
+  }
 }
 
     .form-control {
