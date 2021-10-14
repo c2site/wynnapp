@@ -41,7 +41,7 @@ const Registration = (props) => {
   return (
     <>
       <Button className="btn btn-primary" onClick={toggle}>
-        join us
+        {props.text}
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
         <ModalHeader toggle={toggle}>join us</ModalHeader>

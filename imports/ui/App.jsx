@@ -28,7 +28,10 @@ import "./style/components/steps/steps.scss";
 import "./style/components/borrow/borrow.scss";
 import "./style/components/stats/stats.scss";
 import "./style/components/subscribe/subscribe.scss";
-import './style/components/ticket/ticket.scss'
+import './style/components/ticket/ticket.scss';
+import './style/components/tokenomics/tokenomics.scss';
+import './style/components/roadmap/roadmap.scss';
+import './style/components/team/team.scss';
 import "./style/page/profile.scss";
 import "./style/page/history.scss";
 import '../api/i18n';

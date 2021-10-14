@@ -1,0 +1,70 @@
+@import "../../_helpers/variables";
+
+.roadmap {
+    padding-top: 140px;
+    padding-bottom: 150px;
+    h2 {
+        margin-bottom: 15px;
+    }
+    .info-check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: rgba(255,255,255,0.75);
+        margin-bottom: 45px;
+        span {
+            display: flex;
+            padding: 0 35px;
+            align-items: center;
+            svg {
+                display: block;
+                margin-right: 10px;
+            }
+        }
+    }
+    .roadmap-list {
+        .item {
+            background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+            box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            .head {
+                font-family: 'Intro', sans-serif;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #1E2632;
+                padding: 0 29px;
+                height: 70px;
+                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+                border-radius: 10px 10px 0px 0px;
+                display: flex;
+                align-items: center;
+            }
+            .body {
+                padding: 40px 29px;
+                .box {
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    padding: 20px 0;
+                    display: flex;
+                    &:first-child {
+                        border: none;
+                    }
+                    svg {
+                        display: block;
+                        margin-right: 10px;
+                    }
+                    span {
+                        display: block;
+                        width: calc(100% - 34px);
+                    }
+                }
+            }
+        }
+    }
+}

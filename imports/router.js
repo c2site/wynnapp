@@ -18,6 +18,7 @@ import RecoveryPassword from "./ui/page/recovery/recoveryPassword";
 import OptionPage from "./ui/page/option/optionPage";
 import WynnRustPage from "./ui/page/wynnRust/wynnRustPage";
 import FreeCoinPage from "./ui/page/freeCoin/freeCoinPage";
+import InfoPage from "./ui/page/info/infoPage";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -142,6 +143,15 @@ FlowRouter.route('/wynn-rust', {
     title: title('wynn rust'),
     action() {
         mountMain(WynnRustPage);
+    },
+    whileWaiting
+});
+
+FlowRouter.route('/info', {
+    name: 'infoPage',
+    title: title('info'),
+    action() {
+        mountMain(InfoPage);
     },
     whileWaiting
 });
