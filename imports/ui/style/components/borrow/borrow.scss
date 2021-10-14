@@ -50,4 +50,28 @@
             }
         }
     }
+    .table {
+        table {
+            thead {
+                tr {
+                    th {
+                        width: 16%;
+                        &:nth-child(3) {
+                            width: 36%;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        width: 16%;
+                        &:nth-child(3) {
+                            width: 36%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
