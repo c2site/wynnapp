@@ -40,7 +40,7 @@ const Registration = (props) => {
 
   return (
     <>
-      <Button className="btn btn-primary" onClick={toggle}>
+      <Button color={props.color} onClick={toggle}>
         {props.text}
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>

@@ -104,7 +104,7 @@ const Header = () => {
           <div className="holder-nav">
             <NavBar/>
             <div className="btn-header">
-              {!login ? (<Registration text="join us"/>) : (
+              {!login ? (<Registration color="primary" text="join us"/>) : (
                 <Button className="btn btn-default" onClick={(e)=>logout(e)}>
                   <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
                     <g>
