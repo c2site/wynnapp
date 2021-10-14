@@ -17,7 +17,7 @@ Meteor.publish('lottery.tickets', function () {
 
 Meteor.publish('lottery.all', function (skip) {
     check(skip, Number);
-    return Ticket.find({},{sort: {createdAt: -1}, limit: 2, skip: 2 * skip});
+    return Ticket.find({},{sort: {createdAt: -1}, limit: skip});
 })
 
 Meteor.publish('lottery.user', function () {

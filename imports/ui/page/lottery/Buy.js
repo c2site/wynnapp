@@ -10,22 +10,23 @@ import {Price} from "../../../api/mongo/price";
 import { toast } from 'react-toastify';
 import Registration from "../../components/header/components/Registration";
 import { Button } from "reactstrap";
+import {Meteor} from "meteor/meteor";
 
 const BuyPage = () => {
   const login = useTracker(()=>Meteor.userId(), []);
 
-  const [skip, setSkip] = useState(0);
+  const [skip, setSkip] = useState(5);
   useSubscribe('user.money');
   useSubscribe('price');
-
+  useSubscribe(Meteor.subscribe('lottery.all', skip), [skip])
   const money = useTracker(()=>Money.find({userId: Meteor.userId()}).fetch(), []);
-  const user = useTracker(()=>Meteor.user() , []);
-  const list = useTracker(()=> Ticket.find().fetch(), []);
+  const list = useTracker(()=> Ticket.find({}).fetch(), []);
   const [selected, setSelected] = useState([]);
   const [coinName, setCoinName] = useState('wynn');
   const [price, setPrice] = useState(0);
   const [wait, setWait] = useState(false);
 
+  console.log(list);
   const pool = useTracker(()=>Money.find({coins: coinName ,type: 'game', userId: {$in: ['game_4', 'game_3']}}).fetch(),[coinName]);
   const prices = useTracker(()=>Price.findOne({assetName: coinName}), [coinName]);
   const numbers = [];
@@ -61,8 +62,8 @@ const BuyPage = () => {
     }
   }
 
-  const skipPage = (number) => {
-    const page = (skip + number);
+  const skipPage = () => {
+    let page = (skip + 5);
     setSkip(page);
   }
 
@@ -284,8 +285,7 @@ const BuyPage = () => {
                     </div>
                   </div>
               ))}
-
-              <span onClick={()=>skipPage(-(1))}>-</span><span onClick={()=>skipPage(1)}>=</span>
+              <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>Больше</span>
 
             </div>
           </div>
