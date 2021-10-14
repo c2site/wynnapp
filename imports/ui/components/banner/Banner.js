@@ -15,7 +15,7 @@ const Banner = () => {
               play to win
             </h1>
             <div className="btn-holder">
-              <Registration text="get started now"/>
+              <Registration color="primary" text="get started now"/>
               <a href={'https://www.wynn-games.com/wp/White_Paper_WYNN_GAMES.pdf'}  target={'_blank'} className="btn btn-active">White Paper v.1.0.0</a>
               <a href={'https://discord.gg/2tPXTF7795'}  target={'_blank'} className="btn btn-black">
                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
