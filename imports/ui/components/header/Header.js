@@ -26,17 +26,17 @@ const Header = () => {
 
   return (
     <>
-      <a href={FlowRouter.path('freeCoin')} className="notification">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.2827 5L20.9998 12L14.2827 19" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="19.7329" y1="12.0317" x2="3.99985" y2="12.0317" stroke="#1E2632" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <span>get it for free WYNNE</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.71729 19L3.00021 12L9.71729 5" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="4.26709" y1="11.9683" x2="20.0002" y2="11.9683" stroke="#1E2632" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </a>
+      {/*<a href={FlowRouter.path('freeCoin')} className="notification">*/}
+      {/*  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+      {/*    <path d="M14.2827 5L20.9998 12L14.2827 19" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>*/}
+      {/*    <line x1="19.7329" y1="12.0317" x2="3.99985" y2="12.0317" stroke="#1E2632" stroke-width="2" stroke-linecap="round"/>*/}
+      {/*  </svg>*/}
+      {/*  <span>get it for free WYNNE</span>*/}
+      {/*  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+      {/*    <path d="M9.71729 19L3.00021 12L9.71729 5" stroke="#1E2632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>*/}
+      {/*    <line x1="4.26709" y1="11.9683" x2="20.0002" y2="11.9683" stroke="#1E2632" stroke-width="2" stroke-linecap="round"/>*/}
+      {/*  </svg>*/}
+      {/*</a>*/}
       <div className="container">
         <div className="head-top flex f-space-between f-align-center">
           <div className="info">

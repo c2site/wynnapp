@@ -120,14 +120,14 @@ FlowRouter.route('/hash', {
 });
 
 
-FlowRouter.route('/swap', {
-    name: 'swap',
-    title: title('Swap coin'),
-    action() {
-        mountMain(SwapPage);
-    },
-    whileWaiting
-});
+// FlowRouter.route('/swap', {
+//     name: 'swap',
+//     title: title('Swap coin'),
+//     action() {
+//         mountMain(SwapPage);
+//     },
+//     whileWaiting
+// });
 
 FlowRouter.route('/option', {
     name: 'option',
@@ -156,13 +156,13 @@ FlowRouter.route('/info', {
     whileWaiting
 });
 
-FlowRouter.route('/free-coin', {
-    name: 'freeCoin',
-    title: title('free coin'),
-    action() {
-        mountMain(FreeCoinPage);
-    },
-    whileWaiting
-});
+// FlowRouter.route('/free-coin', {
+//     name: 'freeCoin',
+//     title: title('free coin'),
+//     action() {
+//         mountMain(FreeCoinPage);
+//     },
+//     whileWaiting
+// });
 
 new FlowRouterTitle(FlowRouter);
