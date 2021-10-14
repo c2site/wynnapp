@@ -8,13 +8,14 @@ import {Notify, RandomNumber} from "../../utils";
 import {Money} from "../../../api/mongo/money";
 import {Price} from "../../../api/mongo/price";
 import { toast } from 'react-toastify';
+import {Meteor} from "meteor/meteor";
 
 const BuyPage = () => {
 
-  useSubscribe('lottery.all', []);
+  const [skip, setSkip] = useState(0);
   useSubscribe('user.money');
   useSubscribe('price');
-
+  const loading = useSubscribe(Meteor.subscribe('lottery.all', skip), [skip]);
   const money = useTracker(()=>Money.find({userId: Meteor.userId()}).fetch(), []);
   const user = useTracker(()=>Meteor.user() , []);
   const list = useTracker(()=> Ticket.find().fetch(), []);
@@ -58,6 +59,11 @@ const BuyPage = () => {
     }
   }
 
+  const skipPage = (number) => {
+    const page = (skip + number);
+    setSkip(page);
+  }
+
   useEffect(()=> {
     if(selected.length <= 4 || selected.length > 9) {
       setPrice(0)
@@ -87,6 +93,7 @@ const BuyPage = () => {
     setCoinName(e.currentTarget.value)
   }
 
+  if(loading) return (<div>Loading...</div>)
 
     return (
       <div className="buy-page inner-page">
@@ -273,6 +280,8 @@ const BuyPage = () => {
                     </div>
                   </div>
               ))}
+
+              <span onClick={()=>skipPage(-(1))}>-</span><span onClick={()=>skipPage(1)}>=</span>
 
             </div>
           </div>

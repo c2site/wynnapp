@@ -1,5 +1,6 @@
 import {Lottery, LotteryStatus} from "../../imports/api/mongo/lottery";
 import {Ticket, TicketStatus} from "../../imports/api/mongo/ticket";
+import {check} from "meteor/check";
 
 Meteor.publish('lottery', function () {
     return Lottery.find({status: {$in: [LotteryStatus.OPEN, LotteryStatus.WAIT]}});
@@ -14,8 +15,9 @@ Meteor.publish('lottery.tickets', function () {
     return Ticket.find({status: TicketStatus.WIN},{sort: {createdAt: -1}, limit: 25});
 });
 
-Meteor.publish('lottery.all', function () {
-    return Ticket.find({},{sort: {createdAt: -1}, limit: 25});
+Meteor.publish('lottery.all', function (skip) {
+    check(skip, Number);
+    return Ticket.find({},{sort: {createdAt: -1}, limit: 2, skip: 2 * skip});
 })
 
 Meteor.publish('lottery.user', function () {
