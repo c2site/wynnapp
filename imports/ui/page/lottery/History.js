@@ -66,7 +66,9 @@ const History = () => {
                 ))}
                 </tbody>
               </table>
-              <span className={'btn btn-primary'} onClick={()=>setLimits()}>Больше</span>
+              <div className={'text-center'}>
+                <span className={'btn btn-primary'} onClick={()=>setLimits()}>Больше</span>
+              </div>
             </div>
           </div>
         </div>

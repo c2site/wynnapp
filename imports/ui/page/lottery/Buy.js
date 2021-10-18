@@ -285,7 +285,9 @@ const BuyPage = () => {
                     </div>
                   </div>
               ))}
-              <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>Больше</span>
+              <div className={'text-center'}>
+                <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>Больше</span>
+              </div>
 
             </div>
           </div>
