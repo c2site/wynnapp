@@ -7,8 +7,9 @@ Meteor.publish('lottery', function () {
 })
 
 
-Meteor.publish('lottery.history', function () {
-    return Lottery.find({status: LotteryStatus.CANCELED, numbers: {$exists: true}}, {limit: 50, sort: {id: -1}});
+Meteor.publish('lottery.history', function (count) {
+    check(count, Number)
+    return Lottery.find({status: LotteryStatus.CANCELED, numbers: {$exists: true}}, {limit: count, sort: {id: -1}});
 })
 
 Meteor.publish('lottery.tickets', function () {

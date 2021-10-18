@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Lottery} from "../../../api/mongo/lottery";
 import Loading from "../../components/loading";
 
 const History = () => {
-    const loading = useSubscribe('lottery.history');
+  const [limit, setLimit] = useState(5)
+    const loading = useSubscribe(Meteor.subscribe('lottery.history', limit), [limit]);
     const list = useTracker(()=>Lottery.find().fetch(), []);
-
-    if(loading) return (<Loading/>)
+    const setLimits = () => {
+      setLimit(limit + 5);
+    }
+    //if(loading) return (<Loading/>)
     return (
       <div className="history-page inner-page">
         <div className="container">
@@ -63,6 +66,7 @@ const History = () => {
                 ))}
                 </tbody>
               </table>
+              <span className={'btn btn-primary'} onClick={()=>setLimits()}>Больше</span>
             </div>
           </div>
         </div>
