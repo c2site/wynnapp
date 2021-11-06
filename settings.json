@@ -1,1 +1,9 @@
-{}
+{
+  "private": {
+    "name": "WYNN Games",
+    "emails": {
+      "smtps": "smtps://info%40wynn-games.com:poZsag-qovji9-kiwrep@smtpout.secureserver.net:465/",
+      "from": "info@wynn-games.com"
+    }
+  }
+}

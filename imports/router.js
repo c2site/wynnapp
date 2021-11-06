@@ -32,7 +32,6 @@ const invite = () => {
     if(!cookies.get('invite')) {
         cookies.set('invite', i);
     }
-
 }
 
 function whileWaiting() {

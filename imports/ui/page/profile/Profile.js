@@ -70,20 +70,20 @@ const Profile = () => {
     })
   }, [])
 
-  const toggle2FA = () => {
-    if (user?.settings?.twoFa) {
-      setOpen(true);
-    } else {
-      Meteor.call('user.enable2fa', (e, r) => {
-        if (e) {
-          console.log(e);
-        } else {
-          //console.log(r);
-          setSecret(r);
-        }
-      });
-    }
-  };
+  // const toggle2FA = () => {
+  //   if (user?.settings?.twoFa) {
+  //     setOpen(true);
+  //   } else {
+  //     Meteor.call('user.enable2fa', (e, r) => {
+  //       if (e) {
+  //         console.log(e);
+  //       } else {
+  //         //console.log(r);
+  //         setSecret(r);
+  //       }
+  //     });
+  //   }
+  // };
 
     const type = (sender) => {
       if(addr?.address === sender) return 'red';
@@ -110,7 +110,7 @@ const Profile = () => {
                     <span className="info">****************</span>
                     {/*<ChangePassword/>*/}
                   </div>
-                  <div className="item" onClick={toggle2FA}>
+                  <div className="item">
                     <span className="name">2fa</span>
                     <span className="info">{user?.settings?.twoFa ? 'Active' : 'Disabled'}</span>
                     <TwoFa secret={secret} close={() => setSecret(null)} />

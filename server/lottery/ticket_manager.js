@@ -6,6 +6,7 @@ import {Money} from "../../imports/api/mongo/money";
 import {Money_manager, Transactions_manager} from "../money/money_manager";
 import {TransactionType} from "../../imports/api/mongo/transactions";
 import {Coin} from "../../imports/api/mongo/coins";
+
 class Ticket_manager {
     constructor(userId, assetName) {
         this.userId = userId;
@@ -16,9 +17,9 @@ class Ticket_manager {
         this.asset = Coin.findOne({name: this.assetName})
     }
 
-    _check(ticker) {
-        if(!this.lottery) return;
-        if(ticker.amount * Math.pow(10, this.balance.precision) > this.balance.amount) throw new Meteor.Error('error.balance', 'Need more balance');
+    async _check(ticker) {
+        if(!this.lottery) throw new Meteor.Error('error.lottery', 'Need more balance');;
+        if((ticker.price * Math.pow(10, this.balance.precision)) > this.balance.amount) throw new Meteor.Error('error.balance', 'Need balance');
     }
 
     _getPrice(numbersCount) {
@@ -59,7 +60,7 @@ class Ticket_manager {
         }
     }
 
-    _addedRating(ticket) {
+    async _addedRating(ticket) {
         const prams = {
             rating: this.user?.rating?.rating || 0,
             fee: this.user?.rating?.fee || 0
@@ -84,20 +85,24 @@ class Ticket_manager {
     async buy (numbers) {
         const lottery = Lottery.findOne({status: LotteryStatus.WAIT});
         if(lottery) throw new Meteor.Error('find.game', 'Now wait new block, please wait');
-        const ticker = new Ticket({
+        const ticker = {
             userId: this.userId,
             user: {name: this.user?.profile?.name || 'Anonymous'},
             id: Ticket.find().count() + 1,
             numbers,
             assetName: this.assetName,
             lottery: this.lottery
-        });
+        };
+
+
         ticker.price = Number(this._getPrice(numbers).toFixed(2));
-        this._check(ticker);
-        this._addedRating(ticker);
+        await this._check(ticker);
+        await this._addedRating(ticker);
+
         await this._send(ticker);
 
-        ticker.save();
+        const tickets = new Ticket(ticker);
+        tickets.save();
     }
 }
 

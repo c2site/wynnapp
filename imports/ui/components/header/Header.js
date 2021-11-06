@@ -9,7 +9,7 @@ import {useTranslation} from "react-i18next";
 import ProfileBtn from "./components/profileBtn";
 
 const Header = () => {
-  const login = useTracker(()=>Meteor.userId(), []);
+  const login = useTracker(()=>Meteor.user(), []);
 
   const logout = (e) => {
     e.preventDefault();
@@ -179,7 +179,7 @@ const Header = () => {
                   <ProfileBtn />
                 )}
                 {!login ? (<Registration />) : (
-                  <Button className="btn btn-default btn-reg" onClick={(e) => logout(e)}>
+                  <Button className="btn btn-default btn-reg" onClick={logout}>
                     <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
                       <g>
                         <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8

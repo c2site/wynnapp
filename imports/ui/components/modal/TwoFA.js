@@ -3,6 +3,7 @@ import { Button, Modal, Label, Input, ModalHeader, ModalBody, ModalFooter, Row, 
 import { toast } from "react-toastify";
 import otplib from "otplib";
 import QRCode from "qrcode.react";
+import { useTracker } from 'meteor/react-meteor-data'
 
 import TokenInput from "./TokenInput";
 import TwoFAConfirm from "./TwoFAConfirm";
@@ -12,9 +13,9 @@ const QR = ({ secret }) => {
   if (!secret) {
     return <></>;
   }
-  const user = Meteor.user();
+  const user = Meteor.users.findOne({});
   const otpauth = otplib.authenticator.keyuri(user.emails[0].address, 'Wynne', secret);
-
+  console.log(otpauth);
   return (
     <QRCode value={otpauth} level="H" size={256} />
   )
@@ -24,7 +25,8 @@ const TwoFA = () => {
   const [openDeactivate, setDeactivate] = useState(false);
   const [secret, setSecret] = useState('');
   const [token, setToken] = useState('');
-  const user = Meteor.user();
+  const user = useTracker(()=>Meteor.users.findOne({}), []);
+  console.log(user);
 
   const enable2FA = () => {
     if (token.length !== 6 || isNaN(Number(token))) {
@@ -73,6 +75,7 @@ const TwoFA = () => {
 
   const toggleSecret = () => setSecret('');
 
+  console.log(secret);
   return (
     <>
       <Button className="btn-hide" onClick={toggle2FA} />
