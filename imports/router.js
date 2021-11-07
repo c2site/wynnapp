@@ -2,7 +2,6 @@ import React from 'react';
 import {Meteor} from "meteor/meteor";
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import { FlowRouterTitle } from 'meteor/ostrio:flow-router-title';
-
 import { mount } from 'react-mounter';
 import {App} from "./ui/App";
 import HomePage from "./ui/page/home/HomePage";
@@ -19,12 +18,13 @@ import OptionPage from "./ui/page/option/optionPage";
 import WynnRustPage from "./ui/page/wynnRust/wynnRustPage";
 import FreeCoinPage from "./ui/page/freeCoin/freeCoinPage";
 import InfoPage from "./ui/page/info/infoPage";
+import {Tracker} from "meteor/tracker";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
 function checkAuth(ctx, redirect) {
     if (Meteor.loggingIn()) return;
-    if (!Meteor.userId()) FlowRouter.redirect('/');
+    if (!Meteor.userId()) FlowRouter.go('home');
 }
 
 const invite = () => {
@@ -89,7 +89,9 @@ FlowRouter.route('/profile', {
     action() {
         mountMain(Profile);
     },
-    whileWaiting,
+    triggersEnter() {
+        whileWaiting()
+    },
 });
 
 FlowRouter.route('/profile/my-tickets', {
@@ -98,7 +100,9 @@ FlowRouter.route('/profile/my-tickets', {
     action() {
         mountMain(ProfileTickets);
     },
-    whileWaiting,
+    triggersEnter() {
+        whileWaiting()
+    },
 });
 
 FlowRouter.route('/history', {
@@ -133,8 +137,7 @@ FlowRouter.route('/option', {
     title: title('option'),
     action() {
         mountMain(OptionPage);
-    },
-    whileWaiting
+    }
 });
 
 FlowRouter.route('/wynn-rust', {
@@ -142,8 +145,7 @@ FlowRouter.route('/wynn-rust', {
     title: title('wynn rust'),
     action() {
         mountMain(WynnRustPage);
-    },
-    whileWaiting
+    }
 });
 
 FlowRouter.route('/info', {
@@ -151,8 +153,7 @@ FlowRouter.route('/info', {
     title: title('info'),
     action() {
         mountMain(InfoPage);
-    },
-    whileWaiting
+    }
 });
 
 // FlowRouter.route('/free-coin', {

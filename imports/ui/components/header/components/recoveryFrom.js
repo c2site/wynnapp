@@ -7,10 +7,10 @@ const RecoveryFrom = () => {
     const [modal, setModal] = useState(false);
     const [email, setEmail] = useState('');
     const toggle = () => setModal(!modal);
-
+    const [loading, setLoading] = useState(false);
     const onSubmit = (e) => {
         e.preventDefault();
-
+        setLoading(true)
         if (!email) {
             toast.error('Incorrect email address')
             return;
@@ -19,7 +19,9 @@ const RecoveryFrom = () => {
         Accounts.forgotPassword({ email }, (err) => {
             if (err) {
                 toast.error(err.reason);
+                setLoading(false)
             } else {
+                toggle();
                 toast.success('Check you email');
             }
         });
@@ -33,15 +35,19 @@ const RecoveryFrom = () => {
                 Recovery password
             </Button>
             <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
+                <Form className="form" onSubmit={() => onSubmit}>
                 <ModalHeader toggle={toggle}>Recovery password</ModalHeader>
                 <>
                     <ModalBody>
-                        <Form className="form" onSubmit={() => onSubmit}>
+                        {loading ? (
+                            <>Wait....</>
+                        ) : (
                             <div className="input-box">
                                 <Label for="">Email</Label>
                                 <Input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />
                             </div>
-                        </Form>
+                        )}
+
                     </ModalBody>
                     <ModalFooter>
                         <div className="btn-box">
@@ -63,6 +69,7 @@ const RecoveryFrom = () => {
                         </div>
                     </ModalFooter>
                 </>
+                </Form>
             </Modal>
         </>
     );

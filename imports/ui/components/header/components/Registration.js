@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {Meteor} from "meteor/meteor";
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import {cookies} from "../../../utils";
 import {toast} from "react-toastify";
+
+import * as EmailValidator from 'email-validator';
+import {useTracker} from "meteor/react-meteor-data";
 
 const Registration = (props) => {
   const {
@@ -13,8 +16,15 @@ const Registration = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
-  const toggle = () => setModal(!modal);
+  const toggle = () => {
+    if(login) {
+      FlowRouter.go('buy')
+    } else {
+      setModal(!modal)
+    }
+  };
   const invite = cookies.get('invite');
+  const login = useTracker(()=>Meteor.user(), []);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +34,10 @@ const Registration = (props) => {
       return;
     }
 
-    console.log(invite);
+    if(!EmailValidator.validate(email)) {
+      toast.error('Email error');
+      return;
+    }
     Accounts.createUser({
       email: email,
       password: password,
@@ -38,15 +51,16 @@ const Registration = (props) => {
     });
   };
 
+
   return (
     <>
       <Button color={props.color} onClick={toggle}>
         {props.text}
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
+        <Form className="form" onSubmit={(e)=>onSubmit(e)}>
         <ModalHeader toggle={toggle}>join us</ModalHeader>
         <ModalBody>
-          <Form className="form" onSubmit={(e)=>onSubmit(e)}>
             {/*<div className="input-box">*/}
             {/*  <Label for="">name</Label>*/}
             {/*  <Input type="text"/>*/}
@@ -63,7 +77,6 @@ const Registration = (props) => {
               <Label for="">repeat Password</Label>
               <Input type="password"  value={confirm} onChange={(e)=>setConfirm(e.currentTarget.value)}/>
             </div>
-          </Form>
         </ModalBody>
         <ModalFooter>
           <div className="btn-box">
@@ -82,6 +95,8 @@ const Registration = (props) => {
             </Button>
           </div>
         </ModalFooter>
+
+        </Form>
       </Modal>
     </>
   );
