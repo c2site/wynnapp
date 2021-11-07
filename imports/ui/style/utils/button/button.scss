@@ -84,6 +84,34 @@
     }
   }
 
+  &-close-white {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    filter: none;
+
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.75);
+      border: 2px solid rgba(255, 229, 139, 1);
+      svg {
+        path {
+          //fill: #212129;
+          stroke:rgba(255, 255, 255, 0.75);
+        }
+        circle {
+          fill: rgba(255, 255, 255, 0.75);
+          stroke:rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+  }
+
   &-active,
   &-chose {
     background: transparent;

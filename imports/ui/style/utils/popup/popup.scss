@@ -7,6 +7,33 @@
     padding: 45px;
     min-width: 830px;
     width: 100%;
+    &.modal-black {
+      background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+      .modal-header {
+        h5 {
+          color: #fff;
+        }
+      }
+      .table {
+        background: none;
+        table {
+          thead {
+            tr {
+              th {
+                color: #F6C465;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                color: #F6C465;
+              }
+            }
+          }
+        }
+      }
+    }
     @media only screen and (max-width: 650px) {
       min-width: initial;
       width: initial;

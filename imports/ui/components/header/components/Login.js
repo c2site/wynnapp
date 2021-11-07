@@ -4,6 +4,7 @@ import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter 
 import { toast } from "react-toastify";
 import TwoFAConfirm from "../../modal/TwoFAConfirm";
 import RecoveryFrom from "./recoveryFrom";
+import Registration from "./Registration";
 
 const Login = () => {
   const [modal, setModal] = useState(false);
@@ -80,7 +81,7 @@ const Login = () => {
                 <Label for="">Password</Label>
                 <Input type="password" value={password} onChange={(e) => setPassword(e.currentTarget.value)} />
               </div>
-              <div className="btn-box">
+              <div className="btn-box f-align-center">
                 <Button color="black" onClick={(e) => onSubmit(e)} type={'submit'}>
                   <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white" strokeWidth="2"
@@ -102,8 +103,9 @@ const Login = () => {
           </ModalBody>
           <ModalFooter>
 
-            <div className="btn-box">
+            <div className="w-100 flex f-space-between">
               <RecoveryFrom />
+              <Registration color="links" text="Registration"/>
             </div>
 
           </ModalFooter>

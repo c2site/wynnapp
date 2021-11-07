@@ -9,7 +9,7 @@ const Steps = () => {
             <div className="title-box">
               <h2>
                 <span>need to know about</span>
-                now to play
+                How to play
               </h2>
               <p>Follow these 3 easy steps!</p>
             </div>

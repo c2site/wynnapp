@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+
+  const {t, i18n} = useTranslation();
   return (
     <footer className="footer">
       <div className="container">
@@ -124,6 +127,26 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+        <div className="info">
+          <a href="#">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9.00003" cy="9" r="8.25" transform="rotate(-45 9.00003 9)" stroke="white" stroke-width="1.5"/>
+              <ellipse cx="9" cy="9" rx="3.75" ry="3.75" stroke="white" stroke-width="1.5"/>
+              <path d="M3.1665 3.16635L6.08332 6.08317" stroke="white" stroke-width="1.5"/>
+              <path d="M11.6516 11.6516L14.5684 14.5685" stroke="white" stroke-width="1.5"/>
+              <path d="M11.6516 6.34836L14.8336 3.16638" stroke="white" stroke-width="1.5"/>
+              <path d="M3.1665 14.8336L6.34848 11.6516" stroke="white" stroke-width="1.5"/>
+            </svg>
+            {t("header.support")}24/7
+          </a>
+          <a href="#">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 5C1 3.89543 1.89543 3 3 3H17C18.1046 3 19 3.89543 19 5V13.75C19 14.8546 18.1046 15.75 17 15.75H3C1.89543 15.75 1 14.8546 1 13.75V5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M2.42131 4.30287C1.91709 3.84067 2.24409 3 2.9281 3H17.0719C17.7559 3 18.0829 3.84067 17.5787 4.30287L12.0272 9.39176C10.8802 10.4431 9.11979 10.4431 7.97283 9.39176L2.42131 4.30287Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            info@wynn-games.com
+          </a>
+        </div>
         {/*<a href="#">Политика конфиденциальности</a>*/}
       </div>
     </footer>

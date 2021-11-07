@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import { Button, Modal, Form, Label, Input, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {Meteor} from "meteor/meteor";
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
@@ -24,7 +24,6 @@ const Registration = (props) => {
     }
   };
   const invite = cookies.get('invite');
-  const login = useTracker(()=>Meteor.user(), []);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -51,7 +50,6 @@ const Registration = (props) => {
     });
   };
 
-
   return (
     <>
       <Button color={props.color} onClick={toggle}>
@@ -59,7 +57,7 @@ const Registration = (props) => {
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
         <Form className="form" onSubmit={(e)=>onSubmit(e)}>
-        <ModalHeader toggle={toggle}>join us</ModalHeader>
+        <ModalHeader toggle={toggle}>Registration</ModalHeader>
         <ModalBody>
             {/*<div className="input-box">*/}
             {/*  <Label for="">name</Label>*/}
