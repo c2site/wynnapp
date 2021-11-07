@@ -251,7 +251,9 @@ li {
 
 //end flex
 
-
+.page {
+  padding-top: 50px;
+}
 .overflow {
   overflow: hidden;
 }
@@ -362,13 +364,13 @@ h1.black,h2.black,h3.black,h4.black,h5.black,h6.black {
 }
 .mob-show {
   display: none !important;
-  @media only screen and (max-width: $responsive-size-big-tablet) {
-    display: block !important;
+  @media only screen and (max-width: 1199px) {
+    display: flex !important;
   }
 }
 .mob-hide {
   display: block !important;
-  @media only screen and (max-width: $responsive-size-big-tablet) {
+  @media only screen and (max-width: 1199px) {
     display: none !important;
   }
 }

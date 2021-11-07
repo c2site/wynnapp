@@ -7,7 +7,7 @@ const Subscribe = () => {
         <div className="inner row">
           <div className="col-md-8">
             <h2>
-              <span>SUBSCRIBE TO DOOPLO</span>
+              <span>SUBSCRIBE TO WYNN</span>
               TO GET EXCLUSIVE BENEFITS
             </h2>
             <form action="#" className="form flex">

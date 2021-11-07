@@ -44,7 +44,7 @@ const Registration = (props) => {
         {props.text}
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
-        <ModalHeader toggle={toggle}>join us</ModalHeader>
+        <ModalHeader toggle={toggle}>Registration</ModalHeader>
         <ModalBody>
           <Form className="form" onSubmit={(e)=>onSubmit(e)}>
             {/*<div className="input-box">*/}
