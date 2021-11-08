@@ -1,4 +1,33 @@
 import React from "react";
+import { Doughnut } from 'react-chartjs-2';
+
+
+const data = {
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [0.5, 0.5, 0.5, 1, 10, 80],
+      backgroundColor: [
+        '#D94848',
+        '#E65757',
+        '#E8922D',
+        '#F5AB54',
+        '#FFBC6D',
+        '#F8D270',
+      ],
+      borderColor: [
+        '#D94848',
+        '#E65757',
+        '#E8922D',
+        '#F5AB54',
+        '#FFBC6D',
+        '#F8D270',
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+
 
 const Tokenomics = () => {
   return (
@@ -7,7 +36,10 @@ const Tokenomics = () => {
         <h2 className="text-center">Tokenomics</h2>
         <div className="row f-align-center">
           <div className="col-lg-4">
-
+            <div className="diagram">
+              <img src="./img/info-logo.svg" alt="" />
+              <Doughnut data={data} />
+            </div>
           </div>
           <div className="col-lg-4">
             <div className="list-percent">
