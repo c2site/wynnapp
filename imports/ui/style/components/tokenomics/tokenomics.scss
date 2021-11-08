@@ -139,4 +139,22 @@
             max-width: 910px;
         }
     }
+    .diagram {
+        position: relative;
+        img {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            max-width: 30%;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        canvas {
+            position: relative;
+            z-index: 2;
+        }
+    }
 }
