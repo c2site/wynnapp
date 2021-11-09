@@ -134,7 +134,7 @@
   .summ {
     padding: 6px 6px 4px;
     margin-left: 10px;
-    background: #EB3B3B;
+    background: #EB3B3B url("./img/arrow-select.svg") no-repeat calc(100% - 5px) 50%;
     border-radius: 20px;
     font-weight: bold;
     font-size: 11px;
@@ -161,6 +161,22 @@
       @media only screen and (max-width: $responsive-size-stand-mobile) {
         display: none;
       }
+    }
+    select {
+      border: none;
+      padding: 0 10px 0 0;
+      margin: 0;
+      background: none;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      outline: none;
     }
   }
 }

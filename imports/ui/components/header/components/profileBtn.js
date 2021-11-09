@@ -28,7 +28,10 @@ const ProfileBtn = () => {
                     <ellipse cx="10.0001" cy="9.33333" rx="1.33333" ry="1.33333" stroke="white"/>
                 </svg>
                 {balance?.value()}
-                <span>{t('header.wynn')}</span>
+              <select>
+                <option value="{t('header.wynn')}">{t('header.wynn')}</option>
+                <option value="{t('header.wynn')}">{t('header.wynn')}</option>
+              </select>
             </strong>
         </Button>
     )
