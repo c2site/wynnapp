@@ -1,0 +1,48 @@
+@import "../../_helpers/variables";
+
+.team-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h2 {
+        margin-bottom: 50px;
+    }
+    .head {
+        font-family: 'Intro', sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #F6C465;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .item {
+        margin-top: 50px;
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        .img {
+            display: block;
+            margin-bottom: 35px;
+            overflow: hidden;
+            border-radius: 50%;
+            img {
+                display: block;
+            }
+        }
+        .name {
+            display: block;
+            font-family: 'Intro', sans-serif;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+}

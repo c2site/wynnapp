@@ -1,0 +1,388 @@
+@import "../../_helpers/variables";
+
+.spinner-border {
+  span {
+    display: none;
+  }
+}
+.btn {
+  position: relative;
+  top: 0px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important;
+  color: #fff;
+
+  border-radius: 50px;
+  //transition: all linear 0.3s;
+  min-height: 50px;
+  padding: 15px 30px;
+  svg {
+    display: block;
+    margin-right: 10px;
+  }
+
+  &-default {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.75);
+      background: transparent;
+      border: 2px solid rgba(255, 229, 139, 1);
+      svg {
+        path {
+          //fill: #212129;
+          stroke:rgba(255, 255, 255, 0.75);
+        }
+        circle {
+          fill: rgba(255, 255, 255, 0.75);
+          stroke:rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+  }
+
+
+  &-close-default {
+    background: transparent;
+    border: 2px solid rgba(62, 69, 80, 0.5);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1E2632;
+
+    &:hover,
+    &:focus {
+      color: #212129;
+      border: 2px solid rgba(62, 69, 80, 1);
+      svg {
+        path {
+          //fill: #212129;
+          stroke:#212129;
+        }
+        circle {
+          fill: #212129;
+          stroke:#212129;
+        }
+      }
+    }
+  }
+
+  &-close-white {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    filter: none;
+
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.75);
+      border: 2px solid rgba(255, 229, 139, 1);
+      svg {
+        path {
+          //fill: #212129;
+          stroke:rgba(255, 255, 255, 0.75);
+        }
+        circle {
+          fill: rgba(255, 255, 255, 0.75);
+          stroke:rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+  }
+
+  &-active,
+  &-chose {
+    background: transparent;
+    border: 2px solid rgba(255, 229, 139, 1);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    position: relative;
+
+    svg,
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    &:hover,
+    &:focus {
+      border: 2px solid transparent;
+      color: #212129;
+      background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+      svg {
+        circle,
+        line,
+        path {
+          fill: #212129;
+          stroke:#212129;
+        }
+
+      }
+    }
+    &.none-hover {
+      &:hover,
+      &:focus {
+        background: transparent;
+        border: 2px solid rgba(255, 229, 139, 1);
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.75);
+        position: relative;
+        svg {
+          circle,
+          line,
+          path {
+            fill: #fff;
+            stroke: none;
+          }
+
+        }
+      }
+    }
+  }
+
+  &-primary {
+    color: #212129;
+    background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+    border-width: 0;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-left: 32px;
+    padding-right: 32px;
+
+
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.75);
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      padding-left: 30px;
+      padding-right: 30px;
+      svg {
+        path {
+          fill: rgba(255, 255, 255, 0.75);
+          stroke:rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+    &.none-hover {
+      &:hover,
+      &:focus {
+        color: #212129;
+        background: linear-gradient(90deg, rgba(255, 229, 139, 1) -25%, rgba(232, 146, 45, 1) 125%);
+        border-width: 0;
+        border-color: transparent;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding-left: 32px;
+        padding-right: 32px;
+        svg {
+          circle,
+          line,
+          path {
+            fill: #212129;
+            stroke: none;
+          }
+
+        }
+      }
+    }
+  }
+
+  &-black {
+    background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background: #EB3B3B;
+      svg {
+        path {
+          //fill: rgba(255, 255, 255, 1);
+          //stroke:rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+
+
+  &-links {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active{
+      color: #212129;
+      background: none;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      svg {
+        path {
+          //fill: #212129;
+          stroke:#212129;
+        }
+      }
+    }
+    &:focus {
+      &:active{
+        color: #212129;
+        background: none;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        svg {
+          path {
+            //fill: #212129;
+            stroke:#212129;
+          }
+        }
+      }
+    }
+  }
+
+  &.btn-hide {
+    background: none;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    outline: none !important;
+  }
+
+  &-standart,
+  &-success {
+    min-width: 120px;
+    color: #ffffff;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent !important;
+      border: 1px solid rgba(136, 135, 253, 1) !important;
+    }
+  }
+  &-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    outline: none;
+    &:hover,
+    &:focus,
+    &:active {
+      background: #c9302c !important;
+      border-color: #761c19 !important;
+    }
+  }
+}
+
+.btn-lang {
+  min-width: 60px;
+  min-height: 48px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important;
+  color: #fff;
+  background: none;
+  svg {
+    display: block;
+    margin-left: 8px;
+  }
+}
+.dropdown-lang {
+  display: inline-block;
+  width: 60px;
+  position: relative;
+  z-index: 2;
+  .dropdown-menu {
+    min-width: initial;
+    margin-top: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: linear-gradient(87.16deg, #ffe58b -4.55%, #e8922d 103.59%);
+    padding: 0;
+    width: 100%;
+  }
+  a {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    text-decoration: none;
+    background: none;
+    color: #000000;
+    transition: 250ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background: none;
+    }
+  }
+}

@@ -1,0 +1,273 @@
+@import "../_helpers/variables";
+
+.profile-page {
+    padding-bottom: 30px;
+    .profile-btn {
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            overflow-x: scroll;
+            margin-top: 30px;
+            width: 100%;
+            margin-right: -30px;
+        }
+        .holder {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            //min-width: 525px;
+        }
+        .btn {
+            margin-left: 15px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin-left: 0;
+                margin-right: 15px;
+                margin-top: 10px;
+            }
+            &:first-child {
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+    }
+    .profile-info {
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        border-radius: 15px;
+        padding: 50px;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            padding: 30px 20px;
+        }
+        .info-list {
+            .item {
+                padding-top: 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding-bottom: 10px;
+                position: relative;
+                &:first-child {
+                    border: none;
+                    padding-top: 0;
+                }
+                &.progress-item {
+                    border-top: none;
+                }
+                .name {
+                    display: block;
+                    font-weight: 500;
+                    font-size: 11px;
+                    line-height: 13px;
+                    text-transform: uppercase;
+                    color: #999999;
+                }
+                .info {
+                    font-size: 14px;
+                    line-height: 28px;
+                    color: #F6C465;
+                    position: relative;
+                    display: flex;
+                    .btn {
+                        padding: 0;
+                        width: 28px;
+                        height: 28px;
+                        min-height: auto;
+                        margin-left: auto;
+                        svg {
+                            margin: 0;
+                        }
+                    }
+                }
+                .progress {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 10px;
+                    margin-top: 13px;
+                    height: 8px;
+                    div {
+                        background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+                        border-radius: 10px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .wallet-info {
+        background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+        border-radius: 15px;
+        padding: 50px;
+        font-size: 13px;
+        line-height: 24px;
+        color: #1E2632;
+        margin-bottom: 30px;
+        p { margin: 0;}
+        h2 {
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 16px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: #1E2632;
+            margin-bottom: 16px;
+        }
+        .form-copy {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            .input-box {
+                background: #FFFFFF;
+                border-radius: 5px;
+                padding: 15px 48px 15px 27px;
+                position: relative;
+                max-width: 738px;
+                width: 100%;
+                min-height: 50%;
+                input {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    font-weight: 500;
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: #000;
+                    border: none;
+                    background: none;
+                }
+                .copy {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    right: 12px;
+                    height: 100%;
+                    cursor: pointer;
+                    svg {
+                        display: block;
+                    }
+                }
+            }
+            .btn-black {
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                padding: 0;
+                svg {
+                    display: block;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .wallets-list {
+        .item {
+            background: linear-gradient(248.19deg, rgba(62, 69, 80, 0.75) 24.97%, rgba(30, 38, 50, 0.75) 69.73%);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            padding: 40px 17px 30px 30px;
+            border: 1px solid rgba(216, 235, 253, 0.25);
+            position: relative;
+            &:after {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                display: block;
+                content: '';
+                z-index: 1;
+                transform: translateY(-50%);
+                background: url("./img/arrow-coin.svg") no-repeat 50% 50%;
+            }
+            .name {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                position: relative;
+                z-index: 2;
+            }
+            .info {
+                display: inline-flex;
+                padding: 7px 20px;
+                background: #EB3B3B;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+}
+.table {
+    &.profile-table {
+        min-width: initial;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            //min-width: 815px;
+        }
+        padding: 30px;
+        .table-head {
+            min-width: initial;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                //min-width: 815px;
+            }
+            padding: 0 30px;
+            margin: 0 -30px;
+            thead {
+                tr {
+                    th {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &:nth-child(1) {
+                            width: 18%;
+                            padding-right: 5px;
+                        }
+                        &:nth-child(2) {
+                            width: 10%;
+                            padding-right: 5px;
+                        }
+                        &:nth-child(3) {
+                            width: 10%;
+                            padding-right: 5px;
+                        }
+                        &:nth-child(4) {
+                            width: 62%;
+                        }
+                    }
+                }
+            }
+        }
+        table {
+            tr {
+                td {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &:nth-child(1) {
+                        width: 18%;
+                        padding-right: 5px;
+                    }
+                    &:nth-child(2) {
+                        width: 10%;
+                        padding-right: 5px;
+                    }
+                    &:nth-child(3) {
+                        width: 10%;
+                        padding-right: 5px;
+                    }
+                    &:nth-child(4) {
+                        width: 62%;
+                    }
+                }
+            }
+        }
+    }
+}

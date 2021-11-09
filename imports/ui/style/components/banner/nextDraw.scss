@@ -1,0 +1,112 @@
+@import "../../_helpers/variables";
+
+.next-draw {
+    position: relative;
+    background: linear-gradient(180deg, #FCDA7E 0%, #212129 33.96%);
+    border-radius: 150px;
+    padding-top: 2px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+        border-radius: 50px;
+    }
+    &:after {
+        position: absolute;
+        bottom: -42px;
+        right: 47px;
+        display: block;
+        content: '';
+        width: 102px;
+        height: 123px;
+        background: url("./img/coin-steps.svg") no-repeat;
+        background-size: cover;
+        z-index: 3;
+    }
+    .inner {
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        border-radius: 150px;
+        position: relative;
+        z-index: 2;
+        padding: 94px 110px;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            border-radius: 50px;
+            padding: 70px 30px 45px;
+        }
+        .win-number {
+            font-family: 'Intro', sans-serif;
+            position: absolute;
+            top: -36px;
+            left: 50%;
+            min-height: 73px;
+            transform: translateX(-50%);
+            padding: 24px;
+            min-width: 445px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+            border-radius: 150px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                padding: 20px 20px 12px;
+                font-size: 20px;
+                line-height: 20px;
+                min-width: initial;
+            }
+            svg {
+                display: block;
+                margin-right: 18px;
+                @media only screen and (max-width: $responsive-size-big-tablet) {
+                    width: 20px;
+                    height: 17px;
+                    margin-right: 16px;
+                }
+                @media only screen and (max-width: $responsive-size-mobile) {
+                    margin-right: 7px;
+                }
+            }
+            strong {
+                white-space: nowrap;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 32px;
+                color: #1E2632;
+                @media only screen and (max-width: $responsive-size-big-tablet) {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .name {
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin-bottom: 35px;
+            }
+        }
+        .flex {
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .btn {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .timer {
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin-bottom: 35px;
+            }
+            span {
+                font-size: 40px;
+                line-height: 49px;
+                text-align: center;
+                color: #FFFFFF;
+                &.separator {
+                    height: 24px;
+                    margin: 0 20px;
+                    width: 1px;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+}

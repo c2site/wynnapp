@@ -1,0 +1,303 @@
+{
+  "header": {
+    "support": "Support en",
+    "logout": "logout",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "bitcointalk": "BitcoinTalk",
+    "profile": "Profile",
+    "wynn": "wynn"
+  },
+  "footer": {
+    "copy": "Copyright"
+  },
+  "nav": {
+    "home": "Home",
+    "info": "Info",
+    "lottery": "Lottery",
+    "history": "History Games",
+    "buy-wynn": "Buy WYNN",
+    "option": "Option",
+    "contact": "Contact",
+    "free_coin": "free coin",
+    "buy": "buy",
+    "check": "Check Lottery",
+    "profile": "profile",
+    "get": "Get WYNN",
+    "rust": "wynn rust"
+  },
+  "form": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "password2": "repeat Password",
+    "close": "Close",
+    "recovery": "Recovery password",
+    "send": "Send",
+    "registration": "Registration",
+    "change_email": "Change email",
+    "change": "Change",
+    "save": "save",
+    "repeat_email": "repeat email",
+    "new_email": "new email",
+    "old_email": "old email",
+    "last_name": "last name",
+    "first_name": "first name",
+    "change_name": "Change name",
+    "repeat_password": "repeat password",
+    "new_password": "new password",
+    "old_password": "old password",
+    "change_password": "Change password",
+    "password_confirm": "Password confirm",
+    "rating": "rating",
+    "name": "Name",
+    "amount": "Amount",
+    "send_wynn": "Send WYNN",
+    "max": "max",
+    "wallet_address": "wallet address",
+    "commission": "Сommission",
+    "discount": "discount",
+    "enter_code": "Enter 2FA code"
+  },
+  "2fa": {
+    "title": "2FA",
+    "confirmation": "2fa confirmation",
+    "code": "2fa code"
+  },
+  "banner": {
+    "title": "New crypto game",
+    "sub_title": "play to win",
+    "started": "get started now",
+    "next_draw": {
+      "title": "next draw",
+      "sub_title": "CHOOSE YOUR DREAM TICKETS",
+      "buy": "buy tickets"
+    }
+  },
+  "borrow": {
+    "title": "Latest winners",
+    "sub_title": "Leaderboard",
+    "table": {
+      "user": "User",
+      "id": "bet id",
+      "amount": "bet amount",
+      "game": "game",
+      "profit": "profit"
+    }
+  },
+  "links": {
+    "link1": "lottery",
+    "link2": "option",
+    "link3": "wynn rust"
+  },
+  "stats": {
+    "title": "stats",
+    "winners": "Winners",
+    "users": "Users",
+    "games": "Games"
+  },
+  "steps": {
+    "title": "need to know about",
+    "sub_title": "How to play",
+    "text": "Follow these 3 easy steps!",
+    "choose": "Choose",
+    "win": "Win",
+    "buy": "Buy",
+    "choose_text": "Register to WYNN & Choose your contest",
+    "win_text": "Win",
+    "buy_text": "Buy a ticket"
+  },
+  "subscribe": {
+    "subscribe": "subscribe",
+    "title": "SUBSCRIBE TO WYNN",
+    "sub_title": "TO GET EXCLUSIVE BENEFITS",
+    "enter_email": "Enter you email"
+  },
+  "free_coin": {
+    "title": "How to get the fee WYNNE?",
+    "deposit": "Deposit TRX",
+    "locked": "Locked TRX - 10 Day",
+    "get": "get coins",
+    "locket": "locket trx",
+    "title_text": "Free Coins only for purchase",
+    "text": "To get free coins from the system, freeze TRX for 10 days.\n After this period expires, this funds will be frozen, and ...% of the frozen amount will appear on your account.\n The tokens you received from the Wynn system for free cannot be withdrawn.\n They can only be used to buy new tickets, pay for extra numbers, and play games."
+  },
+  "info": {
+    "title": "Info",
+    "match": "MATCHES",
+    "dev": "dev",
+    "price_title": "Ticket Price",
+    "distribution": "Distribution",
+    "text": "The prize fund receives 90% of the collected funds",
+    "text1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games with a transparent and independent winning algorithm.",
+    "text2": "The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Tron blockchain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
+    "text3": "It doesn't really matter what country you live in and how strict are its laws.",
+    "text4": "It offers no opportunities for external influence on the drawing process. And most importantly, all payments within the Wynn Games platform are made only in cryptocurrency. The platform accepts for payment: Tron (TRX), Tether (TRC-20), and its own native Wynn token.",
+    "tokenomics": {
+      "title": "Tokenomics",
+      "percent": {
+        "text1": "Reserved for pre-sale",
+        "text2": "Reserved for replenishing the lottery prize fund",
+        "text3": "Reserved for replenishing the prize fund of a binary option",
+        "text4": "A marketing fund",
+        "text5": "The development team fund",
+        "text6": "For replenishing the prize funds"
+      },
+      "title2": "TokenInfo",
+      "info1": "Stock Ticker",
+      "info2": "Type",
+      "info3": "Blockchain",
+      "info4": "Token Standard:",
+      "info5": "Emission",
+      "token": "Token",
+      "tokens": "tokens",
+      "or": "or",
+      "title3": "Initial Distribution",
+      "text": "The total emission of the Wynn token is 50,000,000 tokens, which are distributed on special system wallets, each of which has its own intended purpose. This excludes irrational or inappropriate use.",
+      "token_text": {
+        "text1": "Reserved for pre-sale",
+        "text2": "Reserved for replenishing the lottery prize fund",
+        "text3": "Reserved for replenishing the prize fund of a binary option",
+        "text4": "A marketing fund for promoting and scaling the project",
+        "text5": "The development team fund is frozen",
+        "text6": "An operational wallet for replenishing the prize fund of gaming services under development"
+      },
+      "roadmap": {
+        "title": "roadmap",
+        "complete": "Complete",
+        "planning": "Planning",
+        "underway": "Underway",
+        "list1": {
+          "name": "Stage 1.1. (2021 2/2)",
+          "text1": "Formation of a development team",
+          "text2": "Creation of the Wynn Games test platform",
+          "text3": "Creation of a crypto lottery based on the Tron network",
+          "text4": "Start of beta testing",
+          "text5": "Launch of blockchain test network",
+          "text6": "Start of alpha testing",
+          "text7": "Successful bugfix test"
+        },
+        "list2": {
+          "name": "Stage 1.2. (2021 2/2)",
+          "text1": "Launch of the main blockchain on the Tron network",
+          "text2": "Start of pre-sale",
+          "text3": "Coingecko listing",
+          "text4": "Token listing on crypto exchanges",
+          "text5": "CoinMarketCap listing",
+          "text6": "Advertising campaign",
+          "text7": "Increase the number of the development staff",
+          "text8": "Creation of a “Wynn Binary” option",
+          "text9": "Launch of alpha testing for the “Wynn Binary” option"
+        },
+        "list3": {
+          "name": "Stage 2 (2022 2/2)",
+          "text1": "Move to beta testing",
+          "text2": "Launch of the “Wynn Binary” option",
+          "text3": "Adding new trading pairs",
+          "text4": "Advertising campaign",
+          "text5": "Integration of affiliate programs\n",
+          "text6": "Creation of a Wynn RAST server",
+          "text7": "Implementation of Wynn as a native payment method"
+        },
+        "list4": {
+          "name": "Stage 3 (2023 1/2)",
+          "text1": "Update lottery algorithm",
+          "text2": "Add new types of lotteries",
+          "text3": "Beta testing of \"4 out of 20\" lottery",
+          "text4": "Establishment of the Wynn Games Education Academy",
+          "text5": "Launch of the Wynn Games Education Academy video courses"
+        },
+        "list5": {
+          "name": "Stage 4 (2023 2/2)",
+          "text1": "Add the ability to buy tickets using cryptocurrencies from the top 10 Coinmarketcap",
+          "text2": "Release of a mobile application for Android",
+          "text3": "Alpha testing of a mobile application for iOS",
+          "text4": "Release of a mobile application for iOS",
+          "text5": "Beta testing of \"6 out of 45\" lottery",
+          "text6": "Add the ability to buy tickets using fiat",
+          "text7": "Alpha testing of plugins for popular internet browsers"
+        }
+      }
+    },
+    "team": {
+      "title": "team",
+      "col1": "Development",
+      "col2": "Advertisement",
+      "col3": "Support",
+      "col4": "HR"
+    }
+  },
+  "buy": {
+    "title": "buy",
+    "info_name": "buy ticket",
+    "random": "random",
+    "clear": "clear",
+    "select": "select number",
+    "price": "price",
+    "balance": "balance",
+    "btn": "buy ticket",
+    "title2": "Select 5 numbers",
+    "title3": "Want to increase your chances of winning?",
+    "title4": "prize pool",
+    "title5": "New Tickets",
+    "text1": "You need to choose any 5 numbers.",
+    "text2": "This can be done manually or by activating the “Random” mode at the top of the ticket. Use this button to select  random cells.",
+    "text3": "After the end of the drawing, the winning tickets are those that have 3, 4 or 5 matches",
+    "text4": "Add 1, 2, 3, or 4 additional numbers per ticket (for an additional fee). You can also buy additional tickets.",
+    "text5": "The prize fund receives 90% of the collected funds, which are distributed as follows: 3 matches - 30%, 4 matches - 30%, 5 matches - 30%.",
+    "game": "game",
+    "more": "more"
+  },
+  "hash": {
+    "title": "Check Lottery",
+    "label": "hash",
+    "game": "game",
+    "win": "win numbers",
+    "btn1": "fine games",
+    "btn2": "game lorem",
+    "more": "more"
+  },
+  "comming_soon": "comming soon",
+  "ticket": {
+    "title": "YOUR TICKETS",
+    "name1": "WAIT",
+    "name2": "WIN",
+    "name3": "LOSE",
+    "text1": "These tickets are still awaiting a draw. As soon as the winning combination is determined, it will go to the Win or Lose section.",
+    "text2": "Your tickets that have 3, 4, or 5 matches (matched numbers are highlighted). These are winning tickets.",
+    "text3": "Tickets that didn't match.",
+    "game": "game",
+    "price": "price"
+  },
+  "profile": {
+    "info": {
+      "label1": "email",
+      "label2": "password",
+      "label3": "rating",
+      "label4": "fee",
+      "label5": "Invite url (invite users ",
+      "label6": "next level"
+    },
+    "wallet": {
+      "title": "wallet address",
+      "text1": "To replenish the wallet, copy the address and paste it into the corresponding line in the exchanger or in the wallet of another system.",
+      "text2": "The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens which you can store here are listed below.",
+      "text3": "* The minimum balance on your wallet cannot be lower than 5 TRX."
+    },
+    "table": {
+      "time": "time",
+      "amount": "amount",
+      "coin": "coin",
+      "txid": "txid"
+    },
+    "title": "profile",
+    "my_tickets": "my tickets",
+    "my_logs": "my logs"
+  },
+  "swap": {
+    "title": "Get WYNN",
+    "title2": "Get amount WYNN",
+    "title3": "Select coins",
+    "remainder": "Remainder"
+  }
+}

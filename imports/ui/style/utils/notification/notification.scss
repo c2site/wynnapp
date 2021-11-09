@@ -1,0 +1,40 @@
+@import "../../_helpers/variables";
+
+.notification {
+  background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+  box-shadow: inset 0px -1px 0px #000000;
+  height: 70px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-family: 'Intro', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1E2632;
+  @media only screen and (max-width: $responsive-size-big-tablet) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  span {
+    display: block;
+    margin: 0 20px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      margin: 0 9px;
+    }
+  }
+  svg {
+    display: block;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      width: 18px;
+      height: 19px;
+    }
+  }
+}
+

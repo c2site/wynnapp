@@ -1,0 +1,153 @@
+@import "../../_helpers/variables";
+
+.steps-block {
+    padding-bottom: 150px;
+    h2 {
+        margin-bottom: 3px;
+        span {
+            margin-bottom: 15px;
+        }
+    }
+    &.free-coin {
+        .steps-list {
+            margin-top: 0;
+        }
+    }
+    .steps-list {
+        margin-top: 60px;
+        position: relative;
+        &:after {
+            position: absolute;
+            top: -13px;
+            left: -56px;
+            display: block;
+            content: '';
+            width: 102px;
+            height: 123px;
+            background: url("./img/coin-steps.svg") no-repeat;
+            background-size: cover;
+        }
+        &>* {
+            @media only screen and (max-width: 991px) {
+                margin-bottom: 20px;
+            }
+        }
+        .item {
+            background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+            box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 35px 30px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            position: relative;
+            min-height: 100%;
+            @media only screen and (max-width: 991px) {
+                padding: 30px 30px 35px;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: left;
+            }
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-size: cover !important;
+            }
+            &:before {
+                background: url("./img/bg-br-step.svg") no-repeat;
+            }
+            &:after {
+                background: url("./img/bg-bt-step.svg") no-repeat;
+            }
+            .ico {
+                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+                width: 120px;
+                height: 120px;
+                margin-bottom: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                @media only screen and (max-width: 991px) {
+                    margin: 0 15px 0 0;
+                    width: 100px;
+                    height: 100px;
+                }
+                svg {
+                    display: block;
+                }
+            }
+            .text {
+                @media only screen and (max-width: 991px) {
+                    width: calc(100% - 115px);
+                }
+            }
+            h5,
+            .title {
+                text-align: center;
+                margin-bottom: 12px;
+                @media only screen and (max-width: 991px) {
+                    text-align: left;
+                }
+            }
+            .title {
+                font-family: 'Intro', sans-serif;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 22px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                display: block;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+    .img {
+        @media only screen and (max-width: 991px) {
+            display: none;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+        }
+    }
+    .btn-holder {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .btn {
+            width: 100%;
+            margin-top: 30px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &.info-box {
+        font-size: 18px;
+        line-height: 30px;
+        color: rgba(255,255,255,0.75);
+
+        p {
+            margin-bottom: 45px;
+        }
+    }
+}

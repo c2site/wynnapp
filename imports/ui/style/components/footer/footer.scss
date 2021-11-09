@@ -1,0 +1,127 @@
+@import "../../_helpers/variables";
+
+footer {
+  padding: 15px 0 16px;
+  margin-top: auto;
+  background: #212129;
+  position: relative;
+  z-index: 2;
+  @media only screen and (max-width: $responsive-size-stand-mobile) {
+    padding: 20px 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      flex-direction: column;
+    }
+  }
+  .copyright {
+    font-size: 13px;
+    line-height: 24px;
+    color: rgba(255,255,255,0.5);
+    padding-left: 50px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      padding-left: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  a {
+    font-size: 13px;
+    line-height: 24px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: rgba(255,255,255,1);
+      text-decoration: underline;
+    }
+  }
+  .social {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    li {
+      padding: 0 25px;
+      @media only screen and (max-width: $responsive-size-big-tablet) {
+        padding: 0 0 0 25px;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 24px;
+        color: rgba(255,255,255,0.5);
+        transition: all linear 0.3s;
+
+        .ico {
+          display: block;
+          margin-right: 8px;
+          svg {
+            display: block;
+            transition: all linear 0.3s;
+            path {
+              transition: all linear 0.3s;
+            }
+          }
+        }
+        &:hover {
+          color: rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: $responsive-size-stand-mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+      margin-right: 40px;
+      @media only screen and (max-width: $responsive-size-stand-mobile) {
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        margin-right: 0;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      svg {
+        display: block;
+        margin-right: 10px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
