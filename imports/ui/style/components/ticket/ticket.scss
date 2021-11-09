@@ -439,6 +439,16 @@
     @media only screen and (max-width: $responsive-size-mobile) {
         margin: 0 -15px;
     }
+    &:before {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: -100%;
+        right: -100%;
+        background: #fff;
+        display: block;
+        content: '';
+    }
     &:after {
         position: absolute;
         bottom: -108px;
