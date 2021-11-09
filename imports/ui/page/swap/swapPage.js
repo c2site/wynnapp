@@ -6,8 +6,10 @@ import {Price} from "../../../api/mongo/price";
 import {Meteor} from "meteor/meteor";
 import {toast} from "react-toastify";
 import {Input, Label, Form} from 'reactstrap';
+import { useTranslation } from "react-i18next";
 
 const SwapPage = () => {
+  const {t, i18n} = useTranslation();
     const [asset, setAsset] = useState('trx');
     const [price, setPrice] = useState(0);
     const [amount, setAmount] = useState(0);
@@ -46,24 +48,24 @@ const SwapPage = () => {
                 <div className="container">
                     <div className="head-page">
                         <div className="breadcrumbs">
-                            <a href="#">Home</a>
+                            <a href="#">{t('nav.home')}</a>
                             <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-                            <a href="#">Get WYNN</a>
+                            <a href="#">{t('nav.get')}</a>
                         </div>
-                        <h2 className="title-page">Get WYNN</h2>
+                        <h2 className="title-page">{t('swap.title')}</h2>
                     </div>
                     <div className="progress-box">
                         <div className="item progress-item">
-                            <h5 className="name">Remainder {swap?.value()} WYNN</h5>
+                            <h5 className="name">{t('swap.remainder')} {swap?.value()} WYNN</h5>
                             <div className="progress">
                                 <div style={progress}></div>
                             </div>
                         </div>
                     </div>
                     <div className="wallet-info">
-                        <h2>Get amount WYNN</h2>
+                        <h2>{t('swap.title2')}</h2>
                         <form className="form form-swap">
                             <div className="input-box flex f-align-center">
                                 <input type="number" name="amount" value={amount} onChange={(e)=>setAmount(e.currentTarget.value)}/> <span>= {price || 0} {asset}</span>
@@ -73,7 +75,7 @@ const SwapPage = () => {
                             </div>
                         </form>
                         <Form className="wallets-list row">
-                            <h2>Select coins</h2>
+                            <h2>{t('swap.title3')}</h2>
                             {money?.map(wallet=> (
                                 <div className="col-md-4 holder-item" key={wallet._id}>
                                     <Input type="radio" id={wallet.coins} checked={wallet.coins === asset} value={wallet.coins} onChange={()=>setAsset(wallet.coins)}/>

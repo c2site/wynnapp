@@ -3,36 +3,38 @@ import InfoBox from "./components/infoBox";
 import Tokenomics from "./components/tokenomics";
 import Roadmap from "./components/roadmap";
 import Team from "./components/team";
+import { useTranslation } from "react-i18next";
 
 const InfoPage = () => {
+  const {t, i18n} = useTranslation();
         return (
             <div className="inner-page">
                 <div className="container">
                     <div className="head-page">
                         <div className="breadcrumbs">
-                            <a href="#">Home</a>
+                            <a href="#">{t('nav.home')}</a>
                             <span className="separator">
                               <img src="./img/arrow-breadcrumbs.svg" alt="" />
                             </span>
-                            <a href="#">Info</a>
+                            <a href="#">{t('nav.info')}</a>
                         </div>
-                        <h2 className="title-page">Info</h2>
+                        <h2 className="title-page">{t('info.title')}</h2>
                     </div>
                     <InfoBox/>
                     <Tokenomics/>
                   <div className="distribution-box">
                     <div className="container">
                       <div className="head-box">
-                        <h2 className="black">Distribution</h2>
-                        <p>90% of the proceeds from ticket sales go to the prize pool</p>
+                        <h2 className="black">{t('info.distribution')}</h2>
+                        <p>{t('info.text')}</p>
                       </div>
                       <div className="distribution-list">
                         <div className="item center-top">
-                          <span className="info">4 match</span>
+                          <span className="info">4 {t('info.match')}</span>
                           <strong>30%</strong>
                         </div>
                         <div className="item left">
-                          <span className="info">5 match</span>
+                          <span className="info">5 {t('info.match')}</span>
                           <strong>30%</strong>
                         </div>
                         <div className="item center ticket">
@@ -44,7 +46,7 @@ const InfoPage = () => {
                               <path d="M48 50V57" stroke="#1E2632" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                           </div>
-                          <span className="name">TicketPrice</span>
+                          <span className="name">{t('info.price_title')}</span>
                           <span className="arrow top">
                     <svg width="16" height="88" viewBox="0 0 16 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 86.5C7 87.0523 7.44772 87.5 8 87.5C8.55228 87.5 9 87.0523 9 86.5H7ZM8.70711 0.792892C8.31658 0.402367 7.68342 0.402367 7.29289 0.792892L0.928932 7.15685C0.538408 7.54738 0.538408 8.18054 0.928932 8.57107C1.31946 8.96159 1.95262 8.96159 2.34315 8.57107L8 2.91422L13.6569 8.57107C14.0474 8.96159 14.6805 8.96159 15.0711 8.57107C15.4616 8.18054 15.4616 7.54738 15.0711 7.15685L8.70711 0.792892ZM9 86.5L9 1.5H7L7 86.5H9Z" fill="#C4C4C4"/>
@@ -67,11 +69,11 @@ const InfoPage = () => {
                   </span>
                         </div>
                         <div className="item right">
-                          <span className="info">3 match</span>
+                          <span className="info">3 {t('info.match')}</span>
                           <strong>30%</strong>
                         </div>
                         <div className="item center-bottom">
-                          <span className="info">dev</span>
+                          <span className="info">{t('info.dev')}</span>
                           <strong>10%</strong>
                         </div>
                       </div>

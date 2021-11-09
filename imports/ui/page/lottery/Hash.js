@@ -1,24 +1,26 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 
 const Hash = () => {
+  const {t, i18n} = useTranslation();
 
     return (
       <div className="history-page inner-page">
         <div className="container">
           <div className="head-page">
             <div className="breadcrumbs">
-              <a href="#">Home</a>
+              <a href="#">{t('nav.home')}</a>
               <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-              <a href="#">Check Lotery</a>
+              <a href="#">{t('nav.check')}</a>
             </div>
-            <h2 className="title-page">Check Lotery</h2>
+            <h2 className="title-page">{t('hash.title')}</h2>
           </div>
           <div className="table history-table history-hash">
             <form action="#" className="form form-hash">
-              <label >hash</label>
+              <label >{t('hash.label')}</label>
               <div className="flex">
                 <input type="text" name="" id="" />
                 <button className="btn btn-primary">
@@ -30,8 +32,8 @@ const Hash = () => {
               </div>
             </form>
             <div className="hash-btn">
-              <button className="btn btn-active">fine games</button>
-              <button className="btn btn-default">game lorem</button>
+              <button className="btn btn-active">{t('hash.btn1')}</button>
+              <button className="btn btn-default">{t('hash.btn2')}</button>
             </div>
             <div className="scroll-hash">
               <div className="table-hash">
@@ -39,11 +41,11 @@ const Hash = () => {
                   <table>
                     <thead>
                     <tr>
-                      <th>game</th>
-                      <th>tickets</th>
-                      <th>win numbers</th>
-                      <th>win amount</th>
-                      <th>hash</th>
+                      <th>{t('hash.game')}</th>
+                      {/*<th>tickets</th>*/}
+                      <th>{t('hash.win')}</th>
+                      {/*<th>win amount</th>*/}
+                      <th>{t('hash.label')}</th>
                     </tr>
                     </thead>
                   </table>
@@ -52,7 +54,7 @@ const Hash = () => {
                   <tbody>
                   <tr>
                     <td>№1055</td>
-                    <td>12</td>
+                    {/*<td>12</td>*/}
                     <td>
                       <div className="numbers">
                         <span className="number">10</span>
@@ -62,7 +64,7 @@ const Hash = () => {
                         <span className="number">10</span>
                       </div>
                     </td>
-                    <td className='green'>24500 WYNN</td>
+                    {/*<td className='green'>24500 WYNN</td>*/}
                     <td>1aa2793c984e484a12f249fbc331ece54b33f50020d40075bbbdecc2422edfab</td>
                   </tr>
                   </tbody>

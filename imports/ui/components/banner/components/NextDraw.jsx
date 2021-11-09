@@ -7,10 +7,12 @@ import {Money} from "../../../../api/mongo/money";
 import Countdown from 'react-countdown';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import Loading from "../../loading";
+import { useTranslation } from "react-i18next";
 
 
 const NextDraw = ({button, coins = 'wynn'})=> {
 
+  const {t, i18n} = useTranslation();
   const assetName = coins;
   useSubscribe ('lottery', []);
   const loading = useSubscribe('money.game', []);
@@ -50,8 +52,8 @@ const NextDraw = ({button, coins = 'wynn'})=> {
                       <div className="flex f-space-between f-align-center">
                           <div className="name">
                               <h2>
-                                  next draw
-                                  <span>CHOOSE YOUR DREAM TICKETS</span>
+                                {t('banner.next_draw.title')}
+                                  <span>{t('banner.next_draw.sub_title')}</span>
                               </h2>
                           </div>
                           <Countdown
@@ -67,7 +69,7 @@ const NextDraw = ({button, coins = 'wynn'})=> {
                                       <path d="M15 11V13" stroke="#212129" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                       <path d="M15 18V20" stroke="#212129" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                   </svg>
-                                  buy tickets
+                                {t('banner.next_draw.buy')}
                               </button>
                           ) : (
                               <></>

@@ -1,23 +1,25 @@
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import React from "react";
+import {useTranslation} from "react-i18next";
 
 const Navigation = () => {
+  const {t, i18n} = useTranslation();
   return (
     <>
           <ul className="nav">
             <li>
               <a href={FlowRouter.path('/')}
-              >Home</a></li>
-            <li><a href={FlowRouter.path('info')}>Info</a></li>
+              >{t('nav.home')}</a></li>
+            <li><a href={FlowRouter.path('info')}>{t('nav.info')}</a></li>
             <li>
               <a href={FlowRouter.path('buy')}
-            >Lottery</a></li>
+            >{t('nav.lottery')}</a></li>
             <li>
               <a href={FlowRouter.path('history')}
-              >History Games</a></li>
-            {/*<li><a href={FlowRouter.path('swap')}>Buy WYNN</a></li>*/}
-            {/*<li><a href="#">Option</a></li>*/}
-            {/*<li><a href="#">Contact</a></li>*/}
+              >{t('nav.history')}</a></li>
+            {/*<li><a href={FlowRouter.path('swap')}>{t('nav.buy-wynn')}</a></li>*/}
+            {/*<li><a href="#">{t('nav.option')}</a></li>*/}
+            {/*<li><a href="#">{t('nav.contact')}</a></li>*/}
           </ul>
     </>
   );

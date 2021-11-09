@@ -3,9 +3,11 @@ import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Ticket} from "../../../api/mongo/ticket";
 import {Meteor} from "meteor/meteor";
+import { useTranslation } from "react-i18next";
 
 
 const MyTickets = () => {
+  const {t, i18n} = useTranslation();
   useSubscribe('lottery.user');
   const list = useTracker(()=>Ticket.find({userId: Meteor.userId()}).fetch(), []);
     return (
@@ -17,7 +19,7 @@ const MyTickets = () => {
                     <div className="item" key={ticket._id}>
                       <div className="head">
                       <span className="info">
-                      game #{ticket.lottery.id}
+                      {t('ticket.game')} #{ticket.lottery.id}
                         <span className="separator">/</span>
                       ID #{ticket.id}
                     </span>
@@ -58,7 +60,7 @@ const MyTickets = () => {
                             {ticket.status}
                           </div>
                           <span className="price">
-                            price
+                            {t('ticket.price')}
                             <span>{ticket.price} {ticket.lottery.assetName}</span>
                           </span>
                         </div>
@@ -69,7 +71,7 @@ const MyTickets = () => {
             </div>
             <div className="col-lg-4">
               <div className="info-tickets">
-                <h4>YOUR TICKETS</h4>
+                <h4>{t('ticket.title')}</h4>
                 <div className="info-list">
                   <div className="info-item">
                     <div className="ico wait">
@@ -80,8 +82,8 @@ const MyTickets = () => {
                         </g>
                       </svg>
                     </div>
-                    <strong className="name">WAIT</strong>
-                    <p>These tickets are still awaiting a draw. As soon as the winning combination is determined, it will go to the Win or Lose section.</p>
+                    <strong className="name">{t('ticket.name1')}</strong>
+                    <p>{t('ticket.text1')}</p>
                   </div>
                   <div className="info-item">
                     <div className="ico win">
@@ -90,8 +92,8 @@ const MyTickets = () => {
                         <path d="M8.5 10.9581L10.2678 12.7259L13.8033 9.19032" stroke="#C6C8CB" stroke-width="2" stroke-linecap="round"/>
                       </svg>
                     </div>
-                    <strong className="name">WIN</strong>
-                    <p>Your tickets that have 3, 4, or 5 matches (matched numbers are highlighted). These are winning tickets.</p>
+                    <strong className="name">{t('ticket.name2')}</strong>
+                    <p>{t('ticket.text2')}</p>
                   </div>
                   <div className="info-item">
                     <div className="ico lose">
@@ -109,8 +111,8 @@ const MyTickets = () => {
                         </defs>
                       </svg>
                     </div>
-                    <strong className="name">LOSE</strong>
-                    <p>Tickets that didn't match.</p>
+                    <strong className="name">{t('ticket.name3')}</strong>
+                    <p>{t('ticket.text3')}</p>
                   </div>
                 </div>
               </div>

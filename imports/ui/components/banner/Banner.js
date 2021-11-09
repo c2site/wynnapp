@@ -3,19 +3,21 @@ import React from "react";
 
 import NextDraw from '/imports/ui/components/banner/components/NextDraw';
 import Registration from "../header/components/Registration";
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
+  const {t, i18n} = useTranslation();
   return (
     <>
       <div className="banner-box container">
         <div className="head-banner flex f-space-between f-align-center">
           <div className="title-box">
             <h1>
-              <span>New crypto game</span>
-              play to win
+              <span>{t('banner.title')}</span>
+              {t('banner.sub_title')}
             </h1>
             <div className="btn-holder">
-              <Registration color="primary" text="get started now"/>
+              <Registration color="primary" text={t('banner.started')}/>
               <a href={'https://www.wynn-games.com/wp/White_Paper_WYNN_GAMES.pdf'}  target={'_blank'} className="btn btn-active">White Paper v.1.0.0</a>
               <a href={'https://discord.gg/2tPXTF7795'}  target={'_blank'} className="btn btn-black">
                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +25,7 @@ const Banner = () => {
                   <path d="M12.1943 11.6914C12.8229 11.6914 13.3886 11.1257 13.3886 10.4343C13.3886 9.74283 12.8857 9.23997 12.1943 9.23997C11.5657 9.23997 11 9.80569 11 10.4971C11 11.1257 11.5029 11.6914 12.1943 11.6914Z" fill="white"/>
                   <path d="M7.91996 11.6914C8.54854 11.6914 9.11425 11.1257 9.11425 10.4343C9.11425 9.74283 8.61139 9.23997 7.91996 9.23997C7.29139 9.23997 6.72568 9.80569 6.72568 10.4971C6.78853 11.1257 7.29139 11.6914 7.91996 11.6914Z" fill="white"/>
                 </svg>
-                Discord
+                {t('header.discord')}
               </a>
             </div>
           </div>

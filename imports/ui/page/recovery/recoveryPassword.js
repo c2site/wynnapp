@@ -4,8 +4,10 @@ import {toast} from "react-toastify";
 import {Input, Label, Button, Form} from "reactstrap";
 import TokenInput from "../../components/modal/TokenInput";
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import { useTranslation } from "react-i18next";
 
 const RecoveryPassword = () => {
+    const {t, i18n} = useTranslation();
     const token = useParam('token');
     const [pass, setPass] = useState('');
     const [repeat, setRepeat] = useState('');
@@ -59,7 +61,7 @@ const RecoveryPassword = () => {
                             {show ? (
                             <>
                                 <div className="input-box">
-                                    <Label className="label">Enter 2FA code</Label>
+                                    <Label className="label">{t('form.enter_code')}</Label>
                                     <TokenInput token={secret} onChange={(tkn) => setSecret(tkn)} offset={3} size={6} />
                                 </div>
                             </>
@@ -67,12 +69,12 @@ const RecoveryPassword = () => {
                             <>
                                 <div className={'input-box'}>
                                     <Label for="pass1" className="label in">
-                                        Password
+                                        {t('form.Password')}
                                     </Label><Input type={'password'} id={'pass1'} value={pass} onChange={(e) => setPass(e.currentTarget.value)} />
                                 </div>
                                 <div className="input-box">
                                     <Label for="pass2" className="label in">
-                                        Password confirm
+                                        {t('form.password_confirm')}
                                     </Label>
                                     <Input
                                       type={'password'}
@@ -85,7 +87,7 @@ const RecoveryPassword = () => {
                             )}
                             <div className="btn-box text-center">
                                 <Button color={'black'} type={'submit'}>
-                                    Change
+                                    {t('form.change')}
                                 </Button>
                             </div>
                         </Form>
