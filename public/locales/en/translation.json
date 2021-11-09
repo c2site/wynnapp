@@ -58,7 +58,8 @@
     "wallet_address": "wallet address",
     "commission": "Сommission",
     "discount": "discount",
-    "enter_code": "Enter 2FA code"
+    "enter_code": "Enter 2FA code",
+    "ref": "refferal id"
   },
   "2fa": {
     "title": "2FA",

@@ -58,6 +58,10 @@ const Registration = (props) => {
               <Input type="email"  value={email} onChange={(e)=>setEmail(e.currentTarget.value)}/>
             </div>
             <div className="input-box">
+              <Label for="">{t('form.ref')}</Label>
+              <Input type="number"  value=""/>
+            </div>
+            <div className="input-box">
               <Label for="">{t('form.password')}</Label>
               <Input type="password"  value={password} onChange={(e)=>setPassword(e.currentTarget.value)}/>
             </div>

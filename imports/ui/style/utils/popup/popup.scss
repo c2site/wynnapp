@@ -183,6 +183,15 @@
       background: #FFFFFF;
       border-radius: 5px;
       text-align: left;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      &[type=number] {
+        -moz-appearance: textfield;
+      }
       &::placeholder {
         color: rgba(153, 153, 153, 1);
         font-weight: 500;
