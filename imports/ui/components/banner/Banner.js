@@ -4,9 +4,14 @@ import React from "react";
 import NextDraw from '/imports/ui/components/banner/components/NextDraw';
 import Registration from "../header/components/Registration";
 import { useTranslation } from "react-i18next";
+import Login from "../header/components/Login";
+import ProfileBtn from "../header/components/profileBtn";
+import { FlowRouter } from "meteor/ostrio:flow-router-extra";
+import { useTracker } from "meteor/react-meteor-data";
 
 const Banner = () => {
   const {t, i18n} = useTranslation();
+  const login = useTracker(()=>Meteor.user(), []);
   return (
     <>
       <div className="banner-box container">
@@ -17,7 +22,9 @@ const Banner = () => {
               {t('banner.sub_title')}
             </h1>
             <div className="btn-holder">
-              <Registration color="primary" text={t('banner.started')}/>
+              {!login ? (<Registration color="primary" text={t('banner.started')}/>) : (
+                <button className="btn btn-primary" onClick={()=>FlowRouter.go('/profile')}>{t('banner.started')}</button>
+              )}
               <a href={'https://www.wynn-games.com/wp/White_Paper_WYNN_GAMES.pdf'}  target={'_blank'} className="btn btn-active">White Paper v.1.0.0</a>
               <a href={'https://discord.gg/2tPXTF7795'}  target={'_blank'} className="btn btn-black">
                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
