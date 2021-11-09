@@ -3,6 +3,9 @@
 .tokenomics-block {
     padding-top: 100px;
     padding-bottom: 100px;
+    @media only screen and (max-width: $responsive-size-mobile) {
+        padding: 20px 0;
+    }
     h2{
         margin-bottom: 100px;
     }
@@ -18,6 +21,10 @@
             font-size: 16px;
             line-height: 20px;
             color: #FFFFFF;
+            @media only screen and (max-width: $responsive-size-mobile) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             &:after {
                 position: absolute;
@@ -46,6 +53,9 @@
                 line-height: 29px;
                 color: #FFFFFF;
                 margin-right: 20px;
+                @media only screen and (max-width: $responsive-size-mobile) {
+                    margin: 0 0 20px;
+                }
                 &>span{
                     width: 24px;
                     height: 24px;
@@ -74,6 +84,9 @@
             }
             .text {
                 width: calc(100% - 110px);
+                @media only screen and (max-width: $responsive-size-mobile) {
+                    width: 100%;
+                }
             }
         }
     }

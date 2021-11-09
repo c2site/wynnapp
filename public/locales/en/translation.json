@@ -163,62 +163,62 @@
         "text4": "A marketing fund for promoting and scaling the project",
         "text5": "The development team fund is frozen",
         "text6": "An operational wallet for replenishing the prize fund of gaming services under development"
+      }
+    },
+    "roadmap": {
+      "title": "roadmap",
+      "complete": "Complete",
+      "planning": "Planning",
+      "underway": "Underway",
+      "list1": {
+        "name": "Stage 1.1. (2021 2/2)",
+        "text1": "Formation of a development team",
+        "text2": "Creation of the Wynn Games test platform",
+        "text3": "Creation of a crypto lottery based on the Tron network",
+        "text4": "Start of beta testing",
+        "text5": "Launch of blockchain test network",
+        "text6": "Start of alpha testing",
+        "text7": "Successful bugfix test"
       },
-      "roadmap": {
-        "title": "roadmap",
-        "complete": "Complete",
-        "planning": "Planning",
-        "underway": "Underway",
-        "list1": {
-          "name": "Stage 1.1. (2021 2/2)",
-          "text1": "Formation of a development team",
-          "text2": "Creation of the Wynn Games test platform",
-          "text3": "Creation of a crypto lottery based on the Tron network",
-          "text4": "Start of beta testing",
-          "text5": "Launch of blockchain test network",
-          "text6": "Start of alpha testing",
-          "text7": "Successful bugfix test"
-        },
-        "list2": {
-          "name": "Stage 1.2. (2021 2/2)",
-          "text1": "Launch of the main blockchain on the Tron network",
-          "text2": "Start of pre-sale",
-          "text3": "Coingecko listing",
-          "text4": "Token listing on crypto exchanges",
-          "text5": "CoinMarketCap listing",
-          "text6": "Advertising campaign",
-          "text7": "Increase the number of the development staff",
-          "text8": "Creation of a “Wynn Binary” option",
-          "text9": "Launch of alpha testing for the “Wynn Binary” option"
-        },
-        "list3": {
-          "name": "Stage 2 (2022 2/2)",
-          "text1": "Move to beta testing",
-          "text2": "Launch of the “Wynn Binary” option",
-          "text3": "Adding new trading pairs",
-          "text4": "Advertising campaign",
-          "text5": "Integration of affiliate programs\n",
-          "text6": "Creation of a Wynn RAST server",
-          "text7": "Implementation of Wynn as a native payment method"
-        },
-        "list4": {
-          "name": "Stage 3 (2023 1/2)",
-          "text1": "Update lottery algorithm",
-          "text2": "Add new types of lotteries",
-          "text3": "Beta testing of \"4 out of 20\" lottery",
-          "text4": "Establishment of the Wynn Games Education Academy",
-          "text5": "Launch of the Wynn Games Education Academy video courses"
-        },
-        "list5": {
-          "name": "Stage 4 (2023 2/2)",
-          "text1": "Add the ability to buy tickets using cryptocurrencies from the top 10 Coinmarketcap",
-          "text2": "Release of a mobile application for Android",
-          "text3": "Alpha testing of a mobile application for iOS",
-          "text4": "Release of a mobile application for iOS",
-          "text5": "Beta testing of \"6 out of 45\" lottery",
-          "text6": "Add the ability to buy tickets using fiat",
-          "text7": "Alpha testing of plugins for popular internet browsers"
-        }
+      "list2": {
+        "name": "Stage 1.2. (2021 2/2)",
+        "text1": "Launch of the main blockchain on the Tron network",
+        "text2": "Start of pre-sale",
+        "text3": "Coingecko listing",
+        "text4": "Token listing on crypto exchanges",
+        "text5": "CoinMarketCap listing",
+        "text6": "Advertising campaign",
+        "text7": "Increase the number of the development staff",
+        "text8": "Creation of a “Wynn Binary” option",
+        "text9": "Launch of alpha testing for the “Wynn Binary” option"
+      },
+      "list3": {
+        "name": "Stage 2 (2022 2/2)",
+        "text1": "Move to beta testing",
+        "text2": "Launch of the “Wynn Binary” option",
+        "text3": "Adding new trading pairs",
+        "text4": "Advertising campaign",
+        "text5": "Integration of affiliate programs\n",
+        "text6": "Creation of a Wynn RAST server",
+        "text7": "Implementation of Wynn as a native payment method"
+      },
+      "list4": {
+        "name": "Stage 3 (2023 1/2)",
+        "text1": "Update lottery algorithm",
+        "text2": "Add new types of lotteries",
+        "text3": "Beta testing of \"4 out of 20\" lottery",
+        "text4": "Establishment of the Wynn Games Education Academy",
+        "text5": "Launch of the Wynn Games Education Academy video courses"
+      },
+      "list5": {
+        "name": "Stage 4 (2023 2/2)",
+        "text1": "Add the ability to buy tickets using cryptocurrencies from the top 10 Coinmarketcap",
+        "text2": "Release of a mobile application for Android",
+        "text3": "Alpha testing of a mobile application for iOS",
+        "text4": "Release of a mobile application for iOS",
+        "text5": "Beta testing of \"6 out of 45\" lottery",
+        "text6": "Add the ability to buy tickets using fiat",
+        "text7": "Alpha testing of plugins for popular internet browsers"
       }
     },
     "team": {

@@ -38,7 +38,7 @@ const ProfilePage = ({ children }) => {
                     <path d="M9 12H14" stroke="#CED0D3" strokeWidth="1.5" strokeLinecap="round"
                           strokeLinejoin="round" />
                   </svg>
-                  {t('profile.my logs')}
+                  {t('profile.my_logs')}
                 </Button>*/}
               </div>
             </div>

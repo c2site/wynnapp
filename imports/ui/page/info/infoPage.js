@@ -80,7 +80,7 @@ const InfoPage = () => {
                     </div>
                   </div>
                   <Roadmap/>
-                  <Team/>
+                  {/*<Team/>*/}
                 </div>
             </div>
         )

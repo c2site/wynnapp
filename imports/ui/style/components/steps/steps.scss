@@ -145,6 +145,9 @@
         font-size: 18px;
         line-height: 30px;
         color: rgba(255,255,255,0.75);
+        @media only screen and (max-width: $responsive-size-mobile) {
+            padding: 20px 0;
+        }
 
         p {
             margin-bottom: 45px;

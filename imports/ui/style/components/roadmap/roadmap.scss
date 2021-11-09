@@ -15,10 +15,18 @@
         line-height: 21px;
         color: rgba(255,255,255,0.75);
         margin-bottom: 45px;
+        @media only screen and (max-width: $responsive-size-mobile) {
+            flex-direction: column;
+        }
         span {
             display: flex;
             padding: 0 35px;
             align-items: center;
+            @media only screen and (max-width: $responsive-size-mobile) {
+                + span {
+                    margin-top: 15px;
+                }
+            }
             svg {
                 display: block;
                 margin-right: 10px;

@@ -199,6 +199,10 @@ li {
     padding-left: 30px;
     padding-right: 30px;
   }
+  @media only screen and (max-width: $responsive-size-mobile) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 //@media screen and (min-width: 990px) {
 //  .container {
@@ -295,6 +299,9 @@ h2 {
   @media only screen and (max-width: $responsive-size-laptop-screen) {
     font-size: 40px;
     line-height: 40px;
+  }
+  @media only screen and (max-width: $responsive-size-mobile) {
+    font-size: 32px;
   }
   span {
     display: block;
