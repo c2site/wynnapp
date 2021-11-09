@@ -80,9 +80,9 @@ const TwoFA = () => {
   console.log(secret);
   return (
     <>
-      <Button className="btn-hide" onClick={toggle2FA} />
+      <Button className="btn-primary active-2fa" onClick={toggle2FA}>{t('active')}</Button>
       <Modal isOpen={!!secret} toggle={toggleSecret} className={'modal-app'}>
-        <ModalHeader toggle={toggleSecret}>{t('form.2fa.title')}</ModalHeader>
+        <ModalHeader toggle={toggleSecret}>{t('2fa.title')}</ModalHeader>
         <ModalBody>
           <div className="twofa-box">
             <div className="img-holder">
@@ -91,8 +91,8 @@ const TwoFA = () => {
             <Row>
               <Col md={12}>
                 <div className="input-box">
-                  <Label for="">{t('form.2fa.code')}</Label>
-                  <TokenInput type="text" placeholder={t('form.2fa.code')} token={token} onChange={(tkn) => setToken(tkn)} />
+                  <Label for="">{t('2fa.code')}</Label>
+                  <TokenInput type="text" placeholder={t('2fa.code')} token={token} onChange={(tkn) => setToken(tkn)} />
                 </div>
               </Col>
             </Row>

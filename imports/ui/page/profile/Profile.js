@@ -113,16 +113,20 @@ const Profile = () => {
                     {/*<ChangePassword/>*/}
                   </div>
                   <div className="item">
-                    <span className="name">2fa</span>
-                    <span className="info">{user?.settings?.twoFa ? 'Active' : 'Disabled'}</span>
-                    <TwoFa secret={secret} close={() => setSecret(null)} />
-                    <TwoFAConfirm
+                    <div className="flex f-space-between">
+                      <div>
+                        <span className="name">2fa</span>
+                        <span className="info">{user?.settings?.twoFa ? 'Active' : 'Disabled'}</span>
+                      </div>
+                      <TwoFa secret={secret} close={() => setSecret(null)} />
+                      <TwoFAConfirm
                         open={open}
                         close={() => setOpen(false)}
                         confirm={handleDeactivate}
                         token={token}
                         onChange={(tkn) => setToken(tkn)}
-                    />
+                      />
+                    </div>
                   </div>
                   <div className="item">
                     <span className="name">{t('profile.info.label3')}</span>

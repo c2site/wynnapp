@@ -301,5 +301,6 @@
     "title2": "Get amount WYNN",
     "title3": "Select coins",
     "remainder": "Remainder"
-  }
+  },
+  "active": "active"
 }

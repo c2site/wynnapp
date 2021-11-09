@@ -21,15 +21,15 @@ const TwoFAConfirm: React.FC<TwoFAConfirmProps> = ({ open, close, confirm }) => 
 
   return (
     <Modal isOpen={open} toggle={closeModal} className="modal-app text-center">
-      <ModalHeader toggle={closeModal}>{t('form.2fa.confirmation')}</ModalHeader>
+      <ModalHeader toggle={closeModal}>{t('2fa.confirmation')}</ModalHeader>
       <ModalBody>
         <div className="twofa-box">
           <div className="row">
             <div className="col-md-12">
               <div className="input-box">
                 <FormGroup>
-                  <Label for="">{t('form.2fa.code')}</Label>
-                  <TokenInput type="text" placeholder={t('form.2fa.code')} token={token} onChange={(tkn) => setToken(tkn)} />
+                  <Label for="">{t('2fa.code')}</Label>
+                  <TokenInput type="text" placeholder={t('2fa.code')} token={token} onChange={(tkn) => setToken(tkn)} />
                 </FormGroup>
               </div>
             </div>
