@@ -197,9 +197,13 @@ const BuyPage = () => {
                       <div className="balance-info">
                         <div className="form-control item">
                           <select value={coinName} defaultValue={coinName}  onChange={(e)=>ChangeWallet(e)}>
-                            {money?.map(wallet=>(
-                                <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
-                            ))}
+                            {!login ? (
+                                <option value='0'>WYNN 0</option>
+                            ) : (
+                                money?.map(wallet=>(
+                                    <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
+                                ))
+                            )}
                           </select>
                         </div>
                       </div>

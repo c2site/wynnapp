@@ -18,6 +18,7 @@ const Registration = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
+  const login = useTracker(()=>Meteor.users.findOne(), []);
   const toggle = () => {
     if(login) {
       FlowRouter.go('buy')
@@ -35,7 +36,10 @@ const Registration = (props) => {
       return;
     }
 
-    console.log(invite);
+    if(!EmailValidator.validate(email)) {
+      toast.error('Email error');
+      return;
+    }
     Accounts.createUser({
       email: email,
       password: password,
