@@ -17,7 +17,7 @@ const Steps = () => {
             </div>
             <div className="steps-list row">
               <div className="col-lg-4">
-                <a href="#" className="item">
+                <div className="item">
                   <span className="ico">
                     <svg width="57" height="45" viewBox="0 0 57 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <ellipse cx="4.45833" cy="4.62496" rx="2.45833" ry="2.45834" stroke="#1E2632" stroke-width="3"/>
@@ -46,10 +46,10 @@ const Steps = () => {
                     <span className="title">{t('steps.choose')}</span>
                     <span>{t('steps.choose_text')}</span>
                   </span>
-                </a>
+                </div>
               </div>
               <div className="col-lg-4">
-                <a href="#" className="item">
+                <div className="item">
                   <span className="ico">
                     <svg width="59" height="69" viewBox="0 0 59 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3.4585 14.9166H11.6875C12.6249 14.9166 13.4365 15.5677 13.6399 16.4828L15.7502 25.9791M15.7502 25.9791L19.7711 48.0941C20.2898 50.947 22.7746 53.0208 25.6743 53.0208H46.6066C49.408 53.0208 51.8366 51.0823 52.4574 48.3505L57.1254 27.8116C57.3387 26.8729 56.6252 25.9791 55.6627 25.9791H15.7502Z" stroke="#1E2632" stroke-width="3" stroke-linecap="round"/>
@@ -64,10 +64,10 @@ const Steps = () => {
                     <span className="title">{t('steps.buy')}</span>
                     <span>{t('steps.buy_text')}</span>
                   </span>
-                </a>
+                </div>
               </div>
               <div className="col-lg-4">
-                <a href="#" className="item">
+                <div className="item">
                   <span className="ico">
                     <svg width="68" height="59" viewBox="0 0 68 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M50.0758 2H17.9242C17.9242 2 15.8448 17.7355 17.9242 27.4375C20.3873 38.9302 28.6414 43.25 28.6414 43.25V57H39.3586V43.25C39.3586 43.25 47.6127 38.9302 50.0758 27.4375C52.1552 17.7355 50.0758 2 50.0758 2Z" stroke="#1E2632" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -81,7 +81,7 @@ const Steps = () => {
                     <span className="title">{t('steps.win')}</span>
                     <span>{t('steps.win_text')}</span>
                   </span>
-                </a>
+                </div>
               </div>
             </div>
           </div>
