@@ -107,7 +107,7 @@ const Login = () => {
 
             <div className="w-100 flex f-space-between">
               <RecoveryFrom />
-              <Registration color="links" text={t('form.registration')}/>
+              <Registration color="links" text={t('form.reg_link')}/>
             </div>
 
           </ModalFooter>
