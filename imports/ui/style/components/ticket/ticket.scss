@@ -144,8 +144,9 @@
                         height: 50px;
                     }
                     &:hover {
-                        background: #E8922D;
-                        border: 1px solid #E8922D;
+                        //background: #E8922D;
+                        //border: 1px solid #E8922D;
+                        border: 2px solid #fff;
                     }
                 }
                 input:checked + label {
