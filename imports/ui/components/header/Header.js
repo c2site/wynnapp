@@ -14,9 +14,7 @@ const Header = () => {
 
   const logout = (e) => {
     e.preventDefault();
-    Meteor.logout((err) => {
-      alert(err);
-    })
+    Meteor.logout()
   }
 
   const [isShown, setIsShown] = useState(false);

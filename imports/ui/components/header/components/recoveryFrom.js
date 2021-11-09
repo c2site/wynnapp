@@ -9,6 +9,7 @@ const RecoveryFrom = () => {
     const [modal, setModal] = useState(false);
     const [email, setEmail] = useState('');
     const toggle = () => setModal(!modal);
+    const [loading, setLoading] = useState(false);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -21,6 +22,7 @@ const RecoveryFrom = () => {
         Accounts.forgotPassword({ email }, (err) => {
             if (err) {
                 toast.error(err.reason);
+                setLoading(false)
             } else {
                 toast.success('Check you email');
             }
@@ -38,12 +40,16 @@ const RecoveryFrom = () => {
                 <ModalHeader toggle={toggle}>{t('form.recovery')}</ModalHeader>
                 <>
                     <ModalBody>
-                        <Form className="form" onSubmit={() => onSubmit}>
-                            <div className="input-box">
-                                <Label for="">{t('form.email')}</Label>
-                                <Input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />
-                            </div>
-                        </Form>
+                        {loading ? (
+                            <>Wait....</>
+                        ) : (
+                            <Form className="form" onSubmit={() => onSubmit}>
+                                <div className="input-box">
+                                    <Label for="">{t('form.email')}</Label>
+                                    <Input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />
+                                </div>
+                            </Form>
+                        )}
                     </ModalBody>
                     <ModalFooter>
                         <div className="btn-box">

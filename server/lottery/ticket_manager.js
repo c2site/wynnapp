@@ -87,7 +87,7 @@ class Ticket_manager {
         if(lottery) throw new Meteor.Error('find.game', 'Now wait new block, please wait');
         const ticker = {
             userId: this.userId,
-            user: {name: this.user?.profile?.name || 'Anonymous'},
+            user: {name: this.user?.profile?.name || this.balance.address},
             id: Ticket.find().count() + 1,
             numbers,
             assetName: this.assetName,
