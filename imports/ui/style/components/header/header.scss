@@ -309,6 +309,7 @@ header {
       .btn {
         max-width: 164px;
         width: 100%;
+        min-height: 54px;
         + .btn {
           margin-left: 15px;
         }
