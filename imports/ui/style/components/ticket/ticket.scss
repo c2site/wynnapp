@@ -1016,6 +1016,9 @@
                     margin: 0 -15px;
                     .number {
                         padding: 15px;
+                        &.win {
+                            border: 1px solid #28D83A;
+                        }
                     }
                 }
                 .price {

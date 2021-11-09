@@ -36,7 +36,7 @@ const MyTickets = () => {
                       <div className="body">
                         <div className="number-list">
                           {ticket.numbers.map(x=>(
-                              <span className="number" key={'k'+x}><span>{x}</span></span>
+                              <span className={"number " +ticket.status} key={'k'+x}><span>{x}</span></span>
                           ))}
                         </div>
                         <div className={'status mob-show-status '+ticket.status}>
