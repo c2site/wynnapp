@@ -7,6 +7,7 @@ import { useTracker } from 'meteor/react-meteor-data'
 
 import TokenInput from "./TokenInput";
 import TwoFAConfirm from "./TwoFAConfirm";
+import { useTranslation } from "react-i18next";
 
 
 const QR = ({ secret }) => {
@@ -22,6 +23,7 @@ const QR = ({ secret }) => {
 }
 
 const TwoFA = () => {
+  const {t, i18n} = useTranslation();
   const [openDeactivate, setDeactivate] = useState(false);
   const [secret, setSecret] = useState('');
   const [token, setToken] = useState('');
@@ -80,7 +82,7 @@ const TwoFA = () => {
     <>
       <Button className="btn-hide" onClick={toggle2FA} />
       <Modal isOpen={!!secret} toggle={toggleSecret} className={'modal-app'}>
-        <ModalHeader toggle={toggleSecret}>2FA</ModalHeader>
+        <ModalHeader toggle={toggleSecret}>{t('form.2fa.title')}</ModalHeader>
         <ModalBody>
           <div className="twofa-box">
             <div className="img-holder">
@@ -89,8 +91,8 @@ const TwoFA = () => {
             <Row>
               <Col md={12}>
                 <div className="input-box">
-                  <Label for="">2fa code</Label>
-                  <TokenInput type="text" placeholder="2fa code" token={token} onChange={(tkn) => setToken(tkn)} />
+                  <Label for="">{t('form.2fa.code')}</Label>
+                  <TokenInput type="text" placeholder={t('form.2fa.code')} token={token} onChange={(tkn) => setToken(tkn)} />
                 </div>
               </Col>
             </Row>
@@ -103,7 +105,7 @@ const TwoFA = () => {
                 <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white"
                       strokeLinecap="round" />
               </svg>
-              save
+              {t('form.save')}
             </Button>
             <Button color="close-default" onClick={toggleSecret}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +114,7 @@ const TwoFA = () => {
                 <path d="M6 18.7742L18.7742 6.00001" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
                       strokeLinejoin="round" />
               </svg>
-              Close
+              {t('form.close')}
             </Button>
           </div>
         </ModalFooter>

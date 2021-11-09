@@ -2,29 +2,31 @@ import React from 'react';
 import { IcoProfile, IcoTicket } from "./icons";
 import { FlowRouter } from "meteor/ostrio:flow-router-extra";
 import { Button } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
 const ProfilePage = ({ children }) => {
+  const {t, i18n} = useTranslation();
   return (
     <div className="profile-page inner-page">
       <div className="container">
         <div className="head-page">
           <div className="breadcrumbs">
-            <a href="#">Home</a>
+            <a href="#">{t('nav.home')}</a>
             <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-            <a href="#">profile</a>
+            <a href="#">{t('nav.profile')}</a>
           </div>
           <div className="flex f-space-between">
-            <h2 className="title-page">profile</h2>
+            <h2 className="title-page">{t('profile.title')}</h2>
             <div className="profile-btn">
               <div className="holder"><Button color={'default'} onClick={() => FlowRouter.go('/profile')}>
                 <IcoProfile />
-                profile
+                {t('profile.title')}
               </Button>
                 <Button color={'default'} onClick={() => FlowRouter.go('/profile/my-tickets')}>
                   <IcoTicket />
-                  my tickets
+                  {t('profile.my_tickets')}
                 </Button>
                 <Button color={'default'}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +38,7 @@ const ProfilePage = ({ children }) => {
                     <path d="M9 12H14" stroke="#CED0D3" strokeWidth="1.5" strokeLinecap="round"
                           strokeLinejoin="round" />
                   </svg>
-                  my logs
+                  {t('profile.my logs')}
                 </Button>
               </div>
             </div>

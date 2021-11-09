@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="copyright">
           <p>
-            Copyright 2021<span> | Wynn Games</span>
+            {t('footer.copy')} 2021<span> | Wynn Games</span>
           </p>
         </div>
         <ul className="social">
@@ -49,7 +49,7 @@ const Footer = () => {
                   </defs>
                 </svg>
               </span>
-              <span className="ico-title">Discord</span>
+              <span className="ico-title">{t('header.discord')}</span>
             </a>
           </li>
           <li>
@@ -80,7 +80,7 @@ const Footer = () => {
                   </defs>
                 </svg>
               </span>
-              <span className="ico-title">Twitter</span>
+              <span className="ico-title">{t('header.twitter')}</span>
             </a>
           </li>
           <li>
@@ -123,7 +123,7 @@ const Footer = () => {
                   </defs>
                 </svg>
               </span>
-              <span className="ico-title">BitcoinTalk</span>
+              <span className="ico-title">{t('header.bitcointalk')}</span>
             </a>
           </li>
         </ul>

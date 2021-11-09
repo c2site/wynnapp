@@ -3,8 +3,10 @@ import {useSubscribe} from "../../../api/hooks";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Lottery} from "../../../api/mongo/lottery";
 import Loading from "../../components/loading";
+import { useTranslation } from "react-i18next";
 
 const History = () => {
+  const {t, i18n} = useTranslation();
   const [limit, setLimit] = useState(5)
     const loading = useSubscribe(Meteor.subscribe('lottery.history', limit), [limit]);
     const list = useTracker(()=>Lottery.find().fetch(), []);
@@ -17,13 +19,13 @@ const History = () => {
         <div className="container">
           <div className="head-page">
             <div className="breadcrumbs">
-              <a href="#">Home</a>
+              <a href="#">{t('nav.home')}</a>
               <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-              <a href="#">Check Lotery</a>
+              <a href="#">{t('nav.check')}</a>
             </div>
-            <h2 className="title-page">Check Lotery</h2>
+            <h2 className="title-page">{t('hash.title')}</h2>
           </div>
           <div className="scroll-history">
             <div className="table history-table">
@@ -31,11 +33,11 @@ const History = () => {
                 <table>
                   <thead>
                   <tr>
-                    <th>game</th>
+                    <th>{t('hash.game')}</th>
                     {/*<th>tickets</th>*/}
-                    <th>win numbers</th>
+                    <th>{t('hash.win')}</th>
                     {/*<th>win amount</th>*/}
-                    <th>hash</th>
+                    <th>{t('hash.label')}</th>
                     <th></th>
                   </tr>
                   </thead>
@@ -48,7 +50,7 @@ const History = () => {
                       <td><span className="th-name">game</span>№{lot.id}</td>
                       {/*<td>12</td>*/}
                       <td>
-                        <span className="th-name">win numbers</span>
+                        <span className="th-name">{t('hash.win')}</span>
                         <div className="numbers">
                           {lot.numbers?.map(x=>(
                               <span className="number">{x}</span>
@@ -56,7 +58,7 @@ const History = () => {
                         </div>
                       </td>
                       {/*<td className='green'>24500 WYNN</td>*/}
-                      <td><span className="th-name">hash</span><a href={` ${lot.hash}`}>{lot.hash}</a></td>
+                      <td><span className="th-name">{t('hash.label')}</span><a href={` ${lot.hash}`}>{lot.hash}</a></td>
                       <td>
                         <div className="flex">
                           {/*<button className="btn btn-primary">check hash</button>*/}
@@ -67,7 +69,7 @@ const History = () => {
                 </tbody>
               </table>
               <div className={'text-center mt20'}>
-                <span className={'btn btn-primary'} onClick={()=>setLimits()}>Больше</span>
+                <span className={'btn btn-primary'} onClick={()=>setLimits()}>{t('hash.more')}</span>
               </div>
             </div>
           </div>

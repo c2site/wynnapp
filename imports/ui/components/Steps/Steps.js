@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Steps = () => {
+  const {t, i18n} = useTranslation();
   return (
     <>
       <div className="container steps-block">
@@ -8,10 +10,10 @@ const Steps = () => {
           <div className="col-lg-8">
             <div className="title-box">
               <h2>
-                <span>need to know about</span>
-                How to play
+                <span>{t('steps.title')}</span>
+                {t('steps.sub_title')}
               </h2>
-              <p>Follow these 3 easy steps!</p>
+              <p>{t('steps.text')}</p>
             </div>
             <div className="steps-list row">
               <div className="col-lg-4">
@@ -41,8 +43,8 @@ const Steps = () => {
                     </svg>
                   </span>
                   <span className="text">
-                    <span className="title">Choose</span>
-                    <span>Register to WYNN & Choose your contest</span>
+                    <span className="title">{t('steps.choose')}</span>
+                    <span>{t('steps.choose_text')}</span>
                   </span>
                 </a>
               </div>
@@ -59,8 +61,8 @@ const Steps = () => {
 
                   </span>
                   <span className="text">
-                    <span className="title">Buy</span>
-                    <span>Buy a ticket</span>
+                    <span className="title">{t('steps.buy')}</span>
+                    <span>{t('steps.buy_text')}</span>
                   </span>
                 </a>
               </div>
@@ -76,8 +78,8 @@ const Steps = () => {
                     </svg>
                   </span>
                   <span className="text">
-                    <span className="title">Win</span>
-                    <span>Win</span>
+                    <span className="title">{t('steps.win')}</span>
+                    <span>{t('steps.win_text')}</span>
                   </span>
                 </a>
               </div>

@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from "react";
+import { useTranslation } from "react-i18next";
 
 const Stats = () => {
   const [data, setData] = useState();
+  const {t, i18n} = useTranslation();
 
   useEffect(()=> {
     Meteor.call('stats.count', function (err, res) {
@@ -14,7 +16,7 @@ const Stats = () => {
     <>
       <div className="stats-box container">
         <h2>
-          stats
+          {t('stats.title')}
         </h2>
         <div className="stats-list">
           <div className="item">
@@ -29,7 +31,7 @@ const Stats = () => {
               </svg>
             </div>
             <span className="number">{data?.lottery}</span>
-            <span className="name">Games</span>
+            <span className="name">{t('stats.games')}</span>
           </div>
           <div className="item">
             <div className="ico">
@@ -41,7 +43,7 @@ const Stats = () => {
               </svg>
             </div>
             <span className="number">{data?.users}</span>
-            <span className="name">Users</span>
+            <span className="name">{t('stats.users')}</span>
           </div>
           <div className="item">
             <div className="ico">
@@ -53,7 +55,7 @@ const Stats = () => {
               </svg>
             </div>
             <span className="number">{data?.win}</span>
-            <span className="name">Winners</span>
+            <span className="name">{t('stats.winners')}</span>
           </div>
         </div>
       </div>

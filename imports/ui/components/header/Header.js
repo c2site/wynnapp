@@ -8,6 +8,7 @@ import {FlowRouter} from "meteor/ostrio:flow-router-extra";
 import {useTranslation} from "react-i18next";
 import ProfileBtn from "./components/profileBtn";
 
+
 const Header = () => {
   const login = useTracker(()=>Meteor.user(), []);
 
@@ -100,7 +101,7 @@ const Header = () => {
                           c0.4,0,0.8-0.4,0.8-0.8V16.1z M17.9,7.5l-1.2,1.2l1.9,1.9H8.1v1.6h10.6L16.8,14l1.2,1.2l3.8-3.8L17.9,7.5z" />
                       </g>
                     </svg>
-                    <span>logout</span>
+                    <span>{t('header.logout')}</span>
                   </Button>
                 )}
               </div>
@@ -128,7 +129,7 @@ const Header = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                    Discord
+                    {t('header.discord')}
                   </a></li>
                   <li><a href="#">
                     <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,7 +142,7 @@ const Header = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                    Twitter
+                    {t('header.twitter')}
                   </a></li>
                   <li><a href="#">
                     <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,7 +158,7 @@ const Header = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                    BitcoinTalk
+                    {t('header.bitcointalk')}
                   </a></li>
                 </ul>
                 <NavBar />
@@ -174,7 +175,7 @@ const Header = () => {
                             c0.4,0,0.8-0.4,0.8-0.8V16.1z M17.9,7.5l-1.2,1.2l1.9,1.9H8.1v1.6h10.6L16.8,14l1.2,1.2l3.8-3.8L17.9,7.5z" />
                         </g>
                       </svg>
-                      <span>logout</span>
+                      <span>{t('header.logout')}</span>
                     </Button>
                   )}
                 </div>

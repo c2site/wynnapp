@@ -1,5 +1,6 @@
 import React from "react";
 import { Doughnut } from 'react-chartjs-2';
+import { useTranslation } from "react-i18next";
 
 
 const data = {
@@ -30,10 +31,11 @@ const data = {
 
 
 const Tokenomics = () => {
+  const {t, i18n} = useTranslation();
   return (
     <>
       <div className="container tokenomics-block">
-        <h2 className="text-center">Tokenomics</h2>
+        <h2 className="text-center">{t('info.tokenomics.title')}</h2>
         <div className="row f-align-center">
           <div className="col-lg-4">
             <div className="diagram">
@@ -48,76 +50,78 @@ const Tokenomics = () => {
                   <span className="color-1"></span>
                   0,5%
                 </span>
-                <span className="text">для проведения Pre-Sale</span>
+                <span className="text"> - {t('info.tokenomics.percent.text1')}</span>
               </div>
               <div className="item">
                 <span className="percent">
                   <span className="color-2"></span>
                   0,5%
                 </span>
-                <span className="text">для пополнения призового фонда лотереи</span>
+                <span className="text"> - {t('info.tokenomics.percent.text2')}</span>
               </div>
               <div className="item">
                 <span className="percent">
                   <span className="color-3"></span>
                   0,5%
                 </span>
-                <span className="text">для пополнения призового фонда бинарного опциона</span>
+                <span className="text"> - {t('info.tokenomics.percent.text3')}</span>
               </div>
               <div className="item">
                 <span className="percent">
                   <span className="color-4"></span>
                   1%
                 </span>
-                <span className="text">маркетинговый фонд</span>
+                <span className="text"> - {t('info.tokenomics.percent.text4')}</span>
               </div>
               <div className="item">
                 <span className="percent">
                   <span className="color-5"></span>
                   10%
                 </span>
-                <span className="text">фонд команды разработчиков</span>
+                <span className="text"> - {t('info.tokenomics.percent.text5')}</span>
               </div>
               <div className="item">
                 <span className="percent">
                   <span className="color-6"></span>
                   80%
                 </span>
-                <span className="text">для пополнения призовых фондов</span>
+                <span className="text"> - {t('info.tokenomics.percent.text6')}</span>
               </div>
             </div>
           </div>
           <div className="col-lg-4">
             <div className="token-info">
-              <h5>TokenInfo</h5>
+              <h5>{t('info.tokenomics.title2')}</h5>
               <div className="list">
                 <div className="item">
-                  <span>Биржевой тикер: <strong>Wynn</strong></span>
+                  <span>{t('info.tokenomics.info1')}: <strong>Wynn</strong></span>
                 </div>
                 <div className="item">
-                  <span>Тип: <strong>токен</strong></span>
+                  <span>{t('info.tokenomics.info2')}: <strong>{t('info.tokenomics.token')}</strong></span>
                 </div>
                 <div className="item">
-                  <span>Блокчейн: <strong>Tron</strong></span>
+                  <span>{t('info.tokenomics.info3')}: <strong>Tron</strong></span>
                 </div>
                 <div className="item">
-                  <span>Стандарт токена: <strong>TRC-20</strong></span>
+                  <span>{t('info.tokenomics.info4')}: <strong>TRC-20</strong></span>
                 </div>
                 <div className="item">
-                  <span>Эмиссия: <strong>50 000 000 токенов</strong></span>
+                  <span>{t('info.tokenomics.info5')}: <strong>50 000 000 {t('info.tokenomics.tokens')}</strong></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="token-text">
-          <h5>Первоначальное распределение</h5>
-          <p>Общая эмиссия токена Wynn составляет <strong>50 000 000</strong> токенов, которые распределены на специальных системных кошельках, каждый из которых имеет свое целевое предназначение, что исключает их нерациональное или нецелевое использование.</p>
+          <h5>{t('info.tokenomics.title3')}</h5>
+          <p>{t('info.tokenomics.text')}</p>
           <div className="list">
-            <p>0,5% или <strong>1 000 000 Wynn</strong> – зарезервированы для проведения Pre-Sale;</p>
-            <p>0,5% или <strong>1 000 000 Wynn</strong> – резерв для пополнения призового фонда лотереи;</p>
-            <p>0,5% или <strong>1 000 000 Wynn</strong> – резерв для пополнения призового фонда бинарного опциона;</p>
-            <p>1% или <strong>2 000 000 Wynn</strong> – маркетинговый фонд для продвижения и масштабирования проекта.</p>
+            <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text1')}</p>
+            <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text2')}</p>
+            <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text3')}</p>
+            <p>1% {t('info.tokenomics.or')} <strong>2 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text4')}</p>
+            <p>10% {t('info.tokenomics.or')} <strong>5 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text5')}</p>
+            <p>80% {t('info.tokenomics.or')} <strong>40 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text6')}</p>
           </div>
         </div>
       </div>

@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const team = () => {
+  const {t, i18n} = useTranslation();
   return (
     <>
       <div className="container team-box">
-        <h2 className="text-center">team</h2>
+        <h2 className="text-center">{t('info.team.title')}</h2>
         <div className="row">
           <div className="col-lg-3">
             <div className="head">
-              <span>Development</span>
+              <span>{t('info.team.col1')}</span>
             </div>
             <div className="item">
               <div className="img">
@@ -25,7 +27,7 @@ const team = () => {
           </div>
           <div className="col-lg-3">
             <div className="head">
-              <span>Advertisement</span>
+              <span>{t('info.team.col3')}</span>
             </div>
             <div className="item">
               <div className="img">
@@ -42,7 +44,7 @@ const team = () => {
           </div>
           <div className="col-lg-3">
             <div className="head">
-              <span>Support</span>
+              <span>{t('info.team.col3')}</span>
             </div>
             <div className="item">
               <div className="img">
@@ -59,7 +61,7 @@ const team = () => {
           </div>
           <div className="col-lg-3">
             <div className="head">
-              <span>HR</span>
+              <span>{t('info.team.col4')}</span>
             </div>
             <div className="item">
               <div className="img">

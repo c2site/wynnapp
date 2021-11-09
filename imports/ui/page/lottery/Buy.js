@@ -11,8 +11,10 @@ import { toast } from 'react-toastify';
 import Registration from "../../components/header/components/Registration";
 import { Button } from "reactstrap";
 import {Meteor} from "meteor/meteor";
+import { useTranslation } from "react-i18next";
 
 const BuyPage = () => {
+  const {t, i18n} = useTranslation();
   const login = useTracker(()=>Meteor.userId(), []);
 
   const [skip, setSkip] = useState(5);
@@ -102,17 +104,17 @@ const BuyPage = () => {
         <div className="container">
           <div className="head-page">
             <div className="breadcrumbs">
-              <a href="#">Home</a>
+              <a href="#">{t('nav.home')}</a>
               <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-              <a href="#">lottery 5/36</a>
+              <a href="#">{t('nav.lottery')} 5/36</a>
               <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-              <a href="#">buy</a>
+              <a href="#">{t('nav.buy')}</a>
             </div>
-            <h2 className="title-page">buy</h2>
+            <h2 className="title-page">{t('buy.title')}</h2>
           </div>
           <NextDraw button={false} coins={coinName}/>
           <div className="row">
@@ -123,7 +125,7 @@ const BuyPage = () => {
                     <div className="ticket-head" data-toggle="collapse" data-target="#ticket" role="button">
                       <div className="column">
                         <div className="info">
-                          <span className="name">buy ticket 3/36</span>
+                          <span className="name">{t('buy.info_name')} 3/36</span>
                         </div>
                       </div>
                       <div className="column">
@@ -139,7 +141,7 @@ const BuyPage = () => {
                             <line x1="14.7992" y1="14.5587" x2="3.32069" y2="3.08014" stroke="#CED0D3"
                                   stroke-width="1.5" stroke-linecap="round"/>
                           </svg>
-                          <span>random</span>
+                          <span>{t('buy.random')}</span>
                         </button>
                         <button className="btn btn-default" onClick={()=>clear()}>
                           <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
@@ -157,7 +159,7 @@ const BuyPage = () => {
                             <path d="M7.125 9.70833V13.6667" stroke="#CED0D3" stroke-width="1.5"
                                   stroke-linecap="round"/>
                           </svg>
-                          <span>clear</span>
+                          <span>{t('buy.clear')}</span>
                         </button>
                       </div>
                     </div>
@@ -177,10 +179,10 @@ const BuyPage = () => {
                   <div className="ticket-stats">
                     <div className="holder">
             <span className="number-tickets">
-              select number <span> {selected.length} / 9 </span>
+              {t('buy.select')} <span> {selected.length} / 9 </span>
             </span>
                       <span className="price">
-              price <span>{price} {coinName}</span>
+              {t('buy.price')} <span>{price} {coinName}</span>
             </span>
                     </div>
                   </div>
@@ -191,7 +193,7 @@ const BuyPage = () => {
               {/*{user? (*/}
                   <div className="ticket-balance">
                     <form className="contain-balance">
-                      <h3>balance</h3>
+                      <h3>{t('buy.balance')}</h3>
                       <div className="balance-info">
                         <div className="form-control item">
                           <select value={coinName} defaultValue={coinName}  onChange={(e)=>ChangeWallet(e)}>
@@ -216,7 +218,7 @@ const BuyPage = () => {
                               </clipPath>
                             </defs>
                           </svg>
-                          buy ticket
+                          {t('buy.btn')}
                         </button>
                       )}
 
@@ -224,23 +226,26 @@ const BuyPage = () => {
                   </div>
               {/*) : (<></>)}*/}
               <div className="info-text">
-                <h6>Pick 5 numbers</h6>
-                <p>You need to choose any 5 numbers. This can be done manually or by activating the “Random” mode at the top of the ticket. Random mode selects cells at random.</p>
-                <p>Tickets are won, in which after the drawing there will be 3, 4 or 5 matches.</p>
+                <h6>{t('buy.title2')}</h6>
+                <p>{t('buy.text1')}</p>
+                <p>{t('buy.text2')}</p>
               </div>
               <div className="info-text">
-                <h6>Want to increase your chances of winning?</h6>
-                <p>Add 1, 2, 3 or 4 additional numbers to your ticket (this is a paid service). You can also buy another ticket.</p>
+                <p>{t('buy.text3')}</p>
               </div>
               <div className="info-text">
-                <h6>Prize fund</h6>
-                <p>Almost all the proceeds (90%) go to the prize fund, which is further distributed among the winners: 3 matches - 30%, 4 matches - 30%, 5 matches - 30%.</p>
+                <h6>{t('buy.title3')}</h6>
+                <p>{t('buy.text4')}</p>
+              </div>
+              <div className="info-text">
+                <h6>{t('buy.title4')}</h6>
+                <p>{t('buy.text5')}</p>
               </div>
             </div>
           </div>
         </div>
         <div className="prize-box">
-          <h2>prize pool</h2>
+          <h2>{t('buy.title4')}</h2>
           <div className="prize-list row">
             {pool?.map(money=>(
                 <div className={'col'}>
@@ -249,7 +254,7 @@ const BuyPage = () => {
                       <img src="./img/ico-prize-01.svg" alt="" />
                     </div>
                     <span className="number">{money.value()} {money.coins}</span>
-                    <span className="info">{(money.userId).replace(/^.{5}/, '')} matches</span>
+                    <span className="info">{(money.userId).replace(/^.{5}/, '')} {t('buy.title')}matches</span>
                   </div>
                 </div>
             ))}
@@ -258,7 +263,7 @@ const BuyPage = () => {
         <div className="new-tickets">
           <div className="container">
             <div className="head-box">
-              <h2>New Tickets</h2>
+              <h2>{t('buy.title5')}</h2>
               {/*<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>*/}
             </div>
             <div className="list-new-tickets">
@@ -267,7 +272,7 @@ const BuyPage = () => {
                     <div className="head">
                       <span className="name">{tic?.user?.name || 'Anonyms'}</span>
                       <span className="info">
-                      game #{tic?.lottery.id}
+                      {t('buy.game')} #{tic?.lottery.id}
                         <span className="separator">/</span>
                       ID #{tic?.id}
                     </span>
@@ -279,14 +284,14 @@ const BuyPage = () => {
                         ))}
                       </div>
                       <span className="price">
-                      price
+                      {t('buy.price')}
                       <span>{tic?.price} {tic?.lottery.assetName}</span>
                     </span>
                     </div>
                   </div>
               ))}
               <div className={'text-center'}>
-                <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>Больше</span>
+                <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>{t('buy.more')}</span>
               </div>
 
             </div>

@@ -1,7 +1,9 @@
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const LinksList = () => {
+  const {t, i18n} = useTranslation();
   return (
     <>
         <div className="container">
@@ -17,7 +19,7 @@ const LinksList = () => {
                 </svg>
               </span>
               <span className="name">
-                lottery
+                {t('links.link1')}
               </span>
               <span className="arrow">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +56,7 @@ const LinksList = () => {
                 </svg>
               </span>
               <span className="name">
-                option
+                {t('links.link2')}
               </span>
               <span className="arrow">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +78,7 @@ const LinksList = () => {
                 </svg>
               </span>
               <span className="name">
-                wynn rust
+                {t('links.link3')}
               </span>
               <span className="arrow">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

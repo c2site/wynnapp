@@ -21,8 +21,10 @@ import ProfileLayout from "./ProfileLayout";
 
 import TwoFAConfirm from "/imports/ui/components/modal/TwoFAConfirm";
 import {Meteor} from "meteor/meteor";
+import { useTranslation } from "react-i18next";
 
 const Profile = () => {
+  const {t, i18n} = useTranslation();
   const [secret, setSecret] = useState('');
   const [token, setToken] = useState('');
   const [open, setOpen] = useState(false);
@@ -96,7 +98,7 @@ const Profile = () => {
               <div className="profile-info mb30m">
                 <div className="info-list">
                   <div className="item">
-                    <span className="name">email</span>
+                    <span className="name">{t('profile.info.label1')}</span>
                     <span className="info">{user?.emails[0].address}</span>
                     {/*<ChangeEmail/>*/}
                     </div>
@@ -106,7 +108,7 @@ const Profile = () => {
                   {/*  <ChangeName/>*/}
                   {/*</div>*/}
                   <div className="item">
-                    <span className="name">password</span>
+                    <span className="name">{t('profile.info.label2')}</span>
                     <span className="info">****************</span>
                     {/*<ChangePassword/>*/}
                   </div>
@@ -123,14 +125,14 @@ const Profile = () => {
                     />
                   </div>
                   <div className="item">
-                    <span className="name">rating</span>
+                    <span className="name">{t('profile.info.label3')}</span>
                     <span className="info">
                       {user?.rating?.rating || 0}
                   <RatingModal />
                     </span>
               </div>
               <div className="item">
-                <span className="name">fee</span>
+                <span className="name">{t('profile.info.label4')}</span>
                 <span className="info">
                       {user?.rating?.fee * 100 || 0}%
 
@@ -138,7 +140,7 @@ const Profile = () => {
               </div>
 
               <div className="item">
-                <span className="name">Invite url (invite users {invite})</span>
+                <span className="name">{t('profile.info.label5')} {invite})</span>
                 <span className="info">
                       https://wynn-games.com/?invite={user?.settings?.ref?.code}
                   <CopyToClipboard text={`https://wynn-games.com/?invite=${user?.settings?.ref?.code}`}
@@ -156,7 +158,7 @@ const Profile = () => {
                     </span>
               </div>
               {/*<div className="item progress-item">*/}
-              {/*  <span className="name">next level</span>*/}
+              {/*  <span className="name">{t('profile.info.label6')}</span>*/}
               {/*  <div className="progress">*/}
               {/*    <div style={progress}></div>*/}
               {/*  </div>*/}
@@ -166,7 +168,7 @@ const Profile = () => {
         </div>
         <div className="col-lg-8">
           <div className="wallet-info">
-            <h2>wallet adress</h2>
+            <h2>{t('profile.wallet.title')}</h2>
             <form action="#" className="form-copy">
               <div className="input-box">
                 <input type="text" disabled value={addr?.address} name="" id="" />
@@ -182,12 +184,9 @@ const Profile = () => {
                 </CopyToClipboard>
               </div>
             </form>
-            <p>To replenish the wallet, copy the address and paste it into the corresponding line in the exchanger or
-              wallet of another system.</p>
-            <p>The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens with your
-              balance
-              that you can store here are listed below.</p>
-            <p>* The minimum balance on your wallet cannot be lower than 5 TRX.</p>
+            <p>{t('profile.wallet.text1')}</p>
+            <p>{t('profile.wallet.text2')}</p>
+            <p>{t('profile.wallet.text3')}</p>
           </div>
           <div className="wallets-list row">
             {money?.map(wallet => (
@@ -207,10 +206,10 @@ const Profile = () => {
                   <table>
                     <thead>
                     <tr>
-                      <th>time</th>
-                      <th>amount</th>
-                      <th>coin</th>
-                      <th colSpan="3">txid</th>
+                      <th>{t('profile.table.time')}</th>
+                      <th>{t('profile.table.amount')}</th>
+                      <th>{t('profile.table.coin')}</th>
+                      <th colSpan="3">{t('profile.table.txid')}</th>
                     </tr>
                     </thead>
                   </table>
@@ -219,10 +218,10 @@ const Profile = () => {
                   <tbody>
                   {txs?.map(tx=>(
                       <tr key={tx._id}>
-                        <td className={type(tx.sender)}><span className="th-name">time</span><Moment format={"HH:mm:ss DD/MM/YYYY"}>{tx.createdAt}</Moment></td>
-                        <td className={type(tx.sender)}><span className="th-name">amount</span>{tx.value()}</td>
-                        <td className={type(tx.sender)}><span className="th-name">coin</span>{coin(tx.asset)}</td>
-                        <td className={type(tx.sender)} colSpan="3"><span className="th-name">txid</span><a href={`https://tronscan.io/#/transaction/${tx.txid}`} target={'_blank'}>{tx.txid}</a></td>
+                        <td className={type(tx.sender)}><span className="th-name">{t('profile.table.time')}</span><Moment format={"HH:mm:ss DD/MM/YYYY"}>{tx.createdAt}</Moment></td>
+                        <td className={type(tx.sender)}><span className="th-name">{t('profile.table.amount')}</span>{tx.value()}</td>
+                        <td className={type(tx.sender)}><span className="th-name">{t('profile.table.coin')}</span>{coin(tx.asset)}</td>
+                        <td className={type(tx.sender)} colSpan="3"><span className="th-name">{t('profile.table.txid')}</span><a href={`https://tronscan.io/#/transaction/${tx.txid}`} target={'_blank'}>{tx.txid}</a></td>
                       </tr>
                   ))}
                   </tbody>

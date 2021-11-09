@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Subscribe = () => {
+  const {t, i18n} = useTranslation();
   return (
     <>
       <div className="container subscribe-box">
         <div className="inner row">
           <div className="col-md-8">
             <h2>
-              <span>SUBSCRIBE TO WYNN</span>
-              TO GET EXCLUSIVE BENEFITS
+              <span>{t('subscribe.title')}</span>
+              {t('subscribe.sub_title')}
             </h2>
             <form action="#" className="form flex">
               <div className="holder-email">
@@ -18,9 +20,9 @@ const Subscribe = () => {
 <path d="M2.42131 5.30287C1.91709 4.84067 2.24409 4 2.9281 4H23.0719C23.7559 4 24.0829 4.84067 23.5787 5.30287L15.0272 13.1418C13.8802 14.1931 12.1198 14.1931 10.9728 13.1418L2.42131 5.30287Z" stroke="#212129" stroke-width="2" stroke-linejoin="round"/>
 </svg>
                 </span>
-                <input type="email" placeholder="Enter you email" name="" id="" />
+                <input type="email" placeholder={t('subscribe.enter_email')} name="" id="" />
               </div>
-              <input type="submit" value="subscribe" className="btn btn-primary" />
+              <input type="submit" value={t('subscribe.subscribe')} className="btn btn-primary" />
             </form>
           </div>
           <div className="col-md-4 img-box">

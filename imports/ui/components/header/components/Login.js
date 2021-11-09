@@ -5,8 +5,10 @@ import { toast } from "react-toastify";
 import TwoFAConfirm from "../../modal/TwoFAConfirm";
 import RecoveryFrom from "./recoveryFrom";
 import Registration from "./Registration";
+import {useTranslation} from "react-i18next";
 
 const Login = () => {
+  const {t, i18n} = useTranslation();
   const [modal, setModal] = useState(false);
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState('');
@@ -66,19 +68,19 @@ const Login = () => {
             d="M10 9.16666C12.0711 9.16666 13.75 7.48772 13.75 5.41666C13.75 3.34559 12.0711 1.66666 10 1.66666C7.92893 1.66666 6.25 3.34559 6.25 5.41666C6.25 7.48772 7.92893 9.16666 10 9.16666Z"
             stroke="white" strokeOpacity="0.75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <span>Login</span>
+        <span>{t('form.login')}</span>
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={'modal-app'}>
-        <ModalHeader toggle={toggle}>Login</ModalHeader>
+        <ModalHeader toggle={toggle}>{t('form.login')}</ModalHeader>
         <>
           <ModalBody>
             <Form className="form" onSubmit={(e) => onSubmit(e)}>
               <div className="input-box">
-                <Label for="">Email</Label>
+                <Label for="">{t('form.email')}</Label>
                 <Input type="email" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />
               </div>
               <div className="input-box">
-                <Label for="">Password</Label>
+                <Label for="">{t('form.password')}</Label>
                 <Input type="password" value={password} onChange={(e) => setPassword(e.currentTarget.value)} />
               </div>
               <div className="btn-box f-align-center">
@@ -87,7 +89,7 @@ const Login = () => {
                     <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white" strokeWidth="2"
                           strokeLinecap="round" />
                   </svg>
-                  Login
+                  {t('form.login')}
                 </Button>
                 <Button color="close-default" onClick={toggle}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +98,7 @@ const Login = () => {
                     <path d="M6 18.7742L18.7742 6.00001" stroke="#1E2632" strokeWidth="2" strokeLinecap="round"
                           strokeLinejoin="round" />
                   </svg>
-                  Close
+                  {t('form.close')}
                 </Button>
               </div>
             </Form>
@@ -105,7 +107,7 @@ const Login = () => {
 
             <div className="w-100 flex f-space-between">
               <RecoveryFrom />
-              <Registration color="links" text="Registration"/>
+              <Registration color="links" text={t('form.registration')}/>
             </div>
 
           </ModalFooter>
