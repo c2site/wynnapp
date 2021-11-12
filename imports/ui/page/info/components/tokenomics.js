@@ -113,15 +113,22 @@ const Tokenomics = () => {
           </div>
         </div>
         <div className="token-text">
-          <h5>{t('info.tokenomics.title3')}</h5>
-          <p>{t('info.tokenomics.text')}</p>
-          <div className="list">
-            <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text1')}</p>
-            <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text2')}</p>
-            <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text3')}</p>
-            <p>1% {t('info.tokenomics.or')} <strong>2 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text4')}</p>
-            <p>10% {t('info.tokenomics.or')} <strong>5 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text5')}</p>
-            <p>80% {t('info.tokenomics.or')} <strong>40 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text6')}</p>
+          <div className="row">
+            <div className="col-md-8">
+              <h5>{t('info.tokenomics.title3')}</h5>
+              <p>{t('info.tokenomics.text')}</p>
+              <div className="list">
+                <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text1')}</p>
+                <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text2')}</p>
+                <p>0,5% {t('info.tokenomics.or')} <strong>1 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text3')}</p>
+                <p>1% {t('info.tokenomics.or')} <strong>2 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text4')}</p>
+                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text5')}</p>
+                <p>80% {t('info.tokenomics.or')} <strong>40 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text6')}</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+
+            </div>
           </div>
         </div>
       </div>
