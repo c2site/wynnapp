@@ -926,6 +926,12 @@
                 }
                 .number {
                     display: flex;
+                    border: none !important;
+                    &.win {
+                        span {
+                            border: 1px solid #28D83A;
+                        }
+                    }
                     span {
                         font-family: "Rubik", sans-serif;
                         display: flex;
@@ -954,9 +960,6 @@
                         @media only screen and (max-width: $responsive-size-mobile) {
                             width: 42px;
                             height: 42px;
-                        }
-                        &.win {
-                            border: 1px solid #28D83A;
                         }
                     }
                 }
