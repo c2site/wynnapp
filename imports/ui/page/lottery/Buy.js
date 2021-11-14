@@ -129,20 +129,20 @@ const BuyPage = () => {
                         </div>
                       </div>
                       <div className="column">
-                        <button className="btn btn-chose" disabled={true}>
-                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                               xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.0001 2.63605L15.3638 2.77211L15.3637 7" stroke="#CED0D3" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="14.4905" y1="3.20083" x2="3.01197" y2="14.6793" stroke="#CED0D3"
-                                  stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M15.3639 11.0682L15.2278 15.432L10.9999 15.4319" stroke="#CED0D3"
-                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="14.7992" y1="14.5587" x2="3.32069" y2="3.08014" stroke="#CED0D3"
-                                  stroke-width="1.5" stroke-linecap="round"/>
-                          </svg>
-                          <span>{t('buy.random')}</span>
-                        </button>
+                        {/*<button className="btn btn-chose" disabled={true}>*/}
+                        {/*  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"*/}
+                        {/*       xmlns="http://www.w3.org/2000/svg">*/}
+                        {/*    <path d="M11.0001 2.63605L15.3638 2.77211L15.3637 7" stroke="#CED0D3" stroke-width="1.5"*/}
+                        {/*          stroke-linecap="round" stroke-linejoin="round"/>*/}
+                        {/*    <line x1="14.4905" y1="3.20083" x2="3.01197" y2="14.6793" stroke="#CED0D3"*/}
+                        {/*          stroke-width="1.5" stroke-linecap="round"/>*/}
+                        {/*    <path d="M15.3639 11.0682L15.2278 15.432L10.9999 15.4319" stroke="#CED0D3"*/}
+                        {/*          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>*/}
+                        {/*    <line x1="14.7992" y1="14.5587" x2="3.32069" y2="3.08014" stroke="#CED0D3"*/}
+                        {/*          stroke-width="1.5" stroke-linecap="round"/>*/}
+                        {/*  </svg>*/}
+                        {/*  <span>{t('buy.random')}</span>*/}
+                        {/*</button>*/}
                         <button className="btn btn-default" onClick={()=>clear()}>
                           <svg width="19" height="20" viewBox="0 0 19 20" fill="none"
                                xmlns="http://www.w3.org/2000/svg">

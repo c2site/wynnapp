@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 
 
 const data = {
+  //labels: [],
   datasets: [
     {
-      label: '# of Votes',
       data: [0.5, 0.5, 0.5, 1, 10, 80],
       backgroundColor: [
         '#D94848',
@@ -29,6 +29,22 @@ const data = {
   ],
 };
 
+const options = {
+  plugins: {
+    tooltip: {
+      callbacks: {
+      //   title: function () {
+      //     return "my tittle";
+      //   },
+        label: function (item, data) {
+          return `${item.formattedValue}%`;
+        }
+      }
+    },
+    legend: { display: false },
+  }
+}
+
 
 const Tokenomics = () => {
   const {t, i18n} = useTranslation();
@@ -40,7 +56,7 @@ const Tokenomics = () => {
           <div className="col-lg-4">
             <div className="diagram">
               <img src="./img/info-logo.svg" alt="" />
-              <Doughnut data={data} />
+              <Doughnut data={data} options={options}/>
             </div>
           </div>
           <div className="col-lg-4">
