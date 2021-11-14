@@ -14,10 +14,12 @@ class Ticket_manager {
         this.user = Meteor.users.findOne({_id: this.userId});
         this.lottery = Lottery.findOne({status: LotteryStatus.OPEN, assetName: assetName});
         this.balance = Money.findOne({userId: this.userId, coins: this.assetName});
+        this.trx = Money.findOne({userId: this.userId, coins: 'trx'})
         this.asset = Coin.findOne({name: this.assetName})
     }
 
     async _check(ticker) {
+        if(this.trx.amount < 5 * Math.pow(10, this.trx.precision))
         if(!this.lottery) throw new Meteor.Error('error.lottery', 'Need more balance');;
         if((ticker.price * Math.pow(10, this.balance.precision)) > this.balance.amount) throw new Meteor.Error('error.balance', 'Need balance');
     }
