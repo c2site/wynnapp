@@ -284,16 +284,51 @@ header {
     .btn-header {
       display: flex;
       justify-content: flex-end;
-      width: 30%;
-      @media only screen and (max-width: 1199px) {
-        width: 25%;
-      }
+      width: 45%;
+      //@media only screen and (max-width: 1199px) {
+      //  width: 25%;
+      //}
       @media only screen and (max-width: 1199px) {
         margin-top: 30px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+      }
+      .lang-drop {
+        display: flex;
+        & > a {
+          padding: 10px 35px;
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          font-size: 11px;
+          line-height: 15px;
+          color: #fff;
+          text-transform: uppercase;
+          transition: all linear 0.2s;
+          @media only screen and (max-width : $responsive-size-big-mobile) {
+            padding: 10px;
+          }
+          & > span {
+            @media only screen and (max-width : $responsive-size-big-mobile) {
+              display: none;
+            }
+          }
+
+          &:hover {
+            opacity: 0.8;
+            text-decoration: none;
+          }
+
+          img {
+            display: block;
+            margin-right: 12px;
+            @media only screen and (max-width : $responsive-size-big-mobile) {
+              margin-right: 0;
+            }
+          }
+        }
       }
       .mob-hide {
         @media only screen and (max-width: 1199px) {
@@ -363,7 +398,7 @@ header {
   }
   .nav {
     width: 100%;
-    max-width: 65%;
+    max-width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;

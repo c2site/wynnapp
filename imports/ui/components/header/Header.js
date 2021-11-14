@@ -7,6 +7,7 @@ import {Button} from "reactstrap";
 import {FlowRouter} from "meteor/ostrio:flow-router-extra";
 import {useTranslation} from "react-i18next";
 import ProfileBtn from "./components/profileBtn";
+import ChangeLang from "./components/ChangeLang";
 
 
 const Header = () => {
@@ -85,6 +86,7 @@ const Header = () => {
             <div className="holder-nav">
               <NavBar/>
               <div className="btn-header">
+                <ChangeLang/>
                   <div className="mob-hide login-hide">
                     {!login ? (<Login/>) : (
                       <ProfileBtn />
