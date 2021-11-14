@@ -86,7 +86,6 @@ const Header = () => {
             <div className="holder-nav">
               <NavBar/>
               <div className="btn-header">
-                <ChangeLang/>
                   <div className="mob-hide login-hide">
                     {!login ? (<Login/>) : (
                       <ProfileBtn />
@@ -104,6 +103,7 @@ const Header = () => {
                     <span>{t('header.logout')}</span>
                   </Button>
                 )}
+                <ChangeLang/>
               </div>
             </div>
             {isShown &&

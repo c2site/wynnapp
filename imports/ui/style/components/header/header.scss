@@ -132,10 +132,13 @@
     padding-right: 12px;
   }
   .summ {
-    padding: 6px 6px 4px;
-    margin-left: 10px;
-    background: #EB3B3B url("./img/arrow-select.svg") no-repeat calc(100% - 5px) 50%;
-    border-radius: 20px;
+
+
+    padding: 6px 15px 4px;
+    min-height: 50px;
+    //margin-left: 10px;
+    background: #EB3B3B url("./img/arrow-select.svg") no-repeat calc(100% - 10px) 50%;
+    border-radius: 50px;
     font-weight: bold;
     font-size: 11px;
     line-height: 13px;
@@ -284,6 +287,7 @@ header {
     .btn-header {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       width: 45%;
       //@media only screen and (max-width: 1199px) {
       //  width: 25%;
@@ -355,7 +359,7 @@ header {
         }
       }
       .profile-btn {
-        margin-bottom: 10px;
+        //margin-bottom: 10px;
       }
       .btn {
         max-width: 164px;
