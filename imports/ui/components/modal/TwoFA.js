@@ -28,7 +28,6 @@ const TwoFA = () => {
   const [secret, setSecret] = useState('');
   const [token, setToken] = useState('');
   const user = useTracker(()=>Meteor.users.findOne({}), []);
-  console.log(user);
 
   const enable2FA = () => {
     if (token.length !== 6 || isNaN(Number(token))) {
@@ -80,7 +79,7 @@ const TwoFA = () => {
   console.log(secret);
   return (
     <>
-      <Button className="btn-primary active-2fa" onClick={toggle2FA}>{t('active')}</Button>
+      <Button className="btn-primary active-2fa" onClick={toggle2FA}>{user?.settings?.twoFa ? 'Disabled' : t('active')}</Button>
       <Modal isOpen={!!secret} toggle={toggleSecret} className={'modal-app'}>
         <ModalHeader toggle={toggleSecret}>{t('2fa.title')}</ModalHeader>
         <ModalBody>
