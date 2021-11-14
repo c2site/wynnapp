@@ -282,9 +282,9 @@ const BuyPage = () => {
                     </span>
                     </div>
                     <div className="body">
-                      <div className="number-list">
+                      <div className="number-list w-50 f-space-between">
                         {tic?.numbers.map(x=>(
-                            <span key={x} className="number">{x}</span>
+                            <span key={x} className="number"><span>{x}</span></span>
                         ))}
                       </div>
                       <span className="price">
