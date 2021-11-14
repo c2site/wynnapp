@@ -1,0 +1,303 @@
+{
+  "header": {
+    "support": "支持 英语",
+    "logout": "登出",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "bitcointalk": "BitcoinTalk",
+    "profile": "个人资料",
+    "wynn": "wynn"
+  },
+  "footer": {
+    "copy": "版权"
+  },
+  "nav": {
+    "home": "主页",
+    "info": "信息",
+    "lottery": "彩票",
+    "history": "历史游戏",
+    "buy-wynn": "购买 WYNN",
+    "option": "选项",
+    "contact": "联系",
+    "free_coin": "免费硬币",
+    "buy": "购买",
+    "check": "检查彩票",
+    "profile": "个人资料",
+    "get": "获得 WYNN",
+    "rust": "wynn rust"
+  },
+  "form": {
+    "login": "登入",
+    "email": "电子邮件",
+    "password": "密码",
+    "password2": "重置密码",
+    "close": "关闭",
+    "recovery": "恢复密码",
+    "send": "发送",
+    "registration": "注册",
+    "change_email": "更改电子邮件",
+    "change": "更改",
+    "save": "保存",
+    "repeat_email": "重新输入电子邮件",
+    "new_email": "新电子邮件",
+    "old_email": "旧电子邮件",
+    "last_name": "姓",
+    "first_name": "名",
+    "change_name": "更改姓名",
+    "repeat_password": "重新输入密码",
+    "new_password": "新密码",
+    "old_password": "旧密码",
+    "change_password": "更改密码",
+    "password_confirm": "确认密码",
+    "rating": "评级",
+    "name": "姓名",
+    "amount": "数目",
+    "send_wynn": "发送 WYNN",
+    "max": "最大值",
+    "wallet_address": "钱包地址",
+    "commission": "佣金",
+    "discount": "折扣",
+    "enter_code": "输入2FA代码"
+  },
+  "2fa": {
+    "title": "2FA",
+    "confirmation": "确认2fa",
+    "code": "2fa代码"
+  },
+  "banner": {
+    "title": "新加密货币游戏",
+    "sub_title": "成为赢家",
+    "started": "现在开始",
+    "next_draw": {
+      "title": "下一轮",
+      "sub_title": "选择你梦想的彩票",
+      "buy": "购买彩票"
+    }
+  },
+  "borrow": {
+    "title": "最新赢家",
+    "sub_title": "排行榜",
+    "table": {
+      "user": "用户",
+      "id": "游戏单局id",
+      "amount": "游戏金额",
+      "game": "游戏",
+      "profit": "利润"
+    }
+  },
+  "links": {
+    "link1": "彩票抽奖",
+    "link2": "选项",
+    "link3": "wynn rust"
+  },
+  "stats": {
+    "title": "统计",
+    "winners": "赢家",
+    "users": "用户",
+    "games": "游戏"
+  },
+  "steps": {
+    "title": "游戏须知",
+    "sub_title": "如何进行游戏",
+    "text": "按照以下3个简单的步骤!",
+    "choose": "选择",
+    "win": "获胜",
+    "buy": "购买",
+    "choose_text": "注册WYNN & 选择游戏局",
+    "win_text": "获胜",
+    "buy_text": "购买彩票"
+  },
+  "subscribe": {
+    "subscribe": "订阅",
+    "title": "订阅WYNN",
+    "sub_title": "以获得独家优惠",
+    "enter_email": "输入你的电子邮件"
+  },
+  "free_coin": {
+    "title": "如何获得免费WYNN币?",
+    "deposit": "存入TRX",
+    "locked": "锁定TRX - 10天",
+    "get": "获得硬币",
+    "locket": "trx存储箱",
+    "title_text": "免费硬币，只可购买",
+    "text": "要从系统中获得免费硬币，请将TRX冻结10天。\n 这段时间过后，这笔资金将被冻结，冻结金额的...%将出现在你的账户上。\n Wynn系统免费提供的硬币无法提取。\n 只能用于购买新的彩票，支付所额外选择的数字，以及玩游戏。"
+  },
+  "info": {
+    "title": "信息",
+    "match": "配对",
+    "dev": "dev",
+    "price_title": "彩票价格",
+    "distribution": "分布",
+    "text": "奖金基金池收到90%的募集资金",
+    "text1": "Wynn Games是一个区块链彩票、二元期权或经济博弈的平台，采用独立透明的获胜算法。",
+    "text2": "Wynn Games团队，相对于其他类似的在线产品，将去中心化的Tron区块链整合到游戏行业，使用单个直观界面来实现所有功能，以在一个直观的界面上实现所有功能，目的是避开边界，跳出其他在线彩票的规则。",
+    "text3": "你所居住的国家，当地法律是否严格，其实并不重要。",
+    "text4": "抽奖过程不受外部影响。最重要的是，Wynn 游戏平台内的所有付款都只用加密货币进行。该平台接受支付的代币种类包括Tron (TRX), Tether (TRC-20), 以及它自己的原生Wynn代币。",
+    "tokenomics": {
+      "title": "代币经济",
+      "percent": {
+        "text1": "保留用于预售",
+        "text2": "保留用于补充彩票奖金基金池",
+        "text3": "保留用于补充二元期权的奖金基金池",
+        "text4": "营销基金",
+        "text5": "开发团队基金",
+        "text6": "用于补充奖金基金池"
+      },
+      "title2": "代币信息",
+      "info1": "股票代码",
+      "info2": "类型",
+      "info3": "区块链",
+      "info4": "代币标准:",
+      "info5": "发行量",
+      "token": "代币",
+      "tokens": "代币",
+      "or": "或",
+      "title3": "初始分配",
+      "text": "Wynn代币总发行量为50,000,000，它们通过特殊的系统钱包分发，每个钱包自身都有预定用途，但不包括无理或不当用途。",
+      "token_text": {
+        "text1": "保留用于预售",
+        "text2": "保留用于补充彩票奖金基金池",
+        "text3": "保留用于补充二元期权的奖金基金池",
+        "text4": "用于推广和扩大项目规模的营销基金",
+        "text5": "冻结用于开发团队基金",
+        "text6": "运营基金钱包，用于补充在开发中的博弈服务的奖金基金"
+      },
+      "roadmap": {
+        "title": "行动计划",
+        "complete": "完成",
+        "planning": "计划",
+        "underway": "正在执行中",
+        "list1": {
+          "name": "阶段 1.1. (2021 2/2)",
+          "text1": "组建开发团队",
+          "text2": "创建Wynn Games测试平台",
+          "text3": "创建基于Tron网络的加密货币彩票",
+          "text4": "开始beta测试",
+          "text5": "启动区块链测试网络",
+          "text6": "开始alpha测试",
+          "text7": "错误修复测试"
+        },
+        "list2": {
+          "name": "阶段 1.2. (2021 2/2)",
+          "text1": "在Tron网络上推出主区块链",
+          "text2": "开始预售",
+          "text3": "Coingecko上市",
+          "text4": "代币在加密货币交易所上市",
+          "text5": "CoinMarketCap上市",
+          "text6": "广告推广",
+          "text7": "增加开发人员的数量",
+          "text8": "创建 “Wynn Binary”选项",
+          "text9": "启动 “Wynn Binary”选项的alpha测试"
+        },
+        "list3": {
+          "name": "阶段 2 (2022 2/2)",
+          "text1": "转入beta测试",
+          "text2": "推出“Wynn Binary”选项",
+          "text3": "增加新的交易对",
+          "text4": "广告宣传",
+          "text5": "整合联盟计划\n",
+          "text6": "创建Wynn RAST服务器",
+          "text7": "实施Wynn作为本地支付方式"
+        },
+        "list4": {
+          "name": "阶段 3 (2023 1/2)",
+          "text1": "更新彩票算法",
+          "text2": "增加新的彩票类型",
+          "text3": "对 \"20分之4 \"彩票进行测试",
+          "text4": "建立Wynn游戏教育学院",
+          "text5": "推出Wynn游戏教育学院的视频课程"
+        },
+        "list5": {
+          "name": "阶段 4 (2023 2/2)",
+          "text1": "增加使用前10名Coinmarketcap中的加密货币购买彩票的功能",
+          "text2": "发布Android系统的移动应用程序",
+          "text3": "对iOS的移动应用程序进行Alpha测试",
+          "text4": "发布iOS版的移动应用程序",
+          "text5": "对 \"45分之6 \"彩票进行Beta测试 ",
+          "text6": "增加使用法币购买彩票的功能",
+          "text7": "对流行的互联网浏览器的插件进行Alpha测试"
+        }
+      }
+    },
+    "team": {
+      "title": "团队",
+      "col1": "发展",
+      "col2": "广告",
+      "col3": "支持",
+      "col4": "人力资源"
+    }
+  },
+  "buy": {
+    "title": "购买",
+    "info_name": "购买彩票",
+    "random": "随机",
+    "clear": "清除",
+    "select": "选择数字",
+    "price": "价格",
+    "balance": "余额",
+    "btn": "购买彩票",
+    "title2": "选择5个数字",
+    "title3": "想要提高你的获胜几率吗？",
+    "title4": "奖金池",
+    "title5": "新的彩票",
+    "text1": "你需要选择任意5个数字。",
+    "text2": "可以手动选择，也可以通过激活彩票票面上部分的“随机”模式，使用该按钮选择随机单元。",
+    "text3": "抽奖结果揭晓后，赢家的彩票应该有3、4或5个数字匹配",
+    "text4": "给每张彩票添加1、2、3或4个额外的数字（需要额外付费）。你也可以购买额外的彩票。",
+    "text5": "奖金基金收到汇集资金的90%，分配如下：3个数字匹配-30%，4个数字匹配-30%，5个数字匹配-30%。",
+    "game": "游戏",
+    "more": "更多"
+  },
+  "hash": {
+    "title": "检查彩票抽奖",
+    "label": "哈希值",
+    "game": "游戏",
+    "win": "获胜数字",
+    "btn1": "精品游戏",
+    "btn2": "随机游戏",
+    "more": "更多"
+  },
+  "comming_soon": "即将到来",
+  "ticket": {
+    "title": "你的彩票",
+    "name1": "等待",
+    "name2": "胜利",
+    "name3": "失败",
+    "text1": "这些彩票仍在等待抽奖中。一旦中奖数字组合确认，将显示胜利或失败的结果。",
+    "text2": "你的彩票有3，4，或5个数字匹配（突出显示匹配的数字）。以下是中奖的彩票。",
+    "text3": "没有匹配的彩票。",
+    "game": "游戏",
+    "price": "价格"
+  },
+  "profile": {
+    "info": {
+      "label1": "电子邮件",
+      "label2": "密码",
+      "label3": "评级",
+      "label4": "费用",
+      "label5": "邀请链接 (邀请用户 ",
+      "label6": "下一级"
+    },
+    "wallet": {
+      "title": "钱包地址",
+      "text1": "要给钱包充值，复制钱包地址并将其粘贴到交换器或其他系统钱包中的相应行中。",
+      "text2": "Wynn钱包只支持基于TRON区块链的加密货币。该钱包可以存储的代币种类如下。",
+      "text3": "* 钱包中最低余额不能低于5个TRX。"
+    },
+    "table": {
+      "time": "时间",
+      "amount": "金额",
+      "coin": "硬币",
+      "txid": "txid"
+    },
+    "title": "个人资料",
+    "my_tickets": "我的彩票",
+    "my_logs": "我的日志"
+  },
+  "swap": {
+    "title": "获得WYNN币",
+    "title2": "获得 WYNN的金额",
+    "title3": "选择硬币",
+    "remainder": "剩余"
+  }
+}

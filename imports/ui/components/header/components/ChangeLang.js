@@ -6,7 +6,7 @@ import {toast} from "react-toastify";
 import {useCurrentUser, useSubscribe} from "/imports/api/hooks";
 
 const langs = [
-  { value: 'ru', label: 'RU' },
+  { value: 'cn', label: 'CN' },
   { value: 'en', label: 'ENG' },
 ];
 
@@ -19,11 +19,11 @@ const ChangeLang = ({mobile}) => {
 
     const close = (lang) => {
         i18n.changeLanguage(lang);
-        if(Meteor.loggingIn()) {
-            Meteor.call('user.locale', lang, (err)=> {
-                toast.error(err.reason);
-            })
-        }
+        // if(Meteor.loggingIn()) {
+        //     Meteor.call('user.locale', lang, (err)=> {
+        //         toast.error(err.reason);
+        //     })
+        // }
 
         setLocale(i18n.language)
         setOpen(!isOpen);
