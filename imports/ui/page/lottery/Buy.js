@@ -248,56 +248,58 @@ const BuyPage = () => {
             </div>
           </div>
         </div>
-        <div className="prize-box">
-          <h2>{t('buy.title4')}</h2>
-          <div className="prize-list row">
-            {pool?.map(money=>(
-                <div className={'col'}>
-                  <div className="item">
-                    <div className="ico">
-                      <img src="./img/ico-prize-01.svg" alt="" />
-                    </div>
-                    <span className="number">{money.value()} {money.coins}</span>
-                    <span className="info">{(money.userId).replace(/^.{5}/, '')} {t('buy.title')}matches</span>
-                  </div>
-                </div>
-            ))}
-          </div>
-        </div>
-        <div className="new-tickets">
-          <div className="container">
-            <div className="head-box">
-              <h2>{t('buy.title5')}</h2>
-              {/*<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>*/}
-            </div>
-            <div className="list-new-tickets">
-              {list?.map(tic=> (
-                  <div key={tic?._id} className="item">
-                    <div className="head">
-                      <span className="name">{tic?.user?.name || 'Anonyms'}</span>
-                      <span className="info">
-                      {t('buy.game')} #{tic?.lottery.id}
-                        <span className="separator">/</span>
-                      ID #{tic?.id}
-                    </span>
-                    </div>
-                    <div className="body">
-                      <div className="number-list w-50 f-space-between">
-                        {tic?.numbers.map(x=>(
-                            <span key={x} className="number"><span>{x}</span></span>
-                        ))}
+        <div className="prize-holder">
+          <div className="prize-box">
+            <h2>{t('buy.title4')}</h2>
+            <div className="prize-list row">
+              {pool?.map(money=>(
+                  <div className={'col'}>
+                    <div className="item">
+                      <div className="ico">
+                        <img src="./img/ico-prize-01.svg" alt="" />
                       </div>
-                      <span className="price">
-                      {t('buy.price')}
-                      <span>{tic?.price} {tic?.lottery.assetName}</span>
-                    </span>
+                      <span className="number">{money.value()} {money.coins}</span>
+                      <span className="info">{(money.userId).replace(/^.{5}/, '')} {t('buy.title')}matches</span>
                     </div>
                   </div>
               ))}
-              <div className={'text-center'}>
-                <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>{t('buy.more')}</span>
+            </div>
+          </div>
+          <div className="new-tickets">
+            <div className="container">
+              <div className="head-box">
+                <h2>{t('buy.title5')}</h2>
+                {/*<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>*/}
               </div>
+              <div className="list-new-tickets">
+                {list?.map(tic=> (
+                    <div key={tic?._id} className="item">
+                      <div className="head">
+                        <span className="name">{tic?.user?.name || 'Anonyms'}</span>
+                        <span className="info">
+                        {t('buy.game')} #{tic?.lottery.id}
+                          <span className="separator">/</span>
+                        ID #{tic?.id}
+                      </span>
+                      </div>
+                      <div className="body">
+                        <div className="number-list w-50 f-space-between">
+                          {tic?.numbers.map(x=>(
+                              <span key={x} className="number"><span>{x}</span></span>
+                          ))}
+                        </div>
+                        <span className="price">
+                        {t('buy.price')}
+                        <span>{tic?.price} {tic?.lottery.assetName}</span>
+                      </span>
+                      </div>
+                    </div>
+                ))}
+                <div className={'text-center mt20'}>
+                  <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>{t('buy.more')}</span>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
