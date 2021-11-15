@@ -130,7 +130,7 @@ const Tokenomics = () => {
         </div>
         <div className="token-text">
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <h5>{t('info.tokenomics.title3')}</h5>
               <p>{t('info.tokenomics.text')}</p>
               <div className="list">
@@ -142,8 +142,8 @@ const Tokenomics = () => {
                 <p>80% {t('info.tokenomics.or')} <strong>40 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text6')}</p>
               </div>
             </div>
-            <div className="col-md-4">
-
+            <div className="col-lg-4 img">
+              <img src="./img/img-info-text.svg" alt="" />
             </div>
           </div>
         </div>

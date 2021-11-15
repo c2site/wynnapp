@@ -25,7 +25,9 @@ const History = () => {
               </span>
               <a href="#">{t('nav.check')}</a>
             </div>
-            <h2 className="title-page">{t('hash.title')}</h2>
+          </div>
+          <div className="container">
+            <h2 className="title-page mb15">{t('hash.title')}</h2>
           </div>
           <div className="scroll-history">
             <div className="table history-table">

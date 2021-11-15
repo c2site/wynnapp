@@ -257,7 +257,8 @@ li {
 
 .page {
   padding-top: 50px;
-  overflow-x: hidden;
+  //overflow-x: hidden;
+  //min-height: calc(100% - 55px);
 }
 .overflow {
   overflow: hidden;

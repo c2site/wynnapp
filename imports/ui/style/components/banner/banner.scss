@@ -32,6 +32,13 @@
     .head-banner {
         margin-bottom: 105px;
         .title-box {
+            max-width: calc(100% - 550px);
+            @media only screen and (max-width: $responsive-size-laptop-screen) {
+                max-width: calc(100% - 350px);
+            }
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                max-width: 100%;
+            }
             h1 {
                 margin: 0 0 22px;
             }
@@ -39,8 +46,19 @@
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
+                + .btn-holder {
+                    margin-top: 20px;
+                }
                 .btn {
                     margin-right: 15px;
+                    min-width: 210px;
+                    @media only screen and (max-width: 499px) {
+                        width: 100%;
+                        margin-right: 0;
+                        + .btn {
+                            margin-top: 20px;
+                        }
+                    }
                     @media only screen and (max-width: $responsive-size-stand-mobile) {
                         margin-bottom: 15px;
                     }
