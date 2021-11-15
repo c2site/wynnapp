@@ -3,7 +3,7 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 import {useTracker} from "meteor/react-meteor-data";
 
-const Navigation = ({mobi, setMobi}) => {
+const Navigation = () => {
   const {t, i18n} = useTranslation();
 
   const login = useTracker(()=>Meteor.user(), []);

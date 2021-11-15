@@ -120,7 +120,7 @@ const Header = () => {
                     <ProfileBtn />
                   )}
                 </div>
-                <NavBar />
+                <Navigation />
                 <div className="btn-header">
                   {!login ? (<Registration color="primary" text="Registration"/>) : (
                     <Button className="btn btn-default btn-reg" onClick={logout}>
