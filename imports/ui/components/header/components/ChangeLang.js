@@ -15,7 +15,7 @@ const ChangeLang = ({mobile}) => {
     const [isOpen, setOpen] = useState(false);
     const user = useCurrentUser()
     const [locale, setLocale] = useState(user?.settings?.lang || i18n.language);
-
+    const toggle = () => setOpen((prevState) => !prevState);
 
     const close = (lang) => {
         i18n.changeLanguage(lang);
@@ -27,9 +27,10 @@ const ChangeLang = ({mobile}) => {
 
         setLocale(i18n.language)
         setOpen(!isOpen);
+        toggle()
     };
 
-    const toggle = () => setOpen((prevState) => !prevState);
+
 
     return (
         <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
