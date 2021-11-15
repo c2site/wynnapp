@@ -47,6 +47,8 @@ FlowRouter.globals.push({
     title: 'Wynn Games'
 });
 
+FlowRouter.triggers.enter([ () => { window.scrollTo(0, 0); } ]);
+
 
 FlowRouter.route('/recoveryPassword/:token', {
     name: 'recoveryPassword',

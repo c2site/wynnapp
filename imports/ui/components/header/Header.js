@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from '/imports/ui/components/header/components/Navigation';
+import Navigation from '/imports/ui/components/header/components/Navigation';
 import Login from  '/imports/ui/components/header/components/Login';
 import Registration from "./components/Registration";
 import { useTracker } from 'meteor/react-meteor-data'
@@ -84,7 +84,7 @@ const Header = () => {
               </a>
             </div>
             <div className="holder-nav">
-              <NavBar/>
+              <Navigation mobi={toggleNav} setMobi={toggleNav} />
               <div className="btn-header">
                   <div className="mob-hide login-hide">
                     {!login ? (<Login/>) : (
@@ -161,7 +161,7 @@ const Header = () => {
                     {t('header.bitcointalk')}
                   </a></li>
                 </ul>
-                <NavBar />
+                <Navigation />
                 <div className="btn-header">
                   {!login ? (<Login/>) : (
                     <ProfileBtn />

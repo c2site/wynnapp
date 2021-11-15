@@ -1,9 +1,12 @@
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import React from "react";
 import {useTranslation} from "react-i18next";
+import {useTracker} from "meteor/react-meteor-data";
 
-const Navigation = () => {
+const Navigation = ({mobi, setMobi}) => {
   const {t, i18n} = useTranslation();
+
+  const login = useTracker(()=>Meteor.user(), []);
   return (
     <>
           <ul className="nav">
@@ -17,9 +20,12 @@ const Navigation = () => {
             <li>
               <a href={FlowRouter.path('history')}
               >{t('nav.history')}</a></li>
-            <li>
-              <a href={FlowRouter.path('profile')}
-              >{t('header.profile')}</a></li>
+            {login ? (
+                <li>
+                  <a href={FlowRouter.path('profile')}
+                  >{t('header.profile')}</a></li>
+            ): (<></>)}
+
             {/*<li><a href={FlowRouter.path('swap')}>{t('nav.buy-wynn')}</a></li>*/}
             {/*<li><a href="#">{t('nav.option')}</a></li>*/}
             {/*<li><a href="#">{t('nav.contact')}</a></li>*/}
