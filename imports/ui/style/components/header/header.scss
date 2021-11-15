@@ -128,8 +128,8 @@
 .profile-btn {
   @media only screen and (max-width: $responsive-size-stand-mobile) {
     width: auto;
-    padding-left: 12px;
-    padding-right: 12px;
+    //padding-left: 12px;
+    //padding-right: 12px;
   }
   .summ {
 
@@ -148,8 +148,8 @@
     display: flex;
     align-items: center;
     @media only screen and (max-width: $responsive-size-stand-mobile) {
-      padding: 2px 4px;
-      margin-left: -6px;
+      //padding: 2px 4px;
+      //margin-left: -6px;
       position: relative;
       z-index: 2;
     }
@@ -227,7 +227,7 @@ header {
         display: flex;
         min-height: 100vh;
         .profile-btn {
-          border: 2px solid rgba(30, 38, 50, 0.1);
+          //border: 2px solid rgba(30, 38, 50, 0.1);
           & > span {
             display: none;
           }
@@ -240,7 +240,7 @@ header {
       }
     }
     .social-head {
-      margin: 0 0 30px;
+      margin: 20px 0 30px;
       padding: 0;
       list-style: none;
       li {
