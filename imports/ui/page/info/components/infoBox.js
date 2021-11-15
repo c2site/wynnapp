@@ -8,6 +8,7 @@ const infoBox = () => {
       <div className="container steps-block info-box">
         <div className="row f-align-center">
           <div className="col-lg-8">
+            <h2 className="title-page">{t('info.title')}</h2>
             <p>{t('info.text1')}</p>
             <p>{t('info.text2')}</p>
             <p>{t('info.text3')}</p>

@@ -18,7 +18,6 @@ const InfoPage = () => {
                             </span>
                             <a href="#">{t('nav.info')}</a>
                         </div>
-                        <h2 className="title-page">{t('info.title')}</h2>
                     </div>
                     <InfoBox/>
                     <Tokenomics/>

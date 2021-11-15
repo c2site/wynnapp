@@ -116,6 +116,7 @@ const BuyPage = () => {
             </div>
             <h2 className="title-page">{t('buy.title')}</h2>
           </div>
+          <h3 className="mb45">{t('nav.lottery')} 5/36</h3>
           <NextDraw button={false} coins={coinName}/>
           <div className="row">
             <div className="col-lg-8">
@@ -259,7 +260,7 @@ const BuyPage = () => {
                         <img src="./img/ico-prize-01.svg" alt="" />
                       </div>
                       <span className="number">{money.value()} {money.coins}</span>
-                      <span className="info">{(money.userId).replace(/^.{5}/, '')} {t('buy.title')}matches</span>
+                      <span className="info">{(money.userId).replace(/^.{5}/, '')} {t('buy.title')} matches</span>
                     </div>
                   </div>
               ))}
