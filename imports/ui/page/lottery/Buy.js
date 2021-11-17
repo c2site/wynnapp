@@ -114,8 +114,8 @@ const BuyPage = () => {
               </span>
               <a href="#">{t('nav.buy')}</a>
             </div>
-            <h2 className="title-page">{t('buy.title')}</h2>
           </div>
+          <h2 className="title-page">{t('buy.title')}</h2>
           <h3 className="mb45">{t('nav.lottery')} 5/36</h3>
           <NextDraw button={false} coins={coinName}/>
           <div className="row">
