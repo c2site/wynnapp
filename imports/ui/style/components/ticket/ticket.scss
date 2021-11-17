@@ -850,7 +850,7 @@
                     justify-content: center;
                 }
             }
-            .win {
+            .win-sum {
                 font-weight: bold;
                 font-size: 13px;
                 line-height: 16px;
@@ -861,6 +861,9 @@
                 margin-left: 40px;
                 display: flex;
                 align-items: center;
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
                 span {
                     background: #1E2632;
                     border-radius: 20px;
@@ -872,6 +875,7 @@
                     text-transform: uppercase;
                     color: #28D83A;
                     display: block;
+                    margin-left: 10px;
                 }
             }
             .status {
@@ -896,18 +900,24 @@
             text-transform: uppercase;
             color: rgba(255,255,255,0.75);
             border: 2px solid #6C7788;
+            @media only screen and (max-width: 767px) {
+                display: none;
+            }
             svg {
                 margin-right: 6px;
                 display: block;
             }
             &.wait {
                 border: 2px solid #6C7788;
+                margin-left: auto;
             }
             &.win {
                 border: 2px solid #28D83A;
+                margin-left: auto;
             }
             &.lose {
                 border: 2px solid #EB3B3B;
+                margin-left: auto;
             }
         }
         .body {
@@ -995,6 +1005,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
             padding: 15px 0;
             @media only screen and (max-width: 767px) {
                 width: 100%;
@@ -1004,6 +1015,37 @@
                 margin-left: initial;
                 @media only screen and (max-width: 767px) {
                     display: flex;
+                }
+            }
+            .win-sum {
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-left: 40px;
+                align-items: center;
+                justify-content: center;
+                display: none;
+                width: 100%;
+                margin-top: 25px;
+                @media only screen and (max-width: 767px) {
+                    display: flex;
+                }
+                span {
+                    background: #1E2632;
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: #28D83A;
+                    display: block;
+                    margin-left: 10px;
                 }
             }
         }
@@ -1016,6 +1058,12 @@
                 border-bottom: none;
                 margin-bottom: 20px;
                 justify-content: flex-start;
+
+                .status {
+                    @media only screen and (max-width: 767px) {
+                        display: none;
+                    }
+                }
             }
             .body {
                 .number-list {
@@ -1030,6 +1078,15 @@
                 .price {
                     span {
                         background: #1E2632;
+                    }
+                }
+            }
+            .footer {
+                .status {
+                    display: none;
+                    margin-left: initial;
+                    @media only screen and (max-width: 767px) {
+                        display: flex;
                     }
                 }
             }
