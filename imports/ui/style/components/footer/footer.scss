@@ -1,7 +1,6 @@
 @import "../../_helpers/variables";
-
 footer {
-  padding: 15px 0 16px;
+  padding: 15px 0 15px;
   margin-top: auto;
   background: #212129;
   position: relative;
@@ -10,33 +9,103 @@ footer {
     padding: 20px 0;
   }
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 30px 130px;
     @media only screen and (max-width: $responsive-size-big-tablet) {
       flex-direction: column;
+      padding: 10px 10px;
     }
   }
-  .copyright {
-    font-size: 13px;
+  .footer-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    color: #FFFFFF;
+  }
+  .footer-nav-inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 65%;
+  }
+  .footer-nav nav {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1rem;
+    width: 33%;
+    @media only screen and (max-width: $responsive-size-stand-mobile) {
+      width:100%;
+    }
+  }
+  .footer-nav nav ul li {
+    padding-top: 10px;
+  }
+  .footer-nav nav ul li a svg {
+    margin-right: 10px;
+  }
+  .footer-nav nav .title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .footer-logo {
+    width: 35%;
+    @media only screen and (max-width: $responsive-size-stand-mobile) {
+      width:100%;
+    }
+  }
+  .logo-text {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
     line-height: 24px;
-    color: rgba(255,255,255,0.5);
-    padding-left: 50px;
+    letter-spacing: 0.205em;
+    text-transform: uppercase;
+    color: #E8C76F;
+    display: block;
+    padding-top: 25px;
+  }
+  .logo-desc {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 5px;
+  }
+  .footer-copyright {
+    display: flex;
+    border-top: 1px solid rgba(219, 219, 219, 0.2);
+  }
+  .copyright {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-left: 130px;
+    width: 50%;
+    padding-top: 15px;
     @media only screen and (max-width: $responsive-size-big-tablet) {
-      padding-left: 0;
+      padding-left: 10px;
     }
     p {
       margin: 0;
     }
   }
   a {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 24px;
-    color: rgba(255,255,255,0.5);
+    color: #ffffff;
     text-decoration: none;
     &:hover,
     &:focus {
-      color: rgba(255,255,255,1);
+      color: rgba(255, 255, 255, 1);
       text-decoration: underline;
     }
   }
@@ -51,7 +120,6 @@ footer {
       width: 100%;
       padding: 20px 0;
     }
-
     li {
       padding: 0 25px;
       @media only screen and (max-width: $responsive-size-big-tablet) {
@@ -69,9 +137,8 @@ footer {
         text-decoration: none;
         font-size: 13px;
         line-height: 24px;
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         transition: all linear 0.3s;
-
         .ico {
           display: block;
           margin-right: 8px;
@@ -84,7 +151,7 @@ footer {
           }
         }
         &:hover {
-          color: rgba(255,255,255,1);
+          color: rgba(255, 255, 255, 1);
         }
       }
     }
@@ -92,19 +159,21 @@ footer {
   .info {
     display: flex;
     align-items: center;
+    padding-top: 10px;
     @media only screen and (max-width: $responsive-size-stand-mobile) {
       flex-direction: column;
       align-items: flex-start;
+      padding-left: 50px;
+      padding-top: 17px;
     }
     a {
       display: flex;
       align-items: center;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 17px;
       color: #FFFFFF;
-      margin-right: 40px;
+      margin-right: 50px;
       @media only screen and (max-width: $responsive-size-stand-mobile) {
         margin-top: 10px;
         font-weight: 500;
