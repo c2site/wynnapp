@@ -302,5 +302,11 @@
     "title3": "Select coins",
     "remainder": "Remainder"
   },
-  "active": "active"
+  "active": "active",
+  "rating": {
+    "text": "The use of the native Wynn token on the Wynn Games platform provides users the opportunity to participate in the loyalty program for VIP-level users, which offers a dynamically growing discount (from 1.1% to 10.1%) for the purchase of tickets or contracts.",
+    "rating": "Rating",
+    "level": "Vip level",
+    "discount": "Discount"
+  }
 }

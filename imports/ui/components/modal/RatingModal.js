@@ -23,27 +23,66 @@ const RatingModal = (props) => {
       <Modal isOpen={modal} toggle={toggle} className={'modal-app modal-black'}>
         <ModalHeader toggle={toggle}>{t('form.rating')}</ModalHeader>
         <ModalBody>
-          <div className="table profile-table">
-            <div className="table-head">
+          <div className="text-rating">
+            <p>{t('rating.text')}</p>
+          </div>
+          <div className="flex f-space-between flex-wrap rating-table">
+            <div className="table-holder">
               <table>
                 <thead>
                 <tr>
-                  <th>{t('form.name')}</th>
-                  <th>{t('form.amount')}</th>
+                  <th>{t('rating.rating')}</th>
+                  <th>{t('rating.level')}</th>
+                  <th>{t('rating.discount')}</th>
                 </tr>
                 </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>VIP 5 </td>
+                    <td>1.1%</td>
+                  </tr>
+                  <tr>
+                    <td>150</td>
+                    <td>VIP 4</td>
+                    <td>2.2%</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>VIP 3</td>
+                    <td>3.3%</td>
+                  </tr>
+                  <tr>
+                    <td>1000</td>
+                    <td>VIP 2</td>
+                    <td>5.5%</td>
+                  </tr>
+                  <tr>
+                    <td>5000</td>
+                    <td>VIP 1</td>
+                    <td>10.1%</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
-            <table>
-              <tbody>
-              {list?.map(coin=>(
+            <div className="table-holder">
+              <table>
+                  <thead>
+                  <tr>
+                    <th>{t('form.name')}</th>
+                    <th>{t('form.amount')}</th>
+                  </tr>
+                  </thead>
+                <tbody>
+                {list?.map(coin=>(
                   <tr>
                     <td>{coin.name}</td>
                     <td>1 {coin.name} = { (1 / coin.rating ).toFixed(2)} rating</td>
                   </tr>
-              ))}
-              </tbody>
-            </table>
+                ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </ModalBody>
         <ModalFooter>

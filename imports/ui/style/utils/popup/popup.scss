@@ -7,6 +7,9 @@
     padding: 45px;
     min-width: 830px;
     width: 100%;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      min-width: 95%;
+    }
     &.modal-black {
       background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
       .modal-header {
@@ -144,6 +147,78 @@
         display: block;
         margin-bottom: 16px;
         color: rgba(30, 38, 50, 0.75);
+      }
+      .text-rating {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        margin-bottom: 65px;
+        p {
+          margin: 0;
+          + p {
+            margin-top: 15px;
+          }
+        }
+      }
+      .rating-table {
+        .table-holder {
+          width: 54%;
+          padding: 0 0 20px;
+          @media only screen and (max-width: $responsive-size-stand-mobile) {
+            min-width: 100%;
+          }
+          &:last-child {
+            width: 44%;
+            @media only screen and (max-width: $responsive-size-stand-mobile) {
+              min-width: 100%;
+            }
+          }
+          &-head {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+          table {
+            width: 100%;
+            thead {
+              tr {
+                th {
+                  font-family: 'Intro', sans-serif;
+                  width: initial !important;
+                  text-align: left;
+                  border-bottom: 1px solid #404751;
+                  font-weight: 900;
+                  font-size: 16px;
+                  line-height: 20px;
+                  text-transform: uppercase;
+                  color: #F5C365;
+                  padding: 0 0 15px;
+                  &:first-child {
+                    padding-left: 15px;
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  width: initial !important;
+                  color:#fff;
+                  text-align: left;
+                  border-bottom: 1px solid #404751;
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 20px;
+                  padding: 12px 0;
+                  &:first-child {
+                    padding-left: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
     .modal-header,
