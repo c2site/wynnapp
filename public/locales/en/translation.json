@@ -315,5 +315,10 @@
     "discount": "Discount",
     "vip": "VIP"
   },
-  "wp": "White Paper"
+  "wp": "White Paper",
+  "errorPage": {
+    "title": "Page not found",
+    "text": "You have found the secret page",
+    "btn": "Back to home"
+  }
 }

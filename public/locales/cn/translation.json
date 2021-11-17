@@ -313,5 +313,10 @@
     "discount": "折扣",
     "vip": "貴賓"
   },
-  "wp": "白皮書"
+  "wp": "白皮書",
+  "errorPage": {
+    "title": "Page not found",
+    "text": "You have found the secret page",
+    "btn": "Back to home"
+  }
 }
