@@ -240,7 +240,7 @@
     "btn": "buy ticket",
     "title2": "Select 5 numbers",
     "title3": "Want to increase your chances of winning?",
-    "title4": "prize pool",
+    "title4": "Prize pool",
     "title5": "New Tickets",
     "text1": "You need to choose any 5 numbers.",
     "text2": "This can be done manually or by activating the “Random” mode at the top of the ticket. Use this button to select  random cells.",
@@ -248,7 +248,8 @@
     "text4": "Add 1, 2, 3, or 4 additional numbers per ticket (for an additional fee). You can also buy additional tickets.",
     "text5": "The prize fund receives 90% of the collected funds, which are distributed as follows: 3 matches - 30%, 4 matches - 30%, 5 matches - 30%.",
     "game": "game",
-    "more": "more"
+    "more": "more",
+    "matches": "matches"
   },
   "hash": {
     "title": "Check Lottery",
@@ -302,5 +303,8 @@
     "title3": "Select coins",
     "remainder": "Remainder"
   },
-  "active": "active"
+  "active": "active",
+  "notification": {
+
+  }
 }

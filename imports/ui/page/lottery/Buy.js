@@ -254,13 +254,13 @@ const BuyPage = () => {
             <h2>{t('buy.title4')}</h2>
             <div className="prize-list row">
               {pool?.map(money=>(
-                  <div className={'col'}>
+                  <div className={'col'} key={money._id}>
                     <div className="item">
                       <div className="ico">
                         <img src="./img/ico-prize-01.svg" alt="" />
                       </div>
                       <span className="number">{money.value()} {money.coins}</span>
-                      <span className="info">{(money.userId).replace(/^.{5}/, '')} {t('buy.title')} matches</span>
+                      <span className="info">{(money.userId).replace(/^.{5}/, '')} matches</span>
                     </div>
                   </div>
               ))}
