@@ -69,7 +69,7 @@ const RecoveryPassword = () => {
                             <>
                                 <div className={'input-box'}>
                                     <Label for="pass1" className="label in">
-                                        {t('form.Password')}
+                                        {t('form.password')}
                                     </Label><Input type={'password'} id={'pass1'} value={pass} onChange={(e) => setPass(e.currentTarget.value)} />
                                 </div>
                                 <div className="input-box">
