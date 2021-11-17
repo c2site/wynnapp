@@ -304,5 +304,13 @@
   "active": "active",
   "notification": {
 
-  }
+  },
+  "rating": {
+    "text": "在 Wynn Games 平台上使用原生 Wynn 代幣為用戶提供了參與 VIP 級用戶忠誠度計劃的機會，該計劃為購買門票或合約提供動態增長的折扣（從 1.1% 到 10.1%）。",
+    "rating": "評分",
+    "level": "貴賓級",
+    "discount": "折扣",
+    "vip": "貴賓"
+  },
+  "vp": "白皮書"
 }

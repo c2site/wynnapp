@@ -39,27 +39,27 @@ const RatingModal = (props) => {
                 <tbody>
                   <tr>
                     <td>10</td>
-                    <td>VIP 5 </td>
+                    <td>{t('rating.vip')} 5 </td>
                     <td>1.1%</td>
                   </tr>
                   <tr>
                     <td>150</td>
-                    <td>VIP 4</td>
+                    <td>{t('rating.vip')} 4</td>
                     <td>2.2%</td>
                   </tr>
                   <tr>
                     <td>500</td>
-                    <td>VIP 3</td>
+                    <td>{t('rating.vip')} 3</td>
                     <td>3.3%</td>
                   </tr>
                   <tr>
                     <td>1000</td>
-                    <td>VIP 2</td>
+                    <td>{t('rating.vip')} 2</td>
                     <td>5.5%</td>
                   </tr>
                   <tr>
                     <td>5000</td>
-                    <td>VIP 1</td>
+                    <td>{t('rating.vip')} 1</td>
                     <td>10.1%</td>
                   </tr>
                 </tbody>
