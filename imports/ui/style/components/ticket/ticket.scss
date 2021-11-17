@@ -933,13 +933,19 @@
                 display: flex;
                 flex-wrap: wrap;
                 @media only screen and (max-width: 767px) {
-                    //margin-bottom: 30px;
-                    //justify-content: space-around;
-                    //width: 100%;
+                    margin-bottom: 30px;
+                    justify-content: center;
+                    width: 100%;
                 }
                 .number {
                     display: flex;
                     border: none !important;
+                    + .number {
+                        margin-left: 18px;
+                        @media only screen and (max-width: 767px) {
+                            margin-right: 10px;
+                        }
+                    }
                     &.win {
                         span {
                             border: 1px solid #28D83A;
