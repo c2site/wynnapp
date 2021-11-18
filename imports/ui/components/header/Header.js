@@ -194,6 +194,7 @@ const Header = () => {
                   </svg>
                 </Button>
               </div>
+              <ChangeLang/>
             </div>
           </header>
         </div>
