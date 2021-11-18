@@ -41,7 +41,7 @@ const RecoveryPassword = () => {
                     if (e.error === 'two-factor-required') {
                         setShow(true);
                     } else {
-                        toast.error(e.reason);
+                        toast.error(t(e.reason));
                     }
                 } else {
                     toast.success('recovery.password_done');

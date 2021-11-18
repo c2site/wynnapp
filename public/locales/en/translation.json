@@ -306,7 +306,17 @@
   },
   "active": "active",
   "notification": {
-
+    "amount": "The amount is greater than your current balance",
+    "balance": "Need more balance",
+    "numbers": "Need more numbers",
+    "blocks": "Wait for a new block, please",
+    "wait": "One transaction 60 seconds",
+    "trx": "You need min 5 TRX",
+    "handleError": "Something went wrong. Please check your credentials.",
+    "token": "Invalid token",
+    "emailToken": "Token has invalid email address",
+    "emailError": "Invalid email",
+    "copy": "Copy wallet address"
   },
   "rating": {
     "text": "The use of the native Wynn token on the Wynn Games platform provides users the opportunity to participate in the loyalty program for VIP-level users, which offers a dynamically growing discount (from 1.1% to 10.1%) for the purchase of tickets or contracts.",

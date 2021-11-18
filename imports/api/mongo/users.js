@@ -28,7 +28,8 @@ export const UserSettings = Class.create({
   fields: {
     twoFa: { type: Boolean, default: false },
     template: { type: String, optional: true },
-    ref: { type: Ref, default: () => new Ref() }
+    ref: { type: Ref, default: () => new Ref() },
+    dmoney: {type: String, optional: true}
   }
 });
 

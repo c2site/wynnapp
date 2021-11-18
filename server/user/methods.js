@@ -23,5 +23,11 @@ Meteor.methods({
   'user.invites'(){
     const user = Meteor.user();
     return Meteor.users.find({'settings.ref.invite': user.settings.ref.code}).count()
+  },
+  'user.setMoney'(id) {
+    check(this.userId, String);
+    check(id, String);
+
+    Meteor.users.update(this.userId, {$set: {'settings.dmoney': id}});
   }
 });

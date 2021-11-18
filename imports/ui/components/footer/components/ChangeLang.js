@@ -19,11 +19,11 @@ const ChangeLang = ({mobile}) => {
 
     const close = (lang) => {
         i18n.changeLanguage(lang);
-        // if(Meteor.loggingIn()) {
-        //     Meteor.call('user.locale', lang, (err)=> {
-        //         toast.error(err.reason);
-        //     })
-        // }
+        if(Meteor.loggingIn()) {
+            Meteor.call('user.locale', lang, (err)=> {
+                toast.error(err.reason);
+            })
+        }
 
         setLocale(i18n.language)
         setOpen(!isOpen);

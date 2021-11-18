@@ -23,7 +23,7 @@ class TronSend {
     }
 
     async _send({amount, address}) {
-        if(await this.tronWeb.trx.getBalance(this.address.address) < 1 * Math.pow(10, 6)) throw new Meteor.Error('error.trx.balance', 'You need min 5 TRX');
+        if(await this.tronWeb.trx.getBalance(this.address.address) < 1 * Math.pow(10, 6)) throw new Meteor.Error('error.trx.balance', 'notification.trx');
         if(this.asset.name === 'trx') {
             const trxTxs = await this.tronWeb.transactionBuilder.sendTrx(
                 address,

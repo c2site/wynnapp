@@ -13,7 +13,7 @@ class TwoFA {
     const secret = Meteor.users.findOne({_id: userId}).services.twoFactorSecret;
     console.log(userId , otplib.authenticator.check(token, secret));
     if (!otplib.authenticator.check(token, secret)) {
-      throw new Meteor.Error('invalid-token', 'Invalid token');
+      throw new Meteor.Error('invalid-token', 'notification.token');
     }
   }
 

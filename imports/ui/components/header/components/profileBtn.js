@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {FlowRouter} from "meteor/ostrio:flow-router-extra";
 import {Button} from "reactstrap";
 import { useTracker } from 'meteor/react-meteor-data'
@@ -7,11 +7,23 @@ import {Meteor} from "meteor/meteor";
 import {useSubscribe} from "../../../../api/hooks";
 import Loading from "../../loading";
 import { useTranslation } from "react-i18next";
+import {cookies} from "../../../utils";
 
 const ProfileBtn = () => {
   const {t, i18n} = useTranslation();
     const loading = useSubscribe('user.money');
-    const balance = useTracker(()=> Money.findOne({userId: Meteor.userId(), coins: 'wynn'}), []);
+    const balance = useTracker(()=> Money.find({userId: Meteor.userId()}).fetch(), []);
+    const user = useTracker(()=>Meteor.user(), []);
+    const [coinName, setCoinName] = useState(user?.settings?.dmoney || 'wynn');
+
+  const ChangeWallet = (e)=> {
+    setCoinName(e.currentTarget.value)
+    Meteor.call('user.setMoney', e.currentTarget.value);
+  }
+
+  useEffect(()=> {
+    setCoinName(user?.settings?.dmoney);
+  }, [user])
 
     if(loading) return  <Loading />;
     return (
@@ -22,10 +34,10 @@ const ProfileBtn = () => {
             <rect x="4.66675" y="6" width="10.6667" height="6.66667" rx="2" stroke="white"/>
             <ellipse cx="10.0001" cy="9.33333" rx="1.33333" ry="1.33333" stroke="white"/>
           </svg>
-          {balance?.value()}
-          <select>
-            <option value="{t('header.wynn')}">{t('header.wynn')}</option>
-            <option value="{t('header.wynn')}">{t('header.wynn')}</option>
+          <select value={coinName} selectedValue={coinName}  onChange={(e)=>ChangeWallet(e)}>
+            {balance?.map(wallet=>(
+                <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
+            ))}
           </select>
         </strong>
       </div>

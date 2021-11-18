@@ -21,7 +21,7 @@ const RecoveryFrom = () => {
 
         Accounts.forgotPassword({ email }, (err) => {
             if (err) {
-                toast.error(err.reason);
+                toast.error(t(err.reason));
                 setLoading(false)
             } else {
                 toast.success('Check you email');

@@ -20,7 +20,7 @@ const SendWallet = (props) => {
 
     Meteor.call('user.send.coin', {wallet, send}, (err) => {
       if(err) {
-        toast.error(err.reason);
+        toast.error(t(err.reason));
       } else {
         setSend({address: '', amount: 0});
         toggle()
@@ -31,7 +31,6 @@ const SendWallet = (props) => {
   const change = (e) => {
     const newState = { [e.currentTarget.name]: e.currentTarget.value };
     setSend((prevState) => ({ ...prevState, ...newState }));
-
   }
 
   const max = () => {

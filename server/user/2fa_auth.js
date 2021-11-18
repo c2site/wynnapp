@@ -8,7 +8,7 @@ Accounts.validateLoginAttempt(info =>
   info.allowed && !(info.type === 'password' && info.user?.settings?.twoFa));
 
 const handleError = () => {
-  throw new Meteor.Error(403, 'Something went wrong. Please check your credentials.');
+  throw new Meteor.Error(403, 'notification.handleError');
 };
 
 Accounts.registerLoginHandler('two-factor', (options) => {

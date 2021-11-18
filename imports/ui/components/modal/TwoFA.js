@@ -66,7 +66,7 @@ const TwoFA = () => {
 
     Meteor.call('user.disable2fa', tkn, (e) => {
       if (e) {
-        toast.error(e.reason);
+        toast.error(t(e.reason));
       } else {
         setDeactivate(false);
       }

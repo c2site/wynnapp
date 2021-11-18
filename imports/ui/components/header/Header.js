@@ -95,7 +95,7 @@ const Header = () => {
                       <ProfileBtn />
                     )}
                   </div>
-                {!login ? (<div className="mob-hide"><Registration color="primary" text="Registration"/></div>) : (
+                {!login ? (<div className="mob-hide"><Registration color="primary" text={t('form.registration')}/></div>) : (
                   <Button className="btn btn-default" onClick={logout}>
                     <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
                       <g>
@@ -126,7 +126,7 @@ const Header = () => {
                 </div>
                 <Navigation />
                 <div className="btn-header">
-                  {!login ? (<Registration color="primary" text="Registration"/>) : (
+                  {!login ? (<Registration color="primary" text={t('form.registration')}/>) : (
                     <Button className="btn btn-default btn-reg" onClick={(e)=>logOut(e)}>
                       <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
                         <g>
