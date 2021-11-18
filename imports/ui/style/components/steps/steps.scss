@@ -146,8 +146,8 @@
         line-height: 30px;
         color: rgba(255,255,255,0.75);
         font-family: 'Intro', sans-serif;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
         @media only screen and (max-width: $responsive-size-mobile) {
             padding: 20px 0;
         }
