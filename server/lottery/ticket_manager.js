@@ -19,7 +19,7 @@ class Ticket_manager {
     }
 
     async _check(ticker) {
-        if(this.trx.amount < 5 * Math.pow(10, this.trx.precision))
+        if(this.trx.amount < 5 * Math.pow(10, this.trx.precision)) throw new Meteor.Error('error.lottery', 'notification.trx');
         if(!this.lottery) throw new Meteor.Error('error.lottery', 'notification.balance');
         if((ticker.price * Math.pow(10, this.balance.precision)) > this.balance.amount) throw new Meteor.Error('error.balance', 'notification.balance');
     }
