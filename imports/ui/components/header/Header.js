@@ -25,7 +25,7 @@ const Header = () => {
   const [isShown, setIsShown] = useState(false);
 
   const toggleNav = () => setIsShown(!isShown);
-
+  console.log(isShown);
   const {t, i18n} = useTranslation();
 
   return (
@@ -88,7 +88,7 @@ const Header = () => {
               </a>
             </div>
             <div className="holder-nav">
-              <Navigation />
+              <Navigation mobi={false} isShown={isShown} setIsShown={setIsShown} />
               <div className="btn-header">
                   <div className="mob-hide login-hide">
                     {!login ? (<Login/>) : (
@@ -124,7 +124,7 @@ const Header = () => {
                     <ProfileBtn />
                   )}
                 </div>
-                <Navigation />
+                <Navigation mobi={true} isShown={isShown} setIsShown={setIsShown} />
                 <div className="btn-header">
                   {!login ? (<Registration color="primary" text={t('form.registration')}/>) : (
                     <Button className="btn btn-default btn-reg" onClick={(e)=>logOut(e)}>

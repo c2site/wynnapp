@@ -3,32 +3,34 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 import {useTracker} from "meteor/react-meteor-data";
 
-const Navigation = () => {
+const Navigation = ({mobi, isShown, setIsShown}) => {
   const {t, i18n} = useTranslation();
 
   const login = useTracker(()=>Meteor.user(), []);
+  const nav = [
+    {href: FlowRouter.path('/'), title:t('nav.home'), name: 'home'},
+    {href: FlowRouter.path('info'), title:t('nav.info'), name: 'info'},
+    {href: FlowRouter.path('buy'), title:t('nav.lottery'), name: 'buy'},
+    {href: FlowRouter.path('history'), title:t('nav.history'), name: 'history'},
+  ]
+  if(login) {
+    nav.push({
+      href: FlowRouter.path('profile'), title:t('header.profile'), name: 'profile'
+    })
+  }
+
+  console.log(isShown)
+  const go = (name)=>{
+    if(mobi) setIsShown(!isShown);
+    FlowRouter.go(name);
+  }
+
   return (
     <>
           <ul className="nav">
-            <li>
-              <a href={FlowRouter.path('/')}
-              >{t('nav.home')}</a></li>
-            <li><a href={FlowRouter.path('info')}>{t('nav.info')}</a></li>
-            <li>
-              <a href={FlowRouter.path('buy')}
-            >{t('nav.lottery')}</a></li>
-            <li>
-              <a href={FlowRouter.path('history')}
-              >{t('nav.history')}</a></li>
-            {login ? (
-                <li>
-                  <a href={FlowRouter.path('profile')}
-                  >{t('header.profile')}</a></li>
-            ): (<></>)}
-
-            {/*<li><a href={FlowRouter.path('swap')}>{t('nav.buy-wynn')}</a></li>*/}
-            {/*<li><a href="#">{t('nav.option')}</a></li>*/}
-            {/*<li><a href="#">{t('nav.contact')}</a></li>*/}
+            {nav.map(n=>(
+                <li key={n.name}><a  onClick={()=>go(n.name)} href={n.href}>{n.title}</a></li>
+            ))}
           </ul>
     </>
   );

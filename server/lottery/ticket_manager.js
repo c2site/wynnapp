@@ -99,9 +99,11 @@ class Ticket_manager {
 
         ticker.price = Number(this._getPrice(numbers).toFixed(2));
         await this._check(ticker);
-        await this._addedRating(ticker);
+
 
         await this._send(ticker);
+
+        await this._addedRating(ticker);
 
         const tickets = new Ticket(ticker);
         tickets.save();
