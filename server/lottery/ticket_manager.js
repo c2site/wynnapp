@@ -20,14 +20,14 @@ class Ticket_manager {
 
     async _check(ticker) {
         if(this.trx.amount < 5 * Math.pow(10, this.trx.precision))
-        if(!this.lottery) throw new Meteor.Error('error.lottery', 'Need more balance');;
-        if((ticker.price * Math.pow(10, this.balance.precision)) > this.balance.amount) throw new Meteor.Error('error.balance', 'Need balance');
+        if(!this.lottery) throw new Meteor.Error('error.lottery', 'notification.balance');
+        if((ticker.price * Math.pow(10, this.balance.precision)) > this.balance.amount) throw new Meteor.Error('error.balance', 'notification.balance');
     }
 
     _getPrice(numbersCount) {
         const price = Price.findOne({assetName: this.assetName});
         const res = price.prices[`price${numbersCount.length}`];
-        if(!res) throw new Meteor.Error('error.ticket.numbers', 'Need more numbers');
+        if(!res) throw new Meteor.Error('error.ticket.numbers', 'notification.numbers');
         return res;
     }
 
@@ -86,7 +86,7 @@ class Ticket_manager {
 
     async buy (numbers) {
         const lottery = Lottery.findOne({status: LotteryStatus.WAIT});
-        if(lottery) throw new Meteor.Error('find.game', 'Now wait new block, please wait');
+        if(lottery) throw new Meteor.Error('find.game', 'notification.blocks');
         const ticker = {
             userId: this.userId,
             user: {name: this.user?.profile?.name || this.balance.address},

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Meteor} from "meteor/meteor";
 import Navigation from '/imports/ui/components/header/components/Navigation';
 import Login from  '/imports/ui/components/header/components/Login';
 import Registration from "./components/Registration";
@@ -10,12 +11,15 @@ import ProfileBtn from "./components/profileBtn";
 import ChangeLang from "./components/ChangeLang";
 
 
-const Header = () => {
-  const login = useTracker(()=>Meteor.user(), []);
 
-  const logout = (e) => {
-    e.preventDefault();
-    Meteor.logout()
+const Header = () => {
+  const login = useTracker(()=>Meteor.users.findOne(), []);
+
+  const logout = () => {
+
+    Meteor.logout(() => {
+      FlowRouter.go('home')
+    });
   }
 
   const [isShown, setIsShown] = useState(false);
@@ -91,8 +95,8 @@ const Header = () => {
                       <ProfileBtn />
                     )}
                   </div>
-                {!login ? (<div className="mob-hide"><Registration color="primary" text="Registration"/></div>) : (
-                  <Button className="btn btn-default" onClick={(e)=>logout(e)}>
+                {!login ? (<div className="mob-hide"><Registration color="primary" text={t('form.registration')}/></div>) : (
+                  <Button className="btn btn-default" onClick={logout}>
                     <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
                       <g>
                         <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8
@@ -122,8 +126,8 @@ const Header = () => {
                 </div>
                 <Navigation />
                 <div className="btn-header">
-                  {!login ? (<Registration color="primary" text="Registration"/>) : (
-                    <Button className="btn btn-default btn-reg" onClick={logout}>
+                  {!login ? (<Registration color="primary" text={t('form.registration')}/>) : (
+                    <Button className="btn btn-default btn-reg" onClick={(e)=>logOut(e)}>
                       <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
                         <g>
                           <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8

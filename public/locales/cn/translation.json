@@ -65,7 +65,7 @@
     "code": "2fa代码"
   },
   "banner": {
-    "wp": "White Paper",
+    "wp": "白皮书",
     "title": "新加密货币游戏",
     "sub_title": "成为赢家",
     "started": "现在开始",
@@ -302,9 +302,19 @@
     "title3": "选择硬币",
     "remainder": "剩余"
   },
-  "active": "active",
+  "active": "活跃",
   "notification": {
-
+    "amount": "Error amount CH",
+    "balance": "需要余额",
+    "numbers": "Need more numbers CH",
+    "blocks": "Now wait new block, please wait CH",
+    "wait": "One transaction 60 seconds CH",
+    "trx": "你需要5个TRX",
+    "handleError": "Something went wrong. Please check your credentials. CH",
+    "token": "Invalid token CH",
+    "emailToken": "Token has invalid email address CH",
+    "emailError": "Invalid email CH",
+    "copy": "复制钱包地址"
   },
   "rating": {
     "text": "在 Wynn Games 平台上使用原生 Wynn 代幣為用戶提供了參與 VIP 級用戶忠誠度計劃的機會，該計劃為購買門票或合約提供動態增長的折扣（從 1.1% 到 10.1%）。",

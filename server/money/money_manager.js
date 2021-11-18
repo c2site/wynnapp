@@ -3,6 +3,7 @@ import {Transaction, TransactionType} from "../../imports/api/mongo/transactions
 import {Coin} from "../../imports/api/mongo/coins";
 import TronSend from "../tron/send";
 
+
 export class Money_manager {
     constructor(userId, name) {
         this.userId = userId;
@@ -23,9 +24,9 @@ export class Money_manager {
     }
 
     _check(amount) {
-        if(this.money.amount < amount) throw new Meteor.Error('error_balance', 'Amount > Balance');
+        if(this.money.amount < amount) throw new Meteor.Error('error_balance','notification.amount');
         if(!Meteor.isDevelopment) {
-            if(Transaction.findOne({sender: this.address, createdAt: {$gte: new Date( Date.now()- (1000 * 60) ) }})) throw new Meteor.Error('error.timer', 'One transaction 60 seconds');
+            if(Transaction.findOne({sender: this.address, createdAt: {$gte: new Date( Date.now()- (1000 * 60) ) }})) throw new Meteor.Error('error.timer', 'notification.wait');
         }
 
     }

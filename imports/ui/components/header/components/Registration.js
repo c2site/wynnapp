@@ -46,7 +46,7 @@ const Registration = (props) => {
       profile: { invite: invite },
     }, (err) => {
       if (err) {
-        toast.error(err.reason);
+        toast.error(t(err.reason));
       } else {
         toggle();
       }

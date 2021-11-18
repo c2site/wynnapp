@@ -4,7 +4,7 @@ import { useTracker } from 'meteor/react-meteor-data'
 import NextDraw from "../../components/banner/components/NextDraw";
 import {useSubscribe} from "../../../api/hooks";
 import {Ticket} from "../../../api/mongo/ticket";
-import {Notify, RandomNumber} from "../../utils";
+import {cookies, Notify, RandomNumber} from "../../utils";
 import {Money} from "../../../api/mongo/money";
 import {Price} from "../../../api/mongo/price";
 import { toast } from 'react-toastify';
@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 const BuyPage = () => {
   const {t, i18n} = useTranslation();
-  const login = useTracker(()=>Meteor.userId(), []);
+  const login = useTracker(()=>Meteor.user(), []);
 
   const [skip, setSkip] = useState(5);
   useSubscribe('user.money');
@@ -24,7 +24,7 @@ const BuyPage = () => {
   const money = useTracker(()=>Money.find({userId: Meteor.userId()}).fetch(), []);
   const list = useTracker(()=> Ticket.find({}).fetch(), []);
   const [selected, setSelected] = useState([]);
-  const [coinName, setCoinName] = useState('wynn');
+  const [coinName, setCoinName] = useState(login?.settings?.dmoney || 'wynn');
   const [price, setPrice] = useState(0);
   const [wait, setWait] = useState(false);
 
@@ -83,7 +83,7 @@ const BuyPage = () => {
     setWait(true);
     Meteor.call('buy', selected, coinName, (err)=> {
       if(err) {
-        toast.error(err.reason)
+        toast.error(t(err.reason))
         setWait(false);
       } else {
         setSelected([])
@@ -96,6 +96,7 @@ const BuyPage = () => {
 
   const ChangeWallet = (e)=> {
     setCoinName(e.currentTarget.value)
+    Meteor.call('user.setMoney', e.currentTarget.value);
   }
 
 
@@ -197,7 +198,7 @@ const BuyPage = () => {
                       <h3>{t('buy.balance')}</h3>
                       <div className="balance-info">
                         <div className="form-control item">
-                          <select value={coinName} defaultValue={coinName}  onChange={(e)=>ChangeWallet(e)}>
+                          <select value={coinName} selectedValue={coinName}  onChange={(e)=>ChangeWallet(e)}>
                             {!login ? (
                                 <option value='0'>WYNN 0</option>
                             ) : (

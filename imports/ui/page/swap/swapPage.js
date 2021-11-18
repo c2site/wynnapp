@@ -26,7 +26,7 @@ const SwapPage = () => {
         console.log('methods')
         Meteor.call('swap', {amount, asset}, (err) => {
             if(err) {
-                toast.error(err.reason);
+                toast.error(t(err.reason));
             } else {
                 toast.success(`You swap ${amount} WYNN. Wait transactions`);
             }

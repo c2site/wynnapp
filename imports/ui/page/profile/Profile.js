@@ -54,7 +54,7 @@ const Profile = () => {
 
     Meteor.call('user.disable2fa', token, (e) => {
       if (e) {
-        toast.error(e.reason);
+        toast.error(t(e.reason));
       } else {
         setOpen(false);
       }
@@ -65,7 +65,7 @@ const Profile = () => {
   useEffect(()=> {
     Meteor.call('user.invites', (err, res)=> {
       if(err) {
-        console.error(err.reason);
+        console.error(t(err.reason));
       } else {
         setInvite(res);
       }
@@ -176,7 +176,7 @@ const Profile = () => {
             <form action="#" className="form-copy">
               <div className="input-box">
                 <input type="text" disabled value={addr?.address} name="" id="" />
-                <CopyToClipboard text={addr?.address} onCopy={() => toast.success('Copy wallet address')}>
+                <CopyToClipboard text={addr?.address} onCopy={() => toast.success(t('notification.copy'))}>
                     <span className="copy">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path

@@ -23,7 +23,7 @@ export const Money = Class.create({
     },
     helpers: {
         value() {
-            return (this.amount / Math.pow(10, this.precision)).toFixed(this.precision);
+            return (this.amount / Math.pow(10, this.precision));
         }
     }
 });

@@ -9,7 +9,7 @@ const bcryptHash = Meteor.wrapAsync(bcrypt.hash);
 const hashPassword = password => bcryptHash(password, Accounts._bcryptRounds());
 
 const handleError = () => {
-  throw new Meteor.Error(403, 'Something went wrong. Please check your credentials.');
+  throw new Meteor.Error(403, 'notification.handleError');
 };
 
 Accounts.registerLoginHandler('two-factor-reset', function (options) {
@@ -57,7 +57,7 @@ Accounts.registerLoginHandler('two-factor-reset', function (options) {
   if (!(user.emails.map(x => x.address).includes(email))) {
     return {
       userId: user._id,
-      error: new Meteor.Error(403, 'Token has invalid email address')
+      error: new Meteor.Error(403, 'notification.emailToken')
     };
   }
 
@@ -80,7 +80,7 @@ Accounts.registerLoginHandler('two-factor-reset', function (options) {
     if (affectedRecords !== 1)
       return {
         userId: user._id,
-        error: new Meteor.Error(403, 'Invalid email')
+        error: new Meteor.Error(403, 'notification.emailError')
       };
   } catch (err) {
     resetToOldToken();

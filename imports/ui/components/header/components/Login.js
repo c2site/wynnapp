@@ -31,7 +31,7 @@ const Login = () => {
           if (err.error === 'two-factor-required') {
             setShow(true);
           } else {
-            toast.error(err.reason);
+            toast.error(t(err.reason));
           }
         } else {
           toggle();

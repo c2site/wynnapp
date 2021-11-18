@@ -1,0 +1,55 @@
+import React, {useState} from "react";
+
+import { Dropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
+import i18n from "i18next";
+import {toast} from "react-toastify";
+import {useCurrentUser, useSubscribe} from "/imports/api/hooks";
+
+const langs = [
+  { value: 'cn', label: 'Chine' },
+  { value: 'en', label: 'English' },
+];
+
+const ChangeLang = ({mobile}) => {
+    useSubscribe('user.one')
+    const [isOpen, setOpen] = useState(false);
+    const user = useCurrentUser()
+    const [locale, setLocale] = useState(user?.settings?.lang || i18n.language);
+    const toggle = () => setOpen((prevState) => !prevState);
+
+    const close = (lang) => {
+        i18n.changeLanguage(lang);
+        if(Meteor.loggingIn()) {
+            Meteor.call('user.locale', lang, (err)=> {
+                toast.error(err.reason);
+            })
+        }
+
+        setLocale(i18n.language)
+        setOpen(!isOpen);
+        toggle()
+    };
+
+
+
+    return (
+
+        <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
+            <DropdownToggle mobile={mobile} tag={'a'}  className="btn btn-default btn btn-secondary" data-toggle="dropdown" aria-expanded={isOpen}>
+                <img src={`/img/flag-${locale}.png`} alt="" />
+                <span>{locale}</span>
+            </DropdownToggle>
+            <DropdownMenu>
+                {langs.map((lan) => (
+                    <DropdownItem key={lan.value} onClick={() => close(lan.value)}>
+                        <img src={`/img/flag-${lan.value}.png`} alt="" />
+                        {lan.label}
+                    </DropdownItem>
+                ))}
+            </DropdownMenu>
+        </Dropdown>
+    );
+}
+
+export default ChangeLang;
+
