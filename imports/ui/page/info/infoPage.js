@@ -2,7 +2,6 @@ import React from "react";
 import InfoBox from "./components/infoBox";
 import Tokenomics from "./components/tokenomics";
 import Roadmap from "./components/roadmap";
-import Team from "./components/team";
 import { useTranslation } from "react-i18next";
 
 const InfoPage = () => {

@@ -453,6 +453,9 @@
         background: #fff;
         display: block;
         content: '';
+        @media only screen and (max-width: $responsive-size-mobile) {
+            display: none;
+        }
     }
     &:after {
         position: absolute;
