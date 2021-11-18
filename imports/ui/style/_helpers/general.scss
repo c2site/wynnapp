@@ -382,9 +382,6 @@ h1.black,h2.black,h3.black,h4.black,h5.black,h6.black {
 }
 .mob-show-status {
   display: none !important;
-  @media only screen and (max-width: $responsive-size-big-tablet) {
-    display: flex !important;
-  }
 }
 .mob-hide {
   display: block !important;
