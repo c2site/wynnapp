@@ -38,8 +38,8 @@ const roadmap = () => {
             {t('info.roadmap.planning')}
           </span>
         </div>
-        <div className="row roadmap-list">
-          <div className="col-lg-3">
+        <div className="roadmap-list">
+          <div className="item-holder">
             <div className="item">
               <div className="head">
                 <span>{t('info.roadmap.list1.name')}</span>
@@ -98,7 +98,7 @@ const roadmap = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="item-holder">
             <div className="item">
               <div className="head">
                 <span>{t('info.roadmap.list2.name')}</span>
@@ -169,7 +169,7 @@ const roadmap = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="item-holder">
             <div className="item">
               <div className="head">
                 <span>{t('info.roadmap.list3.name')}</span>
@@ -252,7 +252,7 @@ const roadmap = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="item-holder">
             <div className="item">
               <div className="head">
                 <span>{t('info.roadmap.list4.name')}</span>
@@ -299,7 +299,7 @@ const roadmap = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="item-holder">
             <div className="item">
               <div className="head">
                 <span>{t('info.roadmap.list5.name')}</span>

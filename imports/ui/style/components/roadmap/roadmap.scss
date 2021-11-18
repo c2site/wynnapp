@@ -36,7 +36,7 @@
     .roadmap-list {
         .item {
             background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
-            box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
+            //box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             overflow: hidden;
             margin-top: 20px;
@@ -55,11 +55,26 @@
                 align-items: center;
             }
             .body {
-                padding: 40px 29px;
+                padding: 30px 35px 10px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                max-height: 260px;
+                @media only screen and (max-width: $responsive-size-big-tablet) {
+                    max-height: initial;
+                }
                 .box {
-                    border-top: 1px solid rgba(255, 255, 255, 0.1);
-                    padding: 20px 0;
+                    //border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    padding: 0 0 20px;
                     display: flex;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #FFFFFF;
+                    width: 50%;
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        width: 100%;
+                    }
                     &:first-child {
                         border: none;
                     }

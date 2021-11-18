@@ -440,6 +440,7 @@
     padding: 140px 0;
     background: #fff;
     position: relative;
+    overflow-x: clip;
     @media only screen and (max-width: $responsive-size-mobile) {
         margin: 0 -15px;
     }
