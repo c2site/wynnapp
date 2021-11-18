@@ -27,6 +27,10 @@
     "rust": "wynn rust"
   },
   "form": {
+    "title_login": "Login to your account",
+    "remember": "Remember me",
+    "terms": "I agree the Terms&Conditions",
+    "create": "Create new accounte",
     "login": "Login",
     "email": "Email",
     "password": "Password",

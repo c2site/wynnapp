@@ -10,6 +10,140 @@
     @media only screen and (max-width: $responsive-size-big-tablet) {
       min-width: 95%;
     }
+    &.modal-login {
+      min-width: initial;
+      max-width: 650px;
+      width: 100%;
+      padding: 40px;
+      @media only screen and (max-width: $responsive-size-big-tablet) {
+        min-width: initial;
+      }
+      .modal-header {
+        margin-bottom: 60px;
+        justify-content: center;
+        h5 {
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+          text-transform: uppercase;
+          color: #1E2632;
+          text-align: center;
+        }
+      }
+      .btn-box {
+        justify-content: space-between;
+      }
+      .login-btn {
+        width: 60%;
+      }
+      .modal-body {
+        label {
+          padding-left: 20px;
+          margin-bottom: 8px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 16px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: #818181;
+        }
+      }
+      input:not([type="submit"]) {
+        border-radius: 50px;
+        padding: 20px 50px;
+
+      }
+      .btn-links {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #39414B;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+      .remember-box {
+        overflow: hidden;
+        position: relative;
+        padding-left: 20px;
+        margin-top: 20px;
+        input {
+          width: 0;
+          height: 0;
+          opacity: 0;
+          position: absolute;
+          + label {
+            padding-left: 35px;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #39414B;
+            position: relative;
+            display: block;
+            &:after {
+              width: 18px;
+              height: 18px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              content: "";
+              border: 2px solid rgba(57, 65, 75, 1);
+              border-radius: 4px;
+            }
+            &:before {
+              width: 12px;
+              height: 12px;
+              position: absolute;
+              top: 3px;
+              left: 3px;
+              display: none;
+              content: "";
+              background: rgba(57, 65, 75, 1);
+              border-radius: 4px;
+            }
+          }
+          &:checked {
+            + label {
+              &:before {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .holder-input {
+        position: relative;
+        .ico {
+          display: flex;
+          position: absolute;
+          top: 0;
+          left: 20px;
+          height: 100%;
+          align-items: center;
+          svg {
+            display: block;
+          }
+        }
+        .show-pass {
+          display: flex;
+          position: absolute;
+          top: 0;
+          right: 20px;
+          height: 100%;
+          align-items: center;
+          svg {
+            display: block;
+          }
+        }
+      }
+    }
     &.modal-black {
       background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
       .modal-header {
