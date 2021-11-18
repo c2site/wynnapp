@@ -1,6 +1,6 @@
 @import "../../_helpers/variables";
 footer {
-  padding: 15px 0 15px;
+  padding: 15px 0 0;
   margin-top: auto;
   background: #212129;
   position: relative;
@@ -29,13 +29,19 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    width: 65%;
+    width: 70%;
+    @media only screen and (max-width: $responsive-size-stand-mobile) {
+      margin-top: 10px;
+    }
   }
   .footer-nav nav {
     display: inline-block;
     vertical-align: top;
     font-size: 1rem;
-    width: 33%;
+    width: 25%;
+    &:last-child {
+      width: 30%;
+    }
     @media only screen and (max-width: $responsive-size-stand-mobile) {
       width:100%;
     }
@@ -55,7 +61,7 @@ footer {
     text-transform: uppercase;
   }
   .footer-logo {
-    width: 35%;
+    width: 30%;
     @media only screen and (max-width: $responsive-size-stand-mobile) {
       width:100%;
     }
@@ -70,6 +76,9 @@ footer {
     color: #E8C76F;
     display: block;
     padding-top: 25px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      padding-top: 5px;
+    }
   }
   .logo-desc {
     font-style: normal;
@@ -80,19 +89,55 @@ footer {
     color: #FFFFFF;
     padding-top: 5px;
   }
+
+  .lang-drop a{
+    display: flex;
+    line-height: 15px;
+  }
+
+  .lang-drop a span{
+    font-weight: initial;
+    font-size: 16px;
+    text-transform: initial;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
+  .lang-drop a img{
+    border-radius: 50px;
+  }
+
   .footer-copyright {
     display: flex;
     border-top: 1px solid rgba(219, 219, 219, 0.2);
   }
+
+  .footer-copyright .container{
+    padding: 10px 130px;
+    @media only screen and (max-width: $responsive-size-big-tablet) {
+      flex-direction: column;
+      padding: 10px 10px;
+    }
+  }
+
+  .sub-footer{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
   .copyright {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 42px;
     color: #FFFFFF;
-    padding-left: 130px;
     width: 50%;
-    padding-top: 15px;
     @media only screen and (max-width: $responsive-size-big-tablet) {
-      padding-left: 10px;
+      width: 100%;
+      text-align: center;
     }
     p {
       margin: 0;
@@ -159,11 +204,10 @@ footer {
   .info {
     display: flex;
     align-items: center;
-    padding-top: 10px;
     @media only screen and (max-width: $responsive-size-stand-mobile) {
-      flex-direction: column;
+      flex-direction: inherit;
       align-items: flex-start;
-      padding-left: 50px;
+      width: 100%;
       padding-top: 17px;
     }
     a {
@@ -179,10 +223,7 @@ footer {
         font-weight: 500;
         font-size: 12px;
         line-height: 16px;
-        margin-right: 0;
-        &:first-child {
-          margin-top: 0;
-        }
+        margin: 0 auto;
       }
       svg {
         display: block;
