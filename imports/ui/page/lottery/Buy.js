@@ -24,13 +24,12 @@ const BuyPage = () => {
   const money = useTracker(()=>Money.find({userId: Meteor.userId()}).fetch(), []);
   const list = useTracker(()=> Ticket.find({}).fetch(), []);
   const [selected, setSelected] = useState([]);
-  const [coinName, setCoinName] = useState(login?.settings?.dmoney || 'wynn');
   const [price, setPrice] = useState(0);
   const [wait, setWait] = useState(false);
 
   console.log(list);
-  const pool = useTracker(()=>Money.find({coins: coinName ,type: 'game', userId: {$in: ['game_4', 'game_3']}}).fetch(),[coinName]);
-  const prices = useTracker(()=>Price.findOne({assetName: coinName}), [coinName]);
+  const pool = useTracker(()=>Money.find({coins: login?.settings?.dmoney || 'wynn' ,type: 'game', userId: {$in: ['game_4', 'game_3']}}).fetch(),[login]);
+  const prices = useTracker(()=>Price.findOne({assetName: login?.settings?.dmoney || 'wynn'}), [login]);
   const numbers = [];
   for(let i = 1; i <= 36; i++) {
     numbers.push(i)
@@ -75,13 +74,13 @@ const BuyPage = () => {
     } else {
       setPrice(prices.prices[`price${selected.length}`].toFixed(2));
     }
-  }, [selected, coinName])
+  }, [selected, login])
 
 
   const buy = (e) => {
     e.preventDefault();
     setWait(true);
-    Meteor.call('buy', selected, coinName, (err)=> {
+    Meteor.call('buy', selected, login?.settings?.dmoney, (err)=> {
       if(err) {
         toast.error(t(err.reason))
         setWait(false);
@@ -95,7 +94,6 @@ const BuyPage = () => {
   }
 
   const ChangeWallet = (e)=> {
-    setCoinName(e.currentTarget.value)
     Meteor.call('user.setMoney', e.currentTarget.value);
   }
 
@@ -118,7 +116,7 @@ const BuyPage = () => {
           </div>
           <h2 className="title-page">{t('buy.title')}</h2>
           <h3 className="mb45">{t('nav.lottery')} 5/36</h3>
-          <NextDraw button={false} coins={coinName}/>
+          <NextDraw button={false} coins={!login ? 'wynn' : login?.settings?.dmoney}/>
           <div className="row">
             <div className="col-lg-8">
               <div>
@@ -184,7 +182,7 @@ const BuyPage = () => {
               {t('buy.select')} <span> {selected.length} / 9 </span>
             </span>
                       <span className="price">
-              {t('buy.price')} <span>{price} {coinName}</span>
+              {t('buy.price')} <span>{price} {!login ? 'wynn' : login?.settings?.dmoney}</span>
             </span>
                     </div>
                   </div>
@@ -198,15 +196,17 @@ const BuyPage = () => {
                       <h3>{t('buy.balance')}</h3>
                       <div className="balance-info">
                         <div className="form-control item">
-                          <select value={coinName} selectedValue={coinName}  onChange={(e)=>ChangeWallet(e)}>
                             {!login ? (
-                                <option value='0'>WYNN 0</option>
+                                <></>
                             ) : (
-                                money?.map(wallet=>(
-                                    <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
-                                ))
+                                <select value={login?.settings?.money} selectedValue={login?.settings?.money}  onChange={(e)=>ChangeWallet(e)}>
+                                  {
+                                    money?.map(wallet=>(
+                                        <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
+                                    ))
+                                  }
+                                </select>
                             )}
-                          </select>
                         </div>
                       </div>
                       {!login ? (<Registration color="black" text="buy ticket"/>) : (

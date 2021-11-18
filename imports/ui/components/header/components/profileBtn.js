@@ -12,12 +12,12 @@ import {cookies} from "../../../utils";
 const ProfileBtn = () => {
   const {t, i18n} = useTranslation();
     const loading = useSubscribe('user.money');
-    const balance = useTracker(()=> Money.find({userId: Meteor.userId()}).fetch(), []);
     const user = useTracker(()=>Meteor.user(), []);
+
+  const balance = useTracker(()=> Money.find({userId: Meteor.userId()}).fetch(), []);
     const [coinName, setCoinName] = useState(user?.settings?.dmoney || 'wynn');
 
   const ChangeWallet = (e)=> {
-    setCoinName(e.currentTarget.value)
     Meteor.call('user.setMoney', e.currentTarget.value);
   }
 

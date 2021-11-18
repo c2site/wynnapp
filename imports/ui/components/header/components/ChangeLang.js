@@ -1,31 +1,50 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import { Dropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import i18n from "i18next";
 import {toast} from "react-toastify";
 import {useCurrentUser, useSubscribe} from "/imports/api/hooks";
+import { useTracker } from "meteor/react-meteor-data";
+import {Meteor} from "meteor/meteor";
 
-const langs = [
-  { value: 'cn', label: 'China' },
-  { value: 'en', label: 'English' },
-];
+
+
 
 const ChangeLang = ({mobile}) => {
     useSubscribe('user.one')
     const [isOpen, setOpen] = useState(false);
-    const user = useCurrentUser()
-    const [locale, setLocale] = useState(user?.settings?.lang || i18n.language);
+    const locale = useTracker(()=>Meteor.user()?.settings?.lang || i18n.language);
     const toggle = () => setOpen((prevState) => !prevState);
+    const [value,setValue] = useState();
+    const langs = [
+        { value: 'cn', label: 'China' },
+        { value: 'en', label: 'English' },
+    ];
+    const val = (value) => {
+        for (let i = 0; i < langs.length; i++) {
+            if (langs[i]['value'] === value) {
+                return setValue(langs[i].label);
+            }
+        }
+        return setValue(-1);
+    }
+
+
+
+    useEffect(()=> {
+        val(locale)
+    }, [locale]);
+
 
     const close = (lang) => {
         i18n.changeLanguage(lang);
-        // if(Meteor.loggingIn()) {
-        //     Meteor.call('user.locale', lang, (err)=> {
-        //         toast.error(err.reason);
-        //     })
-        // }
+        if(Meteor.loggingIn()) {
+            Meteor.call('user.locale', lang, (err)=> {
+                toast.error(err.reason);
+            })
+        }
 
-        setLocale(i18n.language)
+        //setLocale(i18n.language)
         setOpen(!isOpen);
         toggle()
     };
@@ -34,9 +53,9 @@ const ChangeLang = ({mobile}) => {
 
     return (
         <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
-            <DropdownToggle mobile={mobile} tag={'a'} href="#" data-toggle="dropdown" aria-expanded={isOpen}>
+            <DropdownToggle mobile={mobile} tag={'a'} data-toggle="dropdown" aria-expanded={isOpen}>
                 <img src={`/img/flag-${locale}.png`} alt="" />
-                <span>{locale}</span>
+                <span>{value}</span>
             </DropdownToggle>
             <DropdownMenu>
                 {langs.map((lan) => (

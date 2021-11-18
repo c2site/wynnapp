@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import ChangeLang from "./components/ChangeLang";
 
 import settings from "../../../api/settings";
+import ChangeLang from "../header/components/ChangeLang";
 
 const Footer = () => {
 
@@ -119,7 +119,7 @@ const Footer = () => {
                   </ul>
                </nav>
                <div className="lang-drop dropdown">
-                  <ChangeLang/>
+                  <ChangeLang />
                </div>
             </div>
          </div>

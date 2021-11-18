@@ -19,6 +19,7 @@ import WynnRustPage from "./ui/page/wynnRust/wynnRustPage";
 import FreeCoinPage from "./ui/page/freeCoin/freeCoinPage";
 import InfoPage from "./ui/page/info/infoPage";
 import {Tracker} from "meteor/tracker";
+import ErrorPage from "./ui/page/404/404";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -44,8 +45,14 @@ function whileWaiting() {
 const title = (text) => `Wynn Games - ${text}`
 
 FlowRouter.globals.push({
-    title: 'Wynn Games'
+    title: 'Wynn Games',
 });
+FlowRouter.notFound = {
+    title: '404: Page not found',
+    action: function () {
+        mountMain(ErrorPage)
+    }
+};
 
 FlowRouter.triggers.enter([ () => { window.scrollTo(0, 0); } ]);
 

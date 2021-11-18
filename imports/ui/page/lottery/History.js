@@ -60,7 +60,7 @@ const History = () => {
                         </div>
                       </td>
                       {/*<td className='green'>24500 WYNN</td>*/}
-                      <td><span className="th-name">{t('hash.label')}</span><a href={` ${lot.hash}`}>{lot.hash}</a></td>
+                      <td><span className="th-name">{t('hash.label')}</span>{lot.hash}</td>
                       <td>
                         <div className="flex">
                           {/*<button className="btn btn-primary">check hash</button>*/}
