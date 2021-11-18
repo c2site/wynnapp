@@ -6,8 +6,8 @@ import {toast} from "react-toastify";
 import {useCurrentUser, useSubscribe} from "/imports/api/hooks";
 
 const langs = [
-  { value: 'cn', label: 'CN' },
-  { value: 'en', label: 'ENG' },
+  { value: 'cn', label: 'China' },
+  { value: 'en', label: 'English' },
 ];
 
 const ChangeLang = ({mobile}) => {
@@ -41,7 +41,8 @@ const ChangeLang = ({mobile}) => {
             <DropdownMenu>
                 {langs.map((lan) => (
                     <DropdownItem key={lan.value} onClick={() => close(lan.value)}>
-                        {lan.label}
+                        <img src={`/img/flag-${lan.value}.png`} alt="" />
+                        <span>{lan.label}</span>
                     </DropdownItem>
                 ))}
             </DropdownMenu>
