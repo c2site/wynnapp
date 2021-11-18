@@ -309,7 +309,17 @@
     "remainder": "Remainder"
   },
   "active": "active",
+  "disabled": "Disabled",
   "notification": {
+    "incorect": {
+      "email": "Incorrect email address",
+      "password": "Incorrect password",
+      "err": "Error password",
+      "code": "Invalid code",
+      "numbers": "Max 9 numbers",
+      "recoveryPass": "recovery.empty_input_password",
+      "recoveryPassMatch": "recovery.password_not_match"
+    },
     "amount": "The amount is greater than your current balance",
     "balance": "Need more balance",
     "numbers": "Need more numbers",
@@ -320,7 +330,11 @@
     "token": "Invalid token",
     "emailToken": "Token has invalid email address",
     "emailError": "Invalid email",
-    "copy": "Copy wallet address"
+    "copy": "Copy wallet address",
+    "copyUrl": "Copy invite url",
+    "checkEmail": "Check you email",
+    "twaActive": "Two-Factor has activated",
+    "passwordRecovery": "recovery.password_done"
   },
   "rating": {
     "text": "The use of the native Wynn token on the Wynn Games platform provides users the opportunity to participate in the loyalty program for VIP-level users, which offers a dynamically growing discount (from 1.1% to 10.1%) for the purchase of tickets or contracts.",

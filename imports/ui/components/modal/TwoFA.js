@@ -79,7 +79,7 @@ const TwoFA = () => {
   console.log(secret);
   return (
     <>
-      <Button className="btn-primary active-2fa" onClick={toggle2FA}>{user?.settings?.twoFa ? 'Disabled' : t('active')}</Button>
+      <Button className="btn-primary active-2fa" onClick={toggle2FA}>{user?.settings?.twoFa ? t('disabled') : t('active')}</Button>
       <Modal isOpen={!!secret} toggle={toggleSecret} className={'modal-app'}>
         <ModalHeader toggle={toggleSecret}>{t('2fa.title')}</ModalHeader>
         <ModalBody>
