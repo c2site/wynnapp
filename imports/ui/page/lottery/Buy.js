@@ -284,7 +284,7 @@ const BuyPage = () => {
                       </span>
                       </div>
                       <div className="body">
-                        <div className="number-list w-50 f-space-between">
+                        <div className="number-list w-50">
                           {tic?.numbers.map(x=>(
                               <span key={x} className="number"><span>{x}</span></span>
                           ))}

@@ -180,6 +180,38 @@
             margin: 0;
         }
     }
+    .error-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 41px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 20px 0;
+        img {
+            display: block;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 75px;
+            line-height: 94px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-bottom: 2px;
+        }
+        p {
+            margin: 0;
+        }
+        .btn {
+            margin-top: 40px;
+        }
+    }
 }
 .comming-page {
     padding: 20px 0;

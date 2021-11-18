@@ -13,7 +13,7 @@ const infoBox = () => {
             <p>{t('info.text2')}</p>
             <p>{t('info.text3')}</p>
             <p>{t('info.text4')}</p>
-            <a href="#" className="btn btn-primary">White Paper v.1.0.0</a>
+            <a href="#" className="btn btn-primary">{t('wp')} v.1.0.0</a>
           </div>
           <div className="col-lg-4 img">
             <img src="./img/img-info.svg" alt="" />
