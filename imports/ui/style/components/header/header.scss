@@ -458,106 +458,107 @@ header {
       }
     }
   }
-  .lang-drop {
+
+}
+.lang-drop {
+  display: flex;
+  margin-left: 12px;
+  & > a {
     display: flex;
-    margin-left: 12px;
-    & > a {
+    align-items: center;
+    transition: all linear 0.2s;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: 2px solid #37373E;
+    box-sizing: border-box;
+    border-radius: 29px;
+    padding: 15px 50px 15px 20px;
+    background: url("/img/arrow-drop.svg") no-repeat calc(100% - 22px) 50%;
+    @media only screen and (max-width : $responsive-size-big-mobile) {
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      justify-content: center;
+      background:none;
+    }
+    & > span {
+      @media only screen and (max-width : $responsive-size-big-mobile) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      margin-right: 4px;
+      @media only screen and (max-width : $responsive-size-big-mobile) {
+        margin-right: 0;
+      }
+    }
+  }
+  .dropdown-menu {
+    background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+    border-radius: 4px;
+    padding: 6px 4px;
+    left: initial !important;
+    right: 0;
+    transform: none !important;
+    top:calc(100% + 16px) !important;
+    border: none;
+    margin: 0;
+    @media only screen and (max-width : $responsive-size-big-mobile) {
+      min-width: initial !important;
+    }
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      display: block;
+      position: absolute;
+      z-index: 10;
+      border: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      margin-left: -10px;
+      right: 10px;
+      border-bottom: 10px solid #3E4550;
+      top: -10px;
+    }
+    .dropdown-item {
       display: flex;
       align-items: center;
-      transition: all linear 0.2s;
-
+      padding: 10px 0px 10px 25px;
+      border-radius: 25px;
       font-weight: bold;
       font-size: 16px;
       line-height: 20px;
       color: #FFFFFF;
-      border: 2px solid #37373E;
-      box-sizing: border-box;
-      border-radius: 29px;
-      padding: 15px 50px 15px 20px;
-      background: url("/img/arrow-drop.svg") no-repeat calc(100% - 22px) 50%;
+      border: 2px solid transparent;
+      transition: all linear 0.2s;
       @media only screen and (max-width : $responsive-size-big-mobile) {
-        padding: 10px;
-        width: 50px;
-        height: 50px;
-        justify-content: center;
-        background:none;
+        padding: 5px;
       }
-      & > span {
-        @media only screen and (max-width : $responsive-size-big-mobile) {
-          display: none;
-        }
-      }
-
       &:hover {
-        opacity: 0.8;
-        text-decoration: none;
+        background: none;
+        border: 2px solid #FFE58B;
       }
-
       img {
         display: block;
-        margin-right: 4px;
+        margin-right: 20px;
         @media only screen and (max-width : $responsive-size-big-mobile) {
           margin-right: 0;
         }
       }
-    }
-    .dropdown-menu {
-      background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
-      border-radius: 4px;
-      padding: 6px 4px;
-      left: initial !important;
-      right: 0;
-      transform: none !important;
-      top:calc(100% + 16px) !important;
-      border: none;
-      margin: 0;
-      @media only screen and (max-width : $responsive-size-big-mobile) {
-        min-width: initial !important;
-      }
-      &::after {
-        content: '';
-        width: 0;
-        height: 0;
-        display: block;
-        position: absolute;
-        z-index: 10;
-        border: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        margin-left: -10px;
-        right: 10px;
-        border-bottom: 10px solid #3E4550;
-        top: -10px;
-      }
-      .dropdown-item {
-        display: flex;
-        align-items: center;
-        padding: 10px 0px 10px 25px;
-        border-radius: 25px;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-        color: #FFFFFF;
-        border: 2px solid transparent;
-        transition: all linear 0.2s;
+      span {
         @media only screen and (max-width : $responsive-size-big-mobile) {
-          padding: 5px;
-        }
-        &:hover {
-          background: none;
-          border: 2px solid #FFE58B;
-        }
-        img {
-          display: block;
-          margin-right: 20px;
-          @media only screen and (max-width : $responsive-size-big-mobile) {
-            margin-right: 0;
-          }
-        }
-        span {
-          @media only screen and (max-width : $responsive-size-big-mobile) {
-            display: none;
-          }
+          display: none;
         }
       }
     }
