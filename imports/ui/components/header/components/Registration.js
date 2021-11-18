@@ -27,7 +27,7 @@ const Registration = (props) => {
       setModal(!modal)
     }
   };
-  const invite = cookies.get('invite');
+  const invite = useTracker(()=>cookies.get('invite'), []);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -54,6 +54,7 @@ const Registration = (props) => {
     });
   };
 
+
   return (
     <>
       <Button color={props.color} onClick={toggle}>
@@ -78,10 +79,11 @@ const Registration = (props) => {
                   </span>
               </div>
             </div>
-            <div className="input-box">
+            {!invite ? (<></>) : (
+                <div className="input-box">
               <Label for="">{t('form.ref')}</Label>
               <div className="holder-input">
-              <Input type="number"  value=""/>
+                <Input type="number"  value={invite}/>
                 <span className="ico">
                     <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15.67 9.12988C17.04 10.0599 18 11.3199 18 12.9999V15.9999H21C21.5523 15.9999 22 15.5522 22 14.9999V12.9999C22 10.8199 18.43 9.52988 15.67 9.12988Z" fill="#1E2632"/>
@@ -92,6 +94,7 @@ const Registration = (props) => {
                   </span>
               </div>
             </div>
+            )}
             <div className="input-box">
               <Label for="">{t('form.password')}</Label>
               <div className="holder-input">
@@ -126,7 +129,7 @@ const Registration = (props) => {
             </div>
             <div className="flex f-space-between f-align-center">
               <div className="remember-box">
-                <input type="checkbox" id="terms" />
+                <input type="checkbox" id="terms" defaultChecked={true}/>
                 <label htmlFor="terms">{t('form.terms')}</label>
               </div>
             </div>
