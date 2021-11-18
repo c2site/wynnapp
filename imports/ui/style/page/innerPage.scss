@@ -3,6 +3,7 @@
 .inner-page {
     position: relative;
     padding-bottom: 50px;
+    overflow: hidden;
     &:after {
         z-index: 1;
         position: absolute;

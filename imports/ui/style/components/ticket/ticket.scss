@@ -444,6 +444,7 @@
     @media only screen and (max-width: $responsive-size-mobile) {
         margin: 0 -15px;
     }
+<<<<<<< Updated upstream
     &:before {
         position: absolute;
         top: 0;
@@ -457,6 +458,9 @@
             display: none;
         }
     }
+=======
+
+>>>>>>> Stashed changes
     &:after {
         position: absolute;
         bottom: -108px;

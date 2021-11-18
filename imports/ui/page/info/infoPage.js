@@ -8,8 +8,7 @@ const InfoPage = () => {
   const {t, i18n} = useTranslation();
         return (
             <div className="inner-page">
-                <div className="container">
-                    <div className="head-page">
+                  <div className="container head-page">
                         <div className="breadcrumbs">
                             <a href="#">{t('nav.home')}</a>
                             <span className="separator">
@@ -18,8 +17,8 @@ const InfoPage = () => {
                             <a href="#">{t('nav.info')}</a>
                         </div>
                     </div>
-                    <InfoBox/>
-                    <Tokenomics/>
+                  <InfoBox/>
+                  <Tokenomics/>
                   <div className="distribution-box">
                     <div className="container">
                       <div className="head-box">
@@ -79,7 +78,6 @@ const InfoPage = () => {
                   </div>
                   <Roadmap/>
                   {/*<Team/>*/}
-                </div>
             </div>
         )
 }
