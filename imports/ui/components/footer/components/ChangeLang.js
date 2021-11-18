@@ -34,20 +34,20 @@ const ChangeLang = ({mobile}) => {
 
     return (
 
-        <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
-            <DropdownToggle mobile={mobile} tag={'a'}  className="btn btn-default btn btn-secondary" data-toggle="dropdown" aria-expanded={isOpen}>
-                <img src={`/img/flag-${locale}.png`} alt="" />
-                <span>{locale}</span>
-            </DropdownToggle>
-            <DropdownMenu>
-                {langs.map((lan) => (
-                    <DropdownItem key={lan.value} onClick={() => close(lan.value)}>
-                        <img src={`/img/flag-${lan.value}.png`} alt="" />
-                        {lan.label}
-                    </DropdownItem>
-                ))}
-            </DropdownMenu>
-        </Dropdown>
+      <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
+        <DropdownToggle mobile={mobile} tag={'a'} data-toggle="dropdown" aria-expanded={isOpen}>
+          <img src={`/img/flag-${locale}.png`} alt="" />
+          <span>{locale}</span>
+        </DropdownToggle>
+        <DropdownMenu>
+          {langs.map((lan) => (
+            <DropdownItem key={lan.value} onClick={() => close(lan.value)}>
+              <img src={`/img/flag-${lan.value}.png`} alt="" />
+              <span>{lan.label}</span>
+            </DropdownItem>
+          ))}
+        </DropdownMenu>
+      </Dropdown>
     );
 }
 
