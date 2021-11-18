@@ -2,6 +2,8 @@ import { Meteor } from 'meteor/meteor';
 import {Accounts} from "meteor/accounts-base";
 // import './money/init';
 
+Accounts._defaultPublishFields.projection = { settings: 1, ...Accounts._defaultPublishFields.projection };
+
 import './emails/mail';
 
 import './lottery/publish';
