@@ -17,7 +17,7 @@ const ChangeLang = ({mobile}) => {
     const toggle = () => setOpen((prevState) => !prevState);
     const [value,setValue] = useState();
     const langs = [
-        { value: 'cn', label: 'China' },
+        { value: 'cn', label: '中文' },
         { value: 'en', label: 'English' },
     ];
     const val = (value) => {

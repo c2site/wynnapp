@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import settings from "../../../api/settings";
 import ChangeLang from "../header/components/ChangeLang";
 
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+
 const Footer = () => {
 
    const {t, i18n} = useTranslation();
@@ -32,7 +34,7 @@ const Footer = () => {
                   <ul>
                      <li><a href={`https://www.wynn-games.com/wp/White_Paper_${i18n.language}.pdf`} target={'_blank'} >{t('banner.wp')} V1.0.0</a></li>
                      <li><a href="#">Knowledge base</a></li>
-                     <li><a href="#">About</a></li>
+                     <li><a href={FlowRouter.path('info')}>About</a></li>
                   </ul>
                </nav>
                <nav role="navigation">
@@ -133,7 +135,7 @@ const Footer = () => {
                   </p>
                </div>
                <div className="info">
-                  <a href="#">
+                  <a href={'/Terms.pdf'} target={'_blank'}>
                   Terms & conditions
                   </a>
                   <a href={'/Privacy_Policy.pdf'} target={'_blank'}>
