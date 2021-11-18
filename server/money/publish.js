@@ -1,3 +1,4 @@
+import {Meteor} from "meteor/meteor";
 import {Addr, Money} from "../../imports/api/mongo/money";
 import {Transaction} from "../../imports/api/mongo/transactions";
 import {Coin} from "../../imports/api/mongo/coins";
@@ -27,10 +28,12 @@ Meteor.publish('coin', function () {
 
 Meteor.publish('user.transactions', function () {
     if (!this.userId) this.ready();
-    const address = Addr.findOne({userId: this.userId})?.address;
-    console.log(address);
-    return Transaction.find({"$or": [
-            {recipient: address},
-            {sender: address}
-        ]}, {sort: {createdAt: -1}});
+
+    const address = Addr.findOne({userId: this.userId});
+    return Transaction.find({
+        $or: [
+            {recipient: address.address || ''},
+            {sender: address.address || ''}
+        ]
+    }, {sort: {createdAt: -1}, limit: 100});
 })

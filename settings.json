@@ -1,4 +1,13 @@
 {
+  "public": {
+    "url": {
+      "telegram": "telegram",
+      "twitter": "twitter",
+      "medium": "medium",
+      "btt": "btt",
+      "coingeco": "coingeco"
+    }
+  },
   "private": {
     "name": "WYNN Games",
     "emails": {
