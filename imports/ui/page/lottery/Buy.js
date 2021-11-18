@@ -196,15 +196,17 @@ const BuyPage = () => {
                       <h3>{t('buy.balance')}</h3>
                       <div className="balance-info">
                         <div className="form-control item">
-                          <select value={login?.settings?.money} selectedValue={login?.settings?.money}  onChange={(e)=>ChangeWallet(e)}>
                             {!login ? (
-                                <option value='0'>WYNN 0</option>
+                                <></>
                             ) : (
-                                money?.map(wallet=>(
-                                    <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
-                                ))
+                                <select value={login?.settings?.money} selectedValue={login?.settings?.money}  onChange={(e)=>ChangeWallet(e)}>
+                                  {
+                                    money?.map(wallet=>(
+                                        <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
+                                    ))
+                                  }
+                                </select>
                             )}
-                          </select>
                         </div>
                       </div>
                       {!login ? (<Registration color="black" text="buy ticket"/>) : (

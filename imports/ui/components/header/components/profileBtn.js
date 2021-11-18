@@ -18,7 +18,6 @@ const ProfileBtn = () => {
     const [coinName, setCoinName] = useState(user?.settings?.dmoney || 'wynn');
 
   const ChangeWallet = (e)=> {
-    setCoinName(e.currentTarget.value)
     Meteor.call('user.setMoney', e.currentTarget.value);
   }
 
