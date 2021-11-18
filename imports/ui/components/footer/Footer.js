@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import ChangeLang from "./components/ChangeLang";
+
 const Footer = () => {
    const {t, i18n} = useTranslation();
    return (
@@ -113,31 +115,29 @@ const Footer = () => {
                      </li>
                   </ul>
                </nav>
-               <div class="lang-drop dropdown">
-               <a href="#" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" class="">
-               <img src="/img/flag-en.png" alt=""/>
-               <span>en</span></a>
-                 <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
-                   <button type="button" tabindex="0" role="menuitem" class="dropdown-item">CN</button>
-                   <button type="button" tabindex="0" role="menuitem" class="dropdown-item">ENG</button>
-                 </div>
+               <div className="lang-drop dropdown">
+                  <ChangeLang/>
                </div>
             </div>
          </div>
       </div>
       <div className="footer-copyright">
-         <div className="copyright">
-            <p>
-               {t('footer.copy')} 2021<span> | Wynn Games</span>
-            </p>
-         </div>
-         <div className="info">
-            <a href="#">
-            Terms & conditions
-            </a>
-            <a href="#">
-            Privacy Policy
-            </a>
+         <div className="container">
+            <div className="sub-footer">
+               <div className="copyright">
+                  <p>
+                     {t('footer.copy')} 2021<span> | Wynn Games</span>
+                  </p>
+               </div>
+               <div className="info">
+                  <a href="#">
+                  Terms & conditions
+                  </a>
+                  <a href="#">
+                  Privacy Policy
+                  </a>
+               </div>
+            </div>
          </div>
       </div>
    </footer>
