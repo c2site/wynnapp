@@ -101,7 +101,7 @@ const Footer = () => {
                   </ul>
                </nav>
                <nav role="navigation">
-                  <span className="title">Foundation</span>
+                  <span className="title">Contact us</span>
                   <ul>
                      <li>
                         <FreshdeskWidget url={'wynn-games.freshdesk.com'} type="pop-up">

@@ -20,14 +20,14 @@ const ProfilePage = ({ children }) => {
           <div className="flex f-space-between">
             <h2 className="title-page">{t('profile.title')}</h2>
             <div className="profile-btn">
-              <div className="holder"><Button color={'default'} onClick={() => FlowRouter.go('/profile')}>
+              <div className="holder"><a className={'btn btn-default'} color={'default'} href={FlowRouter.path('profile')}>
                 <IcoProfile />
                 {t('profile.title')}
-              </Button>
-                <Button color={'default'} onClick={() => FlowRouter.go('/profile/my-tickets')}>
+              </a>
+                <a className={'btn btn-default'} color={'default'} onClick={() => FlowRouter.go('profile.tickets')}>
                   <IcoTicket />
                   {t('profile.my_tickets')}
-                </Button>
+                </a>
                 {/*<Button color={'default'}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" clipRule="evenodd"

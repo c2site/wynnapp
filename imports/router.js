@@ -20,6 +20,8 @@ import FreeCoinPage from "./ui/page/freeCoin/freeCoinPage";
 import InfoPage from "./ui/page/info/infoPage";
 import {Tracker} from "meteor/tracker";
 import ErrorPage from "./ui/page/404/404";
+import FaqPage from "./ui/page/faq/faq";
+import PresalePage from "./ui/page/presale/presale";
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -103,7 +105,7 @@ FlowRouter.route('/profile', {
     },
 });
 
-FlowRouter.route('/profile/my-tickets', {
+FlowRouter.route('/my-tickets', {
     name: 'profile.tickets',
     title: title('My Tickets'),
     action() {
@@ -164,6 +166,22 @@ FlowRouter.route('/info', {
         mountMain(InfoPage);
     }
 });
+
+FlowRouter.route('/faq', {
+    name:'faqPage',
+    title: title('F.A.Q.'),
+    action() {
+        mountMain(FaqPage)
+    }
+});
+
+FlowRouter.route('/presale', {
+    name:'presalePage',
+    title: title('Pre-Sale'),
+    action() {
+        mountMain(PresalePage)
+    }
+})
 
 // FlowRouter.route('/free-coin', {
 //     name: 'freeCoin',
