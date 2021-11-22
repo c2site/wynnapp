@@ -5,10 +5,6 @@ import {Ticket} from "../../../api/mongo/ticket";
 import {Meteor} from "meteor/meteor";
 import { useTranslation } from "react-i18next";
 
-function contains(arr, elem, from) {
-  return arr.indexOf(elem, from) != -1;
-}
-
 
 const MyTickets = () => {
 
@@ -46,7 +42,7 @@ const MyTickets = () => {
                       <div className="body">
                         <div className="number-list">
                           {ticket.numbers.map(x=>(
-                              <span className={"number " + ticket.numbers.includes(x) ? 'win' : 'lose'} key={'k'+x}><span>{x}</span></span>
+                              <span className={"number " + ((ticket?.lottery?.numbers).includes(x) && 'win')} key={'k'+x}><span>{x}</span></span>
                           ))}
                         </div>
                         <div className={'status mob-show-status '+ticket.status}>
