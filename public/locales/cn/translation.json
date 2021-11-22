@@ -27,10 +27,10 @@
     "rust": "wynn rust"
   },
   "form": {
-    "title_login": "Login to your account",
-    "remember": "Remember me",
-    "terms": "I agree the Terms&Conditions",
-    "create": "Create new accounte",
+    "title_login": "登入账户",
+    "remember": "下次访问时保持登录状态",
+    "terms": "我同意条款和条件",
+    "create": "创建新帐户",
     "login": "登入",
     "email": "电子邮件",
     "password": "密码",
@@ -307,18 +307,32 @@
     "remainder": "剩余"
   },
   "active": "活跃",
+  "disabled": "已禁用",
   "notification": {
-    "amount": "Error amount CH",
-    "balance": "需要余额",
-    "numbers": "Need more numbers CH",
-    "blocks": "Now wait new block, please wait CH",
-    "wait": "One transaction 60 seconds CH",
-    "trx": "你需要5个TRX",
-    "handleError": "Something went wrong. Please check your credentials. CH",
-    "token": "Invalid token CH",
-    "emailToken": "Token has invalid email address CH",
-    "emailError": "Invalid email CH",
-    "copy": "复制钱包地址"
+    "incorect": {
+      "email": "电子邮件地址错误",
+      "password": "密码不正确",
+      "err": "错误密码",
+      "code": "无效验证码",
+      "numbers": "最多9个数字",
+      "recoveryPass": "recovery.empty_input_password",
+      "recoveryPassMatch": "recovery.password_not_match"
+    },
+    "amount": "金额超过你目前的余额",
+    "balance": "需要更多余额",
+    "numbers": "需要更多数字",
+    "blocks": "请等待新区块",
+    "wait": "60秒交易一次",
+    "trx": "最低需要5个TRX",
+    "handleError": "出现错误，请检查身份验证。",
+    "token": "无效代币",
+    "emailToken": "代币的电子邮件地址无效",
+    "emailError": "无效电子邮件",
+    "copy": "复制钱包地址",
+    "copyUrl": "复制邀请链接",
+    "checkEmail": "检查电子邮件",
+    "twaActive": "已开启双重身份验证",
+    "passwordRecovery": "密码已恢复"
   },
   "rating": {
     "text": "在 Wynn Games 平台上使用原生 Wynn 代幣為用戶提供了參與 VIP 級用戶忠誠度計劃的機會，該計劃為購買門票或合約提供動態增長的折扣（從 1.1% 到 10.1%）。",
@@ -329,8 +343,8 @@
   },
   "wp": "白皮書",
   "errorPage": {
-    "title": "Page not found",
-    "text": "You have found the secret page",
-    "btn": "Back to home"
+    "title": "页面未找到",
+    "text": "你发现了秘密的页面",
+    "btn": "回到主页"
   }
 }
