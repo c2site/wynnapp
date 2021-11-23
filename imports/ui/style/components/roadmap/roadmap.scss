@@ -35,37 +35,127 @@
     }
     .roadmap-list {
         .item {
-            background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+            //background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
             //box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
+            //border-radius: 10px;
             overflow: hidden;
             margin-top: 20px;
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                flex-direction: column;
+                margin-top: 50px;
+            }
             .head {
-                font-family: 'Intro', sans-serif;
-                font-weight: normal;
-                font-size: 24px;
-                line-height: 24px;
-                text-transform: uppercase;
-                color: #1E2632;
-                padding: 0 29px;
-                height: 70px;
-                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
-                border-radius: 10px 10px 0px 0px;
-                display: flex;
-                align-items: center;
+                width: 485px;
+                position: relative;
+                padding-right: 140px;
+
+                @media only screen and (max-width: $responsive-size-big-tablet) {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 50px;
+                    display: flex;
+                    justify-content: center;
+                }
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    left: 345px;
+                    display: block;
+                    content: "";
+                    z-index: 1;
+                    background: #EDA543;
+                    height: 2px;
+                    width: 140px;
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 2px;
+                        height: 50px;
+                    }
+                }
+                span {
+                    //padding: 0 29px;
+                    min-height: 70px;
+                    background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+                    border-radius: 10px;
+                    font-family: 'Intro', sans-serif;
+                    font-weight: normal;
+                    font-size: 24px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    color: #1E2632;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        width: 70%;
+                        min-width: 290px;
+                    }
+                }
+                &:before {
+                    display: block;
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    background: #FFFFFF;
+                    border: 3px solid #EDA543;
+                    box-sizing: border-box;
+                    position: absolute;
+                    top: 50%;
+                    left: 339px;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                    z-index: 2;
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        bottom: -6px;
+                        top: initial;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
             }
             .body {
-                padding: 30px 35px 10px;
+                padding: 30px 30px 10px;
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: column;
                 max-height: 260px;
+                background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+                border-radius: 10px;
+                width: calc(100% - 485px);
+                position: relative;
+                &:after {
+                    position: absolute;
+                    top: 7px;
+                    bottom: 7px;
+                    left: -1px;
+                    display: block;
+                    content: "";
+                    width: 2px;
+                    background: #EDA543;
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        top: -1px;
+                        left: 7px;
+                        right: 7px;
+                        bottom: initial;
+                        height: 2px;
+                        width: 100%;
+                    }
+                }
+                @media only screen and (max-width: 1509px) {
+                    max-height: 320px;
+                }
                 @media only screen and (max-width: $responsive-size-big-tablet) {
                     max-height: initial;
+                    width: 100%;
                 }
                 .box {
                     //border-top: 1px solid rgba(255, 255, 255, 0.1);
-                    padding: 0 0 20px;
+                    padding: 0 5px 20px;
                     display: flex;
                     font-weight: normal;
                     font-size: 16px;
