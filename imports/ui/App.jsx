@@ -34,6 +34,7 @@ import './style/components/roadmap/roadmap.scss';
 import './style/components/team/team.scss';
 import "./style/page/profile.scss";
 import "./style/page/history.scss";
+import "./style/page/faq.scss";
 import '../api/i18n';
 
 export const App = ({Page}) => (

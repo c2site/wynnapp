@@ -1,0 +1,102 @@
+@import "../_helpers/variables";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #212129;
+}
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+}
+.unit {
+  margin-right: auto;
+  width: 70%;
+    @media only screen and (max-width : $responsive-size-big-mobile) {
+      width: 100%;
+    }
+}
+.title-page {
+  font-size: 42px;
+}
+.faq-title {
+  font-size: 32px;
+  margin-top: 92px;
+  font-weight: 900;
+}
+
+.answer {
+  margin-top: 20px;
+  line-height: 26px;
+  width: 90%;
+  @media only screen and (max-width : $responsive-size-big-mobile) {
+    width: 100%;
+  }
+}
+
+details{
+  background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+
+details:hover {
+  cursor: pointer;
+}
+details:nth-child(1) {
+  margin-top: 40px;
+}
+details:not(:nth-child(1)) {
+  margin-top: 32px;
+}
+
+summary {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+summary span{
+  width: 100%;
+}
+
+details > summary::after {
+  position: relative;
+  content: "+";
+  line-height: 25px;
+  width: 25px;
+  font-size: 26px;
+  height: 25px;
+  border-radius: 50px;
+  background: #F1B860;
+  padding-left: 4px;
+}
+
+details[open] > summary::after {
+  position: relative;
+  content: "-";
+  line-height: 23px;
+  width: 25px;
+  font-size: 26px;
+  height: 25px;
+  border-radius: 50px;
+  background: #F1B860;
+  padding-left: 7px;
+
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  animation: sweep .9s ease-in-out;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-top: -30px}
+  100%  {opacity: 1; margin-top: 20px}
+}
