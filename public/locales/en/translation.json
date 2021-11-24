@@ -9,7 +9,9 @@
     "wynn": "wynn"
   },
   "footer": {
-    "copy": "Copyright"
+    "copy": "Copyright",
+    "soc_media": "social media",
+    "contact_us": "contact us"
   },
   "nav": {
     "home": "Home",
@@ -25,7 +27,8 @@
     "profile": "profile",
     "get": "Get WYNN",
     "rust": "wynn rust",
-    "faq": "F.A.Q."
+    "faq": "F.A.Q.",
+    "about": "About"
   },
   "form": {
     "title_login": "Login to your account",
@@ -372,7 +375,7 @@
         "answer-5": "The platform guarantees instant payouts of winnings, which the winner will receive as quickly as a typical cryptocurrency transaction (with the same terms and conditions).",
         "question-6": "Do I need to pass KYC verification?",
         "answer-6": "No, you can use all the advantages of our platform without passing KYC verification.",
-        "question-7": "No, you can use all the advantages of our platform without passing KYC verification.",
+        "question-7": "Can I receive my winnings anonymously?",
         "answer-7": "Yes, you can. Only the winning number and ticket hash will be public, your identity remains anonymous.",
         "question-8": "Do you have your own token? If so, where can I get it?",
         "answer-8": "Yes, we do. You can buy the WYNN token directly through our platform or via various exchanges. Check the list on the platform's website."
