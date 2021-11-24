@@ -9,7 +9,9 @@
     "wynn": "wynn"
   },
   "footer": {
-    "copy": "Copyright"
+    "copy": "Copyright",
+    "soc_media": "social media",
+    "contact_us": "contact us"
   },
   "nav": {
     "home": "Home",
@@ -25,7 +27,8 @@
     "profile": "profile",
     "get": "Get WYNN",
     "rust": "wynn rust",
-    "faq": "F.A.Q."
+    "faq": "F.A.Q.",
+    "about": "About"
   },
   "form": {
     "title_login": "Login to your account",
@@ -177,7 +180,7 @@
       "planning": "Planning",
       "underway": "Underway",
       "list1": {
-        "name": "Stage 1.1. (2021 2/2)",
+        "name": "Stage 1 (2021 2/2)",
         "text1": "Formation of a development team",
         "text2": "Creation of the Wynn Games test platform",
         "text3": "Creation of a crypto lottery based on the Tron network",
@@ -187,7 +190,7 @@
         "text7": "Successful bugfix test"
       },
       "list2": {
-        "name": "Stage 1.2. (2021 2/2)",
+        "name": "Stage 2.1. (2022 1/2)",
         "text1": "Launch of the main blockchain on the Tron network",
         "text2": "Start of pre-sale",
         "text3": "Coingecko listing",
@@ -199,7 +202,7 @@
         "text9": "Launch of alpha testing for the “Wynn Binary” option"
       },
       "list3": {
-        "name": "Stage 2 (2022 2/2)",
+        "name": "Stage 2.2. (2022 2/2)",
         "text1": "Move to beta testing",
         "text2": "Launch of the “Wynn Binary” option",
         "text3": "Adding new trading pairs",
@@ -372,7 +375,7 @@
         "answer-5": "The platform guarantees instant payouts of winnings, which the winner will receive as quickly as a typical cryptocurrency transaction (with the same terms and conditions).",
         "question-6": "Do I need to pass KYC verification?",
         "answer-6": "No, you can use all the advantages of our platform without passing KYC verification.",
-        "question-7": "No, you can use all the advantages of our platform without passing KYC verification.",
+        "question-7": "Can I receive my winnings anonymously?",
         "answer-7": "Yes, you can. Only the winning number and ticket hash will be public, your identity remains anonymous.",
         "question-8": "Do you have your own token? If so, where can I get it?",
         "answer-8": "Yes, we do. You can buy the WYNN token directly through our platform or via various exchanges. Check the list on the platform's website."
