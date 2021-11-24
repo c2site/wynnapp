@@ -9,7 +9,7 @@ import {Money} from "../../../api/mongo/money";
 import {Price} from "../../../api/mongo/price";
 import { toast } from 'react-toastify';
 import Registration from "../../components/header/components/Registration";
-import { Button } from "reactstrap";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
 import {Meteor} from "meteor/meteor";
 import { useTranslation } from "react-i18next";
 
@@ -93,8 +93,12 @@ const BuyPage = () => {
     })
   }
 
+  const [isOpen, setOpen] = useState(false);
+  const toggle = () => setOpen((prevState) => !prevState);
   const ChangeWallet = (e)=> {
     Meteor.call('user.setMoney', e.currentTarget.value);
+    setOpen(!isOpen);
+    toggle();
   }
 
 
@@ -199,13 +203,24 @@ const BuyPage = () => {
                             {!login ? (
                                 <></>
                             ) : (
-                                <select value={login?.settings?.money} selectedValue={login?.settings?.money}  onChange={(e)=>ChangeWallet(e)}>
+
+                              <Dropdown className="lang-drop drop-red" isOpen={isOpen} toggle={toggle}>
+                                <DropdownToggle tag={'a'} data-toggle="dropdown" aria-expanded={isOpen} value={login?.settings?.money} selectedValue={login?.settings?.money}>
+                                  {login?.settings?.money}
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                  {money?.map(wallet=>(
+                                    <DropdownItem key={wallet._id} value={wallet.coins} onChange={(e)=>ChangeWallet(e)}>{wallet.value()} {wallet.coins}</DropdownItem>
+                                  ))}
+                                </DropdownMenu>
+                              </Dropdown>
+                                /*<select value={login?.settings?.money} selectedValue={login?.settings?.money}  onChange={(e)=>ChangeWallet(e)}>
                                   {
                                     money?.map(wallet=>(
                                         <option key={wallet._id} value={wallet.coins}>{wallet.value()} {wallet.coins}</option>
                                     ))
                                   }
-                                </select>
+                                </select>*/
                             )}
                         </div>
                       </div>

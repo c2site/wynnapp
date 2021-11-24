@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {FlowRouter} from "meteor/ostrio:flow-router-extra";
-import {Button} from "reactstrap";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Money} from "../../../../api/mongo/money";
 import {Meteor} from "meteor/meteor";
@@ -8,9 +8,12 @@ import {useSubscribe} from "../../../../api/hooks";
 import Loading from "../../loading";
 import { useTranslation } from "react-i18next";
 import {cookies} from "../../../utils";
+import i18n from "i18next";
 
 const ProfileBtn = () => {
   const {t, i18n} = useTranslation();
+  const [isOpen, setOpen] = useState(false);
+  const toggle = () => setOpen((prevState) => !prevState);
     const loading = useSubscribe('user.money');
     const user = useTracker(()=>Meteor.user(), []);
 
@@ -19,6 +22,8 @@ const ProfileBtn = () => {
 
   const ChangeWallet = (e)=> {
     Meteor.call('user.setMoney', e.currentTarget.value);
+    setOpen(!isOpen);
+    toggle()
   }
 
   useEffect(()=> {
@@ -27,7 +32,8 @@ const ProfileBtn = () => {
 
     if(loading) return  <Loading />;
     return (
-      <div className="profile-btn">
+      <>
+      {/*<div className="profile-btn">
         <strong className="summ">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.3334 6.00001V5.33334C11.3334 4.22877 10.438 3.33334 9.33341 3.33334H2.66675C1.56218 3.33334 0.666748 4.22877 0.666748 5.33334V8.00001C0.666748 9.10458 1.56218 10 2.66675 10H4.57151" stroke="white"/>
@@ -40,7 +46,18 @@ const ProfileBtn = () => {
             ))}
           </select>
         </strong>
-      </div>
+      </div>*/}
+      <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
+        <DropdownToggle tag={'a'} data-toggle="dropdown" aria-expanded={isOpen} >
+          {coinName}
+        </DropdownToggle>
+        <DropdownMenu>
+          {balance?.map(wallet=>(
+            <DropdownItem key={wallet._id} value={wallet.coins} onChange={(e)=>ChangeWallet(e)}>{wallet.value()} {wallet.coins}</DropdownItem>
+          ))}
+        </DropdownMenu>
+      </Dropdown>
+      </>
     )
 }
 
