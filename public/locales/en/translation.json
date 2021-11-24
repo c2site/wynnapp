@@ -180,7 +180,7 @@
       "planning": "Planning",
       "underway": "Underway",
       "list1": {
-        "name": "Stage 1.1. (2021 2/2)",
+        "name": "Stage 1 (2021 2/2)",
         "text1": "Formation of a development team",
         "text2": "Creation of the Wynn Games test platform",
         "text3": "Creation of a crypto lottery based on the Tron network",
@@ -190,7 +190,7 @@
         "text7": "Successful bugfix test"
       },
       "list2": {
-        "name": "Stage 1.2. (2021 2/2)",
+        "name": "Stage 2.1. (2022 1/2)",
         "text1": "Launch of the main blockchain on the Tron network",
         "text2": "Start of pre-sale",
         "text3": "Coingecko listing",
@@ -202,7 +202,7 @@
         "text9": "Launch of alpha testing for the “Wynn Binary” option"
       },
       "list3": {
-        "name": "Stage 2 (2022 2/2)",
+        "name": "Stage 2.2. (2022 2/2)",
         "text1": "Move to beta testing",
         "text2": "Launch of the “Wynn Binary” option",
         "text3": "Adding new trading pairs",
