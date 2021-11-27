@@ -18,8 +18,9 @@ const ProfileBtn = () => {
     const user = useTracker(()=>Meteor.user(), []);
 
   const balance = useTracker(()=> Money.find({userId: Meteor.userId()}).fetch(), []);
-    const [coinName, setCoinName] = useState(user?.settings?.dmoney || 'wynn');
 
+    const [coinName, setCoinName] = useState(user?.settings?.dmoney || 'wynn');
+  const wallet = useTracker(()=>Money.findOne({userId: Meteor.userId(), coins: coinName}), [coinName])
   const ChangeWallet = (e)=> {
     Meteor.call('user.setMoney', e.currentTarget.value);
     setOpen(!isOpen);
@@ -49,11 +50,11 @@ const ProfileBtn = () => {
       </div>*/}
       <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
         <DropdownToggle tag={'a'} data-toggle="dropdown" aria-expanded={isOpen} >
-          {coinName}
+          {wallet.value()} {wallet.coins}
         </DropdownToggle>
         <DropdownMenu>
           {balance?.map(wallet=>(
-            <DropdownItem key={wallet._id} value={wallet.coins} onChange={(e)=>ChangeWallet(e)}>{wallet.value()} {wallet.coins}</DropdownItem>
+            <DropdownItem key={wallet._id} value={wallet.coins} onClick={(e)=>ChangeWallet(e)}>{wallet.value()} {wallet.coins}</DropdownItem>
           ))}
         </DropdownMenu>
       </Dropdown>
