@@ -9,11 +9,11 @@ const FreeCoinPage = () => {
                 <div className="container">
                     <div className="head-page">
                         <div className="breadcrumbs">
-                            <a href="#">{t('nav.home')}</a>
+                            <span className="name">{t('nav.home')}</span>
                             <span className="separator">
                               <img src="./img/arrow-breadcrumbs.svg" alt="" />
                             </span>
-                            <a href="#">{t('nav.free_coin')}</a>
+                            <span className="name">{t('nav.free_coin')}</span>
                         </div>
                         <h2 className="title-page">{t('free_coin.title')}</h2>
                     </div>

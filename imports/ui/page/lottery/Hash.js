@@ -10,11 +10,11 @@ const Hash = () => {
         <div className="container">
           <div className="head-page">
             <div className="breadcrumbs">
-              <a href="#">{t('nav.home')}</a>
+              <span className="name">{t('nav.home')}</span>
               <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-              <a href="#">{t('nav.check')}</a>
+              <span className="name">{t('nav.check')}</span>
             </div>
             <h2 className="title-page">{t('hash.title')}</h2>
           </div>
