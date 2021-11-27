@@ -30,7 +30,7 @@ const BuyPage = () => {
   console.log(list);
   const pool = useTracker(()=>Money.find({coins: login?.settings?.dmoney || 'wynn' ,type: 'game', userId: {$in: ['game_4', 'game_3']}}).fetch(),[login]);
   const prices = useTracker(()=>Price.findOne({assetName: login?.settings?.dmoney || 'wynn'}), [login]);
-  const wallet = useTracker(()=>Money.findOne({userId: Meteor.userId(), coins: login?.settings?.dmoney}), [login])
+  const wallet = useTracker(()=>Money.findOne({userId: Meteor.userId(), coins: login?.settings?.dmoney || 'wynn'}), [login])
   const numbers = [];
   for(let i = 1; i <= 36; i++) {
     numbers.push(i)
