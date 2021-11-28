@@ -108,15 +108,15 @@ const BuyPage = () => {
         <div className="container">
           <div className="head-page">
             <div className="breadcrumbs">
-              <a href="#">{t('nav.home')}</a>
+              <span className="name">{t('nav.home')}</span>
               <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-              <a href="#">{t('nav.lottery')} 5/36</a>
+              <span className="name">{t('nav.lottery')} 5/36</span>
               <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-              <a href="#">{t('nav.buy')}</a>
+              <span className="name">{t('nav.buy')}</span>
             </div>
           </div>
           <h2 className="title-page">{t('buy.title')}</h2>

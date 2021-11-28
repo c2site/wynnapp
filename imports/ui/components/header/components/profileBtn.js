@@ -48,7 +48,7 @@ const ProfileBtn = () => {
           </select>
         </strong>
       </div>*/}
-      <Dropdown className="lang-drop" isOpen={isOpen} toggle={toggle}>
+      <Dropdown className="lang-drop drop-red" isOpen={isOpen} toggle={toggle}>
         <DropdownToggle tag={'a'} data-toggle="dropdown" aria-expanded={isOpen} >
           {wallet.value()} {wallet.coins}
         </DropdownToggle>
