@@ -276,7 +276,7 @@ const BuyPage = () => {
                         <img src="./img/ico-prize-01.svg" alt="" />
                       </div>
                       <span className="number">{money.value()} {money.coins}</span>
-                      <span className="info">{(money.userId).replace(/^.{5}/, '')} matches</span>
+                      <span className="info">{(money.userId).replace(/^.{5}/, '')} {t('buy.matches')}</span>
                     </div>
                   </div>
               ))}
