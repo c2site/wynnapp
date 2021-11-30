@@ -345,7 +345,8 @@
     "rating": "Rating",
     "level": "Vip level",
     "discount": "Discount",
-    "vip": "VIP"
+    "vip": "VIP",
+    "name": "rating"
   },
   "faq": {
       "title": "About the Project",
