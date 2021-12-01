@@ -77,7 +77,7 @@ const RatingModal = (props) => {
                 {list?.map(coin=>(
                   <tr>
                     <td>{coin.name}</td>
-                    <td>1 {coin.name} = { (1 / coin.rating ).toFixed(2)} {t('rating.rating')}</td>
+                    <td>10 {coin.name} = { (1 / coin.rating ).toFixed(2)} {t('rating.name')}</td>
                   </tr>
                 ))}
                 </tbody>

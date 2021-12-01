@@ -343,7 +343,8 @@
     "rating": "評分",
     "level": "貴賓級",
     "discount": "折扣",
-    "vip": "貴賓"
+    "vip": "貴賓",
+    "name": "评级"
   },
   "faq": {
     "title": "关于本项目",
