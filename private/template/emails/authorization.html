@@ -1,0 +1,413 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{title}}</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+      /*All the styling goes here*/
+
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+      }
+
+      body {
+        background-color: #f6f6f6;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+          font-size: 18px;
+          line-height: 25px;
+          color: #000000;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      table {
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        width: 100%;
+      }
+
+      table td {
+        font-family: sans-serif;
+        font-size: 18px;
+        vertical-align: top;
+      }
+
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+      .body {
+        background-color: #f6f6f6;
+        width: 100%;
+      }
+
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container {
+        display: block;
+        margin: 0 auto !important;
+        /* makes it centered */
+        max-width: 620px;
+        width: 100%;
+      }
+
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 620px;
+      }
+
+      /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+      .main {
+        background: #ffffff;
+        width: 100%;
+      }
+
+      .footer {
+        clear: both;
+          background: #292F45;
+      }
+
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+          color: #FFFFFF;
+      }
+
+      /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1,
+      h2,
+      h3,
+      h4 {
+          font-family: 'Montserrat', sans-serif;
+        color: #000000;
+        margin: 0;
+        margin-bottom: 20px;
+      }r
+
+      p,
+      ul,
+      ol {
+        margin: 0;
+        margin-bottom: 12px;
+      }
+
+      p li,
+      ul li,
+      ol li {
+        list-style-position: inside;
+        margin-left: 5px;
+      }
+
+      a {
+        color: #FAB80A;
+        text-decoration: none;
+      }
+
+      /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+      .last {
+        margin-bottom: 0;
+      }
+
+      .first {
+        margin-top: 0;
+      }
+
+      .align-center {
+        text-align: center;
+      }
+
+      .align-right {
+        text-align: right;
+      }
+
+      .align-left {
+        text-align: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .mt0 {
+        margin-top: 0;
+      }
+
+      .mb0 {
+        margin-bottom: 0;
+      }
+
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0;
+      }
+
+      .powered-by a {
+        text-decoration: none;
+      }
+
+      hr {
+        border: 0;
+        border-bottom: 1px solid #f6f6f6;
+        margin: 20px 0;
+      }
+
+      /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 620px) {
+        table[class=body] h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important;
+        }
+
+        table[class=body] p,
+        table[class=body] ul,
+        table[class=body] ol,
+        table[class=body] td,
+        table[class=body] span,
+        table[class=body] a {
+          font-size: 16px !important;
+        }
+
+        table[class=body] .wrapper,
+        table[class=body] .article {
+          padding: 10px !important;
+        }
+
+        table[class=body] .content {
+          padding: 0 !important;
+        }
+
+        table[class=body] .container {
+          padding: 0 !important;
+          width: 100% !important;
+        }
+
+        table[class=body] .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important;
+        }
+
+        table[class=body] .btn table {
+          width: 100% !important;
+        }
+
+        table[class=body] .btn a {
+          width: 100% !important;
+        }
+
+        table[class=body] .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important;
+        }
+      }
+
+      /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+      @media all {
+        .ExternalClass {
+          width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important;
+        }
+
+        #MessageViewBody a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+
+        .btn-primary table td:hover {
+          background-color: #34495e !important;
+        }
+
+        .btn-primary a:hover {
+          background-color: #34495e !important;
+          border-color: #34495e !important;
+        }
+      }
+      .center-block p {
+          margin: 0 0 20px;
+      }
+      h2 {
+          font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            color: #000;
+            margin: 0 0 20px;
+        }
+        .ico {
+            display: block;
+            margin: 0 auto 17px;
+        }
+      .ico svg {
+          display: block;
+          margin: 0 auto;
+      }
+        .link {
+            color: #FFE58B;
+        }
+      .footer {
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          color: #FFFFFF;
+      }
+      .footer p {
+          margin:0;
+      }
+
+    </style>
+  </head>
+  <body class="">
+    <span class="preheader">
+      {{preheader}}
+    </span>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+      <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+          <div class="content">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role="presentation" class="main">
+
+              <!-- START MAIN CONTENT AREA -->
+                <tr>
+                    <td class="header" style="background: url('../../../public/img/bg-email.jpg') no-repeat 50% 50%; padding: 32px;">
+                        <a href="https://wynn-games.com" class="logo">
+                            <svg width="136" height="36" viewBox="0 0 136 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M56.5076 3.31214L56.4181 3.48646C54.0896 7.53379 52.4211 11.9701 51.483 16.6082C50.6909 20.2459 50.2907 23.9676 50.2903 27.7015V28.3354H6.23223C6.29013 24.3847 5.89459 20.4413 5.05437 16.5924C4.09805 11.9004 2.38824 7.41865 0 3.34383H0C0.325711 3.36797 0.6495 3.41562 0.969127 3.48646C3.34991 3.90937 5.61497 4.88022 7.60577 6.33106C9.59657 7.78189 11.265 9.67766 12.4943 11.8857C11.587 12.7766 11.0148 13.9873 10.884 15.2929C10.8545 15.6408 10.8545 15.9909 10.884 16.3388C10.8903 17.5877 11.3467 18.7866 12.1593 19.6886C12.9719 20.5907 14.079 21.1274 15.2526 21.1882H15.6999C16.7715 21.0068 17.7492 20.4316 18.463 19.5629C19.1768 18.6942 19.5813 17.587 19.6062 16.4339C19.6359 16.086 19.6359 15.7359 19.6062 15.388C19.5364 14.6316 19.3138 13.9002 18.9536 13.2438C18.5933 12.5874 18.1039 12.0214 17.5188 11.5846C19.6902 7.88805 22.4676 4.63536 25.7192 1.98094C26.4795 1.23611 27.3443 0.602207 28.3283 0C29.2132 0.581223 30.0691 1.21068 30.8928 1.88586C34.1515 4.53682 36.9343 7.78995 39.108 11.4895C38.523 11.9263 38.0336 12.4923 37.6733 13.1487C37.313 13.8052 37.0904 14.5366 37.0207 15.2929C36.9909 15.6408 36.9909 15.9909 37.0207 16.3388C37.0269 17.5877 37.4833 18.7866 38.2959 19.6886C39.1086 20.5907 40.2156 21.1274 41.3892 21.1882H41.8365C42.9081 21.0068 43.8859 20.4316 44.5996 19.5629C45.3134 18.6942 45.7179 17.587 45.7428 16.4339C45.7799 16.0864 45.7799 15.7355 45.7428 15.388C45.602 14.0306 44.9843 12.7798 44.0133 11.8857C47.3232 4.61164 56.4927 3.31214 56.4927 3.31214H56.5076ZM6.29187 35.7679H50.2157V29.9202H6.29187V35.7679Z" fill="#E8C76F"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0226 28.3671H6.23223C6.29013 24.4164 5.89459 20.473 5.05437 16.6241C4.10131 11.9211 2.3914 7.42835 0 3.34383H0C0.325711 3.36797 0.6495 3.41562 0.969127 3.48646C3.34991 3.90937 5.61497 4.88022 7.60577 6.33106C9.59657 7.78189 11.265 9.67766 12.4943 11.8857C11.587 12.7766 11.0148 13.9873 10.884 15.2929C10.8545 15.6408 10.8545 15.9909 10.884 16.3388C10.8903 17.5877 11.3467 18.7866 12.1593 19.6886C12.9719 20.5907 14.079 21.1274 15.2526 21.1882H15.6999C16.7715 21.0068 17.7492 20.4316 18.463 19.5629C19.1768 18.6942 19.5813 17.587 19.6062 16.4339C19.6359 16.086 19.6359 15.7359 19.6062 15.388C19.5364 14.6316 19.3138 13.9002 18.9536 13.2438C18.5933 12.5874 18.1039 12.0214 17.5188 11.5846C19.6902 7.88805 22.4676 4.63536 25.7192 1.98094C26.4795 1.23611 27.3443 0.602207 28.3283 0L21.0226 28.3671ZM20.6201 29.9519L19.1291 35.7996H6.29187V29.9202L20.6201 29.9519Z" fill="#F2DF3A"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M41.8662 13.0732L40.3454 20.0937L43.7746 18.4773L40.5989 20.585L46.9802 23.1523L40.3156 21.5675L41.8364 25.1649L39.8385 21.8369L37.3933 28.5405L38.9141 21.5358L35.4849 23.1364L38.6606 21.0446L32.2793 18.4614L38.9439 20.062L37.4231 16.4488L39.421 19.7926L41.8662 13.0732Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M65.4683 18.2567H68.8677L71.6856 9.73076L74.5483 18.2567H77.9477L82.6442 3.36004H78.5739L76.1287 11.9177L73.4151 3.3125H70.0754L67.332 11.9177L64.8868 3.36004H60.7568L65.4683 18.2567ZM90.2481 18.1458H94.1694V12.5516L99.5219 3.36004H95.1534L92.1715 8.74821L89.279 3.36004H84.8061L90.2481 12.6784V18.2092V18.1458ZM103.145 18.1458H107.007V10.0319L112.97 18.1458H116.385V3.36004H112.568V11.1729L106.783 3.36004H103.145V18.1458ZM121.35 18.1458H125.241V10.0319L131.205 18.1458H134.634V3.36004H130.773V11.1729L124.988 3.36004H121.35V18.1458ZM68.8826 35.9426C71.107 35.9551 73.267 35.1487 74.9956 33.6606V26.9412H68.5844V29.9522H71.3576V31.743C70.6828 32.1853 69.8981 32.4007 69.1062 32.3611C68.5966 32.3791 68.089 32.2849 67.6152 32.0844C67.1415 31.8838 66.7119 31.5813 66.3535 31.1959C65.995 30.8104 65.7154 30.3503 65.5323 29.8444C65.3492 29.3386 65.2665 28.798 65.2894 28.2565C65.2654 27.7346 65.3399 27.2129 65.5086 26.7221C65.6773 26.2313 65.9367 25.7814 66.2716 25.3988C66.6065 25.0163 67.01 24.7089 67.4585 24.4948C67.9069 24.2806 68.3911 24.1641 68.8826 24.152C70.1405 24.1453 71.3545 24.6433 72.282 25.5466L74.5483 22.7099C72.9584 21.2538 70.9045 20.4996 68.8081 20.6022C67.8298 20.5606 66.8537 20.7303 65.9388 21.1008C65.0239 21.4713 64.1892 22.0351 63.4849 22.758C62.7807 23.481 62.2216 24.3481 61.8414 25.3071C61.4612 26.266 61.2678 27.297 61.2728 28.3376C61.2779 29.3782 61.4813 30.407 61.8708 31.3618C62.2602 32.3165 62.8277 33.1775 63.5389 33.8927C64.2501 34.6079 65.0903 35.1625 66.0087 35.523C66.9271 35.8835 67.9048 36.0424 68.8826 35.9901V35.9426ZM76.0392 35.6415H80.1394L81.1532 32.995H86.5804L87.6091 35.6415H91.7838L85.82 20.7448H82.0031L76.0392 35.6415ZM82.3013 29.8096L83.8817 25.5942L85.4472 29.8096H82.3013ZM93.1555 35.6415H96.9127V27.1789L100.491 32.9316H100.581L104.174 27.1472V35.6415H108.05V20.8399H103.995L100.64 26.5767L97.2706 20.8399H93.1555V35.6415ZM110.615 35.6415H122.036V32.155H114.476V29.8096H121.23V26.6401H114.476V24.3263H121.931V20.8399H110.615V35.6415ZM129.55 35.8951C132.964 35.8951 135.245 34.1043 135.245 31.1408C135.245 28.1773 133.233 27.2264 129.997 26.4816C128.044 26.022 127.567 25.7209 127.567 25.0553C127.567 24.3897 128.029 24.0569 128.968 24.0569C130.389 24.1113 131.76 24.6194 132.905 25.5149L134.858 22.6148C133.21 21.2458 131.163 20.5337 129.073 20.6022C125.688 20.6022 123.616 22.599 123.616 25.3564C123.616 28.4467 125.927 29.3342 128.924 30.1107C130.832 30.5861 131.309 30.9189 131.309 31.537C131.309 32.155 130.743 32.5829 129.699 32.5829C128.027 32.568 126.41 31.9412 125.122 30.808L122.96 33.4387C124.802 35.0837 127.145 35.9572 129.55 35.8951Z" fill="#E8C76F"/>
+                            </svg>
+                        </a>
+                    </td>
+                </tr>
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="center-block" style="padding: 32px;">
+                        <h1 style="font-family: 'Montserrat', sans-serif;font-weight: 600;font-size: 28px;line-height: 34px;color: #222222;">Login successful</h1>
+                        <p style="font-family: 'Open Sans', sans-serif;font-size: 18px;line-height: 25px;color: #000000;margin: 0;">You have successfully logged into the Wynn Games service.</p>
+                        <div style="padding: 32px 0;">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 22px;color: #777777;padding: 0 0 8px;">Time:</td>
+                                    <td style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 22px;color: #777777;padding: 0 0 8px;">2021-07-05 12:54:57(UTC)</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 22px;color: #777777;">IP address:</td>
+                                    <td style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 22px;color: #777777;">46.133.69.17</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 25px;color: #000000;margin: 0 0 12px;">If this was you, please ignore this email.</p>
+                          <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 25px;color: #000000;margin: 0;">If this wasn’t you, please change your password to protect your account.</p>
+                        <div style="margin: 40px 0 0; max-width: 446px;">
+                            <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 25px;color: #000000;margin: 0 0 12px;">If you want to reset your password in
+                                <a href="https://wynn-games.com" style="color: #000000; text-decoration: underline;">wynn-games.com</a>, please click the following link: </p>
+                            <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 25px;color: #000000;margin: 0;">
+                                <a href="https://wynn-games.com/recoveryPassword/qvMtV2rPUEAylcouUWpwwQuKMik3ztTgzcy0jqB9gqK" style="color: #FAB80A; text-decoration: none;">https://wynn-games.com/recoveryPassword/<br>qvMtV2rPUEAylcouUWpwwQuKMik3ztTgzcy0jqB9gqK </a></p>
+
+                        </div>
+                          <div style="margin: 40px 0 0;">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin: 0 0 20px;">
+                                  <tr>
+                                      <td valign="middle" style="vertical-align: middle;">
+                                          <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 25px;color: #000000;margin: 0 0 5px;">Or contact the support</p>
+                                          <p style="font-family: 'Open Sans', sans-serif;font-weight: 600;font-size: 16px;line-height: 25px;color: #000000;margin: 0;">
+                                              <a href="mailto:support@wynn-games.com" style="color: #000000; text-decoration: none;">support@wynn-games.com</a></p>
+                                      </td>
+                                      <td>
+                                          <div>
+                                              <img style="display:block;border: 1px solid #FAB80A;" src="../../../public/img/qr-email.jpg" alt="">
+                                          </div>
+                                      </td>
+                                  </tr>
+                              </table>
+                              <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 25px;color: #000000;margin: 0 0 8px;">The Wynn Games team</p>
+                              <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 25px;color: #777777;margin: 0;">This is an automated message please do not reply.</p>
+                          </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- END MAIN CONTENT AREA -->
+            </table>
+            <!-- END CENTERED WHITE CONTAINER -->
+
+            <!-- START FOOTER -->
+            <div class="footer" style="background: url('../../../public/img/bg-email.jpg') no-repeat 50% 50%; padding:18px 32px;">
+              <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 26px;margin: 0 0 12px;"><a href="https://wynn-games.com" style="color: #FFE58B; text-decoration: none;">https://wynn-games.com</a></p>
+                <p style="font-family: 'Open Sans', sans-serif;font-size: 16px;line-height: 26px;margin: 0; color: #ffffff;">Copyright 2021 | Wynn Games. All rights reserved. </p>
+            </div>
+            <!-- END FOOTER -->
+
+          </div>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
