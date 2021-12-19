@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 const BuyPage = () => {
   const {t, i18n} = useTranslation();
-  const login = useTracker(()=>Meteor.user(), []);
+  const login = useTracker(()=>Meteor.users.findOne(), []);
 
   const [skip, setSkip] = useState(5);
   useSubscribe('user.money');
@@ -30,6 +30,7 @@ const BuyPage = () => {
   console.log(list);
   const pool = useTracker(()=>Money.find({coins: login?.settings?.dmoney || 'wynn' ,type: 'game', userId: {$in: ['game_4', 'game_3']}}).fetch(),[login]);
   const prices = useTracker(()=>Price.findOne({assetName: login?.settings?.dmoney || 'wynn'}), [login]);
+  const wallet = useTracker(()=>Money.findOne({userId: Meteor.userId(), coins: login?.settings?.dmoney || 'wynn'}), [login])
   const numbers = [];
   for(let i = 1; i <= 36; i++) {
     numbers.push(i)
@@ -205,12 +206,12 @@ const BuyPage = () => {
                             ) : (
 
                               <Dropdown className="lang-drop drop-red" isOpen={isOpen} toggle={toggle}>
-                                <DropdownToggle tag={'a'} data-toggle="dropdown" aria-expanded={isOpen} value={login?.settings?.money} selectedValue={login?.settings?.money}>
-                                  {login?.settings?.money}
+                                <DropdownToggle tag={'a'} data-toggle="dropdown" aria-expanded={isOpen} onSelect={login?.settings?.money} selectedValue={login?.settings?.money}>
+                                  {wallet?.value()} {wallet?.coins}
                                 </DropdownToggle>
                                 <DropdownMenu>
                                   {money?.map(wallet=>(
-                                    <DropdownItem key={wallet._id} value={wallet.coins} onChange={(e)=>ChangeWallet(e)}>{wallet.value()} {wallet.coins}</DropdownItem>
+                                    <DropdownItem key={wallet._id} value={wallet.coins} onClick={(e)=>ChangeWallet(e)}>{wallet.value()} {wallet.coins}</DropdownItem>
                                   ))}
                                 </DropdownMenu>
                               </Dropdown>

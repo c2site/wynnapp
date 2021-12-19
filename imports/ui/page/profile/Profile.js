@@ -116,7 +116,8 @@ const Profile = () => {
                     <div className="flex f-space-between">
                       <div>
                         <span className="name">2fa</span>
-                        <span className="info">{user?.settings?.twoFa ? 'Active' : 'Disabled'}</span>
+                        <span className="info">{user?.settings?.twoFa ? t('active') : t('disabled')}</span>
+
                       </div>
                       <TwoFa secret={secret} close={() => setSecret(null)} />
                       <TwoFAConfirm
