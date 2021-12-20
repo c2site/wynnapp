@@ -15,10 +15,8 @@ const SendWallet = (props) => {
   const toggle = () => setModal(!modal);
 
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-
-    Meteor.call('user.send.coin', {wallet, send}, (err) => {
+  const onSubmit = () => {
+    Meteor.call('user.send.coin', {...wallet, ...send}, (err) => {
       if(err) {
         toast.error(t(err.reason));
       } else {
@@ -66,7 +64,7 @@ const SendWallet = (props) => {
         </ModalBody>
         <ModalFooter>
           <div className="btn-box">
-            <Button color="black" onClick={()=>onSubmit} type={'submit'}>
+            <Button color="black" onClick={()=>onSubmit()} type={'submit'}>
               <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 11.3137L6.65685 16.9706L17.9706 5.65687" stroke="white" stroke-width="2" stroke-linecap="round"/>
               </svg>

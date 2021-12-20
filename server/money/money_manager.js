@@ -45,8 +45,8 @@ export class Money_manager {
         }
 
         const tron = new TronSend(this.userId, this.asset.asset)
-
-        tx.txid = await tron.send({amount: tx.amount, address: recipient});
+        console.log(tx)
+        tx.txid = await tron.send({amount: tx.amount, address: tx.recipient});
 
         const txs = new Transactions_manager(this.userId);
         txs.create(tx);
@@ -93,11 +93,10 @@ export class Transactions_manager {
         const sender = Addr.findOne({address: tx.sender}) || {userId: 'cron'};
         const asset = Coin.findOne({asset: tx.asset});
         if(!asset) return;
-        if(!recipient) return;
-
-        const deposit = new Money_manager(recipient.userId, asset.name);
-        deposit.deposit(tx.amount);
-
+        if(recipient) {
+            const deposit = new Money_manager(recipient.userId, asset.name);
+            deposit.deposit(tx.amount);
+        }
         const withdrawal = new Money_manager(sender.userId, asset.name);
         withdrawal.withdrawal(tx.amount);
 

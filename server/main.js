@@ -17,14 +17,13 @@ import './user/methods'
 import './user/users';
 
 import './cron';
-import {getPrice} from "./price/price";
 import './api';
-import Lottery_manage from "./lottery/lottery_manage";
-
-Meteor.startup(() => {
-    //getPrice();
-    //Lottery_manage.create();
-});
 
 import './migration';
+
+Meteor.startup(() => {
+
+});
+
+
 
