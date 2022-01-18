@@ -184,40 +184,43 @@
         "text1": "Formation of a development team",
         "text2": "Creation of the Wynn Games test platform",
         "text3": "Creation of a crypto lottery based on the Tron network",
-        "text4": "Start of beta testing",
+        "text4": "Start of alpha testing",
         "text5": "Launch of blockchain test network",
-        "text6": "Start of alpha testing",
-        "text7": "Successful bugfix test"
+        "text6": "Start beta testing",
+        "text7": "Successful bugfix test",
+        "text8": "Launch of the main blockchain on the Tron network",
+        "text9": "Start advertising campaign"
       },
       "list2": {
-        "name": "Stage 2.1. (2022 1/2)",
-        "text1": "Launch of the main blockchain on the Tron network",
+        "name": "Stage 2 (2022 1/2)",
+        "text1": "Minting a Wynn fan token",
         "text2": "Start of pre-sale",
         "text3": "Coingecko listing",
-        "text4": "Token listing on crypto exchanges",
-        "text5": "CoinMarketCap listing",
-        "text6": "Advertising campaign",
-        "text7": "Increase the number of the development staff",
-        "text8": "Creation of a “Wynn Binary” option",
-        "text9": "Launch of alpha testing for the “Wynn Binary” option"
+        "text4": "CoinMarketCap listing",
+        "text5": "Token listing on crypto exchanges",
+        "text6": "Increase the number of the development staff",
+        "text7": "Creation of a “Wynn Rust” server",
+        "text8": "Launch of alpha testing for the “Wynn Rust” server",
+        "text9": "Move to beta testing"
       },
       "list3": {
-        "name": "Stage 2.2. (2022 2/2)",
-        "text1": "Move to beta testing",
-        "text2": "Launch of the “Wynn Binary” option",
-        "text3": "Adding new trading pairs",
-        "text4": "Advertising campaign",
-        "text5": "Integration of affiliate programs\n",
-        "text6": "Creation of a Wynn RAST server",
-        "text7": "Implementation of Wynn as a native payment method"
+        "name": "Stage 2 (2022 2/2)",
+        "text1": "Release of the “Wynn Rust” server",
+        "text2": "Implementation of Wynn as a native payment method",
+        "text3": "Advertising campaign",
+        "text4": "Integration of affiliate programs",
+        "text5": "Launch of alpha testing for the “Wynn Binary” option",
+        "text6": "Move to beta testing"
       },
       "list4": {
         "name": "Stage 3 (2023 1/2)",
-        "text1": "Update lottery algorithm",
-        "text2": "Add new types of lotteries",
-        "text3": "Beta testing of \"4 out of 20\" lottery",
-        "text4": "Establishment of the Wynn Games Education Academy",
-        "text5": "Launch of the Wynn Games Education Academy video courses"
+        "text1": "Release of the “Wynn Binary” option",
+        "text2": "Adding new trading pairs",
+        "text3": "Update lottery algorithm",
+        "text4": "Add new types of lotteries",
+        "text5": "Beta testing of \"4 out of 20\" lottery",
+        "text6": "Establishment of the Wynn Games Education  Academy",
+        "text7": "Launch of the Wynn Games Education Academy video courses"
       },
       "list5": {
         "name": "Stage 4 (2023 2/2)",
@@ -345,61 +348,62 @@
     "rating": "Rating",
     "level": "Vip level",
     "discount": "Discount",
-    "vip": "VIP"
+    "vip": "VIP",
+    "name": "rating"
   },
   "faq": {
-      "title": "About the Project",
-      "faq-about": {
-        "question-1": "What is Wynn Games?",
-        "answer-1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games that uses a transparent and independent winning algorithm. The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Tron blockchain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
-        "question-2": "Advantages of Wynn?",
-        "answer-2": "The Wynn platform is completely autonomous. It offers no opportunities for external influence on the drawing process, either from the developers of the lottery or from third parties.",
-        "question-3": "How to increase your chances of winning?",
-        "answer-3": "To increase your chances of winning, you need to add 1, 2, 3, or 4 additional numbers per ticket (for an additional fee). You can also buy additional tickets.",
-        "question-4": "How is the prize pool funded?",
-        "answer-4": "The prize pool receives 90% of the collected funds, which are distributed between the winners: 3 matches - 30%, 4 matches - 30 %, 5 matches - 30%.",
-        "question-5": "How to sign up?",
-        "answer-5": "To sign up, you need to click “Get Started Now” or “Registration”. Simply fill in all the spaces to start using all the available features of our platform."
-      },
-      "title-2": "Technical Characteristics",
-      "faq-tech": {
-        "question-1": "How can I buy a ticket?",
-        "answer-1": "In order to buy a lottery ticket, you need to visit the lottery section and select your currency. Next, choose 5 to 9 numbers at your discretion and click the “Buy Ticket” button.",
-        "question-2": "What constitutes a winning combination?",
-        "answer-2": "Any tickets that have 3, 4, or 5 matches (matched numbers are highlighted in green) are winning tickets.",
-        "question-3": "How much can I win?",
-        "answer-3": "It all depends on the prize pool. The prize fund is replenished using 90% of the collected funds, which makes it possible to divide the prizes among various winners.",
-        "question-4": "How can I ensure that Wynn Games is operating honestly?",
-        "answer-4": "You can visit the “Check Lottery” section and insert the HASH of the game for validation.",
-        "question-5": "How do I receive my winnings?",
-        "answer-5": "The platform guarantees instant payouts of winnings, which the winner will receive as quickly as a typical cryptocurrency transaction (with the same terms and conditions).",
-        "question-6": "Do I need to pass KYC verification?",
-        "answer-6": "No, you can use all the advantages of our platform without passing KYC verification.",
-        "question-7": "Can I receive my winnings anonymously?",
-        "answer-7": "Yes, you can. Only the winning number and ticket hash will be public, your identity remains anonymous.",
-        "question-8": "Do you have your own token? If so, where can I get it?",
-        "answer-8": "Yes, we do. You can buy the WYNN token directly through our platform or via various exchanges. Check the list on the platform's website."
-      },
-      "title-3": "The Social Life of Wynn Games",
-      "faq-soc": {
-        "question-1": "Do you have social media accounts?",
-        "answer-1": "Yes, we do. You can follow us to stay up-to-date on the life of the project by clicking on the links on the main page of the platform.",
-        "question-2": "Where can I find detailed technical information?",
-        "answer-2": "You can find detailed technical documentation by going to our White Paper, which is located on the main page of the platform.",
-        "question-3": "How can I take part in the bounty campaign?",
-        "answer-3": "As soon as the bounty campaign begins, absolutely any user is able to take part. Follow us on social media for important updates."
-      },
-      "title-4": "Referral Program",
-      "faq-ref": {
-        "question-1": "Do you have a referral program?",
-        "answer-1": "Yes, there is a referral program on our platform. To invite new referrals, use the link found in your account. You will need to fill out a simple registration form.",
-        "question-2": "How can I become part of your referral program?",
-        "answer-2": "To become a part of our referral program, you need to share your link and get a new user involved in the platform. After all the conditions are met, you will receive a referral bonus.",
-        "question-3": "Are there any limitations in the terms of your referral program?",
-        "answer-3": "There are no limitations. Any user on the platform can take part in the referral program.",
-        "question-4": "How can I get referral rewards?",
-        "answer-4": "Receiving a bonus for involving a user is possible if the balance of this referral is replenished with more than 10 WYNN tokens. The partner then receives a reward equal to 5% of the amount spent by the referral on the platform."
-      }
+    "title": "About the Project",
+    "faq-about": {
+      "question-1": "What is Wynn Games?",
+      "answer-1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games that uses a transparent and independent winning algorithm. The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Tron blockchain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
+      "question-2": "Advantages of Wynn?",
+      "answer-2": "The Wynn platform is completely autonomous. It offers no opportunities for external influence on the drawing process, either from the developers of the lottery or from third parties.",
+      "question-3": "How to increase your chances of winning?",
+      "answer-3": "To increase your chances of winning, you need to add 1, 2, 3, or 4 additional numbers per ticket (for an additional fee). You can also buy additional tickets.",
+      "question-4": "How is the prize pool funded?",
+      "answer-4": "The prize pool receives 90% of the collected funds, which are distributed between the winners: 3 matches - 30%, 4 matches - 30 %, 5 matches - 30%.",
+      "question-5": "How to sign up?",
+      "answer-5": "To sign up, you need to click “Get Started Now” or “Registration”. Simply fill in all the spaces to start using all the available features of our platform."
+    },
+    "title-2": "Technical Characteristics",
+    "faq-tech": {
+      "question-1": "How can I buy a ticket?",
+      "answer-1": "In order to buy a lottery ticket, you need to visit the lottery section and select your currency. Next, choose 5 to 9 numbers at your discretion and click the “Buy Ticket” button.",
+      "question-2": "What constitutes a winning combination?",
+      "answer-2": "Any tickets that have 3, 4, or 5 matches (matched numbers are highlighted in green) are winning tickets.",
+      "question-3": "How much can I win?",
+      "answer-3": "It all depends on the prize pool. The prize fund is replenished using 90% of the collected funds, which makes it possible to divide the prizes among various winners.",
+      "question-4": "How can I ensure that Wynn Games is operating honestly?",
+      "answer-4": "You can visit the “Check Lottery” section and insert the HASH of the game for validation.",
+      "question-5": "How do I receive my winnings?",
+      "answer-5": "The platform guarantees instant payouts of winnings, which the winner will receive as quickly as a typical cryptocurrency transaction (with the same terms and conditions).",
+      "question-6": "Do I need to pass KYC verification?",
+      "answer-6": "No, you can use all the advantages of our platform without passing KYC verification.",
+      "question-7": "Can I receive my winnings anonymously?",
+      "answer-7": "Yes, you can. Only the winning number and ticket hash will be public, your identity remains anonymous.",
+      "question-8": "Do you have your own token? If so, where can I get it?",
+      "answer-8": "Yes, we do. You can buy the WYNN token directly through our platform or via various exchanges. Check the list on the platform's website."
+    },
+    "title-3": "The Social Life of Wynn Games",
+    "faq-soc": {
+      "question-1": "Do you have social media accounts?",
+      "answer-1": "Yes, we do. You can follow us to stay up-to-date on the life of the project by clicking on the links on the main page of the platform.",
+      "question-2": "Where can I find detailed technical information?",
+      "answer-2": "You can find detailed technical documentation by going to our White Paper, which is located on the main page of the platform.",
+      "question-3": "How can I take part in the bounty campaign?",
+      "answer-3": "As soon as the bounty campaign begins, absolutely any user is able to take part. Follow us on social media for important updates."
+    },
+    "title-4": "Referral Program",
+    "faq-ref": {
+      "question-1": "Do you have a referral program?",
+      "answer-1": "Yes, there is a referral program on our platform. To invite new referrals, use the link found in your account. You will need to fill out a simple registration form.",
+      "question-2": "How can I become part of your referral program?",
+      "answer-2": "To become a part of our referral program, you need to share your link and get a new user involved in the platform. After all the conditions are met, you will receive a referral bonus.",
+      "question-3": "Are there any limitations in the terms of your referral program?",
+      "answer-3": "There are no limitations. Any user on the platform can take part in the referral program.",
+      "question-4": "How can I get referral rewards?",
+      "answer-4": "Receiving a bonus for involving a user is possible if the balance of this referral is replenished with more than 10 WYNN tokens. The partner then receives a reward equal to 5% of the amount spent by the referral on the platform."
+    }
   },
   "wp": "White Paper",
   "errorPage": {
