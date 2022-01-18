@@ -185,37 +185,41 @@
         "text4": "开始beta测试",
         "text5": "启动区块链测试网络",
         "text6": "开始alpha测试",
-        "text7": "错误修复测试"
+        "text7": "错误修复测试",
+        "text8": "在Tron网络上推出主区块链",
+        "text9": "开始广告宣传"
       },
       "list2": {
-        "name": "阶段 2.1. (2022 1/2)",
-        "text1": "在Tron网络上推出主区块链",
+        "name": "阶段 2 (2022 1/2)",
+        "text1": "为WYNN粉丝准备的代币",
         "text2": "开始预售",
         "text3": "Coingecko上市",
-        "text4": "代币在加密货币交易所上市",
-        "text5": "CoinMarketCap上市",
-        "text6": "广告推广",
-        "text7": "增加开发人员的数量",
-        "text8": "创建 “Wynn Binary”选项",
-        "text9": "启动 “Wynn Binary”选项的alpha测试"
+        "text4": "CoinMarketCap上市",
+        "text5": "代币在加密货币交易所上市",
+        "text6": "增加开发人员的数量",
+        "text7": "创建Wynn Rust服务器",
+        "text8": "开始 \"Wynn Rust \"服务器的alpha测试",
+        "text9": "转入beta测试"
       },
       "list3": {
-        "name": "阶段 2.2. (2022 2/2)",
-        "text1": "转入beta测试",
-        "text2": "推出“Wynn Binary”选项",
-        "text3": "增加新的交易对",
-        "text4": "广告宣传",
-        "text5": "整合联盟计划\n",
-        "text6": "创建Wynn RAST服务器",
-        "text7": "实施Wynn作为本地支付方式"
+        "name": "阶段 2 (2022 2/2)",
+        "text1": "释放 \"Wynn Rust \"服务器",
+        "text2": "实施Wynn作为本地支付方式",
+        "text3": "广告宣传",
+        "text4": "整合联盟计划",
+        "text5": "创建 “Wynn Binary”选项",
+        "text6": "启动 “Wynn Binary”选项的alpha测试",
+        "text7": "转入beta测试"
       },
       "list4": {
         "name": "阶段 3 (2023 1/2)",
-        "text1": "更新彩票算法",
-        "text2": "增加新的彩票类型",
-        "text3": "对 \"20分之4 \"彩票进行测试",
-        "text4": "建立Wynn游戏教育学院",
-        "text5": "推出Wynn游戏教育学院的视频课程"
+        "text1": "发布 \"Wynn Binary \"选项",
+        "text2": "增加新的交易对",
+        "text3": "更新彩票算法",
+        "text4": "增加新的彩票类型",
+        "text5": "对 \"20分之4 \"彩票进行测试",
+        "text6": "建立Wynn游戏教育学院",
+        "text7": "推出Wynn游戏教育学院的视频课程"
       },
       "list5": {
         "name": "阶段 4 (2023 2/2)",
@@ -223,7 +227,7 @@
         "text2": "发布Android系统的移动应用程序",
         "text3": "对iOS的移动应用程序进行Alpha测试",
         "text4": "发布iOS版的移动应用程序",
-        "text5": "对 \"45分之6 \"彩票进行Beta测试 ",
+        "text5": "对 \"45分之6 \"彩票进行Beta测试",
         "text6": "增加使用法币购买彩票的功能",
         "text7": "对流行的互联网浏览器的插件进行Alpha测试"
       }
