@@ -37,13 +37,24 @@ import "./style/page/history.scss";
 import "./style/page/faq.scss";
 import '../api/i18n';
 
+import {Web3ReactProvider} from "@web3-react/core";
+import Web3 from "web3";
+
+function getLibrary (provider) {
+    const library = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
+    library.pollingInterval = 12000;
+    return library;
+}
+
 export const App = ({Page}) => (
   <>
-    <Header />
-    <div className={'page'}>
-      <Page />
-    </div>
-    <Footer />
-    <ToastContainer />
+    <Web3ReactProvider getLibrary={getLibrary} >
+        <Header />
+        <div className={'page'}>
+            <Page />
+        </div>
+        <Footer />
+    </Web3ReactProvider>
+      <ToastContainer />
   </>
 );

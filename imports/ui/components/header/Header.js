@@ -10,19 +10,12 @@ import {useTranslation} from "react-i18next";
 import ProfileBtn from "./components/profileBtn";
 import ChangeLang from "./components/ChangeLang";
 import settings from "../../../api/settings";
+import {useWeb3React} from "@web3-react/core";
 
 
 
 const Header = () => {
-  const login = useTracker(()=>Meteor.users.findOne(), []);
-
-  const logout = () => {
-
-    Meteor.logout(() => {
-      FlowRouter.go('home')
-    });
-  }
-
+  const {active} = useWeb3React();
   const [isShown, setIsShown] = useState(false);
 
   const toggleNav = () => setIsShown(!isShown);
@@ -60,9 +53,9 @@ const Header = () => {
               {/*  </span>*/}
               {/*</button>*/}
               <div className="mob-hide">
-                {!login ? (<Login/>) : (
-                  <ProfileBtn />
-                )}
+
+                <Login/>
+                {active && (<ProfileBtn />)}
               </div>
               <div className="btn-mob">
                 <Button className="btn btn-active" onClick={toggleNav}>
@@ -92,22 +85,19 @@ const Header = () => {
               <Navigation mobi={false} isShown={isShown} setIsShown={setIsShown} />
               <div className="btn-header">
                   <div className="mob-hide login-hide">
-                    {!login ? (<Login/>) : (
-                      <ProfileBtn />
-                    )}
+                    <Login/>
+                    {active && (<ProfileBtn />)}
                   </div>
-                {!login ? (<div className="mob-hide"><Registration color="primary" text={t('form.registration')}/></div>) : (
-                  <Button className="btn btn-default" onClick={logout}>
-                    <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
-                      <g>
-                        <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8
-                          c1.3,0,2.4,1.1,2.4,2.4v3.3H14V3.3c0-0.4-0.4-0.8-0.8-0.8H3.3c-0.4,0-0.8,0.4-0.8,0.8v16c0,0.4,0.4,0.8,0.8,0.8h9.8
-                          c0.4,0,0.8-0.4,0.8-0.8V16.1z M17.9,7.5l-1.2,1.2l1.9,1.9H8.1v1.6h10.6L16.8,14l1.2,1.2l3.8-3.8L17.9,7.5z" />
-                      </g>
-                    </svg>
-                    <span>{t('header.logout')}</span>
-                  </Button>
-                )}
+                {/*// <Button className="btn btn-default" onClick={logout}>*/}
+                {/*//   <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >*/}
+                {/*//     <g>*/}
+                {/*//       <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8*/}
+                {/*  //         c1.3,0,2.4,1.1,2.4,2.4v3.3H14V3.3c0-0.4-0.4-0.8-0.8-0.8H3.3c-0.4,0-0.8,0.4-0.8,0.8v16c0,0.4,0.4,0.8,0.8,0.8h9.8*/}
+                {/*  //         c0.4,0,0.8-0.4,0.8-0.8V16.1z M17.9,7.5l-1.2,1.2l1.9,1.9H8.1v1.6h10.6L16.8,14l1.2,1.2l3.8-3.8L17.9,7.5z" />*/}
+                {/*//     </g>*/}
+                {/*//   </svg>*/}
+                {/*//   <span>{t('header.logout')}</span>*/}
+                {/*// </Button>*/}
                 <ChangeLang/>
               </div>
             </div>
@@ -121,25 +111,10 @@ const Header = () => {
               </button>
               <div className="inner-mob-nav">
                 <div className="btn-header">
-                  {!login ? (<Login/>) : (
-                    <ProfileBtn />
-                  )}
+                  <Login/>
+                  {active && (<ProfileBtn />)}
                 </div>
                 <Navigation mobi={true} isShown={isShown} setIsShown={setIsShown} />
-                <div className="btn-header">
-                  {!login ? (<Registration color="primary" text={t('form.registration')}/>) : (
-                    <Button className="btn btn-default btn-reg" onClick={(e)=>logout(e)}>
-                      <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >
-                        <g>
-                          <path fill="#C7C7C8" d="M14,16.1h1.6v3.3c0,1.3-1.1,2.4-2.4,2.4H3.3c-1.3,0-2.4-1.1-2.4-2.4v-16C0.9,2,2,0.9,3.3,0.9h9.8
-                            c1.3,0,2.4,1.1,2.4,2.4v3.3H14V3.3c0-0.4-0.4-0.8-0.8-0.8H3.3c-0.4,0-0.8,0.4-0.8,0.8v16c0,0.4,0.4,0.8,0.8,0.8h9.8
-                            c0.4,0,0.8-0.4,0.8-0.8V16.1z M17.9,7.5l-1.2,1.2l1.9,1.9H8.1v1.6h10.6L16.8,14l1.2,1.2l3.8-3.8L17.9,7.5z" />
-                        </g>
-                      </svg>
-                      <span>{t('header.logout')}</span>
-                    </Button>
-                  )}
-                </div>
                 <ul className="social-head">
                   <li><a href={settings('url.telegram')} target={'_blank'}>
                     <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,9 +159,7 @@ const Header = () => {
             <div className="shadow"></div>
             }
             <div className="mob-show profile-holder">
-              {!login ? (<Login/>) : (
-                <ProfileBtn />
-              )}
+              <Login/>
               <div className="btn-mob">
                 <Button className="btn btn-active" onClick={toggleNav}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
