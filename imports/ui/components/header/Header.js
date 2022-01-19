@@ -98,7 +98,7 @@ const Header = () => {
                 {/*//   </svg>*/}
                 {/*//   <span>{t('header.logout')}</span>*/}
                 {/*// </Button>*/}
-                <ChangeLang/>
+
               </div>
             </div>
             {isShown &&
@@ -168,7 +168,7 @@ const Header = () => {
                   </svg>
                 </Button>
               </div>
-              <ChangeLang/>
+
             </div>
           </header>
         </div>
