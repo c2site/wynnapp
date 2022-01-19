@@ -11,11 +11,11 @@ const ProfilePage = ({ children }) => {
       <div className="container">
         <div className="head-page">
           <div className="breadcrumbs">
-            <a href="#">{t('nav.home')}</a>
+            <span className="name">{t('nav.home')}</span>
             <span className="separator">
                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
               </span>
-            <a href="#">{t('nav.profile')}</a>
+            <span className="name">{t('nav.profile')}</span>
           </div>
           <div className="flex f-space-between">
             <h2 className="title-page">{t('profile.title')}</h2>

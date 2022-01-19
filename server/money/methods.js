@@ -1,5 +1,4 @@
 import Swap_manager from "./swap_manager";
-import {Money} from "../../imports/api/mongo/money";
 import {Money_manager} from "./money_manager";
 
 Meteor.methods({
@@ -11,15 +10,15 @@ Meteor.methods({
         })
 
         console.log(swap);
-        const swapWynn = new Swap_manager(this.userId, swap.asset);
-        await swapWynn.swap({amount: Number(swap.amount)});
+        // const swapWynn = new Swap_manager(this.userId, swap.asset);
+        // await swapWynn.swap({amount: Number(swap.amount)});
     },
-    'user.send.coin': async function ({send, wallet}) {
+    'user.send.coin': async function (send) {
         check(this.userId, String);
         check(send, Object);
-        check(wallet, Object);
 
-        const money = new Money_manager(this.userId, wallet.name);
-        await money.send({recipient: send.address, amount: send.amount});
+        console.log(send);
+        const money = new Money_manager(this.userId, send.coins);
+        await money.send({recipient: send.address, amount: Number(send.amount)});
     }
 })

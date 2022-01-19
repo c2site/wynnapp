@@ -327,21 +327,6 @@
             //    border: none;
             //    color: #FFFFFF;
             //}
-            .lang-drop {
-                &.drop-red {
-                    > a {
-                        background-color: #EB3B3B;
-                        border: none;
-                        border-radius: 25px;
-                    }
-                    .dropdown-menu {
-                        left: 0 !important;
-                        .dropdown-item {
-                            border-color: #fff;
-                        }
-                    }
-                }
-            }
             select {
                 background: #EB3B3B url("./img/arrow-select.svg") no-repeat calc(100% - 25px) 50%;
                 outline: none;

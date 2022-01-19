@@ -10,11 +10,11 @@ const InfoPage = () => {
             <div className="inner-page">
                   <div className="container head-page">
                         <div className="breadcrumbs">
-                            <a href="#">{t('nav.home')}</a>
+                            <span className="name">{t('nav.home')}</span>
                             <span className="separator">
                               <img src="./img/arrow-breadcrumbs.svg" alt="" />
                             </span>
-                            <a href="#">{t('nav.info')}</a>
+                            <span className="name">{t('nav.info')}</span>
                         </div>
                     </div>
                   <InfoBox/>

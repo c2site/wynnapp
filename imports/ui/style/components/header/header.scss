@@ -563,6 +563,33 @@ header {
       }
     }
   }
+
+  &.drop-red {
+    > a {
+      background-color: #EB3B3B;
+      border: none;
+      border-radius: 25px;
+      @media only screen and (max-width : $responsive-size-big-mobile) {
+        width: initial;
+        height: initial;
+        padding: 10px 15px;
+      }
+    }
+    .dropdown-menu {
+      //left: 0 !important;
+      padding: 10px 20px 20px;
+      .dropdown-item {
+        border-color: #fff;
+        + .dropdown-item {
+          margin-top: 20px;
+        }
+        &:hover {
+          background: none;
+          border: 2px solid #FFE58B;
+        }
+      }
+    }
+  }
 }
 
 .shadow {

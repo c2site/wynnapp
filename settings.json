@@ -1,10 +1,10 @@
 {
   "public": {
     "url": {
-      "telegram": "telegram",
+      "telegram": "https://t.me/WynnGames",
+      "telegram2": "https://t.me/WynnGamesGroup",
       "twitter": "https://twitter.com/DevWynngames",
       "medium": "https://medium.com/@wynngames.dev",
-      "btt": "https://bitcointalk.org/index.php?topic=5358909.msg57889403#msg57889403",
       "coingeco": "coingeco"
     }
   },
