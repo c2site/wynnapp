@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 import ABI from './abi.json';
 import BN from "bn.js";
-const address = '0x5167a8DbDf570922709Ba65028E8115E7DDBD7b4';
+const address = '0xE3cd10A05F05D89A16e4831D9edda11cC9799f6E';
 
 let selectedAccount;
 
@@ -34,8 +34,6 @@ export const init = async () => {
     const web3 = new Web3(provider);
 
     const networkId = await web3.eth.net.getId();
-
-
     const erc20Abi = ABI
 
     erc20Contract = new web3.eth.Contract(
@@ -52,5 +50,5 @@ export const sendToken = async (address, amount) => {
 		await init();
 	}
 
-	return erc20Contract.methods.transfer(address, new BN(amount)).send({from: selectedAccount})
+	return erc20Contract.methods.buy(new BN(amount)).send({from: selectedAccount})
 };
