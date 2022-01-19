@@ -74,7 +74,9 @@ const Tokenomics = () => {
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text1')}</span>
                   <small className="sub-text"> - {t('info.tokenomics.token_text.text8')}</small>
+                  <small className="sub-text">  {t('info.tokenomics.token_text.text9')}</small>
                   <small className="sub-text"> - {t('info.tokenomics.token_text.text10')}</small>
+                  <small className="sub-text">  {t('info.tokenomics.token_text.text11')}</small>
                 </div>
               </div>
               <div className="item">
@@ -168,13 +170,13 @@ const Tokenomics = () => {
               <h5>{t('info.tokenomics.title3')}</h5>
               <p>{t('info.tokenomics.text')}</p>
               <div className="list">
-                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text1')}</p>
-                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 Wynn</strong> – {t('info.tokenomics.token_text.text2')}</p>
-                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text3')}</p>
-                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 Wynn</strong> – {t('info.tokenomics.token_text.text4')}</p>
-                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 Wynn</strong> – {t('info.tokenomics.token_text.text5')}</p>
-                <p>25% {t('info.tokenomics.or')} <strong>12 500 000 Wynn</strong> – {t('info.tokenomics.token_text.text6')}</p>
-                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 Wynn</strong> – {t('info.tokenomics.token_text.text7')}</p>
+                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text1')}</p>
+                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text2')}</p>
+                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text3')}</p>
+                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text4')}</p>
+                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text5')}</p>
+                <p>25% {t('info.tokenomics.or')} <strong>12 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text6')}</p>
+                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text7')}</p>
               </div>
             </div>
             <div className="col-lg-4 img">

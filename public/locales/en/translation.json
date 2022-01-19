@@ -143,7 +143,7 @@
     "text1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games with a transparent and independent winning algorithm.",
     "text2": "The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Binance Smart Chain (BSC) into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
     "text3": "It doesn't really matter what country you live in and how strict are its laws.",
-    "text4": "It offers no opportunities for external influence on the drawing process. And most importantly, all payments within the Wynn Games platform are made only in cryptocurrency. The platform accepts for payment: BSC (BEP20), Tether (TRC-20), and its own native Wynn token.",
+    "text4": "It offers no opportunities for external influence on the drawing process. And most importantly, all payments within the Wynn Games platform are made only in cryptocurrency. The platform accepts for payment: BNB (BEP20), Tether (TRC-20), and its own native WYNN token.",
     "tokenomics": {
       "title": "Tokenomics",
       "percent": {
@@ -164,7 +164,7 @@
       "tokens": "tokens",
       "or": "or",
       "title3": "Initial Distribution",
-      "text": "The total supply:n of the Wynn token is 50,000,000 tokens, which are distributed on special system wallets, each of which has its own intended purpose. This excludes irrational or inappropriate use.",
+      "text": "The total supply of the WYNN token is 50,000,000 tokens, which are distributed on special system wallets, each of which has its own intended purpose. This excludes irrational or inappropriate use.",
       "token_text": {
         "text1": "Supply, rising a total of $445 000",
         "text8": "3% Seed at $0.08 pet token. ($120 000)",
@@ -355,7 +355,7 @@
     "passwordRecovery": "recovery.password_done"
   },
   "rating": {
-    "text": "The use of the native Wynn token on the Wynn Games platform provides users the opportunity to participate in the loyalty program for VIP-level users, which offers a dynamically growing discount (from 1.1% to 10.1%) for the purchase of tickets or contracts.",
+    "text": "The use of the native WYNN token on the Wynn Games platform provides users the opportunity to participate in the loyalty program for VIP-level users, which offers a dynamically growing discount (from 1.1% to 10.1%) for the purchase of tickets or contracts.",
     "rating": "Rating",
     "level": "Vip level",
     "discount": "Discount",
