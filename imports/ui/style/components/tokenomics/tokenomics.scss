@@ -79,13 +79,23 @@
                     &.color-6 {
                         border-color: #F8D270;
                     }
+                    &.color-7 {
+                        border-color: #b92929;
+                    }
                 }
             }
             .text {
-                width: calc(100% - 110px);
+                width: 100%;
+                font-size: 16px;
                 @media only screen and (max-width: $responsive-size-mobile) {
                     width: 100%;
                 }
+            }
+            .sub-text {
+                font-size: 12px;
+                margin-left: 25px;
+                display: block;
+                font-weight: 500;
             }
         }
     }

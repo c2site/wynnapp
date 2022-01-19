@@ -27,6 +27,7 @@ import "./style/components/linksList/linksList.scss";
 import "./style/components/steps/steps.scss";
 import "./style/components/borrow/borrow.scss";
 import "./style/components/stats/stats.scss";
+import "./style/components/partners/partners.scss";
 import "./style/components/subscribe/subscribe.scss";
 import './style/components/ticket/ticket.scss';
 import './style/components/tokenomics/tokenomics.scss';
