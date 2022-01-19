@@ -6,6 +6,7 @@ import Steps from '/imports/ui/components/Steps/Steps';
 import Borrow from '/imports/ui/components/borrow/Borrow';
 import Stats from '/imports/ui/components/stats/Stats';
 import Subscribe from '/imports/ui/components/subscribe/Subscribe';
+import Partners from '/imports/ui/components/partners/Partners';
 
 const HomePage = () => {
     return (
@@ -18,6 +19,7 @@ const HomePage = () => {
         <Borrow/>
         <div className="stats-container">
           <Stats/>
+          <Partners/>
           <Subscribe/>
         </div>
       </div>

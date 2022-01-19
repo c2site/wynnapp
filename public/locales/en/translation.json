@@ -141,9 +141,9 @@
     "distribution": "Distribution",
     "text": "The prize fund receives 90% of the collected funds",
     "text1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games with a transparent and independent winning algorithm.",
-    "text2": "The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Tron blockchain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
+    "text2": "The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Binance Smart Chain (BSC) into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
     "text3": "It doesn't really matter what country you live in and how strict are its laws.",
-    "text4": "It offers no opportunities for external influence on the drawing process. And most importantly, all payments within the Wynn Games platform are made only in cryptocurrency. The platform accepts for payment: Tron (TRX), Tether (TRC-20), and its own native Wynn token.",
+    "text4": "It offers no opportunities for external influence on the drawing process. And most importantly, all payments within the Wynn Games platform are made only in cryptocurrency. The platform accepts for payment: BSC (BEP20), Tether (TRC-20), and its own native Wynn token.",
     "tokenomics": {
       "title": "Tokenomics",
       "percent": {
@@ -154,24 +154,35 @@
         "text5": "The development team fund",
         "text6": "For replenishing the prize funds"
       },
-      "title2": "TokenInfo",
+      "title2": "Token Info",
       "info1": "Stock Ticker",
       "info2": "Type",
       "info3": "Blockchain",
       "info4": "Token Standard",
-      "info5": "Emission",
+      "info5": "Total supply",
       "token": "Token",
       "tokens": "tokens",
       "or": "or",
       "title3": "Initial Distribution",
-      "text": "The total emission of the Wynn token is 50,000,000 tokens, which are distributed on special system wallets, each of which has its own intended purpose. This excludes irrational or inappropriate use.",
+      "text": "The total supply:n of the Wynn token is 50,000,000 tokens, which are distributed on special system wallets, each of which has its own intended purpose. This excludes irrational or inappropriate use.",
       "token_text": {
-        "text1": "Reserved for pre-sale",
+        "text1": "Supply, rising a total of $445 000",
+        "text8": "3% Seed at $0.08 pet token. ($120 000)",
+        "text9": "50% unlock at listing, 25% each month thereafter.",
+        "text10": "7% PRE - SALE at $0.1 per token ($325 000)",
+        "text11": "20% unlock at listing, 20% each month thereafter.",
         "text2": "Reserved for replenishing the lottery prize fund",
+        "text12": "5% unlocked, 5% every 3 month.",
         "text3": "Reserved for replenishing the prize fund of a binary option",
-        "text4": "A marketing fund for promoting and scaling the project",
-        "text5": "The development team fund is frozen",
-        "text6": "An operational wallet for replenishing the prize fund of gaming services under development"
+        "text13": "2.5% unlock at March of 2022 , 2.5% every 3 month",
+        "text4": "A marketing fund",
+        "text14": "50% unlocked, 10% unlock each month",
+        "text5": "The development team fund",
+        "text15": "100% locked for 6 month, 10% unlock each month thereafter.",
+        "text6": "For replenishing the prize funds",
+        "text16": "10% unlocked, 5% every month",
+        "text7": "Liquidity",
+        "text17": "Fully unlocked"
       }
     },
     "roadmap": {
@@ -183,12 +194,12 @@
         "name": "Stage 1 (2021 2/2)",
         "text1": "Formation of a development team",
         "text2": "Creation of the Wynn Games test platform",
-        "text3": "Creation of a crypto lottery based on the Tron network",
+        "text3": "Creation of a crypto lottery based on the BSC Chain",
         "text4": "Start of alpha testing",
         "text5": "Launch of blockchain test network",
         "text6": "Start beta testing",
         "text7": "Successful bugfix test",
-        "text8": "Launch of the main blockchain on the Tron network",
+        "text8": "Launch of the main blockchain on the BSC Chain",
         "text9": "Start advertising campaign"
       },
       "list2": {
@@ -210,7 +221,7 @@
         "text3": "Advertising campaign",
         "text4": "Integration of affiliate programs",
         "text5": "Launch of alpha testing for the “Wynn Binary” option",
-        "text6": "Move to beta testing"
+        "text6": "Start “Wynn Binary” Beta testing"
       },
       "list4": {
         "name": "Stage 3 (2023 1/2)",
@@ -296,7 +307,7 @@
     "wallet": {
       "title": "wallet address",
       "text1": "To replenish the wallet, copy the address and paste it into the corresponding line in the exchanger or in the wallet of another system.",
-      "text2": "The Wynn wallet can only transfer cryptocurrency based on the TRON blockchain. The tokens which you can store here are listed below.",
+      "text2": "The Wynn wallet can only transfer cryptocurrency based on the Binance Smart Chain. The tokens which you can store here are listed below.",
       "text3": "* The minimum balance on your wallet cannot be lower than 5 TRX."
     },
     "table": {
@@ -355,7 +366,7 @@
     "title": "About the Project",
     "faq-about": {
       "question-1": "What is Wynn Games?",
-      "answer-1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games that uses a transparent and independent winning algorithm. The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Tron blockchain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
+      "answer-1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games that uses a transparent and independent winning algorithm. The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Binance Smart Chain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
       "question-2": "Advantages of Wynn?",
       "answer-2": "The Wynn platform is completely autonomous. It offers no opportunities for external influence on the drawing process, either from the developers of the lottery or from third parties.",
       "question-3": "How to increase your chances of winning?",
@@ -406,6 +417,7 @@
     }
   },
   "wp": "White Paper",
+  "partners": "our partners",
   "errorPage": {
     "title": "Page not found",
     "text": "You have found the secret page",
