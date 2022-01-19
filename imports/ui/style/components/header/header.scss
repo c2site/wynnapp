@@ -210,6 +210,13 @@ header {
     justify-content: space-between;
     @media only screen and (max-width: 1199px) {
       width: 75%;
+      .login-ticket {
+        color:#1e2632;
+        border: 2px solid #1e2632;
+      }
+      .login-ticket svg{
+        display: none;
+      }
     }
     @media only screen and (max-width: 1199px) {
       position: fixed;
@@ -328,7 +335,7 @@ header {
         //margin-bottom: 10px;
       }
       .btn {
-        max-width: 164px;
+        max-width: 225px;
         width: 100%;
         min-height: 54px;
         + .btn {
@@ -565,14 +572,17 @@ header {
   }
 
   &.drop-red {
+      min-width: 225px;
     > a {
       background-color: #EB3B3B;
       border: none;
       border-radius: 25px;
       @media only screen and (max-width : $responsive-size-big-mobile) {
-        width: initial;
         height: initial;
         padding: 10px 15px;
+        width: 100%;
+        margin-top: 10px;
+        min-height: 54px;
       }
     }
     .dropdown-menu {

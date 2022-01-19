@@ -379,12 +379,16 @@ h1.black,h2.black,h3.black,h4.black,h5.black,h6.black {
   @media only screen and (max-width: 1199px) {
     display: flex !important;
   }
+  .btn{
+    font-size: 11px;
+    padding: 15px 20px;
+  }
 }
 .mob-show-status {
   display: none !important;
 }
 .mob-hide {
-  display: block !important;
+  display: flex !important;
   @media only screen and (max-width: 1199px) {
     display: none !important;
   }
