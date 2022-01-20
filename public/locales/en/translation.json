@@ -168,9 +168,9 @@
       "token_text": {
         "text1": "Supply, rising a total of $445 000",
         "text8": "3% Seed at $0.08 pet token. ($120 000)",
-        "text9": "50% unlock at listing, 25% each month thereafter.",
+        "text9": "25% (375 000 WYNN) unlock at listing, 25% each month thereafter.",
         "text10": "7% PRE - SALE at $0.1 per token ($325 000)",
-        "text11": "20% unlock at listing, 20% each month thereafter.",
+        "text11": "20% (700 000 WYNN) unlock at listing, 20% each month thereafter.",
         "text2": "Reserved for replenishing the lottery prize fund",
         "text12": "5% unlocked, 5% every 3 month.",
         "text3": "Reserved for replenishing the prize fund of a binary option",
@@ -211,12 +211,14 @@
         "text5": "Token listing on crypto exchanges",
         "text6": "Increase the number of the development staff",
         "text7": "Creation of a “Wynn Rust” server",
+        "text10": "Mint of NFT Rust collection with Big AirDrop campaign",
         "text8": "Launch of alpha testing for the “Wynn Rust” server",
         "text9": "Move to beta testing"
       },
       "list3": {
         "name": "Stage 2 (2022 2/2)",
         "text1": "Release of the “Wynn Rust” server",
+        "text7": "Wynn Rust NFT MARKET PLACE",
         "text2": "Implementation of Wynn as a native payment method",
         "text3": "Advertising campaign",
         "text4": "Integration of affiliate programs",
