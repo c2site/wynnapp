@@ -1,5 +1,5 @@
 import ABI from './abi.json';
-const address = '0xE3cd10A05F05D89A16e4831D9edda11cC9799f6E';
+const address = '0x16B520bc1A31dBeF2F8212b5842EC2873036f642';
 
 export function getToken(web3) {
     return web3
