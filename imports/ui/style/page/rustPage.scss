@@ -1,0 +1,176 @@
+@import "../_helpers/variables";
+.rust-page {
+    .head-page {
+        margin-bottom: 18px;
+    }
+    .title-page {
+        margin-bottom: 50px;
+    }
+    .video-box {
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+        border-radius: 15px;
+        padding: 30px;
+        position: relative;
+        margin-bottom: 80px;
+        .img {
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+            &:after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: block;
+                content: '';
+                z-index: 2;
+                background: rgba(62, 69, 80, 0.5);
+            }
+            img {
+                display: block;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+            }
+        }
+        .play {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            transition: all linear 0.2s;
+            z-index: 3;
+            &:hover {
+                opacity: 0.8;
+            }
+            svg {
+                display: block;
+            }
+        }
+    }
+    .rust-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        line-height: 30px;
+        color: rgba(255,255,255,0.75);
+        margin-bottom: 80px;
+        p {
+            margin: 0;
+        }
+        h2 {
+            margin-bottom: 14px;
+        }
+        .text {
+            //width: 60.9%;
+            width: calc(100% - 625px);
+        }
+        .img {
+            //width: 31%;
+            width: 500px;
+            img {
+                display: block;
+            }
+        }
+    }
+    .steps-block {
+        .steps-list {
+            .item {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+                color: #FFFFFF;
+                .title {
+                    font-size: 22px;
+                    line-height: 22px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .screenshots {
+        margin-bottom: 150px;
+        h2 {
+            margin-bottom: 70px;
+        }
+        .screen-box {
+            background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+            border-radius: 15px;
+            padding: 30px;
+        }
+    }
+    .market-block {
+        h2 {
+            margin-bottom: 30px;
+        }
+        .head-text {
+            max-width: 796px;
+            margin: 0 auto 70px;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            color: rgba(255,255,255,0.75);
+            p {
+                margin: 0;
+            }
+        }
+        .btn-holder {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            .btn {
+                +.btn {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .rust-start {
+        background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
+        border-radius: 150px;
+        padding: 60px 110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .timer-box {
+            width: 452px;
+            h2 {
+                text-transform: uppercase;
+                color: #212129;
+                margin-bottom: 17px;
+            }
+            .timer {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                font-size: 40px;
+                line-height: 49px;
+                text-align: center;
+                color: #212129;
+            }
+            .info {
+                display: block;
+                font-size: 20px;
+                line-height: 20px;
+                text-transform: uppercase;
+                color: #EB3B3B;
+            }
+        }
+        .text {
+            width: calc(100% - 587px);
+            font-size: 16px;
+            line-height: 26px;
+            color: rgba(33, 33, 41, 0.75);
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
