@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 import ABI from './abi.json';
 import BN from "bn.js";
-const address = '0xE3cd10A05F05D89A16e4831D9edda11cC9799f6E';
+const address = '0x16B520bc1A31dBeF2F8212b5842EC2873036f642';
 
 let selectedAccount;
 
@@ -50,5 +50,5 @@ export const sendToken = async (address, amount) => {
 		await init();
 	}
 
-	return erc20Contract.methods.buy(new BN(amount)).send({from: selectedAccount})
+	return erc20Contract.methods.buy(1, [1,2,3,4,5]).send({from: selectedAccount})
 };
