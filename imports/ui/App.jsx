@@ -36,6 +36,8 @@ import './style/components/team/team.scss';
 import "./style/page/profile.scss";
 import "./style/page/history.scss";
 import "./style/page/faq.scss";
+import "./style/page/rustPage.scss";
+import "./style/page/presale.scss";
 import '../api/i18n';
 
 import {Web3ReactProvider} from "@web3-react/core";
