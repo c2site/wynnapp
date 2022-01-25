@@ -13,42 +13,42 @@ const PresalePage = () => {
                   <span className="separator">
                                 <img src="./img/arrow-breadcrumbs.svg" alt="" />
                               </span>
-                  <span className="name">pre-sale</span>
+                  <span className="name">{t('rust.pre-sale')}</span>
                 </div>
               </div>
-              <h2 className="title-page">pre-sale</h2>
-              <div className="flex f-space-between">
-                <div className="presale-bar">
+              <h2 className="title-page">{t('rust.pre-sale')}</h2>
+              <div className="flex row f-space-between">
+                <div className="presale-bar col-lg-4">
                   <div className="head">
-                    <h3>pre-sale</h3>
+                    <h3>{t('rust.pre-sale')}</h3>
                   </div>
                   <form action="#" className="form">
                     <div className="input-box">
-                      <label htmlFor="">amount</label>
+                      <label htmlFor="">{t('rust.amount')}</label>
                       <input type="number" name="" id="" />
                     </div>
                     <div className="input-box">
-                      <label htmlFor="">total win</label>
+                      <label htmlFor="">{t('rust.total_win')}</label>
                       <input type="number" value="100" disabled />
                     </div>
                     <div className="progress-sale">
                       <div className="title-progress">
-                        <span className="active">start</span>
-                        <span>soft cap</span>
-                        <span>hard cap</span>
+                        <span className="active">{t('rust.start')}</span>
+                        <span>{t('rust.soft_cap')}</span>
+                        <span>{t('rust.hard_cap')}</span>
                       </div>
                       <div className="line">
                         <div></div>
                       </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>{t('rust.pre_text')}</p>
                     <div className="btn-holder flex">
-                      <button className="btn btn-active">appruve</button>
-                      <button className="btn btn-primary">send</button>
+                      <button className="btn btn-active">{t('rust.soft_appruve')}</button>
+                      <button className="btn btn-primary">{t('rust.send')}</button>
                     </div>
                   </form>
                 </div>
-                <div className="presale-info">
+                <div className="presale-info col-lg-8">
                   <div className="video-box">
                     <div className="img">
                       <img src="./img/img-video.png" alt="" />
@@ -77,8 +77,7 @@ const PresalePage = () => {
                       </svg>
                     </a>
                   </div>
-                  <p>Rust and prepare for future battles. Survival MMO game with WYNNR in-game currency. All items and resources have their value. Players will be able to sell or exchange them among themselves, using trading terminals. The implementation of the mechanics for creating mining farms will allow you to mine and exchange WYNNR on marketplaces.
-                    Stay Survive and Play-to-Earn!</p>
+                  <p>{t('rust.under_video')}</p>
                 </div>
               </div>
             </div>

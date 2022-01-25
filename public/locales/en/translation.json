@@ -419,10 +419,40 @@
     }
   },
   "wp": "White Paper",
-  "partners": "our partners",
+  "partners": "partners",
   "errorPage": {
     "title": "Page not found",
     "text": "You have found the secret page",
     "btn": "Back to home"
+  },
+  "rust": {
+    "mining": "Mining",
+    "closed_loc": "Closed location",
+    "events": "Events",
+    "market": "Market",
+    "skins": "Skins",
+    "boxes": "Mystery Boxes",
+    "vehicle": "Vehicle",
+    "pre-sale": "PRE-SALE",
+    "pre_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "total_win": "TOTAL WIN",
+    "start": "START",
+    "soft_cap": "SOFT CAP",
+    "hard_cap": "HARD CAP",
+    "under_video": "Join the first of Wynn Rust and prepare everything for future battles. Survival MMO game with intra-card WynnR currency. All items and resources have their own value. Players will be able to sell them or exchange them via trading terminals. The implementation mechanics of creating Mining farms will allow to produce and exchange WynnR on the Market Place.\nStay Survive and Play-to-Earn!\nP",
+    "appruve": "appruve",
+    "send": "Send",
+    "amount": "amount",
+    "rust_about": "Wynn Rust is a survival MMO with the in-game currency WYNNR. All items and resources have their value. Players will be able to sell or exchange them with each other using trading terminals. The mechanics of creating mining farms for the extraction of the WYNNR coin in the game itself will also be implemented. In order to survive in Wynn Rust, you must rally with friends or strangers, extract resources and build huge mining bases, but you can do it alone, or you can just forget about the law and kill players to pick up their rare items and resources with a goal make money on it. Wynn Rust gives the player freedom without being limited. Be strong to survive.",
+    "mining_text": "Get WynnR with your farm mining. Finger it from enemies, unite with your friends and get even more WynnR. Stay alive and play to earn!",
+    "loc_text": "Closed locations This is an integral part of the game mechanics that has developed our teams. In the presence of the NFTs, anyone who wants  can access rare items, resources and other unique opportunities.",
+    "event_text": "The Wynn Games team paid special attention to this part of the gameplay by creating many author's fascinating events. With valuable objects and rare resources, WynnR and much more.",
+    "skin_text": "This section is intended for the purchase, sale and exchange of skins.\nEach skin has its own coloring and value your appearance and you can create it by yourself\n",
+    "boxs_text": "This section is intended for the purchase and sales of Boxes.\nThis is the ability to win a unique skin, transport, weapons - but this is only a small part of what will be created.\n",
+    "vehicle_text": "This section is designed to buy and sell vehicles.\nChoose your personal type of transport by which you will conquer the vastness of Wynn Rust. Try had been fastest at the closed event.\n",
+    "timer_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "screen": "screenshots",
+    "game": "game",
+    "start_server": "Start First Server"
   }
 }

@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { TabPane, NavLink, NavItem, Nav, TabContent  } from 'reactstrap';
+import ImageGallery from 'react-image-gallery';
+import classnames from 'classnames';
+import Skins from  '/imports/ui/components/market/Skins';
+import Cars from  '/imports/ui/components/market/Cars';
+import Boxs from  '/imports/ui/components/market/Boxs';
 
 const WynnRustPage = () => {
   const {t, i18n} = useTranslation();
+  const images = [
+    {
+      original: './img/rust/1.png',
+      thumbnail: './img/rust/1.png',
+    },
+    {
+      original: './img/rust/2.png',
+      thumbnail: './img/rust/2.png',
+    },
+    {
+      original: './img/rust/3.png',
+      thumbnail: './img/rust/3.png',
+    },
+    {
+      original: './img/rust/4.png',
+      thumbnail: './img/rust/4.png',
+    },
+    {
+      original: './img/rust/5.png',
+      thumbnail: './img/rust/5.png',
+    },
+    {
+      original: './img/rust/6.png',
+      thumbnail: './img/rust/6.png',
+    },
+  ];
+
+
+  const [currentActiveTab, setCurrentActiveTab] = useState('1');
+  const toggle = tab => {
+    if (currentActiveTab !== tab) setCurrentActiveTab(tab);
+  }
+
 
         return (
           <div className="inner-page rust-page">
@@ -45,16 +84,23 @@ const WynnRustPage = () => {
                   </svg>
                 </a>
               </div>
-              <div className="rust-info">
-                <div className="text">
-                  <h2>game</h2>
-                  <p>Wynn Rust is a survival MMO with the in-game currency WYNNR. All items and resources have their value. Players will be able to sell or exchange them with each other using trading terminals. The mechanics of creating mining farms for the extraction of the WYNNR coin in the game itself will also be implemented. In order to survive in Wynn Rust, you must rally with friends or strangers, extract resources and build huge mining bases, but you can do it alone, or you can just forget about the law and kill players to pick up their rare items and resources with a goal make money on it. Wynn Rust gives the player freedom without being limited. Be strong to survive.</p>
-                </div>
-                <div className="img">
-                  <img src="./img/img-rust.png" alt="" />
+              <div  className="container">
+                <div className="row f-align-center rust-info">
+                    <div className="col-lg-8">
+                      <div className="text">
+                        <h2>{t('rust.game')}</h2>
+                        <p>{t('rust.rust_about')}</p>
+                      </div>
+                    </div>
+                  <div className="col-lg-4">
+                    <div className="img">
+                      <img src="./img/img-rust.png" alt="" />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="steps-block">
+              <div className="container">
+                <div className="row f-align-center steps-block">
                 <div className="steps-list row">
                   <div className="col-lg-4">
                     <div className="item">
@@ -67,8 +113,8 @@ const WynnRustPage = () => {
                           </svg>
                     </span>
                       <span className="text">
-                      <span className="title">mining</span>
-                      <span>Mine WYNNR with your mining farm. Protect her from enemies, team up with friends and get even more WYNNR. Stay alive and play to earn</span>
+                      <span className="title">{t('rust.mining')}</span>
+                      <span>{t('rust.mining_text')}</span>
                     </span>
                     </div>
                   </div>
@@ -89,8 +135,8 @@ const WynnRustPage = () => {
   </svg>
                     </span>
                       <span className="text">
-                      <span className="title">events</span>
-                      <span>The Wynn Games team has paid special attention to this part of the gameplay, creating a lot of author's exciting events. With valuable items and rare resources, WynnR and more.</span>
+                      <span className="title">{t('rust.events')}</span>
+                      <span> {t('rust.event_text')}</span>
                     </span>
                     </div>
                   </div>
@@ -108,58 +154,111 @@ const WynnRustPage = () => {
   </svg>
                     </span>
                       <span className="text">
-                      <span className="title">Close Location</span>
-                      <span>Closed locations are an integral part of the game mechanics that our team has developed. With NFT, any player can get access to rare items, resources and other unique features</span>
+                      <span className="title">{t('rust.close_loc')}</span>
+                      <span>{t('rust.loc_text')}</span>
                     </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="screenshots">
-                <h2 className="text-center">screenshots</h2>
-                <div className="screen-box"></div>
               </div>
-              <div className="market-block">
-                <h2 className="text-center">market</h2>
-                <div className="btn-holder">
-                  <button className="btn btn-default active">
-                    <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M3.20127 19.5C2.2209 19.5 1.826 18.2358 2.63206 17.6778L11.8616 11.2881C12.5465 10.814 13.4535 10.814 14.1384 11.2881L23.3679 17.6778C24.174 18.2358 23.7791 19.5 22.7987 19.5H3.20127Z" stroke="#CED0D3" stroke-width="1.5"/>
-                      <path d="M12.25 10.5C12.25 10.9142 12.5858 11.25 13 11.25C13.4142 11.25 13.75 10.9142 13.75 10.5H12.25ZM9.25 4.75C9.25 5.16421 9.58579 5.5 10 5.5C10.4142 5.5 10.75 5.16421 10.75 4.75H9.25ZM10.75 4.5C10.75 3.99007 11.0077 3.4211 11.4599 2.96635C11.9116 2.51216 12.4796 2.25 13 2.25V0.75C11.9954 0.75 11.0634 1.23784 10.3963 1.90865C9.72979 2.5789 9.25 3.50993 9.25 4.5H10.75ZM13 2.25C13.6048 2.25 14.1688 2.44874 14.5721 2.80917C14.9621 3.15777 15.25 3.69943 15.25 4.5H16.75C16.75 3.30057 16.3005 2.34223 15.5717 1.69083C14.8562 1.05126 13.9203 0.75 13 0.75V2.25ZM15.25 4.5C15.25 4.95491 14.9955 5.44316 14.5409 5.93359C14.0966 6.41294 13.5428 6.80509 13.1385 7.05686L13.9315 8.33013C14.3898 8.04471 15.0685 7.57096 15.641 6.95328C16.2033 6.34668 16.75 5.50678 16.75 4.5H15.25ZM12.25 8.61803V10.5H13.75V8.61803H12.25ZM9.25 4.5V4.75H10.75V4.5H9.25ZM13.1385 7.05686C12.6226 7.37815 12.25 7.95159 12.25 8.61803H13.75C13.75 8.52693 13.8044 8.4093 13.9315 8.33013L13.1385 7.05686Z" fill="#CED0D3"/>
-                    </svg>
-                    skins
-                  </button>
-                  <button className="btn btn-default">
-                    <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3.5" y="8.5" width="16" height="10" stroke="#CED0D3" stroke-width="1.5"/>
-                      <rect x="1.5" y="2.5" width="20" height="6" rx="1" stroke="#CED0D3" stroke-width="1.5"/>
-                    </svg>
-                    boxs
-                  </button>
-                  <button className="btn btn-default">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M3 15.5L2.10557 15.0528C1.428 14.714 1 14.0215 1 13.2639V12.386C1 11.5523 1.51715 10.8061 2.29775 10.5133L4.3464 9.7451C4.76962 9.58639 5.12607 9.28561 5.44919 8.96956C6.1995 8.23568 7.98478 7 11.5 7C14.6009 7 16.3556 8.15388 17.2412 9.03041C17.7797 9.56331 18.4806 9.99418 19.2309 10.0989C20.602 10.2902 22.6704 10.8518 23 12.5C23.2112 13.5559 23.244 14.255 23.2114 14.7104C23.1735 15.2395 22.702 15.5 22.1716 15.5H21M16 15.5H8" stroke="#CED0D3" stroke-width="2"/>
-                      <circle cx="5.5" cy="16" r="2.5" stroke="#CED0D3" stroke-width="2"/>
-                      <circle cx="18.5" cy="16" r="2.5" stroke="#CED0D3" stroke-width="2"/>
-                    </svg>
-                    cars
-                  </button>
-                </div>
-                <div className="head-text">
-                  <p>This section is for buying and selling vehicles.
-                    Choose on what to conquer the expanses of Wynn Rust. Be the fastest in a private event.</p>
-                </div>
-              </div>
-              <div className="rust-start">
-                <div className="timer-box">
-                  <h2>start</h2>
-                  <div className="timer">
-                    <span>00d</span><span>00h</span><span>00m</span><span>00s</span>
+
+              <div className="container">
+                <div className="row screenshots">
+                  <h2 className="text-center">{t('rust.screen')}</h2>
+                  <div className="screen-box">
+                    <ImageGallery  items={images} thumbnailPosition={'right'} showFullscreenButton={true} showPlayButton={false}/>
                   </div>
-                  <span className="info">Start First Server</span>
                 </div>
-                <div className="text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+
+              <div className="market-block">
+                <h2 className="text-center">{t('rust.market')}</h2>
+
+                  <div className="btn-holder">
+                  <Nav tabs>
+                    <NavItem>
+                      <NavLink
+                          className={classnames({
+                            active:
+                                currentActiveTab === '1'
+                          })}
+                          onClick={() => { toggle('1'); }}
+                      >
+                        <button  className="btn btn-default">
+                          <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.20127 19.5C2.2209 19.5 1.826 18.2358 2.63206 17.6778L11.8616 11.2881C12.5465 10.814 13.4535 10.814 14.1384 11.2881L23.3679 17.6778C24.174 18.2358 23.7791 19.5 22.7987 19.5H3.20127Z" stroke="#CED0D3" stroke-width="1.5"/>
+                            <path d="M12.25 10.5C12.25 10.9142 12.5858 11.25 13 11.25C13.4142 11.25 13.75 10.9142 13.75 10.5H12.25ZM9.25 4.75C9.25 5.16421 9.58579 5.5 10 5.5C10.4142 5.5 10.75 5.16421 10.75 4.75H9.25ZM10.75 4.5C10.75 3.99007 11.0077 3.4211 11.4599 2.96635C11.9116 2.51216 12.4796 2.25 13 2.25V0.75C11.9954 0.75 11.0634 1.23784 10.3963 1.90865C9.72979 2.5789 9.25 3.50993 9.25 4.5H10.75ZM13 2.25C13.6048 2.25 14.1688 2.44874 14.5721 2.80917C14.9621 3.15777 15.25 3.69943 15.25 4.5H16.75C16.75 3.30057 16.3005 2.34223 15.5717 1.69083C14.8562 1.05126 13.9203 0.75 13 0.75V2.25ZM15.25 4.5C15.25 4.95491 14.9955 5.44316 14.5409 5.93359C14.0966 6.41294 13.5428 6.80509 13.1385 7.05686L13.9315 8.33013C14.3898 8.04471 15.0685 7.57096 15.641 6.95328C16.2033 6.34668 16.75 5.50678 16.75 4.5H15.25ZM12.25 8.61803V10.5H13.75V8.61803H12.25ZM9.25 4.5V4.75H10.75V4.5H9.25ZM13.1385 7.05686C12.6226 7.37815 12.25 7.95159 12.25 8.61803H13.75C13.75 8.52693 13.8044 8.4093 13.9315 8.33013L13.1385 7.05686Z" fill="#CED0D3"/>
+                          </svg>
+                          {t('rust.skins')}
+                        </button>
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                          className={classnames({
+                            active:
+                                currentActiveTab === '2'
+                          })}
+                          onClick={() => { toggle('2'); }}
+                      >
+                        <button className="btn btn-default">
+                          <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3.5" y="8.5" width="16" height="10" stroke="#CED0D3" stroke-width="1.5"/>
+                            <rect x="1.5" y="2.5" width="20" height="6" rx="1" stroke="#CED0D3" stroke-width="1.5"/>
+                          </svg>
+                          {t('rust.boxes')}
+                        </button>
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                          className={classnames({
+                            active:
+                                currentActiveTab === '3'
+                          })}
+                          onClick={() => { toggle('3'); }}
+                      >
+                        <button className="btn btn-default">
+                          <svg width="25" height="21" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 15.5L2.10557 15.0528C1.428 14.714 1 14.0215 1 13.2639V12.386C1 11.5523 1.51715 10.8061 2.29775 10.5133L4.3464 9.7451C4.76962 9.58639 5.12607 9.28561 5.44919 8.96956C6.1995 8.23568 7.98478 7 11.5 7C14.6009 7 16.3556 8.15388 17.2412 9.03041C17.7797 9.56331 18.4806 9.99418 19.2309 10.0989C20.602 10.2902 22.6704 10.8518 23 12.5C23.2112 13.5559 23.244 14.255 23.2114 14.7104C23.1735 15.2395 22.702 15.5 22.1716 15.5H21M16 15.5H8" stroke="#CED0D3" stroke-width="2"/>
+                            <circle cx="5.5" cy="16" r="2.5" stroke="#CED0D3" stroke-width="2"/>
+                            <circle cx="18.5" cy="16" r="2.5" stroke="#CED0D3" stroke-width="2"/>
+                          </svg>
+                          {t('rust.vehicle')}
+                        </button>
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+                </div>
+                  <TabContent activeTab={currentActiveTab}>
+                    <TabPane tabId="1">
+                        <Skins />
+                    </TabPane>
+                    <TabPane tabId="2">
+                        <Boxs />
+                    </TabPane>
+                    <TabPane tabId="3">
+                        <Cars />
+                    </TabPane>
+                  </TabContent>
+
+
+
+
+              </div>
+              <div className="container">
+                <div className="row rust-start">
+                  <div className="timer-box col-lg-4">
+                    <h2>{t('rust.start')}</h2>
+                    <div className="timer">
+                      <span>00d</span><span>00h</span><span>00m</span><span>00s</span>
+                    </div>
+                    <span className="info">{t('rust.start_server')}</span>
+                  </div>
+                  <div className="text col-lg-8">
+                    <p>{t('rust.timer_text')}</p>
+                  </div>
                 </div>
               </div>
             </div>

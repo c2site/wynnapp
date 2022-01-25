@@ -12,6 +12,9 @@
         padding: 30px;
         position: relative;
         margin-bottom: 80px;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            padding: 10px;
+        }
         .img {
             overflow: hidden;
             border-radius: 15px;
@@ -65,12 +68,10 @@
             margin-bottom: 14px;
         }
         .text {
-            //width: 60.9%;
-            width: calc(100% - 625px);
+
         }
         .img {
-            //width: 31%;
-            width: 500px;
+            margin-top: 30px;
             img {
                 display: block;
             }
@@ -79,11 +80,19 @@
     .steps-block {
         .steps-list {
             .item {
-                font-weight: 500;
+                font-weight: 100;
                 font-size: 18px;
                 line-height: 24px;
                 text-align: center;
                 color: #FFFFFF;
+                @media only screen and (max-width: $responsive-size-big-tablet) {
+                    display: block;
+                }
+                .ico{
+                    @media only screen and (max-width: $responsive-size-big-tablet) {
+                        margin: 20px auto;
+                    }
+                }
                 .title {
                     font-size: 22px;
                     line-height: 22px;
@@ -103,8 +112,98 @@
         .screen-box {
             background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
             border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                padding: 10px;
+            }
         }
+
+        .image-gallery-left-nav, .image-gallery-right-nav {
+            background: linear-gradient(87.16deg, #ffe58b -4.55%,#e8922d 103.59%);
+            border-radius: 50px;
+            padding: 10px;
+            color: #1E2632;
+            margin: 10px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                background: transparent;
+            }
+        }
+
+        .image-gallery-svg{
+            height: 64px;
+            width: 64px;
+            color: #1E2632;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                height: 32px;
+                width: 32px;
+                color: #ffffff;
+            }
+        }
+
+        .image-gallery-image{
+            border-radius: 10px;
+        }
+        .image-gallery-slide-wrapper.left, .image-gallery-slide-wrapper.right {
+            width: calc(100% - 200px);
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                width: calc(100% - 87px);
+            }
+        }
+        .image-gallery-thumbnail .image-gallery-thumbnail-image {
+            min-width: 185px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                min-width: 100%;
+            }
+            border-radius: 10px;
+        }
+
+        .image-gallery-thumbnails{
+            min-width: 190px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                min-width: 100%;
+            }
+        }
+
+        .image-gallery-thumbnails-wrapper.left, .image-gallery-thumbnails-wrapper.right {
+            margin: 0px 10px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin: 0px 3px;
+            }
+        }
+
+        .image-gallery-thumbnail{
+            width: 100%;
+            opacity: 0.5;
+            border: none;
+            margin: 10px 0;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin: 5px 0;
+            }
+        }
+        .image-gallery-thumbnail:first-child{
+            margin-top:0;
+        }
+
+        .image-gallery-thumbnail:hover {
+            outline: none;
+            border: none;
+            width: 100%;
+            opacity: 1;
+
+        }
+
+        .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus{
+            border: none;
+            outline: none;
+            width: 100%;
+            opacity: 1;
+        }
+
+        .image-gallery-fullscreen-button .image-gallery-svg, .image-gallery-play-button .image-gallery-svg{
+            color: #fff;
+            height: 32px;
+        }
+
     }
     .market-block {
         h2 {
@@ -112,6 +211,7 @@
         }
         .head-text {
             max-width: 796px;
+            min-height: 90px;
             margin: 0 auto 70px;
             font-size: 18px;
             line-height: 30px;
@@ -131,6 +231,130 @@
                 }
             }
         }
+
+        .active .nav-link button{
+            color: rgba(255, 255, 255, 0.75);
+            background: transparent;
+            border: 2px solid #ffe58b;
+        }
+
+        .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .nav-tabs{
+            border: none;
+        }
+        .nav-link {
+            padding: 0;
+            margin: 0 10px;
+            transition: none;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin: 5px 3px;
+            }
+
+        }
+        .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus{
+            border: none;
+        }
+
+        .nav-tabs .nav-link .btn-default.active, .btn-default:hover, .btn-default:focus{
+            color: rgba(255, 255, 255, 0.75);
+            background: transparent;
+            border: 2px solid #ffe58b;
+        }
+
+        .btn-default{
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                font-size: 10px;
+            }
+        }
+
+        .nav-item .nav-link .btn-default:hover{
+            color: rgba(255, 255, 255, 0.75);
+            background: transparent;
+            border: 2px solid #ffe58b;
+        }
+
+        .nav-item .active  .btn-default{
+            color: rgba(255, 255, 255, 0.75);
+            background: transparent;
+            border: 2px solid #ffe58b;
+        }
+
+        .nav{
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                width: 100%;
+                align-content: center;
+            }
+        }
+
+        .slick-next {
+            right: 21px;
+        }
+        .slick-prev {
+            left: -3px;
+            z-index: 1;
+        }
+
+        .slick-next:before {
+            content: '→';
+            background: linear-gradient(87.16deg, #ffe58b -4.55%, #e8922d 103.59%);
+            border-radius: 50px;
+            padding: 7px 9px;
+            color: #1E2632;
+            opacity: 1;
+            font-weight: 900;
+            font-size: 28px;
+        }
+        .slick-prev:before {
+            content: '←';
+            background: linear-gradient(87.16deg, #ffe58b -4.55%, #e8922d 103.59%);
+            border-radius: 50px;
+            padding: 7px 9px;
+            color: #1E2632;
+            opacity: 1;
+            font-weight: 900;
+            font-size: 28px;
+        }
+
+        .slider {
+            position: relative;
+            margin: 0 45px 100px;
+            @media only screen and (max-width: $responsive-size-big-tablet) {
+                margin: 0 20px 100px;
+            }
+            .item {
+                background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
+                box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.05);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 10px;
+                justify-content: center;
+                padding: 70px 35px 30px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: #FFFFFF;
+                position: relative;
+                min-height: 100%;
+
+                .name-item{
+                    font-size: 22px;
+                    line-height: 22px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                }
+
+
+            }
+        }
     }
     .rust-start {
         background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
@@ -139,8 +363,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            padding: 100px 20px;
+            border-radius: 80px;
+
+        }
         .timer-box {
-            width: 452px;
+
             h2 {
                 text-transform: uppercase;
                 color: #212129;
@@ -154,6 +383,9 @@
                 line-height: 49px;
                 text-align: center;
                 color: #212129;
+                @media only screen and (max-width: $responsive-size-big-tablet) {
+                    font-size: 30px;
+                }
             }
             .info {
                 display: block;
@@ -164,7 +396,6 @@
             }
         }
         .text {
-            width: calc(100% - 587px);
             font-size: 16px;
             line-height: 26px;
             color: rgba(33, 33, 41, 0.75);
@@ -173,4 +404,9 @@
             }
         }
     }
+
+
+
+
+
 }
