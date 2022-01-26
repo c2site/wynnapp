@@ -453,6 +453,8 @@
     "timer_text": "Rust and prepare for future battles. Survival MMO game with WYNNR in-game currency. All items and resources have their value. Players will be able to sell or exchange them among themselves, using trading terminals. The implementation of the mechanics for creating mining farms will allow you to mine and exchange WYNNR on marketplaces. Stay Survive and Play-to-Earn!",
     "screen": "screenshots",
     "game": "game",
-    "start_server": "Start First Server"
+    "start_server": "Start First Server",
+    "wynn_rust": "Wynn Rust"
+
   }
 }

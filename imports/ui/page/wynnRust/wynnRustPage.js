@@ -250,7 +250,7 @@ const WynnRustPage = () => {
               <div className="container">
                 <div className="row rust-start">
                   <div className="timer-box col-lg-4">
-                    <h2>{t('rust.start')}</h2>
+                    <h2>{t('rust.wynn_rust')}</h2>
                     <div className="timer">
                       <span>00d</span><span>00h</span><span>00m</span><span>00s</span>
                     </div>
