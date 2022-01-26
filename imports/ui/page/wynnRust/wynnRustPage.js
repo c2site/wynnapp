@@ -100,8 +100,8 @@ const WynnRustPage = () => {
                 </div>
               </div>
               <div className="container">
-                <div className="row f-align-center steps-block">
-                <div className="steps-list row">
+                <div className="steps-block">
+                <div className="row steps-list">
                   <div className="col-lg-4">
                     <div className="item">
                     <span className="ico">
@@ -154,7 +154,7 @@ const WynnRustPage = () => {
   </svg>
                     </span>
                       <span className="text">
-                      <span className="title">{t('rust.close_loc')}</span>
+                      <span className="title">{t('rust.closed_loc')}</span>
                       <span>{t('rust.loc_text')}</span>
                     </span>
                     </div>

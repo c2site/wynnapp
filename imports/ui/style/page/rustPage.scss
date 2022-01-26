@@ -1,5 +1,8 @@
 @import "../_helpers/variables";
 .rust-page {
+     img{
+         height: inherit;
+     }
     .head-page {
         margin-bottom: 18px;
     }
@@ -78,6 +81,9 @@
         }
     }
     .steps-block {
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            padding-bottom: 50px;
+        }
         .steps-list {
             .item {
                 font-weight: 100;
@@ -106,6 +112,9 @@
     }
     .screenshots {
         margin-bottom: 150px;
+        @media only screen and (max-width: $responsive-size-big-tablet) {
+            margin-bottom: 50px;
+        }
         h2 {
             margin-bottom: 70px;
         }
@@ -266,7 +275,7 @@
 
         .btn-default{
             @media only screen and (max-width: $responsive-size-big-tablet) {
-                font-size: 10px;
+                font-size: 9px;
             }
         }
 
@@ -290,11 +299,15 @@
         }
 
         .slick-next {
-            right: 21px;
+            right: -12px;
+            height: 64px;
+            width: 64px;
         }
         .slick-prev {
-            left: -3px;
+            left: -10px;
             z-index: 1;
+            height: 64px;
+            width: 64px;
         }
 
         .slick-next:before {
