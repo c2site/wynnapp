@@ -419,6 +419,7 @@
     }
   },
   "wp": "White Paper",
+  "docs": "DOCS",
   "partners": "partners",
   "errorPage": {
     "title": "Page not found",
