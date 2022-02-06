@@ -28,7 +28,8 @@
     "get": "Get WYNN",
     "rust": "Wynn rust",
     "faq": "F.A.Q.",
-    "about": "About"
+    "about": "About",
+    "audit": "Audit"
   },
   "form": {
     "title_login": "Login to your account",
