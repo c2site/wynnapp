@@ -26,7 +26,7 @@ const Banner = () => {
               {/*{!login ? (<Registration color="primary" text={t('banner.started')}/>) : (*/}
               {/*  <button className="btn btn-primary" onClick={()=>FlowRouter.go('/profile')}>{t('banner.started')}</button>*/}
               {/*)}*/}
-              <a href={`https://wynn-games.gitbook.io/wynn-games/'}`}  target={'_blank'} className="btn btn-active">{t('docs')}</a>
+              <a href={`https://wynn-games.gitbook.io/wynn-games/`}  target={'_blank'} className="btn btn-active">{t('docs')}</a>
             </div>
             <div className="btn-holder">
               <a href={settings('url.twitter')}  target={'_blank'} className="btn btn-black">

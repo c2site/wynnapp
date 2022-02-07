@@ -33,9 +33,10 @@ const Footer = () => {
                <nav role="navigation">
                   <span className="title">{t('nav.info')}</span>
                   <ul>
-                     <li><a href={`https://www.wynn-games.com/wp/White_Paper_V1.0.0.pdf`} target={'_blank'} >White Paper V1.0.0</a></li>
+                     <li><a href={`https://wynn-games.gitbook.io/wynn-games/`} target={'_blank'} >{t('docs')}</a></li>
                      <li><a href={FlowRouter.path('faq')}>{t('nav.faq')}</a></li>
                      <li><a href={FlowRouter.path('info')}>{t('nav.about')}</a></li>
+                     <li><a href={`/Wynn_Games_Audit.pdf`}>{t('nav.audit')}</a></li>
                   </ul>
                </nav>
                <nav role="navigation">
