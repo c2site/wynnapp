@@ -38,6 +38,7 @@
     "react-image-gallery": "^1.2.7",
     "react-moment": "^1.1.1",
     "react-mounter": "^1.2.0",
+    "react-player": "^2.9.0",
     "react-slick": "^0.28.1",
     "react-super-responsive-table": "^5.2.0",
     "react-toastify": "^8.0.2",

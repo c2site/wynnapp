@@ -36,7 +36,7 @@ const Footer = () => {
                      <li><a href={`https://docs.wynn-games.com/wynn-games/`} target={'_blank'} >{t('docs')}</a></li>
                      <li><a href={FlowRouter.path('faq')}>{t('nav.faq')}</a></li>
                      <li><a href={FlowRouter.path('info')}>{t('nav.about')}</a></li>
-                     <li><a href={`/Wynn_Games_Audit.pdf`}>{t('nav.audit')}</a></li>
+                     <li><a href={`/Wynn_Games_Audit.pdf`} target={'_blank'}>{t('nav.audit')}</a></li>
                   </ul>
                </nav>
                <nav role="navigation">
