@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { TabPane, NavLink, NavItem, Nav, TabContent  } from 'reactstrap';
 import ImageGallery from 'react-image-gallery';
+import ReactPlayer from 'react-player';
 import classnames from 'classnames';
 import Skins from  '/imports/ui/components/market/Skins';
 import Cars from  '/imports/ui/components/market/Cars';
@@ -35,12 +36,12 @@ const WynnRustPage = () => {
       thumbnail: './img/rust/6.png',
     },
   ];
-
-
+  
   const [currentActiveTab, setCurrentActiveTab] = useState('1');
   const toggle = tab => {
     if (currentActiveTab !== tab) setCurrentActiveTab(tab);
   }
+
 
 
         return (
@@ -58,31 +59,16 @@ const WynnRustPage = () => {
               <h2 className="title-page">{t('nav.rust')}</h2>
               <div className="video-box">
                 <div className="img">
-                  <img src="./img/img-video.png" alt="" />
+                  <ReactPlayer
+                      url="https://www.youtube.com/embed/LGcECozNXEw"
+                      width="100%"
+                      height="770px"
+                      playing
+                      playIcon={<svg width="100" height="107" viewBox="0 0 100 107" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_201_605)"><circle cx="50" cy="50" r="50" fill="url(#paint0_linear_201_605)"></circle></g><path d="M41 37.4239C41 35.5608 42.8939 34.3963 44.4091 35.3279L64.8636 47.904C66.3788 48.8355 66.3788 51.1645 64.8636 52.096L44.4091 64.6721C42.8939 65.6037 41 64.4392 41 62.5761L41 37.4239Z" fill="#212129"></path><defs><filter id="filter0_d_201_605" x="0" y="0" width="100" height="107" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="7"></feOffset><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_201_605"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_201_605" result="shape"></feBlend></filter><linearGradient id="paint0_linear_201_605" x1="-5.51724" y1="85.1064" x2="107.717" y2="79.4848" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE58B"></stop><stop offset="1" stop-color="#E8922D"></stop></linearGradient></defs></svg>}
+                      light="./img/img-video.png"
+                  />
+
                 </div>
-                <a href="#" className="play">
-                  <svg width="100" height="107" viewBox="0 0 100 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_201_605)">
-                      <circle cx="50" cy="50" r="50" fill="url(#paint0_linear_201_605)"/>
-                    </g>
-                    <path d="M41 37.4239C41 35.5608 42.8939 34.3963 44.4091 35.3279L64.8636 47.904C66.3788 48.8355 66.3788 51.1645 64.8636 52.096L44.4091 64.6721C42.8939 65.6037 41 64.4392 41 62.5761L41 37.4239Z" fill="#212129"/>
-                    <defs>
-                      <filter id="filter0_d_201_605" x="0" y="0" width="100" height="107" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                        <feOffset dy="7"/>
-                        <feComposite in2="hardAlpha" operator="out"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_201_605"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_201_605" result="shape"/>
-                      </filter>
-                      <linearGradient id="paint0_linear_201_605" x1="-5.51724" y1="85.1064" x2="107.717" y2="79.4848" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FFE58B"/>
-                        <stop offset="1" stop-color="#E8922D"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </a>
               </div>
               <div  className="container">
                 <div className="row f-align-center rust-info">
