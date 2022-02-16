@@ -13,6 +13,15 @@
             margin-top: 0;
         }
     }
+    .contracts{
+        margin-top: 50px;
+        a {
+            color:#E8C76F;
+            &:hover{
+                color:#E8C76F
+            }
+        }
+    }
     .steps-list {
         margin-top: 60px;
         position: relative;
