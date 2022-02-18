@@ -37,6 +37,7 @@ const Footer = () => {
                      <li><a href={FlowRouter.path('faq')}>{t('nav.faq')}</a></li>
                      <li><a href={FlowRouter.path('info')}>{t('nav.about')}</a></li>
                      <li><a href={`/Wynn_Games_Audit.pdf`} target={'_blank'}>{t('nav.audit')}</a></li>
+                     <li><a href={'wp/White_Paper.pdf'}  target={'_blank'} >{t('wp')}</a></li>
                   </ul>
                </nav>
                <nav role="navigation">
@@ -155,6 +156,7 @@ const Footer = () => {
                   <a href={'/Privacy_Policy.pdf'} target={'_blank'}>
                      Privacy Policy
                   </a>
+
                </div>
             </div>
          </div>
