@@ -84,6 +84,7 @@ const Steps = () => {
                 </div>
               </div>
             </div>
+            <div className="contracts">Smart Contract: <a href="https://bscscan.com/token/0xc518e0f126f73a5316fdf2ceadedb44ab01ede88">0xc518e0f126f73a5316fdf2ceadedb44ab01ede88</a></div>
           </div>
           <div className="col-lg-4 img">
             <img src="./img/img-steps.svg" alt="" />

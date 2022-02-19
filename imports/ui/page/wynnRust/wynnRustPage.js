@@ -76,6 +76,12 @@ const WynnRustPage = () => {
                       <div className="text">
                         <h2>{t('rust.game')}</h2>
                         <p>{t('rust.rust_about')}</p>
+                          <div className="btn-holder">
+                              {/*{!login ? (<Registration color="primary" text={t('banner.started')}/>) : (*/}
+                              {/*  <button className="btn btn-primary" onClick={()=>FlowRouter.go('/profile')}>{t('banner.started')}</button>*/}
+                              {/*)}*/}
+                              <a href={'wp/White_Paper_Rust.pdf'}  target={'_blank'} className="btn btn-active">{t('wp_rust')}</a>
+                          </div>
                         <span>Powered by                             <svg width="160" height="64" viewBox="0 0 280 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_2424_970)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M31.5 0C14.1438 0 0 14.1488 0 31.5113C0 48.8737 14.1438 63.0225 31.5 63.0225C48.8562 63.0225 63 48.8737 63 31.5113C63 14.1488 48.9009 0 31.5 0ZM31.5 55.9704C18.0255 55.9704 7.09419 45.0352 7.09419 31.5559C7.09419 18.0766 18.0255 7.14136 31.5 7.14136C44.9745 7.14136 55.9058 18.0766 55.9058 31.5559C55.9058 45.0352 44.9745 55.9704 31.5 55.9704ZM30.0276 27.8063L24.9858 22.8074L21.2826 26.5119L17.7132 22.8966L12.6714 27.8956L16.2854 31.5109L12.493 35.3048L17.5347 40.3484L21.2826 36.5545L25.1643 40.4376L30.2061 35.3941L26.3243 31.5109L30.0276 27.8063ZM50.3731 27.6731L46.6699 31.3776L50.5516 35.2607L45.5098 40.2597L41.6281 36.3766L37.8356 40.1705L32.8384 35.1269L36.6309 31.3776L33.0169 27.7623L38.0141 22.7187L41.6281 26.334L45.3314 22.6295L50.3731 27.6731Z" fill="#EC1C24"/>

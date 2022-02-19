@@ -141,7 +141,7 @@
     "price_title": "Ticket Price",
     "distribution": "Distribution",
     "text": "The prize fund receives 90% of the collected funds",
-    "text1": "Wynn Game is not just another project with an enticing legend, it is an entire ecosystem that includes various games from both worlds such as fiat and crypto . The features of P2E allow us to range between different economic fiat games that everyone has seen at least once in real life, as well as Cyber Game World, which already has established communities.",
+    "text1": "Wynn Game is not just another project with an enticing legend, it is an entire ecosystem that includes various games from both worlds such as fiat and crypto. The features of P2E allow us to range between different economic fiat games that everyone has seen at least once in real life, as well as Cyber Game World, which already has established communities.",
     "text2": "The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Binance Smart Chain (BSC) into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
     "text3": "It doesn't really matter what country you live in and how strict are its laws.",
     "text4": "It offers no opportunities for external influence on the drawing process. And most importantly, all payments within the Wynn Games platform are made only in cryptocurrency. The platform accepts for payment: BNB (BEP20), Tether (TRC-20), and its own native WYNN token.",
@@ -420,6 +420,7 @@
     }
   },
   "wp": "White Paper",
+  "wp_rust": "WYNN RUST WP",
   "docs": "DOCS",
   "partners": "partners",
   "errorPage": {
