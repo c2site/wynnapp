@@ -135,9 +135,9 @@ const Footer = () => {
                      </li>
                   </ul>
                </nav>
-               <div className="lang-drop dropdown">
-                  <ChangeLang />
-               </div>
+               {/*<div className="lang-drop dropdown">*/}
+               {/*   <ChangeLang />*/}
+               {/*</div>*/}
             </div>
          </div>
       </div>

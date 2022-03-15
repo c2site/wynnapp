@@ -19,7 +19,7 @@
     "lottery": "Lottery",
     "history": "History Games",
     "buy-wynn": "Buy WYNN",
-    "option": "Option",
+    "option": "FUTURES",
     "contact": "Contact",
     "free_coin": "free coin",
     "buy": "buy",
@@ -99,7 +99,7 @@
   },
   "links": {
     "link1": "lottery",
-    "link2": "option",
+    "link2": "FUTURES",
     "link3": "wynn rust"
   },
   "stats": {
@@ -150,7 +150,7 @@
       "percent": {
         "text1": "Reserved for pre-sale",
         "text2": "Reserved for replenishing the lottery prize fund",
-        "text3": "Reserved for replenishing the prize fund of a binary option",
+        "text3": "Reserved for replenishing the prize fund of a Futures",
         "text4": "A marketing fund",
         "text5": "The development team fund",
         "text6": "For replenishing the prize funds"
@@ -233,12 +233,12 @@
         "text2": "Implementation of Wynn as a native payment method",
         "text3": "Advertising campaign",
         "text4": "Integration of affiliate programs",
-        "text5": "Launch of alpha testing for the “Wynn Binary” option",
-        "text6": "Start “Wynn Binary” Beta testing"
+        "text5": "Launch of alpha testing for the “Wynn” FUTURES",
+        "text6": "Start “Wynn FUTURES” Beta testing"
       },
       "list4": {
         "name": "Stage 3 (2023 1/2)",
-        "text1": "Launch of the “Wynn Binary” option",
+        "text1": "Launch of the “Wynn” FUTURES",
         "text2": "Adding new trading pairs",
         "text3": "Update lottery algorithm",
         "text4": "Add new types of lotteries",
@@ -379,7 +379,7 @@
     "title": "About the Project",
     "faq-about": {
       "question-1": "What is Wynn Games?",
-      "answer-1": "Wynn Games is a platform for blockchain lotteries, binary options, and economic games that uses a transparent and independent winning algorithm. The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Binance Smart Chain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
+      "answer-1": "Wynn Games is a platform for blockchain lotteries, Futures, and economic games that uses a transparent and independent winning algorithm. The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Binance Smart Chain into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.",
       "question-2": "Advantages of Wynn?",
       "answer-2": "The Wynn platform is completely autonomous. It offers no opportunities for external influence on the drawing process, either from the developers of the lottery or from third parties.",
       "question-3": "How to increase your chances of winning?",
