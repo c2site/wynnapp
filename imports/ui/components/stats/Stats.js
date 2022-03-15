@@ -2,15 +2,8 @@ import React, {useEffect, useState} from "react";
 import { useTranslation } from "react-i18next";
 
 const Stats = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState({lottery: 0, users: 0, win: 0});
   const {t, i18n} = useTranslation();
-
-  useEffect(()=> {
-    Meteor.call('stats.count', function (err, res) {
-      if(err) console.error(err.reason);
-      setData(res);
-    });
-  }, []);
 
   return (
     <>

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useTranslation } from "react-i18next";
+import {CondrSvg} from "./condr";
 
 const Partners = () => {
     const [data, setData] = useState();
@@ -117,6 +118,11 @@ const Partners = () => {
                             </svg>
 
                         </div>
+                    </div>
+                    <div className={'item'}>
+                        <a href={'https://kondr.io/'} target={'_blank'}>
+                            <CondrSvg />
+                        </a>
                     </div>
                     <div className="item">
                         <div className="ico">

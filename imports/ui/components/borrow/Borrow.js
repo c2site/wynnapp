@@ -34,15 +34,15 @@ const Borrow = () => {
               </div>
               <table>
                 <tbody>
-                {list?.map(ticket=>(
-                    <tr key={ticket._id}>
-                      <td><span className="th-name">{t('borrow.table.user')}</span>{ticket?.user?.name || 'Anonyms'}</td>
-                      <td><span className="th-name">{t('borrow.table.id')}</span>{ticket.id}</td>
-                      <td className='red'><span className="th-name">{t('borrow.table.amount')}</span>{ticket.price} {ticket.lottery.assetName}</td>
-                      <td className='game1'><span className="th-name">{t('borrow.table.game')}</span>{ticket.name}</td>
-                      <td className='green'><span className="th-name">{t('borrow.table.profit')}</span>{ticket.win} {ticket.lottery.assetName}</td>
-                    </tr>
-                ))}
+                {/*{list?.map(ticket=>(*/}
+                {/*    <tr key={ticket._id}>*/}
+                {/*      <td><span className="th-name">{t('borrow.table.user')}</span>{ticket?.user?.name || 'Anonyms'}</td>*/}
+                {/*      <td><span className="th-name">{t('borrow.table.id')}</span>{ticket.id}</td>*/}
+                {/*      <td className='red'><span className="th-name">{t('borrow.table.amount')}</span>{ticket.price} {ticket.lottery.assetName}</td>*/}
+                {/*      <td className='game1'><span className="th-name">{t('borrow.table.game')}</span>{ticket.name}</td>*/}
+                {/*      <td className='green'><span className="th-name">{t('borrow.table.profit')}</span>{ticket.win} {ticket.lottery.assetName}</td>*/}
+                {/*    </tr>*/}
+                {/*))}*/}
                 </tbody>
               </table>
             </div>

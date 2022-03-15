@@ -266,7 +266,6 @@ const BuyPage = () => {
                 <div className={'text-center mt20'}>
                   <span className={'btn btn-primary'} onClick={(e)=>skipPage()}>{t('buy.more')}</span>
                 </div>
-
               </div>
             </div>
           </div>

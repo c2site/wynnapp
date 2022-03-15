@@ -12,29 +12,67 @@ const WynnRustPage = () => {
   const {t, i18n} = useTranslation();
   const images = [
     {
-      original: './img/rust/1.png',
-      thumbnail: './img/rust/1.png',
+      original: './img/rust/rust1.jpg',
+      thumbnail: './img/rust/rust1.jpg',
     },
-    {
-      original: './img/rust/2.png',
-      thumbnail: './img/rust/2.png',
-    },
-    {
-      original: './img/rust/3.png',
-      thumbnail: './img/rust/3.png',
-    },
-    {
-      original: './img/rust/4.png',
-      thumbnail: './img/rust/4.png',
-    },
-    {
-      original: './img/rust/5.png',
-      thumbnail: './img/rust/5.png',
-    },
-    {
-      original: './img/rust/6.png',
-      thumbnail: './img/rust/6.png',
-    },
+      {
+          original: './img/rust/rust2.jpg',
+          thumbnail: './img/rust/rust2.jpg',
+      },
+      {
+          original: './img/rust/rust3.jpg',
+          thumbnail: './img/rust/rust3.jpg',
+      },
+      {
+          original: './img/rust/rust4.jpg',
+          thumbnail: './img/rust/rust4.jpg',
+      },
+      {
+          original: './img/rust/rust5.jpg',
+          thumbnail: './img/rust/rust5.jpg',
+      },
+      {
+          original: './img/rust/rust6.jpg',
+          thumbnail: './img/rust/rust6.jpg',
+      },
+      {
+          original: './img/rust/rust7.jpg',
+          thumbnail: './img/rust/rust7.jpg',
+      },
+      {
+          original: './img/rust/rust8.jpg',
+          thumbnail: './img/rust/rust8.jpg',
+      },
+      {
+          original: './img/rust/rust9.jpg',
+          thumbnail: './img/rust/rust9.jpg',
+      },
+      {
+          original: './img/rust/rust10.jpg',
+          thumbnail: './img/rust/rust10.jpg',
+      },
+      {
+          original: './img/rust/rust11.jpg',
+          thumbnail: './img/rust/rust11.jpg',
+      },
+      {
+          original: './img/rust/rust12.jpg',
+          thumbnail: './img/rust/rust12.jpg',
+      },
+      {
+          original: './img/rust/rust13.jpg',
+          thumbnail: './img/rust/rust13.jpg',
+      },
+      {
+          original: './img/rust/rust14.jpg',
+          thumbnail: './img/rust/rust14.jpg',
+      },
+      {
+          original: './img/rust/rust15.jpg',
+          thumbnail: './img/rust/rust15.jpg',
+      },
+
+
   ];
 
   const [currentActiveTab, setCurrentActiveTab] = useState('1');

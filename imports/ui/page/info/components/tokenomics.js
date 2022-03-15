@@ -63,26 +63,55 @@ const Tokenomics = () => {
               <img src="./img/info-logo.svg" alt="" />
               <Doughnut data={data} options={options}/>
             </div>
+            <div className="list-percent">
+              <div className="item">
+                <span className="percent">
+                  <span className="color-7"></span>
+                  3%
+                </span>
+                <div className="test">
+                  <span className="text"> - {t('info.tokenomics.token_text.text20')}</span>
+                  <small className="sub-text"> - {t('info.tokenomics.token_text.text120')}</small>
+                </div>
+              </div>
+              <div className="item">
+                <span className="percent">
+                  <span className="color-1"></span>
+                  3%
+                </span>
+                <div className="test">
+                  <span className="text"> - {t('info.tokenomics.token_text.text21')}</span>
+                  <small className="sub-text"> - {t('info.tokenomics.token_text.text121')}</small>
+                </div>
+              </div>
+              <div className="item">
+                <span className="percent">
+                  <span className="color-2"></span>
+                  10%
+                </span>
+                <div className="test">
+                  <span className="text"> - {t('info.tokenomics.token_text.text22')}</span>
+                  <small className="sub-text"> - {t('info.tokenomics.token_text.text122')}</small>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="col-lg-5">
             <div className="list-percent">
               <div className="item">
                 <span className="percent">
                   <span className="color-7"></span>
-                  10%
+                  2%
                 </span>
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text1')}</span>
                   <small className="sub-text"> - {t('info.tokenomics.token_text.text8')}</small>
-                  <small className="sub-text">  {t('info.tokenomics.token_text.text9')}</small>
-                  <small className="sub-text"> - {t('info.tokenomics.token_text.text10')}</small>
-                  <small className="sub-text">  {t('info.tokenomics.token_text.text11')}</small>
                 </div>
               </div>
               <div className="item">
                 <span className="percent">
                   <span className="color-1"></span>
-                  15%
+                  2%
                 </span>
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text2')}</span>
@@ -92,7 +121,7 @@ const Tokenomics = () => {
               <div className="item">
                 <span className="percent">
                   <span className="color-2"></span>
-                  10%
+                  4%
                 </span>
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text3')}</span>
@@ -102,7 +131,7 @@ const Tokenomics = () => {
               <div className="item">
                 <span className="percent">
                   <span className="color-3"></span>
-                  15%
+                  2%
                 </span>
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text4')}</span>
@@ -112,7 +141,7 @@ const Tokenomics = () => {
               <div className="item">
                 <span className="percent">
                   <span className="color-4"></span>
-                  10%
+                  15%
                 </span>
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text5')}</span>
@@ -122,7 +151,7 @@ const Tokenomics = () => {
               <div className="item">
                 <span className="percent">
                   <span className="color-5"></span>
-                  25%
+                  4%
                 </span>
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text6')}</span>
@@ -137,6 +166,26 @@ const Tokenomics = () => {
                 <div className="test">
                   <span className="text"> - {t('info.tokenomics.token_text.text7')}</span>
                   <small className="sub-text"> - {t('info.tokenomics.token_text.text17')}</small>
+                </div>
+              </div>
+              <div className="item">
+                <span className="percent">
+                  <span className="color-5"></span>
+                  10%
+                </span>
+                <div className="test">
+                  <span className="text"> - {t('info.tokenomics.token_text.text8')}</span>
+                  <small className="sub-text"> - {t('info.tokenomics.token_text.text18')}</small>
+                </div>
+              </div>
+              <div className="item">
+                <span className="percent">
+                  <span className="color-6"></span>
+                  30%
+                </span>
+                <div className="test">
+                  <span className="text"> - {t('info.tokenomics.token_text.text9')}</span>
+                  <small className="sub-text"> - {t('info.tokenomics.token_text.text19')}</small>
                 </div>
               </div>
             </div>
@@ -164,26 +213,26 @@ const Tokenomics = () => {
             </div>
           </div>
         </div>
-        <div className="token-text">
-          <div className="row">
-            <div className="col-lg-8">
-              <h5>{t('info.tokenomics.title3')}</h5>
-              <p>{t('info.tokenomics.text')}</p>
-              <div className="list">
-                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text1')}</p>
-                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text2')}</p>
-                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text3')}</p>
-                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text4')}</p>
-                <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text5')}</p>
-                <p>25% {t('info.tokenomics.or')} <strong>12 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text6')}</p>
-                <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text7')}</p>
-              </div>
-            </div>
-            <div className="col-lg-4 img">
-              <img src="./img/img-info-text.svg" alt="" />
-            </div>
-          </div>
-        </div>
+        {/*<div className="token-text">*/}
+        {/*  <div className="row">*/}
+        {/*    <div className="col-lg-8">*/}
+        {/*      <h5>{t('info.tokenomics.title3')}</h5>*/}
+        {/*      <p>{t('info.tokenomics.text')}</p>*/}
+        {/*      <div className="list">*/}
+        {/*        <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text1')}</p>*/}
+        {/*        <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text2')}</p>*/}
+        {/*        <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text3')}</p>*/}
+        {/*        <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text4')}</p>*/}
+        {/*        <p>10% {t('info.tokenomics.or')} <strong>5 000 000 WYNN</strong> – {t('info.tokenomics.token_text.text5')}</p>*/}
+        {/*        <p>25% {t('info.tokenomics.or')} <strong>12 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text6')}</p>*/}
+        {/*        <p>15% {t('info.tokenomics.or')} <strong>7 500 000 WYNN</strong> – {t('info.tokenomics.token_text.text7')}</p>*/}
+        {/*      </div>*/}
+        {/*    </div>*/}
+        {/*    <div className="col-lg-4 img">*/}
+        {/*      <img src="./img/img-info-text.svg" alt="" />*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </>
   );
