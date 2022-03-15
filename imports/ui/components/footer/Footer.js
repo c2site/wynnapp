@@ -9,6 +9,7 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 const Footer = () => {
 
+   const now = new Date();
    const {t, i18n} = useTranslation();
    return (
    <footer className="footer">
@@ -146,7 +147,7 @@ const Footer = () => {
             <div className="sub-footer">
                <div className="copyright">
                   <p>
-                     {t('footer.copy')} 2021<span> | Wynn Games</span>
+                     {t('footer.copy')} 2021-{now.getFullYear()}<span> | Wynn Games</span>
                   </p>
                </div>
                <div className="info">
