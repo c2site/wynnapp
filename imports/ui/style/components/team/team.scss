@@ -26,23 +26,79 @@
         align-items: center;
         flex-direction: column;
         padding: 40px;
+        @media ( max-width: 767px ) {
+            padding: 15px;
+            align-items: flex-start;
+        }
+        .team-item__wrapper {
+            display: flex;
+            align-items: center;
+            
+        }
+        .team-item__content {
+
+        }
         .img {
+            margin-right: 25px;
+            flex-shrink: 0;
             display: block;
-            margin-bottom: 35px;
+            // margin-bottom: 35px;
             overflow: hidden;
             border-radius: 50%;
             img {
                 display: block;
             }
+            @media ( max-width: 1366px ) {
+                max-width: 160px;
+                margin-right: 15px;
+            }
+            @media ( max-width: 767px ) {
+                max-width: 140px;
+                margin-right: 15px;
+            }
         }
         .name {
             display: block;
             font-family: 'Intro', sans-serif;
-            font-weight: normal;
+            font-weight: 900;
             font-size: 20px;
             line-height: 20px;
             text-transform: uppercase;
             color: #FFFFFF;
+            margin-bottom: 5px;
+            @media ( max-width: 767px ) {
+                font-size: 17px;
+            }
+        }
+        .position {
+            font-family: 'Intro', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: rgba(246, 196, 101, 1);
+            margin-bottom: 15px;
+        }
+        .social-items {
+            display: flex;
+            align-items: center;
+        }
+        .social-items__item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #FFEE76 0.02%, #EEA428 100.02%);
+            border-radius: 50px;
+            transition: all 0.3s;
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+            &:hover {
+                transition: all 0.3s;
+                background: linear-gradient(250deg, #FFEE76 0.02%, #EEA428 100.02%);
+            }
         }
     }
 }

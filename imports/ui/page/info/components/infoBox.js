@@ -11,7 +11,7 @@ const infoBox = () => {
             <h2 className="title-page">{t('info.title')}</h2>
             <p>{t('info.text1')}</p>
             <p>{t('info.text2')}</p>
-            <p>{t('info.text3')}</p>
+            {/* <p>{t('info.text3')}</p> */}
             <p>{t('info.text4')}</p>
             <a href={`https://docs.wynn-games.com/wynn-games/`}  target={'_blank'} className="btn btn-primary">{t('docs')}</a>
           </div>
