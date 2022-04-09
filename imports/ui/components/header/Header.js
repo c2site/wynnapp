@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {Meteor} from "meteor/meteor";
 import Navigation from '/imports/ui/components/header/components/Navigation';
 import Login from  '/imports/ui/components/header/components/Login';
+import LoginYellow from  '/imports/ui/components/header/components/LoginYellow';
 import Registration from "./components/Registration";
 import { useTracker } from 'meteor/react-meteor-data'
 import {Button} from "reactstrap";
@@ -54,7 +55,7 @@ const Header = () => {
               {/*</button>*/}
               <div className="mob-hide">
 
-                <Login/>
+                <LoginYellow />
                 {active && (<ProfileBtn />)}
               </div>
               <div className="btn-mob">
@@ -85,7 +86,7 @@ const Header = () => {
               <Navigation mobi={false} isShown={isShown} setIsShown={setIsShown} />
               <div className="btn-header">
                   <div className="mob-hide login-hide">
-                    <Login/>
+                    <LoginYellow/>
                     {active && (<ProfileBtn />)}
                   </div>
                 {/*// <Button className="btn btn-default" onClick={logout}>*/}
@@ -159,7 +160,7 @@ const Header = () => {
             <div className="shadow"></div>
             }
             <div className="mob-show profile-holder">
-              <Login/>
+              <LoginYellow/>
               <div className="btn-mob">
                 <Button className="btn btn-active" onClick={toggleNav}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
