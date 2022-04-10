@@ -165,9 +165,9 @@ const HomePage = () => {
             <section className="top-games">
                 <div className="container">
                     <h2 className="section__title text-center mb-12">top games</h2>
-                    <p className="section__text text-center mb-100">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                    </p>
+                    {/*<p className="section__text text-center mb-100">*/}
+                    {/*    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s*/}
+                    {/*</p>*/}
                     <div className="top-games__wrapper">
                         <div className="row">
                             <div className="col-xl-4 col-lg-6 col-md-8 mx-lg-0 mx-md-auto col-sm-12">
@@ -291,9 +291,9 @@ const HomePage = () => {
             <section className="howItWorks">
                 <div className="container">
                     <h2 className="section__title text-center mb-12">How it works?</h2>
-                    <p className="section__text text-center mb-100">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                    </p>
+                    {/*<p className="section__text text-center mb-100">*/}
+                    {/*    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s*/}
+                    {/*</p>*/}
                     <div className="howItWorks__wrapper">
                         <div className="row">
 
@@ -305,7 +305,7 @@ const HomePage = () => {
                                     <div className="content">
                                         <h4>Wynn SDK</h4>
                                         <p>
-                                            Быстрая и простая система интеграции любой игры с Blockchain
+                                            Fast and simple integration system that allows synchronization of any application with blockchain technology in a few clicks.
                                         </p>
                                     </div>
                                 </div>
@@ -317,9 +317,9 @@ const HomePage = () => {
                                         <img src="./img/mainpage/how-works-2.svg" alt="" />
                                     </div>
                                     <div className="content">
-                                        <h4>лояльти система</h4>
+                                        <h4>Loyalty system</h4>
                                         <p>
-                                            Система лояльности для игроков - запуск в 2 клика для любого приложения
+                                            In-game loyalty system which provides players with special rewards for acquiring certain add-ons. It's possible to connect to all games at once.
                                         </p>
                                     </div>
                                 </div>
@@ -331,9 +331,9 @@ const HomePage = () => {
                                         <img src="./img/mainpage/how-works-3.svg" alt="" />
                                     </div>
                                     <div className="content">
-                                        <h4>nft скины</h4>
+                                        <h4>NFT Skins</h4>
                                         <p>
-                                            Все ваши скины можно перемещать между играми и вселенными.
+                                            A system which allows users to exchange NFT between all the games and all the characters in the Wynn Games Ecosystem.
                                         </p>
                                     </div>
                                 </div>
@@ -345,9 +345,9 @@ const HomePage = () => {
                                         <img src="./img/mainpage/how-works-4.svg" alt="" />
                                     </div>
                                     <div className="content">
-                                        <h4>game money</h4>
+                                        <h4>Games Currency exchange</h4>
                                         <p>
-                                            Система конвертации вашей игровой валюты между всеми играми в Wynn Game Center
+                                            Currency exchange system with transfer function from one game to another. Games are hosted exclusively at the Wynn Games Center.
                                         </p>
                                     </div>
                                 </div>
@@ -361,7 +361,7 @@ const HomePage = () => {
                                     <div className="content">
                                         <h4>Dev Panel </h4>
                                         <p>
-                                            Панель разработчика для подключения игр к экосистеме
+                                            An easy and handy dev panel for developers to connect the required application to the Wynn Games Ecosystem and the Wynn Games Center.
                                         </p>
                                     </div>
                                 </div>
@@ -373,8 +373,8 @@ const HomePage = () => {
                                         <img src="./img/mainpage/how-works-6.svg" alt="" />
                                     </div>
                                     <div className="content">
-                                        <h4>Wynn Incumbator</h4>
-                                        <p>Инкубатор для ваших игр и ваших идей</p>
+                                        <h4>Wynn Incubator</h4>
+                                        <p>The Wynn Games Ecosystem offers developers support in making their visions come true.</p>
                                     </div>
                                 </div>
                             </div>
@@ -393,11 +393,7 @@ const HomePage = () => {
                                 <h2 className="section__title mb-15">Wynn Games + Rust</h2>
                                 <div className="section__text mb-50">
                                     <p>
-                                        What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    </p>
-                                    <p>
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                                        The first experimental game in our ecosystem was Rust. Using the Wynn SDK system, we synced it with Binance Smart Chain. Upon completion, the team conducted testing on the Wynn Rust server. We tested all the features of the Wynn Games ecosystem and made sure everything worked flawlessly. Rust is a project of Facepunch Studios. The main idea of the game is to survive at any cost. Events will take place in an extremely hostile environment where the whole world is turned against you.
                                     </p>
                                 </div>
                                 <div className="homeAbout__bottom">
@@ -406,14 +402,14 @@ const HomePage = () => {
                                         <p>
                                             server <br />online:
                                         </p>
-                                        <span>13</span>
+                                        <span>0</span>
                                     </div>
                                     <div className="item">
                                         <UsersIcon />
                                         <p>
                                             Users <br />online:
                                         </p>
-                                        <span>17 550</span>
+                                        <span>0</span>
                                     </div>
                                 </div>
                             </div>
@@ -443,7 +439,7 @@ const HomePage = () => {
                                                 </div>
                                                 <h4>Game center</h4>
                                                 <p>
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                                    Acts as a reliable and safe platform where games of different categories are located. In Game Center, you can connect them to the Wynn SDK system. You can use the search engine to quickly find a game that interests you.
                                                 </p>
                                             </div>
                                         </div>
@@ -452,9 +448,9 @@ const HomePage = () => {
                                                 <div className="img">
                                                     <img src="./img/mainpage/ecosystem-img-2.png" alt="" />
                                                 </div>
-                                                <h4>market place</h4>
+                                                <h4>Market Place</h4>
                                                 <p>
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                                    Here you can sell, buy and exchange different goods. A specialized marketplace for players to earn in-game items, currency and even their in-game experience.
                                                 </p>
                                             </div>
                                         </div>
@@ -463,9 +459,9 @@ const HomePage = () => {
                                                 <div className="img">
                                                     <img src="./img/mainpage/ecosystem-img-3.png" alt="" />
                                                 </div>
-                                                <h4>game starter</h4>
+                                                <h4>Game Starter</h4>
                                                 <p>
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                                    A place for game developers who want to join our Wynn SDK system. We will provide them with all the resources they need to achieve their goals.
                                                 </p>
                                             </div>
                                         </div>
@@ -474,9 +470,9 @@ const HomePage = () => {
                                                 <div className="img">
                                                     <img src="./img/mainpage/ecosystem-img-4.png" alt="" />
                                                 </div>
-                                                <h4>lottery</h4>
+                                                <h4>Lottery</h4>
                                                 <p>
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                                    An easy boost or the right resource won't hurt anyone. This is the reason why the Wynn Games Ecosystem created the single Lottery system. Do your best and Try your luck!
                                                 </p>
                                             </div>
                                         </div>
@@ -488,16 +484,7 @@ const HomePage = () => {
                                     <h2 className="section__title mb-15">Ecosystem</h2>
                                     <div className="section__text">
                                         <p>
-                                            Wynn Game is not just another project with an enticing legend, it is an entire ecosystem that includes various games from both worlds such as fiat and crypto. The features of P2E allow us to range between different economic fiat games that everyone has seen at least once in real life, as well as Cyber Game World, which already has established communities.
-                                        </p>
-                                        <p>
-                                            The Wynn Games team, as opposed to other online analogs, has integrated the decentralized Binance Smart Chain (BSC) into the game industry, implementing all functions in an intuitive interface with the aim of destroying borders and overcoming the rules of other online lotteries.
-                                        </p>
-                                        <p>
-                                            It doesn't really matter what country you live in and how strict are its laws.
-                                        </p>
-                                        <p>
-                                            It offers no opportunities for external influence on the drawing process. And most importantly, all payments within the Wynn Games platform are made only in cryptocurrency. The platform accepts for payment: BNB (BEP20), Tether (TRC-20), and its own native WYNN token.
+                                            The Wynn Games Ecosystem is the foundation on which the future will be built. The purpose of which is to introduce and attract new people from the gaming industry to the world of cryptocurrencies. In this way our ecosystem will unite these two components into one, which will allow you to do what you like, i.e. to play and earn money. You don't need to be a famous YouTube blogger or popular on Twitch to do this. Absolutely anyone can start earning, whether you are a beginner or a pro, famous or common person - it does not matter! Everything will depend on your skills and gaming goals. We are also considering offers from developers to add their games to our Game Center and connect them to the Wynn SDK. Thereby strengthening our foundation. Our ecosystem currently includes the following components: Game Center, Game Starter, Market Place, and Lottery. You can find all this on our official website. The Wynn Games team is not going to stop, there's still a lot of work ahead.
                                         </p>
                                     </div>
                                 </div>

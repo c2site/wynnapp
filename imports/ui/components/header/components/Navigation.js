@@ -9,16 +9,16 @@ const Navigation = ({ mobi, isShown, setIsShown }) => {
 
     const login = useTracker(() => Meteor.user(), []);
     const nav = [
-        { href: FlowRouter.path('home'), title: t('nav.home'), name: 'home' },
-        { href: FlowRouter.path('info'), title: t('nav.info'), name: 'info' },
-        { href: FlowRouter.path('buy'), title: t('nav.lottery'), name: 'buy' },
-        { href: FlowRouter.path('history'), title: t('nav.history'), name: 'history' },
+        { href: FlowRouter.path('home'), title: 'home',  icon: <HomeMenuIcon />},
+        { href: '#', title: 'Game Center', icon: <GameMenuIcon /> },
+        { href: '#', title: 'lottery', icon: <LotoMenuIcon /> },
+        { href: FlowRouter.path('info'), title: 'Info', icon: <InfoMenuIcon /> },
     ]
-    if (login) {
-        nav.push({
-            href: FlowRouter.path('profile'), title: t('header.profile'), name: 'profile'
-        })
-    }
+    // if (login) {
+    //     nav.push({
+    //         href: FlowRouter.path('profile'), title: t('header.profile'), name: 'profile'
+    //     })
+    // }
 
     console.log(isShown)
     const go = (name) => {
@@ -29,40 +29,45 @@ const Navigation = ({ mobi, isShown, setIsShown }) => {
     return (
         <>
             <ul className="nav">
-                {/* {nav.map(n=>(
-                <li key={n.name}><a  onClick={()=>go(n.name)} href={n.href}>{n.title}</a></li>
-            ))} */}
+                {nav.map(n=>(
+                <li>
+                    <a href={n.href}>
+                        {n.icon}
+                        {n.title}
+                    </a>
+                </li>
+                ))}
 
-                <li>
-                    <a href="#">
-                        <HomeMenuIcon />
-                        game center
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <GameMenuIcon />
-                        game center
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <LotoMenuIcon />
-                        lottery
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <AboutMenuIcon />
-                        about us
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <InfoMenuIcon />
-                        token info
-                    </a>
-                </li>
+                {/*<li>*/}
+                {/*    <a href={FlowRouter.path('home')}>*/}
+                {/*        <HomeMenuIcon />*/}
+                {/*        Home*/}
+                {/*    </a>*/}
+                {/*</li>*/}
+                {/*<li>*/}
+                {/*    <a href="#">*/}
+                {/*        <GameMenuIcon />*/}
+                {/*        game center*/}
+                {/*    </a>*/}
+                {/*</li>*/}
+                {/*<li>*/}
+                {/*    <a href="#">*/}
+                {/*        <LotoMenuIcon />*/}
+                {/*        lottery*/}
+                {/*    </a>*/}
+                {/*</li>*/}
+                {/*/!*<li>*!/*/}
+                {/*/!*    <a href="#">*!/*/}
+                {/*/!*        <AboutMenuIcon />*!/*/}
+                {/*/!*        about us*!/*/}
+                {/*/!*    </a>*!/*/}
+                {/*/!*</li>*!/*/}
+                {/*<li>*/}
+                {/*    <a href={FlowRouter.path('info')}>*/}
+                {/*        <InfoMenuIcon />*/}
+                {/*        token info*/}
+                {/*    </a>*/}
+                {/*</li>*/}
 
             </ul>
         </>
