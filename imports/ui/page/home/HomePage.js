@@ -164,7 +164,7 @@ const HomePage = () => {
 
             <section className="top-games">
                 <div className="container">
-                    <h2 className="section__title text-center mb-12">top games</h2>
+                    <h2 className="section__title text-center mb-12 mb-100 mb-md-55">top games</h2>
                     {/*<p className="section__text text-center mb-100">*/}
                     {/*    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s*/}
                     {/*</p>*/}
@@ -290,7 +290,7 @@ const HomePage = () => {
 
             <section className="howItWorks">
                 <div className="container">
-                    <h2 className="section__title text-center mb-12">How it works?</h2>
+                    <h2 className="section__title text-center mb-12 mb-100 mb-md-55">How it works?</h2>
                     {/*<p className="section__text text-center mb-100">*/}
                     {/*    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s*/}
                     {/*</p>*/}
@@ -1145,6 +1145,25 @@ const HomePage = () => {
                                                         <TwitterIcon />
                                                     </a>
                                                     <a href={'https://t.me/vasiled13'} target={'_blank'}  className="social-items__item">
+                                                        <TelegramIcon />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                    <div className="item">
+                                        <div className="team-item__wrapper">
+                                            <div className="img">
+                                                <img src="./img/Timurz.svg" alt="" />
+                                            </div>
+                                            <div className="team-item__content">
+                                                <span className="name">Timur Z</span>
+                                                <p className="position">Game Designer</p>
+                                                <div className="social-items">
+                                                    <a href={'https://t.me/Mooti_s'} target={'_blank'}  className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
