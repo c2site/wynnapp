@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 
-import { DeviceAndroidIcon, DeviceIosIcon, DevicePcIcon, DevicePsIcon, DiscordIcon, PlayIcon, RoketIcon, ServerIcon, SliderNextIcon, SliderPrevIcon, StartIcon, TelegramIcon, TwitterIcon, UsersIcon } from '../../svg/icons';
+import { DeviceAndroidIcon, DeviceIosIcon, DevicePcIcon, DevicePsIcon, DiscordIcon, IconCheckFalse, IconCheckTrue, PlayIcon, RoketIcon, ServerIcon, SliderNextIcon, SliderPrevIcon, StartIcon, TelegramIcon, TwitterIcon, UsersIcon } from '../../svg/icons';
 
 const HomePage = () => {
     const { t, i18n } = useTranslation();
@@ -222,8 +222,32 @@ const HomePage = () => {
                                                 <p>ios</p>
                                             </div>
                                         </div>
-                                        <img src="./img/mainpage/pirates-bg.png" alt="" />
-                                        <h2 className="top-games__name">pirates</h2>
+                                        <img src="./img/mainpage/tower-game-bg.png" alt="" />
+                                        <h2 className="top-games__name">Tower of Misery</h2>
+                                    </div>
+                                    <div className="top-games__info">
+                                        <div className="item">
+                                            <ServerIcon />
+                                            <p>
+                                                server online:
+                                                <span>13</span>
+                                            </p>
+                                        </div>
+                                        <div className="item">
+                                            <UsersIcon />
+                                            <p>
+                                                Users online:
+                                                <span>17 550</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-xl-4 col-lg-6 col-md-8 mx-lg-0 mx-md-auto col-sm-12">
+                                <div className="top-games__item">
+                                    <div className="top-games__img">
+                                        <img src="./img/mainpage/comming-game-bg.png" alt="" />
                                     </div>
                                     <div className="top-games__info">
                                         <div className="item">
@@ -245,44 +269,6 @@ const HomePage = () => {
                                 </div>
                             </div>
 
-                            <div className="col-xl-4 col-lg-6 col-md-8 mx-lg-0 mx-md-auto col-sm-12">
-                                <div className="top-games__item">
-                                    <div className="top-games__img">
-                                        <div className="top-games__platforms">
-                                            <div className="platforms__item">
-                                                <DevicePcIcon />
-                                                <p>PC</p>
-                                            </div>
-                                            <div className="platforms__item">
-                                                <DevicePsIcon />
-                                                <p>PS 4</p>
-                                            </div>
-                                            <div className="platforms__item">
-                                                <DevicePsIcon />
-                                                <p>PS 5</p>
-                                            </div>
-                                        </div>
-                                        <img src="./img/mainpage/rust-bg.png" alt="" />
-                                        <h2 className="top-games__name">Rust</h2>
-                                    </div>
-                                    <div className="top-games__info">
-                                        <div className="item">
-                                            <ServerIcon />
-                                            <p>
-                                                server online:
-                                                <span>13</span>
-                                            </p>
-                                        </div>
-                                        <div className="item">
-                                            <UsersIcon />
-                                            <p>
-                                                Users online:
-                                                <span>17 550</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -536,63 +522,39 @@ const HomePage = () => {
                                 <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                     <div className="item roadmap__item">
                                         <div className="head">
-                                            <span>{t('info.roadmap.list1.name')}</span>
+                                            <span>STAGE 1 (2021 2/2) </span>
                                         </div>
                                         <div className="body">
                                             <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text1')}</span>
+                                                <IconCheckTrue />
+                                                <span>Formation of a development team</span>
                                             </div>
                                             <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text2')}</span>
+                                                <IconCheckTrue />
+                                                <span>Creation of the Wynn Games test platform</span>
                                             </div>
                                             <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text3')}</span>
+                                                <IconCheckTrue />
+                                                <span>Launch of blockchain test network</span>
                                             </div>
                                             <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text4')}</span>
+                                                <IconCheckTrue />
+                                                <span>Start beta testing</span>
                                             </div>
                                             <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text5')}</span>
+                                                <IconCheckTrue />
+                                                <span>Successful bugfix test</span>
                                             </div>
                                             <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text6')}</span>
+                                                <IconCheckTrue />
+                                                <span>Launch of the main blockchain on the BSC Chain</span>
                                             </div>
                                             <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text7')}</span>
+                                                <IconCheckTrue />
+                                                <span>Start advertising campaign</span>
                                             </div>
-                                            <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text8')}</span>
-                                            </div>
-                                            <div className="box">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                </svg>
-                                                <span>{t('info.roadmap.list1.text9')}</span>
-                                            </div>
+                                            
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -601,105 +563,56 @@ const HomePage = () => {
                                     <div className="roadmap__item">
                                         <div className="item">
                                             <div className="head">
-                                                <span>{t('info.roadmap.list2.name')}</span>
+                                                <span>STAGE 2 (2022 1/2)</span>
                                             </div>
                                             <div className="body">
                                                 <div className="box">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text1')}</span>
+                                                    <IconCheckTrue />
+                                                    <span>Minting a Wynn fan token</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text2')}</span>
+                                                    <IconCheckTrue />
+                                                    <span>Getting ready to start Wynn SDK development</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0015 6.59305C14.2439 5.63875 19.2494 5.00206 19.2494 5.00206C19.2494 5.00206 18.6127 10.0075 17.6584 12.2499C16.1151 15.8764 10.057 18.4371 10.057 18.4371L5.81434 14.1944C5.81434 14.1944 8.37507 8.13635 12.0015 6.59305Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M10.0558 18.4371L13.5913 21.9726L15.3591 15.2551" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.81438 14.1944L2.27884 10.6589L8.99636 8.89113" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.27382 16.1793C6.05756 15.7656 7.00191 15.382 7.00191 15.382L8.86351 17.2436C8.86351 17.2436 8.42713 18.1657 8.06618 18.9717C7.70524 19.7777 4.75372 19.4978 4.75372 19.4978C4.75372 19.4978 4.49009 16.593 5.27382 16.1793Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M12.1777 6.41626C12.1777 6.41626 12.5313 8.18403 14.2991 9.95179C16.0668 11.7196 17.8346 12.0731 17.8346 12.0731" stroke="#F6C465" stroke-width="1.5" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text3')}</span>
+                                                    <IconCheckTrue />
+                                                    <span>Start of pre-sale</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0015 6.59305C14.2439 5.63875 19.2494 5.00206 19.2494 5.00206C19.2494 5.00206 18.6127 10.0075 17.6584 12.2499C16.1151 15.8764 10.057 18.4371 10.057 18.4371L5.81434 14.1944C5.81434 14.1944 8.37507 8.13635 12.0015 6.59305Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M10.0558 18.4371L13.5913 21.9726L15.3591 15.2551" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.81438 14.1944L2.27884 10.6589L8.99636 8.89113" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.27382 16.1793C6.05756 15.7656 7.00191 15.382 7.00191 15.382L8.86351 17.2436C8.86351 17.2436 8.42713 18.1657 8.06618 18.9717C7.70524 19.7777 4.75372 19.4978 4.75372 19.4978C4.75372 19.4978 4.49009 16.593 5.27382 16.1793Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M12.1777 6.41626C12.1777 6.41626 12.5313 8.18403 14.2991 9.95179C16.0668 11.7196 17.8346 12.0731 17.8346 12.0731" stroke="#F6C465" stroke-width="1.5" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text4')}</span>
+                                                    <IconCheckTrue />
+                                                    <span>Start of Game Center development</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0015 6.59305C14.2439 5.63875 19.2494 5.00206 19.2494 5.00206C19.2494 5.00206 18.6127 10.0075 17.6584 12.2499C16.1151 15.8764 10.057 18.4371 10.057 18.4371L5.81434 14.1944C5.81434 14.1944 8.37507 8.13635 12.0015 6.59305Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M10.0558 18.4371L13.5913 21.9726L15.3591 15.2551" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.81438 14.1944L2.27884 10.6589L8.99636 8.89113" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.27382 16.1793C6.05756 15.7656 7.00191 15.382 7.00191 15.382L8.86351 17.2436C8.86351 17.2436 8.42713 18.1657 8.06618 18.9717C7.70524 19.7777 4.75372 19.4978 4.75372 19.4978C4.75372 19.4978 4.49009 16.593 5.27382 16.1793Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M12.1777 6.41626C12.1777 6.41626 12.5313 8.18403 14.2991 9.95179C16.0668 11.7196 17.8346 12.0731 17.8346 12.0731" stroke="#F6C465" stroke-width="1.5" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text5')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Official testing of Wynn SDK system</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12.0015 6.59305C14.2439 5.63875 19.2494 5.00206 19.2494 5.00206C19.2494 5.00206 18.6127 10.0075 17.6584 12.2499C16.1151 15.8764 10.057 18.4371 10.057 18.4371L5.81434 14.1944C5.81434 14.1944 8.37507 8.13635 12.0015 6.59305Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M10.0558 18.4371L13.5913 21.9726L15.3591 15.2551" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.81438 14.1944L2.27884 10.6589L8.99636 8.89113" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M5.27382 16.1793C6.05756 15.7656 7.00191 15.382 7.00191 15.382L8.86351 17.2436C8.86351 17.2436 8.42713 18.1657 8.06618 18.9717C7.70524 19.7777 4.75372 19.4978 4.75372 19.4978C4.75372 19.4978 4.49009 16.593 5.27382 16.1793Z" stroke="#F6C465" stroke-width="1.5" />
-                                                        <path d="M12.1777 6.41626C12.1777 6.41626 12.5313 8.18403 14.2991 9.95179C16.0668 11.7196 17.8346 12.0731 17.8346 12.0731" stroke="#F6C465" stroke-width="1.5" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text6')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Coingecko listing</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 12.3137L9.65685 17.9706L20.9706 6.65687" stroke="#28D83A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text7')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>CoinMarketCap listing</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text10')}</span>
+                                                    <IconCheckTrue />
+                                                    <span>Increase the number of the development staff</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text8')}</span>
+                                                    <IconCheckTrue />
+                                                    <span>Creation of “Wynn Rust” server</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list2.text9')}</span>
+                                                    <IconCheckTrue />
+                                                    <span>Launch of alpha testing for the “Wynn Rust” server</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Move "Wynn Rust" to beta testing</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Official launch of Wynn Games SDK system</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -710,99 +623,162 @@ const HomePage = () => {
                                     <div className="roadmap__item">
                                         <div className="item">
                                             <div className="head">
-                                                <span>{t('info.roadmap.list3.name')}</span>
+                                                <span>STAGE 2 (2022 2/2)</span>
                                             </div>
                                             <div className="body">
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list3.text1')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Release of the “Wynn Rust” server</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list3.text7')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Token listing on crypto exchanges</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list3.text2')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Test stage of Wynn Games Center </span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list3.text3')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Wynn Games NFT MARKET PLACE development</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list3.text4')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Game Starter system preparing</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list3.text5')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Implementation of Wynn as a native payment method</span>
                                                 </div>
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list3.text6')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>Advertising campaign</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Start of development Games Starter system</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Test stage of Games Starter system</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Test stage of NFT MARKET PLACE</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Launch of alpha testing for the “Wynn FUTURES”</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Start of “Wynn FUTURES” beta testing</span>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                    <div className="roadmap__item">
+                                        <div className="item">
+                                            <div className="head">
+                                                <span>STAGE 3 (2023 1/2)</span>
+                                            </div>
+                                            <div className="body">
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Official release of Wynn Games NFT MARKET PLACE </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Official release of Games Starter system </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Game Starter listing campaign </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Launch of the “Wynn FUTURES” </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Official release of Wynn Games Center  </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Adding new trading pairs to "Wynn FUTURES" </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Update lottery algorithm </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Add new types of lotteries </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Beta testing of "4 out of 20" lottery </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Establishment of the Wynn Games Education Academy </span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Launch of the Wynn Games Education Academy video courses </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                    <div className="roadmap__item">
+                                        <div className="item">
+                                            <div className="head">
+                                                <span>STAGE 3 (2023 2/2)</span>
+                                            </div>
+                                            <div className="body">
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Development of Wynn Incubator</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Release of a mobile application for Android</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Alpha testing of a mobile application for iOS</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Test stage of Wynn Incubator system</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Release of a mobile application for iOS</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Beta testing of "6 out of 45" lottery</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Add the ability to buy tickets using fiat</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Official release of Wynn Incubator service</span>
+                                                </div>
+                                                <div className="box">
+                                                    <IconCheckFalse />
+                                                    <span>Alpha testing of plugins for popular internet browsers</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -813,176 +789,12 @@ const HomePage = () => {
                                     <div className="roadmap__item">
                                         <div className="item">
                                             <div className="head">
-                                                <span>{t('info.roadmap.list4.name')}</span>
+                                                <span>STAGE 4 (2024 1/2 & 2/2)</span>
                                             </div>
                                             <div className="body">
                                                 <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list4.text1')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list4.text2')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list4.text3')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list4.text4')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list4.text5')}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                                    <div className="roadmap__item">
-                                        <div className="item">
-                                            <div className="head">
-                                                <span>{t('info.roadmap.list5.name')}</span>
-                                            </div>
-                                            <div className="body">
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list5.text1')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list5.text2')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list5.text3')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list5.text4')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list5.text5')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list5.text6')}</span>
-                                                </div>
-                                                <div className="box">
-                                                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1.75" y="3.125" width="17.5" height="16.625" rx="3" stroke="#D94848" stroke-width="1.5" />
-                                                        <path d="M6.125 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M14.875 1.375V3.125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M1.75 7.5H19.25" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 11.875H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 11.875H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M6.5625 15.375H8.3125" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.6875 15.375H14.4375" stroke="#D94848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <span>{t('info.roadmap.list5.text7')}</span>
+                                                    <IconCheckFalse />
+                                                    <span>TBA</span>
                                                 </div>
                                             </div>
                                         </div>
