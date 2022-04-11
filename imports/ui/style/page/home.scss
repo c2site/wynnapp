@@ -776,11 +776,11 @@ section.top-games {
 
 .homeAbout__video {
     border-radius: 10px;
-    height: 450px;
-    background-image: url(../img/mainpage/rust-video-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    // height: 438px;
+    // background-image: url(../img/mainpage/rust-video-bg.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // position: relative;
     .btn-play {
         display: flex;
         align-items: center;
@@ -791,11 +791,21 @@ section.top-games {
         border-radius: 50%;
         background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
         box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translateX(-50%) translateY(-50%);
         border: none;
+    }
+    .video-box .img > div {
+        height: 438px !important;
+        @media ( max-width: 480px ) {
+            height: 190px !important;
+        }
+    }
+
+    .react-player__preview {
+        border-radius: 10px;
     }
 
     img {
@@ -804,9 +814,9 @@ section.top-games {
         width: 100%
     }
 
-    @media ( max-width: 480px ) {
-        height: 240px;
-    }   
+    // @media ( max-width: 480px ) {
+    //     height: 240px;
+    // }   
 }
 
 // ############################################

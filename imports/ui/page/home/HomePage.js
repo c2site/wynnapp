@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 
 import { DeviceAndroidIcon, DeviceIosIcon, DevicePcIcon, DevicePsIcon, DiscordIcon, IconCheckFalse, IconCheckTrue, PlayIcon, RoketIcon, ServerIcon, SliderNextIcon, SliderPrevIcon, StartIcon, TelegramIcon, TwitterIcon, UsersIcon } from '../../svg/icons';
+import ReactPlayer from 'react-player';
 
 const HomePage = () => {
     const { t, i18n } = useTranslation();
@@ -253,10 +254,10 @@ const HomePage = () => {
                                         <div className="item">
                                             <RoketIcon />
                                             <p>
-                                                start
+                                                Coming Soon
                                             </p>
                                         </div>
-                                        <div className="item">
+                                        {/* <div className="item">
                                             <StartIcon />
                                             <div className="countdown">
                                                 <span className="days">13 days</span>
@@ -264,7 +265,7 @@ const HomePage = () => {
                                                 <span className="minutes">15 minutes</span>
                                                 <span className="seconds">48 seconds</span>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -402,9 +403,26 @@ const HomePage = () => {
                         </div>
                         <div className="col-xl-6 col-lg-12 center-vertical">
                             <div className="homeAbout__video ">
-                                <button className="btn-play">
+                                {/* <button className="btn-play">
                                     <PlayIcon />
-                                </button>
+                                </button> */}
+                                <div className="video-box">
+                                    <div className="img">
+                                        <ReactPlayer
+                                            url="https://www.youtube.com/embed/LGcECozNXEw"
+                                            width="100%"
+                                            height="438px"
+                                            playing
+                                            playIcon={
+                                                <button className="btn-play">
+                                                    <PlayIcon />
+                                                </button>
+                                            }
+                                            light="./img/mainpage/rust-video-bg.jpg"
+                                        />
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -553,8 +571,8 @@ const HomePage = () => {
                                                 <IconCheckTrue />
                                                 <span>Start advertising campaign</span>
                                             </div>
-                                            
-                                           
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -674,7 +692,7 @@ const HomePage = () => {
                                                     <IconCheckFalse />
                                                     <span>Start of “Wynn FUTURES” beta testing</span>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -814,7 +832,7 @@ const HomePage = () => {
                     <div className="teamSection__wrapper">
                         <div className="slider row">
                             <Slider {...sliderTeamsSettings}>
-                            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                     <div className="item">
                                         <div className="team-item__wrapper">
                                             <div className="img">
@@ -824,10 +842,10 @@ const HomePage = () => {
                                                 <span className="name">Maksim S</span>
                                                 <p className="position">Founder</p>
                                                 <div className="social-items">
-                                                    <a href="https://twitter.com/MSakovec" target={'_blank'}  className="social-items__item">
+                                                    <a href="https://twitter.com/MSakovec" target={'_blank'} className="social-items__item">
                                                         <TwitterIcon />
                                                     </a>
-                                                    <a href={'https://t.me/MaksimWYNN'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://t.me/MaksimWYNN'} target={'_blank'} className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
@@ -846,7 +864,7 @@ const HomePage = () => {
                                                 <span className="name">Andey P</span>
                                                 <p className="position">Block-Chain Developer</p>
                                                 <div className="social-items">
-                                                    <a href={'https://twitter.com/pirsdev'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://twitter.com/pirsdev'} target={'_blank'} className="social-items__item">
                                                         <TwitterIcon />
                                                     </a>
                                                     <a href={'https://t.me/pirsdev'} className="social-items__item">
@@ -868,7 +886,7 @@ const HomePage = () => {
                                                 <span className="name">Yevhenii Y</span>
                                                 <p className="position">Chief designer</p>
                                                 <div className="social-items">
-                                                    <a href={'https://t.me/revenson'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://t.me/revenson'} target={'_blank'} className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
@@ -887,10 +905,10 @@ const HomePage = () => {
                                                 <span className="name">Roman B</span>
                                                 <p className="position">Author & Writer</p>
                                                 <div className="social-items">
-                                                    <a href={'https://twitter.com/romochka_buchik'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://twitter.com/romochka_buchik'} target={'_blank'} className="social-items__item">
                                                         <TwitterIcon />
                                                     </a>
-                                                    <a href={'https://t.me/Wynn_Author'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://t.me/Wynn_Author'} target={'_blank'} className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
@@ -909,10 +927,10 @@ const HomePage = () => {
                                                 <span className="name">Roman V</span>
                                                 <p className="position">Marketing Strategy & Community mng.</p>
                                                 <div className="social-items">
-                                                    <a href={'https://twitter.com/mrfFates'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://twitter.com/mrfFates'} target={'_blank'} className="social-items__item">
                                                         <TwitterIcon />
                                                     </a>
-                                                    <a href={'https://t.me/mFateS'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://t.me/mFateS'} target={'_blank'} className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
@@ -931,10 +949,10 @@ const HomePage = () => {
                                                 <span className="name">Vitaliy K</span>
                                                 <p className="position">Project manager</p>
                                                 <div className="social-items">
-                                                    <a href={'https://twitter.com/KurilovVitaly/'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://twitter.com/KurilovVitaly/'} target={'_blank'} className="social-items__item">
                                                         <TwitterIcon />
                                                     </a>
-                                                    <a href={'https://t.me/userZXC'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://t.me/userZXC'} target={'_blank'} className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
@@ -953,10 +971,10 @@ const HomePage = () => {
                                                 <span className="name">Vasile D</span>
                                                 <p className="position">Team Representative (I.M) </p>
                                                 <div className="social-items">
-                                                    <a href={'https://twitter.com/vasiledorofeev'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://twitter.com/vasiledorofeev'} target={'_blank'} className="social-items__item">
                                                         <TwitterIcon />
                                                     </a>
-                                                    <a href={'https://t.me/vasiled13'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://t.me/vasiled13'} target={'_blank'} className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
@@ -975,7 +993,7 @@ const HomePage = () => {
                                                 <span className="name">Timur Z</span>
                                                 <p className="position">Game Designer</p>
                                                 <div className="social-items">
-                                                    <a href={'https://t.me/Mooti_s'} target={'_blank'}  className="social-items__item">
+                                                    <a href={'https://t.me/Mooti_s'} target={'_blank'} className="social-items__item">
                                                         <TelegramIcon />
                                                     </a>
                                                 </div>
