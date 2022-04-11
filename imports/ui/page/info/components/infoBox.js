@@ -13,7 +13,7 @@ const infoBox = () => {
             <p>{t('info.text2')}</p>
             {/* <p>{t('info.text3')}</p> */}
             <p>{t('info.text4')}</p>
-            <a href={`https://docs.wynn-games.com/wynn-games/`}  target={'_blank'} className="btn btn-primary">{t('docs')}</a>
+            <a href={`https://docs.wynn-games.org/wynn-games/`}  target={'_blank'} className="btn btn-primary">{t('docs')}</a>
           </div>
           <div className="col-lg-4 img">
             <img src="./img/img-info.svg" alt="" />
