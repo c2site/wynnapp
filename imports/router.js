@@ -22,6 +22,7 @@ import {Tracker} from "meteor/tracker";
 import ErrorPage from "./ui/page/404/404";
 import FaqPage from "./ui/page/faq/faq";
 import PresalePage from "./ui/page/presale/presale";
+import HomePageOld from './ui/page/home/HomePageOld';
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -83,6 +84,13 @@ FlowRouter.route('/', {
     action() {
         mountMain(HomePage);
         invite()
+    }
+});
+FlowRouter.route('/old', {
+    name: 'HomePageOld',
+    title: title('HomePageOld'),
+    action() {
+        mountMain(HomePageOld);
     }
 });
 

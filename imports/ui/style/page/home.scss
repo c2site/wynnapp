@@ -51,6 +51,10 @@ html, body {
     overflow-x: hidden;
 }
 
+header {
+    position: relative;
+}
+
 footer .container,
 footer .footer-copyright .container,
 header .container {
@@ -184,6 +188,11 @@ header .container {
         }
         &.slick-next {
             right: -94px;
+        }
+        &.slick-disabled {
+            opacity: 0;
+            transition: all 0.3;
+            // display: none;
         }
 
         &:hover {

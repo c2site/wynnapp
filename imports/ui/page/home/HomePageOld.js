@@ -8,7 +8,7 @@ import Stats from '/imports/ui/components/stats/Stats';
 import Subscribe from '/imports/ui/components/subscribe/Subscribe';
 import Partners from '/imports/ui/components/partners/Partners';
 
-const HomePage = () => {
+const HomePageOld = () => {
     return (
       <div className="home">
         <Banner/>
@@ -26,4 +26,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default HomePageOld;
