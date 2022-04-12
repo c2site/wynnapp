@@ -32,10 +32,8 @@ const Footer = () => {
                <span className="title">{t('nav.info')}</span>
                <ul>
                   <li><a href={`https://docs.wynn-games.org/wynn-games/`} target={'_blank'} >{t('docs')}</a></li>
-                  <li><a href={FlowRouter.path('faq')}>{t('nav.faq')}</a></li>
                   <li><a href={FlowRouter.path('info')}>{t('nav.about')}</a></li>
-                  <li><a href={`/Wynn_Games_Audit.pdf`} target={'_blank'}>{t('nav.audit')}</a></li>
-                  <li><a href={'wp/White_Paper.pdf'}  target={'_blank'} >{t('wp')}</a></li>
+                  <li><a href={`/Wynn_Games_Token_Audit_Report_By_ContractChecker.pdf`} target={'_blank'}>{t('nav.audit')}</a></li>
                </ul>
             </nav>
             <nav role="navigation">
@@ -124,11 +122,11 @@ const Footer = () => {
 
                   </li>
                   <li>
-                     <a href="mailto:info@wynn-games.com">
+                     <a href="mailto:sup.wynn.dev@gmail.com">
                         <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z" fill="#FBD77B"/>
                         </svg>
-                        info@wynn-games.com
+                        sup.wynn.dev@gmail.com
                      </a>
                   </li>
                </ul>

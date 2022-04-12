@@ -132,8 +132,8 @@ const HomePage = () => {
         <div className="redesign-page home">
             <section className="banner">
                 <div className="container">
-                    <h2 className="banner__subtitle color-yellow">Game ecosystem</h2>
-                    <h1 className="banner__title">WynnGames</h1>
+                    <h2 className="banner__subtitle color-yellow">Games ecosystem</h2>
+                    <h1 className="banner__title">Wynn Games</h1>
                     <div className="social">
                         <a href={"https://twitter.com/EcosystemWynn"} target={"_blank"} className="social__item">
                             <span className="icon" style={{
@@ -1014,6 +1014,12 @@ const HomePage = () => {
                         <Slider {...sliderPartnersSettings}>
 
                             <div className="partners__col">
+                                <a href={'https://kondr.io/'} target={'_blank'} className="partners__item">
+                                    <img src="./img/mainpage/partner-img-1.svg" alt="" />
+                                </a>
+                            </div>
+
+                            <div className="partners__col">
                                 <a className="partners__item">
                                     <svg width="282" height="41" viewBox="0 0 282 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g opacity="0.3" clip-path="url(#clip0_2424_977)">
@@ -1113,12 +1119,6 @@ const HomePage = () => {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                </a>
-                            </div>
-
-                            <div className="partners__col">
-                                <a href={'https://kondr.io/'} target={'_blank'} className="partners__item">
-                                    <img src="./img/mainpage/partner-img-1.svg" alt="" />
                                 </a>
                             </div>
 
