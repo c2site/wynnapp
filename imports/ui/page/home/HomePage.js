@@ -189,7 +189,7 @@ const HomePage = () => {
                                             </div>
                                         </div>
                                         <img src="./img/mainpage/rust-bg.png" alt="" />
-                                        <h2 className="top-games__name">Rust</h2>
+                                        <a href={'/game-single/'} className="top-games__name">Rust</a>
                                     </div>
                                     <div className="top-games__info">
                                         <div className="item">
@@ -224,7 +224,7 @@ const HomePage = () => {
                                             </div>
                                         </div>
                                         <img src="./img/mainpage/tower-game-bg.png" alt="" />
-                                        <h2 className="top-games__name">Tower of Misery</h2>
+                                       <a href={'/game-single/'} className="top-games__name">Tower of Misery</a>
                                     </div>
                                     <div className="top-games__info">
                                         {/*<div className="item">*/}

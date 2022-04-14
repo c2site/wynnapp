@@ -23,6 +23,8 @@ import ErrorPage from "./ui/page/404/404";
 import FaqPage from "./ui/page/faq/faq";
 import PresalePage from "./ui/page/presale/presale";
 import HomePageOld from './ui/page/home/HomePageOld';
+import GamesCenter from './ui/page/gamesCenter/GamesCenter';
+import Game from './ui/page/game/Game';
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -86,6 +88,23 @@ FlowRouter.route('/', {
         invite()
     }
 });
+
+FlowRouter.route('/games-center', {
+    name: 'gamesCenter',
+    title: title('WynnGames Center'),
+    action() {
+        mountMain(GamesCenter);
+    },
+});
+
+FlowRouter.route('/game-single', {
+    name: 'game',
+    title: title('WynnGames Center'),
+    action() {
+        mountMain(Game);
+    },
+});
+
 FlowRouter.route('/old', {
     name: 'HomePageOld',
     title: title('HomePageOld'),

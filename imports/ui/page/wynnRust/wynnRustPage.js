@@ -12,64 +12,64 @@ const WynnRustPage = () => {
     const { t, i18n } = useTranslation();
     const images = [
         {
-            original: './img/rust/rust1.jpg',
-            thumbnail: './img/rust/rust1.jpg',
+            original: '/img/rust/rust1.jpg',
+            thumbnail: '/img/rust/rust1.jpg',
         },
         {
-            original: './img/rust/rust2.jpg',
-            thumbnail: './img/rust/rust2.jpg',
+            original: '/img/rust/rust2.jpg',
+            thumbnail: '/img/rust/rust2.jpg',
         },
         {
-            original: './img/rust/rust3.jpg',
-            thumbnail: './img/rust/rust3.jpg',
+            original: '/img/rust/rust3.jpg',
+            thumbnail: '/img/rust/rust3.jpg',
         },
         {
-            original: './img/rust/rust4.jpg',
-            thumbnail: './img/rust/rust4.jpg',
+            original: '/img/rust/rust4.jpg',
+            thumbnail: '/img/rust/rust4.jpg',
         },
         {
-            original: './img/rust/rust5.jpg',
-            thumbnail: './img/rust/rust5.jpg',
+            original: '/img/rust/rust5.jpg',
+            thumbnail: '/img/rust/rust5.jpg',
         },
         {
-            original: './img/rust/rust6.jpg',
-            thumbnail: './img/rust/rust6.jpg',
+            original: '/img/rust/rust6.jpg',
+            thumbnail: '/img/rust/rust6.jpg',
         },
         {
-            original: './img/rust/rust7.jpg',
-            thumbnail: './img/rust/rust7.jpg',
+            original: '/img/rust/rust7.jpg',
+            thumbnail: '/img/rust/rust7.jpg',
         },
         {
-            original: './img/rust/rust8.jpg',
-            thumbnail: './img/rust/rust8.jpg',
+            original: '/img/rust/rust8.jpg',
+            thumbnail: '/img/rust/rust8.jpg',
         },
         {
-            original: './img/rust/rust9.jpg',
-            thumbnail: './img/rust/rust9.jpg',
+            original: '/img/rust/rust9.jpg',
+            thumbnail: '/img/rust/rust9.jpg',
         },
         {
-            original: './img/rust/rust10.jpg',
-            thumbnail: './img/rust/rust10.jpg',
+            original: '/img/rust/rust10.jpg',
+            thumbnail: '/img/rust/rust10.jpg',
         },
         {
-            original: './img/rust/rust11.jpg',
-            thumbnail: './img/rust/rust11.jpg',
+            original: '/img/rust/rust11.jpg',
+            thumbnail: '/img/rust/rust11.jpg',
         },
         {
-            original: './img/rust/rust12.jpg',
-            thumbnail: './img/rust/rust12.jpg',
+            original: '/img/rust/rust12.jpg',
+            thumbnail: '/img/rust/rust12.jpg',
         },
         {
-            original: './img/rust/rust13.jpg',
-            thumbnail: './img/rust/rust13.jpg',
+            original: '/img/rust/rust13.jpg',
+            thumbnail: '/img/rust/rust13.jpg',
         },
         {
-            original: './img/rust/rust14.jpg',
-            thumbnail: './img/rust/rust14.jpg',
+            original: '/img/rust/rust14.jpg',
+            thumbnail: '/img/rust/rust14.jpg',
         },
         {
-            original: './img/rust/rust15.jpg',
-            thumbnail: './img/rust/rust15.jpg',
+            original: '/img/rust/rust15.jpg',
+            thumbnail: '/img/rust/rust15.jpg',
         },
 
 
@@ -89,7 +89,7 @@ const WynnRustPage = () => {
                     <div className="breadcrumbs">
                         <span className="name">{t('nav.home')}</span>
                         <span className="separator">
-                            <img src="./img/arrow-breadcrumbs.svg" alt="" />
+                            <img src="/img/arrow-breadcrumbs.svg" alt="" />
                         </span>
                         <span className="name">{t('nav.rust')}</span>
                     </div>
@@ -103,7 +103,7 @@ const WynnRustPage = () => {
                             height="770px"
                             playing
                             playIcon={<svg width="100" height="107" viewBox="0 0 100 107" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_201_605)"><circle cx="50" cy="50" r="50" fill="url(#paint0_linear_201_605)"></circle></g><path d="M41 37.4239C41 35.5608 42.8939 34.3963 44.4091 35.3279L64.8636 47.904C66.3788 48.8355 66.3788 51.1645 64.8636 52.096L44.4091 64.6721C42.8939 65.6037 41 64.4392 41 62.5761L41 37.4239Z" fill="#212129"></path><defs><filter id="filter0_d_201_605" x="0" y="0" width="100" height="107" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="7"></feOffset><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_201_605"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_201_605" result="shape"></feBlend></filter><linearGradient id="paint0_linear_201_605" x1="-5.51724" y1="85.1064" x2="107.717" y2="79.4848" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE58B"></stop><stop offset="1" stop-color="#E8922D"></stop></linearGradient></defs></svg>}
-                            light="./img/img-video.png"
+                            light="/img/img-video.png"
                         />
 
                     </div>
@@ -135,7 +135,7 @@ const WynnRustPage = () => {
                         </div>
                         <div className="col-lg-4">
                             <div className="img">
-                                <img src="./img/img-rust.png" alt="" />
+                                <img src="/img/img-rust.png" alt="" />
                             </div>
                         </div>
                     </div>

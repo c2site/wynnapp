@@ -21,6 +21,7 @@ import "./style/components/footer/footer.scss";
 import "./style/components/header/header.scss";
 import "./style/page/innerPage.scss";
 import "./style/page/home.scss";
+import "./style/page/secondaryPage.scss";
 import "react-image-gallery/styles/scss/image-gallery.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
