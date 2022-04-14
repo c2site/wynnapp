@@ -227,18 +227,24 @@ const HomePage = () => {
                                         <h2 className="top-games__name">Tower of Misery</h2>
                                     </div>
                                     <div className="top-games__info">
+                                        {/*<div className="item">*/}
+                                        {/*    <ServerIcon />*/}
+                                        {/*    <p>*/}
+                                        {/*        server online:*/}
+                                        {/*        <span>0</span>*/}
+                                        {/*    </p>*/}
+                                        {/*</div>*/}
+                                        {/*<div className="item">*/}
+                                        {/*    <UsersIcon />*/}
+                                        {/*    <p>*/}
+                                        {/*        Users online:*/}
+                                        {/*        <span>0</span>*/}
+                                        {/*    </p>*/}
+                                        {/*</div>*/}
                                         <div className="item">
-                                            <ServerIcon />
+                                            <RoketIcon />
                                             <p>
-                                                server online:
-                                                <span>13</span>
-                                            </p>
-                                        </div>
-                                        <div className="item">
-                                            <UsersIcon />
-                                            <p>
-                                                Users online:
-                                                <span>17 550</span>
+                                                Coming Soon
                                             </p>
                                         </div>
                                     </div>
@@ -861,7 +867,7 @@ const HomePage = () => {
                                                 <img src="./img/andrey.svg" alt="" />
                                             </div>
                                             <div className="team-item__content">
-                                                <span className="name">Andey P</span>
+                                                <span className="name">Andrew P</span>
                                                 <p className="position">Block-Chain Developer</p>
                                                 <div className="social-items">
                                                     <a href={'https://twitter.com/pirsdev'} target={'_blank'} className="social-items__item">

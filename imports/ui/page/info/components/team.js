@@ -16,7 +16,7 @@ const team = () => {
                                 <img src="./img/andrey.svg" alt="" />
                             </div>
                             <div className="team-item__content">
-                                <span className="name">Andey P</span>
+                                <span className="name">Andrew P</span>
                                 <p className="position">Block-Chain Developer</p>
                                 <div className="social-items">
                                     <a href="https://twitter.com/pirsdev" className="social-items__item" target={'_blank'}>
