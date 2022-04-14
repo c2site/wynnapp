@@ -84,16 +84,16 @@ const WynnRustPage = () => {
 
     return (
         <div className="inner-page rust-page">
-            <div className="container">
-                <div className="head-page">
-                    <div className="breadcrumbs">
-                        <span className="name">{t('nav.home')}</span>
-                        <span className="separator">
-                            <img src="/img/arrow-breadcrumbs.svg" alt="" />
-                        </span>
-                        <span className="name">{t('nav.rust')}</span>
-                    </div>
-                </div>
+            <div className="container mt-5">
+                {/*<div className="head-page">*/}
+                {/*    <div className="breadcrumbs">*/}
+                {/*        <span className="name">{t('nav.home')}</span>*/}
+                {/*        <span className="separator">*/}
+                {/*            <img src="/img/arrow-breadcrumbs.svg" alt="" />*/}
+                {/*        </span>*/}
+                {/*        <span className="name">{t('nav.rust')}</span>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <h2 className="title-page">{t('nav.rust')}</h2>
                 <div className="video-box">
                     <div className="img">
