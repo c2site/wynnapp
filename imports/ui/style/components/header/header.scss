@@ -213,11 +213,19 @@ header {
         @media only screen and (max-width: 1199px) {
             width: 75%;
             .login-ticket {
-                color: #1e2632;
-                border: 2px solid #1e2632;
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 13px;
+                color: #212129;
+                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);    
+                border: none;
+                margin-bottom: 40px !important;
             }
+
             .login-ticket svg {
-                display: none;
+                // display: none;
+                stroke: none !important;
             }
         }
         @media only screen and (max-width: 1199px) {
@@ -261,10 +269,14 @@ header {
                     font-size: 13px;
                     line-height: 24px;
                     align-items: center;
-                    color: #1e2632;
+                    // color: #1e2632;
+                    color: #fff;
                     svg {
                         display: flex;
                         margin-right: 8px;
+                        path {
+                            fill: #FDDD82;
+                        }
                     }
                 }
             }
@@ -306,7 +318,8 @@ header {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
+                // align-items: flex-end;
+                align-items: flex-start;
             }
 
             .mob-hide {
@@ -369,11 +382,25 @@ header {
                     }
                 }
             }
+
+            .btn.login-ticket {
+                @media only screen and (max-width: 1199px) {
+                    max-width: 245px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    svg {
+                        path {
+                            stroke:none;
+                        }
+                    }
+                }
+            }
         }
     }
     .mobile-nav {
         display: block;
         z-index: 9999;
+        background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
     }
     .nav {
         width: 100%;
@@ -389,12 +416,12 @@ header {
             padding: 0 15px;
             @media only screen and (max-width: 1199px) {
                 padding: 30px 0;
-                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
                 width: 100%;
                 text-align: right;
-                &:first-child {
-                    border-top: none;
-                }
+                // &:first-child {
+                //     border-top: none;
+                // }
             }
             a {
                 display: flex;
@@ -414,8 +441,8 @@ header {
                     text-align: right;
                     letter-spacing: 0.05em;
                     text-transform: uppercase;
-
-                    color: #020202;
+                    color: #fff;
+                    // color: #020202;
                 }
                 svg {
                     margin-right: 10px;
@@ -476,6 +503,11 @@ header {
 .lang-drop {
     display: flex;
     margin-left: 12px;
+    @media ( max-width: 1200px ) {
+        margin-left: 0;
+        margin-bottom: 30px;
+        width: 100%;
+    }
     & > a {
         display: flex;
         align-items: center;
@@ -583,12 +615,22 @@ header {
             background-color: #eb3b3b;
             border: none;
             border-radius: 25px;
+            @media ( max-width: 1200px ) {
+                max-width: 395px;
+                background: transparent;
+                border: 2px solid #FFE58B;
+                width: 100%;
+                justify-content: center;
+                padding-left: 0;
+                padding-right: 0;
+            }
             @media only screen and (max-width: $responsive-size-big-mobile) {
                 height: initial;
                 padding: 10px 15px;
                 width: 100%;
-                margin-top: 10px;
+                margin-top: 0;
                 min-height: 54px;
+                // margin-bottom: 30px;
             }
         }
         .dropdown-menu {
@@ -620,6 +662,7 @@ header {
     z-index: 9998;
 }
 
+
 @media ( max-width: 767px ) {
     .login-ticket {
         display: none;
@@ -628,8 +671,10 @@ header {
     .inner-mob-nav .login-ticket {
         display: block;
     } 
+
 }
 
 .inner-mob-nav .nav li a svg path {
-    fill: #2D3540;
+    // fill: #2D3540;
+    fill: #FDDD82;
 }
