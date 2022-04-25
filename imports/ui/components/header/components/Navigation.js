@@ -2,7 +2,7 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useTracker } from "meteor/react-meteor-data";
-import { AboutMenuIcon, GameMenuIcon, HomeMenuIcon, InfoMenuIcon, LotoMenuIcon } from '../../../svg/icons';
+import { AboutMenuIcon, DocsMenuIcon, GameMenuIcon, HomeMenuIcon, InfoMenuIcon, LotoMenuIcon } from '../../../svg/icons';
 
 const Navigation = ({ mobi, isShown, setIsShown }) => {
     const { t, i18n } = useTranslation();
@@ -13,6 +13,7 @@ const Navigation = ({ mobi, isShown, setIsShown }) => {
         { href: FlowRouter.path('gamesCenter'), title: 'Game Center', icon: <GameMenuIcon /> },
         { href: FlowRouter.path('lottery'), title: 'lottery', icon: <LotoMenuIcon /> },
         { href: FlowRouter.path('info'), title: 'Info', icon: <InfoMenuIcon /> },
+        { href: 'https://docs.wynn-games.org/wynn-games/', title: 'Docs', icon: <DocsMenuIcon />, target: '_blank' }
     ]
     // if (login) {
     //     nav.push({
@@ -31,7 +32,7 @@ const Navigation = ({ mobi, isShown, setIsShown }) => {
             <ul className="nav">
                 {nav.map(n=>(
                 <li>
-                    <a href={n.href}>
+                    <a href={n.href} target={n.target && n.target}>
                         {n.icon}
                         {n.title}
                     </a>
