@@ -8,7 +8,7 @@ const GamesCenter = () => {
         <div className="redesign-page secondary-page">
             <div className="container">
                 <div className="inner-container">
-                    <h2 className="section__title">WynnGames Center</h2>
+                    <h2 className="section__title">Wynn Games Center</h2>
                     <div className="row games-grid">
                         <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                             <div className="games__item" onClick={e=>FlowRouter.go('wynnRust')}>

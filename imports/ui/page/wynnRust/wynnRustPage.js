@@ -118,7 +118,7 @@ const WynnRustPage = () => {
                                     {/*{!login ? (<Registration color="primary" text={t('banner.started')}/>) : (*/}
                                     {/*  <button className="btn btn-primary" onClick={()=>FlowRouter.go('/profile')}>{t('banner.started')}</button>*/}
                                     {/*)}*/}
-                                    <a href={'wp/White_Paper_Rust.pdf'} target={'_blank'} className="btn btn-active">{t('wp_rust')}</a>
+                                    <a href={'wp/Wynn_Rust_Full_PD.pdf'} target={'_blank'} className="btn btn-active">{t('wp_rust')}</a>
                                 </div>
                                 <span>Powered by                             <svg width="160" height="64" viewBox="0 0 280 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2424_970)">
