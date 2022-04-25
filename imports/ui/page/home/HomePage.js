@@ -40,7 +40,6 @@ const HomePage = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        adaptiveHeight: true,
         initialSlide: 0,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
@@ -60,7 +59,8 @@ const HomePage = () => {
             {
                 breakpoint: 991,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
                 }
             }
         ]
