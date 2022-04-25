@@ -1,8 +1,9 @@
 import React from 'react';
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
+
+import { DeviceAndroidIcon, DeviceIosIcon, DevicePcIcon, DevicePsIcon, DiscordIcon, IconCheckFalse, IconCheckTrue, IconCheckUnderway, PlayIcon, RoketIcon, ServerIcon, SliderNextIcon, SliderPrevIcon, StartIcon, TelegramIcon, TwitterIcon, UsersIcon } from '../../svg/icons';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
-import { DeviceAndroidIcon, DeviceIosIcon, DevicePcIcon, DevicePsIcon, DiscordIcon, IconCheckFalse, IconCheckTrue, PlayIcon, RoketIcon, ServerIcon, SliderNextIcon, SliderPrevIcon, StartIcon, TelegramIcon, TwitterIcon, UsersIcon } from '../../svg/icons';
 import ReactPlayer from 'react-player';
 
 const HomePage = () => {
@@ -173,7 +174,7 @@ const HomePage = () => {
                     <div className="top-games__wrapper">
                         <div className="row">
                             <div className="col-xl-4 col-lg-6 col-md-8 mx-lg-0 mx-md-auto col-sm-12">
-                                <div className="top-games__item" onClick={e=>FlowRouter.go('wynnRust')}>
+                                <div className="top-games__item">
                                     <div className="top-games__img">
                                         <div className="top-games__platforms">
                                             <div className="platforms__item">
@@ -197,14 +198,14 @@ const HomePage = () => {
                                             <ServerIcon />
                                             <p>
                                                 server online:
-                                                <span>0</span>
+                                                <span>13</span>
                                             </p>
                                         </div>
                                         <div className="item">
                                             <UsersIcon />
                                             <p>
                                                 Users online:
-                                                <span>0</span>
+                                                <span>17 550</span>
                                             </p>
                                         </div>
                                     </div>
@@ -214,24 +215,34 @@ const HomePage = () => {
                             <div className="col-xl-4 col-lg-6 col-md-8 mx-lg-0 mx-md-auto col-sm-12">
                                 <div className="top-games__item">
                                     <div className="top-games__img">
-                                        <img src="./img/mainpage/comming-game-bg.png" alt="" />
+                                        <div className="top-games__platforms">
+                                            <div className="platforms__item">
+                                                <DeviceAndroidIcon />
+                                                <p>android</p>
+                                            </div>
+                                            <div className="platforms__item">
+                                                <DeviceIosIcon />
+                                                <p>ios</p>
+                                            </div>
+                                        </div>
+                                        <img src="./img/mainpage/tower-game-bg.png" alt="" />
+                                       <a href={'/game-single/'} className="top-games__name">Tower of Misery</a>
                                     </div>
                                     <div className="top-games__info">
                                         <div className="item">
-                                            <RoketIcon />
+                                            <ServerIcon />
                                             <p>
-                                                Coming Soon
+                                                server online:
+                                                <span>13</span>
                                             </p>
                                         </div>
-                                        {/* <div className="item">
-                                            <StartIcon />
-                                            <div className="countdown">
-                                                <span className="days">13 days</span>
-                                                <span className="hours">10 hours</span>
-                                                <span className="minutes">15 minutes</span>
-                                                <span className="seconds">48 seconds</span>
-                                            </div>
-                                        </div> */}
+                                        <div className="item">
+                                            <UsersIcon />
+                                            <p>
+                                                Users online:
+                                                <span>17 550</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -852,7 +863,7 @@ const HomePage = () => {
                                                 <img src="./img/andrey.svg" alt="" />
                                             </div>
                                             <div className="team-item__content">
-                                                <span className="name">Andrew P</span>
+                                                <span className="name">Andey P</span>
                                                 <p className="position">Block-Chain Developer</p>
                                                 <div className="social-items">
                                                     <a href={'https://twitter.com/pirsdev'} target={'_blank'} className="social-items__item">
