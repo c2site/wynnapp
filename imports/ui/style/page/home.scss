@@ -554,12 +554,12 @@ section.top-games {
     background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 
     @media ( max-width: 1600px ) {
-        flex-direction: column;
-        align-items: flex-start;
+        // flex-direction: column;
+        // align-items: flex-start;
     }
     @media ( max-width: 767px ) {
         padding: 15px 15px;
@@ -570,27 +570,28 @@ section.top-games {
         align-items: center;
 
         @media ( max-width: 1600px ) {
-            &:not(:last-child) {
-                margin-bottom: 12px;
-            }
+            // &:not(:last-child) {
+            //     margin-bottom: 12px;
+            // }
         }
         p {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
             margin-bottom: 0;
             margin-left: 10px;
             font-weight: 600;
             font-size: 13px;
             line-height: 16px;
             text-transform: uppercase;
-            color: #B3B9C2;
+            color: #b3b9c2;
             
             span {
-                margin-left: 10px;
+                margin-top: 5px;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 20px;
-                color: #FFFFFF;
+                color: #ffffff;
                 display: block;
             }
         }

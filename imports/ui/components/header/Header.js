@@ -136,7 +136,7 @@ const Header = () => {
                     </svg>
                     {t('header.twitter')}
                   </a></li>
-                  <li><a href="#">
+                  {/* <li><a href="#">
                     <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#b0)">
                         <path d="M12.2061 12.3792H9.91357V15.1674H12.2061C12.9496 15.1674 13.6311 14.5478 13.6311 13.7423C13.6311 12.9368 12.9496 12.3792 12.2061 12.3792Z" fill="#1E2632"/>
@@ -151,7 +151,7 @@ const Header = () => {
                       </defs>
                     </svg>
                     {t('header.bitcointalk')}
-                  </a></li>
+                  </a></li> */}
                 </ul>
               </div>
             </div>
