@@ -32,7 +32,7 @@ const Game = () => {
         <div className="redesign-page secondary-page">
             <div className="container">
                 <div className="inner-container">
-                    <h2 className="section__title">WynnGames Center</h2>
+                    <h2 className="section__title">Wynn Games Center</h2>
 
                     <div className="game-slider">
                         <ReactImageGallery items={images} thumbnailPosition={'bottom'} showFullscreenButton={false} showPlayButton={false} showNav={false} />

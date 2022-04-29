@@ -84,16 +84,16 @@ const WynnRustPage = () => {
 
     return (
         <div className="inner-page rust-page">
-            <div className="container">
-                <div className="head-page">
-                    <div className="breadcrumbs">
-                        <span className="name">{t('nav.home')}</span>
-                        <span className="separator">
-                            <img src="/img/arrow-breadcrumbs.svg" alt="" />
-                        </span>
-                        <span className="name">{t('nav.rust')}</span>
-                    </div>
-                </div>
+            <div className="container mt-5">
+                {/*<div className="head-page">*/}
+                {/*    <div className="breadcrumbs">*/}
+                {/*        <span className="name">{t('nav.home')}</span>*/}
+                {/*        <span className="separator">*/}
+                {/*            <img src="/img/arrow-breadcrumbs.svg" alt="" />*/}
+                {/*        </span>*/}
+                {/*        <span className="name">{t('nav.rust')}</span>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <h2 className="title-page">{t('nav.rust')}</h2>
                 <div className="video-box">
                     <div className="img">
@@ -118,7 +118,7 @@ const WynnRustPage = () => {
                                     {/*{!login ? (<Registration color="primary" text={t('banner.started')}/>) : (*/}
                                     {/*  <button className="btn btn-primary" onClick={()=>FlowRouter.go('/profile')}>{t('banner.started')}</button>*/}
                                     {/*)}*/}
-                                    <a href={'wp/White_Paper_Rust.pdf'} target={'_blank'} className="btn btn-active">{t('wp_rust')}</a>
+                                    <a href={'wp/Wynn_Rust_Full_PD.pdf'} target={'_blank'} className="btn btn-active">{t('wp_rust')}</a>
                                 </div>
                                 <span>Powered by                             <svg width="160" height="64" viewBox="0 0 280 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2424_970)">

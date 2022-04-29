@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 
 import { DeviceAndroidIcon, DeviceIosIcon, DevicePcIcon, DevicePsIcon, DiscordIcon, IconCheckFalse, IconCheckTrue, IconCheckUnderway, PlayIcon, RoketIcon, ServerIcon, SliderNextIcon, SliderPrevIcon, StartIcon, TelegramIcon, TwitterIcon, UsersIcon } from '../../svg/icons';
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import ReactPlayer from 'react-player';
 
 const HomePage = () => {
@@ -225,7 +226,7 @@ const HomePage = () => {
                                             </div>
                                         </div>
                                         <img src="./img/mainpage/tower-game-bg.png" alt="" />
-                                        <a href={'/game-single/'} className="top-games__name">Tower of Misery</a>
+                                       <a href={'/game-single/'} className="top-games__name">Tower of Misery</a>
                                     </div>
                                     <div className="top-games__info">
                                         <div className="item">
@@ -586,11 +587,11 @@ const HomePage = () => {
                                             </div>
                                             <div className="body">
                                                 <div className="box">
-                                                    <IconCheckUnderway />
+                                                    <IconCheckTrue />
                                                     <span>Minting a Wynn fan token</span>
                                                 </div>
                                                 <div className="box">
-                                                    <IconCheckUnderway />
+                                                    <IconCheckTrue />
                                                     <span>Getting ready to start Wynn SDK development</span>
                                                 </div>
                                                 <div className="box">
@@ -598,7 +599,7 @@ const HomePage = () => {
                                                     <span>Start of pre-sale</span>
                                                 </div>
                                                 <div className="box">
-                                                    <IconCheckUnderway />
+                                                    <IconCheckTrue />
                                                     <span>Start of Game Center development</span>
                                                 </div>
                                                 <div className="box">
@@ -614,7 +615,7 @@ const HomePage = () => {
                                                     <span>CoinMarketCap listing</span>
                                                 </div>
                                                 <div className="box">
-                                                    <IconCheckUnderway />
+                                                    <IconCheckTrue />
                                                     <span>Increase the number of the development staff</span>
                                                 </div>
                                                 <div className="box">
@@ -626,7 +627,7 @@ const HomePage = () => {
                                                     <span>Launch of alpha testing for the “Wynn Rust” server</span>
                                                 </div>
                                                 <div className="box">
-                                                    <IconCheckUnderway />
+                                                    <IconCheckFalse />
                                                     <span>Move "Wynn Rust" to beta testing</span>
                                                 </div>
                                                 <div className="box">
@@ -984,7 +985,7 @@ const HomePage = () => {
                                     </div>
                                 </div>
 
-                                {/* <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                     <div className="item">
                                         <div className="team-item__wrapper">
                                             <div className="img">
@@ -1001,7 +1002,7 @@ const HomePage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div> */}
+                                </div>
                             </Slider>
                         </div>
                     </div>
@@ -1143,7 +1144,7 @@ const HomePage = () => {
                                     </svg>
                                 </a>
                             </div>
-                            {/* 
+
                             <div className="partners__col">
                                 <a className="partners__item">
                                     <svg width="210" height="66" viewBox="0 0 210 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1161,7 +1162,7 @@ const HomePage = () => {
                                         </defs>
                                     </svg>
                                 </a>
-                            </div> */}
+                            </div>
 
                             <div className="partners__col">
                                 <a className="partners__item">

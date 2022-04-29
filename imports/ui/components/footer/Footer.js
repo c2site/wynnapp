@@ -144,10 +144,10 @@ const Footer = () => {
                      {t('footer.copy')} 2021-{now.getFullYear()}<span> | Wynn Games</span>
                   </p>
                </div>
-               <a href={'/Terms.pdf'} target={'_blank'}>
+               <a href={'/wynn_terms.pdf'} target={'_blank'}>
                Terms & conditions
                </a>
-               <a href={'/Privacy_Policy.pdf'} target={'_blank'}>
+               <a href={'/wynn_privacy.pdf'} target={'_blank'}>
                   Privacy Policy
                </a>
             </div>

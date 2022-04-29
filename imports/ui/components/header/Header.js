@@ -56,7 +56,7 @@ const Header = () => {
               <div className="mob-hide">
 
                 <LoginYellow />
-                {active && (<ProfileBtn />)}
+                {/*{active && (<ProfileBtn />)}*/}
               </div>
               <div className="btn-mob">
                 <Button className="btn btn-active" onClick={toggleNav}>
@@ -87,7 +87,7 @@ const Header = () => {
               <div className="btn-header">
                   <div className="mob-hide login-hide">
                     <LoginYellow/>
-                    {active && (<ProfileBtn />)}
+                    {/*{active && (<ProfileBtn />)}*/}
                   </div>
                 {/*// <Button className="btn btn-default" onClick={logout}>*/}
                 {/*//   <svg width="22.7" height="22.7" viewBox="0 0 22.7 22.7" xmlns="http://www.w3.org/2000/svg" >*/}
@@ -113,7 +113,7 @@ const Header = () => {
               <div className="inner-mob-nav">
                 <div className="btn-header">
                   <Login/>
-                  {active && (<ProfileBtn />)}
+                  {/*{active && (<ProfileBtn />)}*/}
                 </div>
                 <Navigation mobi={true} isShown={isShown} setIsShown={setIsShown} />
                 <ul className="social-head">

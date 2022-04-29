@@ -11,7 +11,8 @@ const Navigation = ({ mobi, isShown, setIsShown }) => {
     const nav = [
         { href: FlowRouter.path('home'), title: 'home',  icon: <HomeMenuIcon />},
         { href: FlowRouter.path('gamesCenter'), title: 'Game Center', icon: <GameMenuIcon /> },
-        { href: FlowRouter.path('lottery'), title: 'lottery', icon: <LotoMenuIcon /> },
+        //{ href: '#', title: 'lottery', icon: <LotoMenuIcon /> },
+
         { href: FlowRouter.path('info'), title: 'Info', icon: <InfoMenuIcon /> },
         { href: 'https://docs.wynn-games.org/wynn-games/', title: 'Docs', icon: <DocsMenuIcon />, target: '_blank' }
     ]
@@ -76,3 +77,4 @@ const Navigation = ({ mobi, isShown, setIsShown }) => {
 };
 
 export default Navigation;
+

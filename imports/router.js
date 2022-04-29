@@ -109,7 +109,7 @@ FlowRouter.route('/promotion', {
 
 FlowRouter.route('/lottery', {
     name: 'lottery',
-    title: title('WynnGames Center'),
+    title: title('Wynn Games Center'),
     action() {
         mountMain(Lottery);
     },
@@ -117,7 +117,7 @@ FlowRouter.route('/lottery', {
 
 FlowRouter.route('/games-center', {
     name: 'gamesCenter',
-    title: title('WynnGames Center'),
+    title: title('Wynn Games Center'),
     action() {
         mountMain(GamesCenter);
     },
@@ -125,7 +125,7 @@ FlowRouter.route('/games-center', {
 
 FlowRouter.route('/game-single', {
     name: 'game',
-    title: title('WynnGames Center'),
+    title: title('Wynn Games Center'),
     action() {
         mountMain(Game);
     },
