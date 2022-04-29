@@ -275,6 +275,23 @@ header .container {
     }
 }
 
+.title--md {
+    font-size: 42px;
+    line-height: 42px;
+    @media ( max-width: 1200px ) {
+        font-size: 38px;
+        line-height: 38px;
+    }
+    @media ( max-width: 991px ) {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    @media ( max-width: 767px ) {
+        font-size: 26px;
+        line-height: 26px;
+    }
+}
+
 .section__text {
     max-width: 1000px;
     margin-left: auto;
