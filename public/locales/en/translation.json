@@ -29,7 +29,8 @@
     "rust": "Wynn rust",
     "faq": "F.A.Q.",
     "about": "About",
-    "audit": "Audit"
+    "audit": "Audit",
+    "promo": "Promotion"
   },
   "form": {
     "title_login": "Login to your account",
