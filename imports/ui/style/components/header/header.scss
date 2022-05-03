@@ -218,7 +218,7 @@ header {
                 font-weight: 700;
                 font-size: 13px;
                 color: #212129;
-                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);    
+                background: linear-gradient(87.16deg, #FFE58B -4.55%, #E8922D 103.59%);
                 border: none;
                 margin-bottom: 40px !important;
             }
@@ -257,13 +257,12 @@ header {
             }
         }
         .social-head {
-            margin: 20px 0 30px;
+            margin: 5px 0 30px;
             padding: 0;
             list-style: none;
             li {
-                display: flex;
-                justify-content: flex-end;
-                padding-bottom: 25px;
+              display: inline-block;
+              padding: 10px;
                 a {
                     display: flex;
                     font-size: 13px;
@@ -670,7 +669,7 @@ header {
 
     .inner-mob-nav .login-ticket {
         display: block;
-    } 
+    }
 
 }
 
