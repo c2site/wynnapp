@@ -26,6 +26,7 @@ import HomePageOld from './ui/page/home/HomePageOld';
 import GamesCenter from './ui/page/gamesCenter/GamesCenter';
 import Game from './ui/page/game/Game';
 import Lottery from './ui/page/lottery/Lottery';
+import Promotion from './ui/page/promotion/Promotion';
 
 const mountMain = (Page) => mount(App, { Page }, { rootProps: { className: 'app' } });
 
@@ -95,6 +96,14 @@ FlowRouter.route('/games-center', {
     title: title('WynnGames Center'),
     action() {
         mountMain(GamesCenter);
+    },
+});
+
+FlowRouter.route('/promotion', {
+    name: 'promotion',
+    title: title('Promotion'),
+    action() {
+        mountMain(Promotion);
     },
 });
 
