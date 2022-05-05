@@ -131,13 +131,13 @@ FlowRouter.route('/game-single', {
     },
 });
 
-FlowRouter.route('/old', {
-    name: 'HomePageOld',
-    title: title('HomePageOld'),
-    action() {
-        mountMain(HomePageOld);
-    }
-});
+// FlowRouter.route('/old', {
+//     name: 'HomePageOld',
+//     title: title('HomePageOld'),
+//     action() {
+//         mountMain(HomePageOld);
+//     }
+// });
 
 FlowRouter.route('/buy', {
     name: 'buy',
@@ -158,33 +158,33 @@ FlowRouter.route('/profile', {
     },
 });
 
-FlowRouter.route('/my-tickets', {
-    name: 'profile.tickets',
-    title: title('My Tickets'),
-    action() {
-        mountMain(ProfileTickets);
-    },
-    triggersEnter() {
-        whileWaiting()
-    },
-});
+// FlowRouter.route('/my-tickets', {
+//     name: 'profile.tickets',
+//     title: title('My Tickets'),
+//     action() {
+//         mountMain(ProfileTickets);
+//     },
+//     triggersEnter() {
+//         whileWaiting()
+//     },
+// });
 
-FlowRouter.route('/history', {
-    name: 'history',
-    title: title('Game History'),
-    action() {
-        mountMain(HistoryPage);
-    }
-});
+// FlowRouter.route('/history', {
+//     name: 'history',
+//     title: title('Game History'),
+//     action() {
+//         mountMain(HistoryPage);
+//     }
+// });
 
 
-FlowRouter.route('/hash', {
-    name: 'hash',
-    title: title('Check Hash'),
-    action() {
-        mountMain(HashPage);
-    },
-});
+// FlowRouter.route('/hash', {
+//     name: 'hash',
+//     title: title('Check Hash'),
+//     action() {
+//         mountMain(HashPage);
+//     },
+// });
 
 
 // FlowRouter.route('/swap', {
@@ -196,13 +196,13 @@ FlowRouter.route('/hash', {
 //     whileWaiting
 // });
 
-FlowRouter.route('/option', {
-    name: 'option',
-    title: title('option'),
-    action() {
-        mountMain(OptionPage);
-    }
-});
+// FlowRouter.route('/option', {
+//     name: 'option',
+//     title: title('option'),
+//     action() {
+//         mountMain(OptionPage);
+//     }
+// });
 
 FlowRouter.route('/wynn-rust', {
     name: 'wynnRust',
@@ -228,13 +228,13 @@ FlowRouter.route('/faq', {
     }
 });
 
-FlowRouter.route('/presale', {
-    name:'presalePage',
-    title: title('Pre-Sale'),
-    action() {
-        mountMain(PresalePage)
-    }
-})
+// FlowRouter.route('/presale', {
+//     name:'presalePage',
+//     title: title('Pre-Sale'),
+//     action() {
+//         mountMain(PresalePage)
+//     }
+// })
 
 // FlowRouter.route('/free-coin', {
 //     name: 'freeCoin',
