@@ -233,7 +233,6 @@ export const DownLoadIcon = () => (
     </svg>
 
 )
-)
 
 // colored socials
 
