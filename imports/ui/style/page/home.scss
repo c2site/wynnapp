@@ -45,7 +45,7 @@
 
 // ##################################################
 // Danil Styles
-// home 
+// home
 
 html, body {
     overflow-x: hidden;
@@ -93,14 +93,14 @@ header .container {
         margin-left: auto;
         padding-left: 15px;
         padding-right: 15px;
-    
+
         @media (min-width: 576px) {
         max-width: 540px;
         }
         @media (min-width: 768px) {
         max-width: 720px;
         }
-    
+
         @media ( min-width: 992px ) {
             max-width: 940px;
         }
@@ -123,7 +123,7 @@ header .container {
         margin-right: -25px;
     }
 
-    .col-lg-2, 
+    .col-lg-2,
     .col-lg-3,
     .col-lg-4,
     .col-lg-5,
@@ -220,7 +220,7 @@ header .container {
             }
         }
 
-       
+
     }
 }
 
@@ -291,6 +291,7 @@ header .container {
         line-height: 26px;
     }
 }
+
 
 .section__text {
     max-width: 1000px;
@@ -602,7 +603,7 @@ section.top-games {
             line-height: 16px;
             text-transform: uppercase;
             color: #b3b9c2;
-            
+
             span {
                 margin-top: 5px;
                 font-weight: 500;
@@ -836,7 +837,7 @@ section.top-games {
 
     // @media ( max-width: 480px ) {
     //     height: 240px;
-    // }   
+    // }
 }
 
 // ############################################
@@ -935,7 +936,7 @@ section.top-games {
 }
 
 .partners__col {
-    
+
 }
 
 .partners__item {
@@ -1011,7 +1012,7 @@ section.top-games {
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            
+
         }
         .team-item__content {
 
@@ -1202,4 +1203,3 @@ section.top-games {
         }
     }
 }
-
