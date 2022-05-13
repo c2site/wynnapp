@@ -59,27 +59,27 @@ const Promotion = () => {
 
                     <div className="promotion-socials mt-75">
                         <PromotionCopy
-                            link={'#tglink'}
+                            link={'https://t.me/WynnGamesGroup'}
                             text={'Telegram'}
                             Icon={<TelegramColoredIcon />}
                         />
                         <PromotionCopy
-                            link={'#discordlink'}
+                            link={'https://discord.gg/M5j2FddAXy'}
                             text={'Discord'}
                             Icon={<DiscordColoredIcon />}
                         />
                         <PromotionCopy
-                            link={'#twitterlink'}
+                            link={'https://twitter.com/EcosystemWynn'}
                             text={'Twitter'}
                             Icon={<TwitterColoredIcon />}
                         />
                         <PromotionCopy
-                            link={'#mediumlink'}
+                            link={'https://medium.com/@wynngames.dev/'}
                             text={'Medium'}
                             Icon={<MediumColoredIcon />}
                         />
                         <PromotionCopy
-                            link={'#instlink'}
+                            link={'https://www.instagram.com/wynngames.dev/'}
                             text={'Instagram'}
                             Icon={<InstagramColoredIcon />}
                         />
@@ -91,7 +91,7 @@ const Promotion = () => {
                                 <Promotionitem
                                     image={'/img/promotion-logo-1.svg'}
                                     code={
-                                        '<a href="https://wynn-games.com/?ref=username"><img src="https://wynn-games.com/images/banner_468.gif" alt="" width="320" height="250" /></a>'
+                                        '<a href="https://wynn-games.org"><img src="https://wynn-games.org/img/promotion-logo-1.svg" alt="Wynn Games" /></a>'
                                     }
                                 />
                             </div>
@@ -99,7 +99,7 @@ const Promotion = () => {
                                 <Promotionitem
                                     image={'/img/promotion-logo-2.svg'}
                                     code={
-                                        '<a href="https://wynn-games.com/?ref=username"><img src="https://wynn-games.com/images/banner_468.gif" alt="" width="320" height="250" /></a>'
+                                        '<a href="https://wynn-games.org"><img src="https://wynn-games.orgimg/promotion-logo-2.svg" alt="Wynn Games" /></a>'
                                     }
                                 />
                             </div>
@@ -107,7 +107,7 @@ const Promotion = () => {
                                 <Promotionitem
                                     image={'/img/promotion-logo-3.svg'}
                                     code={
-                                        '<a href="https://wynn-games.com/?ref=username"><img src="https://wynn-games.com/images/banner_468.gif" alt="" width="320" height="250" /></a>'
+                                        '<a href="https://wynn-games.org"><img src="https://wynn-games.org/img/promotion-logo-3.svg" alt="Wynn Games" /></a>'
                                     }
                                 />
                             </div>
@@ -115,7 +115,7 @@ const Promotion = () => {
                                 <Promotionitem
                                     image={'/img/promotion-logo-4.svg'}
                                     code={
-                                        '<a href="https://wynn-games.com/?ref=username"><img src="https://wynn-games.com/images/banner_468.gif" alt="" width="320" height="250" /></a>'
+                                        '<a href="https://wynn-games.org"><img src="https://wynn-games.org/img/promotion-logo-4.svg" alt="Wynn Games" /></a>'
                                     }
                                 />
                             </div>
@@ -123,7 +123,7 @@ const Promotion = () => {
                                 <Promotionitem
                                     image={'/img/promotion-logo-5.svg'}
                                     code={
-                                        '<a href="https://wynn-games.com/?ref=username"><img src="https://wynn-games.com/images/banner_468.gif" alt="" width="320" height="250" /></a>'
+                                        '<a href="https://wynn-games.org"><img src="https://wynn-games.org/img/promotion-logo-5.svg" alt="Wynn Games" /></a>'
                                     }
                                 />
                             </div>
@@ -131,7 +131,7 @@ const Promotion = () => {
                                 <Promotionitem
                                     image={'/img/promotion-logo-6.svg'}
                                     code={
-                                        '<a href="https://wynn-games.com/?ref=username"><img src="https://wynn-games.com/images/banner_468.gif" alt="" width="320" height="250" /></a>'
+                                        '<a href="https://wynn-games.org"><img src="https://wynn-games.org/img/promotion-logo-6.svg" alt="Wynn Games" /></a>'
                                     }
                                 />
                             </div>
