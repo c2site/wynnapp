@@ -991,7 +991,7 @@ const HomePage = () => {
                                     <div className="item">
                                         <div className="team-item__wrapper">
                                             <div className="img">
-                                                <img src="./img/vasile.svg" alt="" />
+                                                <img src="./img/photo-03.svg" alt="" />
                                             </div>
                                             <div className="team-item__content">
                                                 <span className="name">Vasile D</span>
@@ -1013,15 +1013,34 @@ const HomePage = () => {
                                     <div className="item">
                                         <div className="team-item__wrapper">
                                             <div className="img">
-                                                <img src="./img/Timurz.svg" alt="" />
+                                                <img src="./img/photo-01.svg" alt="" />
                                             </div>
                                             <div className="team-item__content">
-                                                <span className="name">Timur Z</span>
-                                                <p className="position">Game Designer</p>
+                                                <span className="name">Artemiy N</span>
+                                                <p className="position">CMO</p>
                                                 <div className="social-items">
-                                                    <a href={'https://t.me/Mooti_s'} target={'_blank'} className="social-items__item">
-                                                        <TelegramIcon />
-                                                    </a>
+                                                    {/*<a href={'https://t.me/Mooti_s'} target={'_blank'} className="social-items__item">*/}
+                                                    {/*    <TelegramIcon />*/}
+                                                    {/*</a>*/}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                    <div className="item">
+                                        <div className="team-item__wrapper">
+                                            <div className="img">
+                                                <img src="./img/photo-02.svg" alt="" />
+                                            </div>
+                                            <div className="team-item__content">
+                                                <span className="name">Kieu S</span>
+                                                <p className="position">PR</p>
+                                                <div className="social-items">
+                                                    {/*<a href={'https://t.me/Mooti_s'} target={'_blank'} className="social-items__item">*/}
+                                                    {/*    <TelegramIcon />*/}
+                                                    {/*</a>*/}
                                                 </div>
                                             </div>
                                         </div>
