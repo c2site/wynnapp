@@ -1083,9 +1083,9 @@ const HomePage = () => {
                         <span className="name">Artemiy N</span>
                         <p className="position">CMO</p>
                         <div className="social-items">
-                          {/*<a href={'https://t.me/Mooti_s'} target={'_blank'} className="social-items__item">*/}
-                          {/*    <TelegramIcon />*/}
-                          {/*</a>*/}
+                          <a href={'https://twitter.com/Ngartem23'} target={'_blank'} className="social-items__item">
+                              <TwitterIcon />
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1165,11 +1165,11 @@ const HomePage = () => {
                 </a>
               </div>
 
-              <div className="partners__col">
-                <a href={'https://www.bitmart.com/'} target={'_blank'} className="partners__item">
-                  <img src="./img/mainpage/partner-img-5.svg" alt="" />
-                </a>
-              </div>
+              {/*<div className="partners__col">*/}
+              {/*  <a href={'https://www.bitmart.com/'} target={'_blank'} className="partners__item">*/}
+              {/*    <img src="./img/mainpage/partner-img-5.svg" alt="" />*/}
+              {/*  </a>*/}
+              {/*</div>*/}
 
               <div className="partners__col">
                 <a href={'https://contractchecker.app/'} target={'_blank'} className="partners__item">
