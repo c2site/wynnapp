@@ -10,7 +10,7 @@ import {
   DiscordIcon,
   IconCheckFalse,
   IconCheckTrue,
-  IconCheckUnderway,
+  IconCheckUnderway, InstagramColoredIcon, InstagramIcon, LinkedinIcon,
   PlayIcon,
   RoketIcon,
   ServerIcon,
@@ -987,39 +987,13 @@ const HomePage = () => {
                   <div className="item">
                     <div className="team-item__wrapper">
                       <div className="img">
-                        <img src="./img/roma-m.svg" alt="" />
+                        <img src="./img/Sergei.svg" alt="" />
                       </div>
                       <div className="team-item__content">
-                        <span className="name">Roman B</span>
-                        <p className="position">Author & Writer</p>
+                        <span className="name">Sergey H</span>
+                        <p className="position">Front End developer</p>
                         <div className="social-items">
-                          <a href={'https://twitter.com/romochka_buchik'} target={'_blank'}
-                             className="social-items__item">
-                            <TwitterIcon />
-                          </a>
-                          <a href={'https://t.me/Wynn_Author'} target={'_blank'} className="social-items__item">
-                            <TelegramIcon />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                  <div className="item">
-                    <div className="team-item__wrapper">
-                      <div className="img">
-                        <img src="./img/roman.svg" alt="" />
-                      </div>
-                      <div className="team-item__content">
-                        <span className="name">Roman V</span>
-                        <p className="position">Marketing Strategy & Community mng.</p>
-                        <div className="social-items">
-                          <a href={'https://twitter.com/mrfFates'} target={'_blank'} className="social-items__item">
-                            <TwitterIcon />
-                          </a>
-                          <a href={'https://t.me/mFateS'} target={'_blank'} className="social-items__item">
+                          <a href={'https://t.me/Serhiy_Hrynko'} target={'_blank'} className="social-items__item">
                             <TelegramIcon />
                           </a>
                         </div>
@@ -1073,6 +1047,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                   <div className="item">
                     <div className="team-item__wrapper">
@@ -1096,15 +1071,82 @@ const HomePage = () => {
                   <div className="item">
                     <div className="team-item__wrapper">
                       <div className="img">
+                        <img src="./img/Dana.svg" alt="" />
+                      </div>
+                      <div className="team-item__content">
+                        <span className="name">Aidana O</span>
+                        <p className="position">Marketing manager</p>
+                        <div className="social-items">
+                          <a href={'https://instagram.com/aidashka999?igshid=YmMyMTA2M2Y='} target={'_blank'} className="social-items__item">
+                            <InstagramColoredIcon/>
+                          </a>
+                          <a href={'https://ae.linkedin.com/in/aidana-osmonbaeva-2a82b2103'} target={'_blank'} className="social-items__item">
+                            <LinkedinIcon />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <div className="item">
+                    <div className="team-item__wrapper">
+                      <div className="img">
                         <img src="./img/photo-02.svg" alt="" />
                       </div>
                       <div className="team-item__content">
-                        <span className="name">Kieu S</span>
+                        <span className="name">Shon K</span>
                         <p className="position">PR</p>
                         <div className="social-items">
-                          {/*<a href={'https://t.me/Mooti_s'} target={'_blank'} className="social-items__item">*/}
+                          {/*<a href={''} target={'_blank'} className="social-items__item">*/}
                           {/*    <TelegramIcon />*/}
                           {/*</a>*/}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <div className="item">
+                    <div className="team-item__wrapper">
+                      <div className="img">
+                        <img src="./img/roma-m.svg" alt="" />
+                      </div>
+                      <div className="team-item__content">
+                        <span className="name">Roman B</span>
+                        <p className="position">Author & Writer</p>
+                        <div className="social-items">
+                          <a href={'https://twitter.com/romochka_buchik'} target={'_blank'}
+                             className="social-items__item">
+                            <TwitterIcon />
+                          </a>
+                          <a href={'https://t.me/Wynn_Author'} target={'_blank'} className="social-items__item">
+                            <TelegramIcon />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <div className="item">
+                    <div className="team-item__wrapper">
+                      <div className="img">
+                        <img src="./img/roman.svg" alt="" />
+                      </div>
+                      <div className="team-item__content">
+                        <span className="name">Roman V</span>
+                        <p className="position">Marketing Strategy & Community mng.</p>
+                        <div className="social-items">
+                          <a href={'https://twitter.com/mrfFates'} target={'_blank'} className="social-items__item">
+                            <TwitterIcon />
+                          </a>
+                          <a href={'https://t.me/mFateS'} target={'_blank'} className="social-items__item">
+                            <TelegramIcon />
+                          </a>
                         </div>
                       </div>
                     </div>
