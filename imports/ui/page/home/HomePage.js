@@ -7,7 +7,7 @@ import {
   DeviceIosIcon,
   DevicePcIcon,
   DevicePsIcon,
-  DiscordIcon,
+  DiscordIcon, FacebookIcon,
   IconCheckFalse,
   IconCheckTrue,
   IconCheckUnderway, InstagramColoredIcon, InstagramIcon, LinkedinIcon,
@@ -1146,6 +1146,28 @@ const HomePage = () => {
                           </a>
                           <a href={'https://t.me/mFateS'} target={'_blank'} className="social-items__item">
                             <TelegramIcon />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <div className="item">
+                    <div className="team-item__wrapper">
+                      <div className="img">
+                        <img src="./img/Keagan.svg" alt="" />
+                      </div>
+                      <div className="team-item__content">
+                        <span className="name">Keagan Van Dyk</span>
+                        <p className="position">Sale Manager</p>
+                        <div className="social-items">
+                          <a href={'https://m.facebook.com/keagan.vandyk'} target={'_blank'} className="social-items__item">
+                            <FacebookIcon />
+                          </a>
+                          <a href={'https://instagram.com/keaganvandyk?igshid=YmMyMTA2M2Y='} target={'_blank'} className="social-items__item">
+                            <InstagramColoredIcon />
                           </a>
                         </div>
                       </div>
