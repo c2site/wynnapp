@@ -1055,11 +1055,14 @@ const HomePage = () => {
                         <img src="./img/photo-01.svg" alt="" />
                       </div>
                       <div className="team-item__content">
-                        <span className="name">Artemiy N</span>
+                        <span className="name">Artemiy Nguien</span>
                         <p className="position">CMO</p>
                         <div className="social-items">
                           <a href={'https://twitter.com/Ngartem23'} target={'_blank'} className="social-items__item">
                               <TwitterIcon />
+                          </a>
+                          <a href={'https://t.me/Ngartem'} target={'_blank'} className="social-items__item">
+                            <TelegramIcon />
                           </a>
                         </div>
                       </div>
@@ -1074,7 +1077,7 @@ const HomePage = () => {
                         <img src="./img/Dana.svg" alt="" />
                       </div>
                       <div className="team-item__content">
-                        <span className="name">Aidana O</span>
+                        <span className="name">Aidana Osmonbaeva</span>
                         <p className="position">Marketing manager</p>
                         <div className="social-items">
                           <a href={'https://instagram.com/aidashka999?igshid=YmMyMTA2M2Y='} target={'_blank'} className="social-items__item">
@@ -1096,7 +1099,7 @@ const HomePage = () => {
                         <img src="./img/photo-02.svg" alt="" />
                       </div>
                       <div className="team-item__content">
-                        <span className="name">Shon K</span>
+                        <span className="name">Kieu Shon</span>
                         <p className="position">PR</p>
                         <div className="social-items">
                           {/*<a href={''} target={'_blank'} className="social-items__item">*/}
