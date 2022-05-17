@@ -999,10 +999,11 @@ section.top-games {
         background: linear-gradient(248.19deg, #3E4550 24.97%, #1E2632 69.73%);
         border-radius: 10px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: column;
         padding: 40px;
+        min-height: 420px;
         @media ( max-width: 1200px ) {
             margin-top: 0;
         }
